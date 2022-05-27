@@ -9,14 +9,18 @@ logging.debug('Start of program' + f'\n')
 
 
 def x_over_x_plus_n():
-    """This function plots each function f(n) from n=1 up to whatever
-value of n is required for the if conditional to evaluate True"""
+    """This function plots each function $f_{n}(x)$, from a sequence of
+functions \{f_{n}\}_{n=1}^{\infty}, each with a doman and codmain of real
+numbers, from n=1 up to whatever value of n is required for the if conditional
+to evaluate True. Once the if conditional evaluates True, the function stores
+the number of natural numbers, n=K, for such an evaluation to be reached.
+This sequence of functions converges pointwise to f=0, on [0, \infty)"""
     
     # We consider those scenarios when user input is not what we desire
     flag = True
     while flag:
         # We take care of those scenarios when user input is the return key
-        x_input = input('Choose a real number x between 2/10 and 1,'
+        x_input = input('Choose a real number x between 1 and 30,'
             ' or press the return key to quit: ')
         if not x_input:
             return 'Okay. Goodbye'
@@ -34,7 +38,7 @@ value of n is required for the if conditional to evaluate True"""
     while flag:
         # We take care of those scenarios when user input is the return key
         epsilon_input = input('Choose a small number epsilon, between 1/100 and'
-            ' 1/10, or press the return key to quit: ')
+            ' 1, or press the return key to quit: ')
         if not epsilon_input:
             return 'Okay. Goodbye'
         
@@ -48,13 +52,13 @@ value of n is required for the if conditional to evaluate True"""
     
     
     # We take care of those scenarios when user input is out of specified range
-    if x < 2/10 or x > 1:
+    if x < 1 or x > 30:
         logging.debug(f'Your value x={x} is not in the requested'
             ' range' + f'\n')
         return 'Goodbye'
     
     # We take care of those scenarios when user input is out of specified range
-    if epsilon < 1/100 or epsilon > 1/10:
+    if epsilon < 1/100 or epsilon > 1:
         logging.debug(f'Your value epsilon={epsilon} is not in the' 
             ' requested range' + f'\n')
         return 'Goodbye'
@@ -64,7 +68,7 @@ value of n is required for the if conditional to evaluate True"""
     
     # Vector u is what defines our restricted domain of each function
     # with respect to x
-    u = np.linspace(0, epsilon, 1000)
+    u = np.linspace(0, 1000, 1000)
     
     # We initiate the index n with a value of 1 to simulate a
     # mathematical sequence
@@ -84,14 +88,17 @@ value of n is required for the if conditional to evaluate True"""
             # Completing the plot
             ax.axvline(x=0, c='k')
             ax.axhline(y=0, c='k')
+            ax.axhline(y=epsilon, c='m', label='epsilon')
+            ax.axvline(x=x, c='c', label='x')
             plt.xlabel('Restricted Domain with respect to x', fontsize=20)
-            plt.xticks(fontsize=20)
+            plt.xticks(fontsize=10)
             plt.ylabel('Range of Restricted Domain',
                 fontsize=20)
-            plt.yticks(fontsize=20)
-            plt.ylim(0, epsilon**30)
-            plt.xlim(0, epsilon**30)
-            fig.suptitle(r'$f(n) = \dfrac{x}{x+n}$', fontsize=20)
+            plt.yticks(fontsize=10)
+            plt.ylim(0, 1)
+            plt.xlim(0, 100 + epsilon)
+            fig.suptitle(r'$f_{n}(x) = \dfrac{x}{x+n}$', fontsize=20)
+            plt.legend(prop={'size':20})
             plt.show()
             
             flag = False
