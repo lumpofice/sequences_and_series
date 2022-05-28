@@ -16,7 +16,8 @@ def geo_series():
     # Taking in and checking user input for the scalar a.
     flag = True
     while flag:
-        a_input = input('Choose a scalar, or press return to exit program: ')
+        a_input = input('Choose a real number, or press return to exit'
+            ' program: ')
         
         # If user wishes to exit program
         if not a_input:
@@ -66,7 +67,7 @@ def geo_series():
         try:
             epsilon = float(epsilon_input)
             if epsilon <= 0:
-                logging.debug('We need an epsilon with a value greater'
+                logging.debug('We need an epsilon with value greater'
                     ' than 0')
             else:
                 flag = False
@@ -97,8 +98,10 @@ def geo_series():
     flag = True
     while flag:
         curr_result = a*r**(power)
-        if abs(prev_result - curr_result) < epsilon:
-            flag = False
+        if power!=0 and power%10==0:
+            if abs(sum(results[power-10:power-1])) < epsilon:
+                flag = False
+                continue
         results.append(curr_result)
         prev_result = curr_result
         power += 1
@@ -107,7 +110,7 @@ def geo_series():
     # The statements below will plot the powers and results list that we have
     # from the above while loop, completing the graph of our function
     fig, ax = plt.subplots(figsize=(15, 10))
-    ax.plot(powers, results, label=r'$af(r)=\sum_{i=0}^{\infty}ar^i$')
+    ax.scatter(powers, results, label=r'$af(r)=\sum_{i=0}^{\infty}ar^i$')
     plt.xlabel('Integer Powers', fontsize=20)
     plt.ylabel('Sequence Value', fontsize=20)
     plt.xticks(fontsize=20)
@@ -116,6 +119,7 @@ def geo_series():
     plt.legend(prop={'size': 20})
     plt.show()
     
-    return 'Nice work'
+    return f'Nice work. Your program require n = {power} before reaching'\
+        ' convergence for the epsilon you specified.'
 
 print(geo_series())
