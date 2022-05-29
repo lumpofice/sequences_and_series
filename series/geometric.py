@@ -120,7 +120,7 @@ def geo_series():
     flag = True
     while flag:
         curr_result = a*r**(power)
-        if power!=0 and power%m==0:
+        if power!=0 and power-m!=0 and power%m==0:
             if abs(sum(results[power-m:power-1])) < epsilon:
                 flag = False
                 continue
@@ -142,6 +142,6 @@ def geo_series():
     plt.show()
     
     return f'Nice work. Your program require n = {power} before reaching'\
-        ' convergence for the epsilon you specified.'
+        f' convergence to the sum {sum(results[1:])} for the epsilon you specified.'
 
 print(geo_series())
