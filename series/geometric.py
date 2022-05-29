@@ -75,6 +75,28 @@ def geo_series():
             logging.debug('Really must provide a numerical response' + f'\n')
             continue
     
+    # Taking in and checking user input for the m.
+    flag = True
+    while flag:
+        m_input = input('Choose a positive integer as m, or press'
+            ' return to exit program: ')
+        
+        # If user wishes to exit program
+        if not m_input:
+            return 'No Problem. Goodbye'
+        
+        # We check if input is a numerical holding under specified conditions
+        try:
+            m = int(m_input)
+            if m <= 0:
+                logging.debug('We need a m with value greater'
+                    ' than 0')
+            else:
+                flag = False
+        except ValueError:
+            logging.debug('Really must provide a numerical response' + f'\n')
+            continue
+    
     # We will plot the powers list as our domain, and we will plot the results
     # list as our range
     results = []
@@ -98,8 +120,8 @@ def geo_series():
     flag = True
     while flag:
         curr_result = a*r**(power)
-        if power!=0 and power%10==0:
-            if abs(sum(results[power-10:power-1])) < epsilon:
+        if power!=0 and power%m==0:
+            if abs(sum(results[power-m:power-1])) < epsilon:
                 flag = False
                 continue
         results.append(curr_result)
