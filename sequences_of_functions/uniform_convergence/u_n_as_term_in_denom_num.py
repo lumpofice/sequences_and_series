@@ -139,7 +139,7 @@ This sequence of functions converges uniformly to f=x, on (-\infty, \infty)"""
                     # Completing the plot
                     ax.axvline(x=0, c='k')
                     ax.axhline(y=0, c='k')
-                    ax.axhline(y=1/k, c='m', label=r'$\epsilon$')
+                    ax.axhline(y=1/k, c='m', label=r'$\dfrac{1}{k}$')
                     ax.plot(u, u, c='k', label=r'$f(x)=x$')
                     plt.xlabel('Restricted Domain with respect to x',\
                         fontsize=20)
