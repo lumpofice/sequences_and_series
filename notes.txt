@@ -1,1 +1,1 @@
-in geometric and n_as_term_in_denominator, logging gives an update_title_pos response
+in all py scripts, logging gives an update_title_pos response

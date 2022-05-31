@@ -45,7 +45,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
             while flag:
                 
                 
-                x_input = input('Choose a real number x between 1 and 30,'
+                x_input = input('Choose a real number x between 1 and 30,'\
                     ' or press the return key to quit: ')
                 
                 
@@ -140,7 +140,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     plt.xlabel('Restricted Domain with respect to x',\
                         fontsize=20)
                     plt.xticks(fontsize=10)
-                    plt.ylabel('Range of Restricted Domain',
+                    plt.ylabel('Range of Restricted Domain',\
                         fontsize=20)
                     plt.yticks(fontsize=10)
                     plt.ylim(0, 1)
@@ -181,7 +181,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
             while flag:
                 
                 
-                x_input = input('Choose a real number x between 1 and 30,'
+                x_input = input('Choose a real number x between 1 and 30,'\
                     ' or press the return key to quit: ')
                 
                 
@@ -276,7 +276,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     plt.xlabel('Restricted Domain with respect to x',\
                         fontsize=20)
                     plt.xticks(fontsize=10)
-                    plt.ylabel('Range of Restricted Domain',
+                    plt.ylabel('Range of Restricted Domain',\
                         fontsize=20)
                     plt.yticks(fontsize=10)
                     plt.ylim(0, 1)
@@ -306,6 +306,10 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     
                     
             return f'\nThe number of functions on the graph: {n}'
+        
+        
+        else:
+            continue
             
 
 print(x_over_x_plus_n())
