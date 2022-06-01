@@ -453,7 +453,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                     ax.axvline(x=0, c='k')
                     ax.axhline(y=0, c='k')
                     ax.axhline(y=1-epsilon, c='k', label=r'$1-\epsilon$')
-                    ax.axhline(y=epsilon, c='k', label=r'$\epsilon$')
+                    ax.axhline(y=epsilon, c='m', label=r'$\epsilon$')
                     ax.axvline(x=x, c='c', label='x')
                     plt.xlabel('Restricted Domain with respect to x',\
                         fontsize=20)
@@ -600,7 +600,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                     ax.axvline(x=0, c='k')
                     ax.axhline(y=0, c='k')
                     ax.axhline(y=1-(1/k), c='k', label=r'$1-\dfrac{1}{k}$')
-                    ax.axhline(y=1/k, c='k', label=r'$\dfrac{1}{k}$')
+                    ax.axhline(y=1/k, c='m', label=r'$\dfrac{1}{k}$')
                     ax.axvline(x=x, c='c', label='x')
                     plt.xlabel('Restricted Domain with respect to x',\
                         fontsize=20)
