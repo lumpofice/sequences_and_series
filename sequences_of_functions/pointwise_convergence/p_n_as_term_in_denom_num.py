@@ -321,7 +321,6 @@ print(nx_over_one_plus_nx_squared())
 
 
 
-
 def nx_over_one_plus_nx():
     """This function plots each function $f_{n}(x)$, from a sequence of
 functions \{f_{n}\}_{n=1}^{\infty}, each with a doman and codmain of real
