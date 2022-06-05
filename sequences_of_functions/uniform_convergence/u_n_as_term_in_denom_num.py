@@ -328,7 +328,7 @@ This sequence of functions converges uniformly to f=x, on (-\infty, \infty)"""
             continue
             
 
-print(x_plus_one_over_n())
+x_plus_one_over_n()
     
 
 
@@ -545,5 +545,5 @@ where a>0"""
             continue
             
 
-print(nx_over_one_plus_nx())
+nx_over_one_plus_nx()
     

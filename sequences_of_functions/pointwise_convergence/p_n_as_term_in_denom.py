@@ -312,7 +312,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
             continue
             
 
-print(x_over_x_plus_n())
+x_over_x_plus_n()
     
     
     

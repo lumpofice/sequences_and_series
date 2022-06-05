@@ -144,4 +144,4 @@ def geo_series():
     return f'Nice work. Your program require n = {power} before reaching'\
         f' convergence to the sum {sum(results[1:])} for the epsilon you specified.'
 
-print(geo_series())
+geo_series()

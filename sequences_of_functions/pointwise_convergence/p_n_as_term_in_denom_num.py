@@ -314,7 +314,7 @@ However, we observe convergence on the positive portion of the graph."""
             continue
             
 
-print(nx_over_one_plus_nx_squared())
+nx_over_one_plus_nx_squared()
 
 
 
@@ -645,4 +645,4 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
             continue
             
 
-print(nx_over_one_plus_nx())
+nx_over_one_plus_nx()
