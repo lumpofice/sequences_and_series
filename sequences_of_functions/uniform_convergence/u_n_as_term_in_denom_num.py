@@ -335,7 +335,7 @@ x_plus_one_over_n()
 
 
 
-def nx_over_one_plus_nx():
+def u_nx_over_one_plus_nx():
     """This function plots each function $f_{n}(x)$, from a sequence of
 functions \{f_{n}\}_{n=1}^{\infty}, each with a doman and codmain of real
 numbers, from n=1 up to whatever value of n is required for the if conditional
@@ -545,5 +545,5 @@ where a>0"""
             continue
             
 
-nx_over_one_plus_nx()
+u_nx_over_one_plus_nx()
     

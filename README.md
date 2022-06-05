@@ -1,9 +1,10 @@
 # Sequences and Series
 
-### This is a respository with different sequences and series I have found useful or interesting through the years.
+## This is a respository with different sequences and series I have found useful or interesting through the years.
 
 
-Following are the function calls, in correspondance with the function's mathematical structure, to the python files within this repository:
+## Following are the function calls, in correspondance with the function's mathematical structure, to the python files within this repository:
+### Note: All names for python functions that are pointwise convergent on larger domains and unformly convergent on attenuated domains have their uniformly convergent counterparts prefaced by a 'u_', while the pointwise convergent definition is not preface by any character. For example: ```nx_over_one_plus_nx()``` is the python function for the pointwise convergent counterpart, while ```u_nx_over_one_plus_nx()``` is the python function for the uniformly convergent counterpart. 
 
 <b> Series
  - ```geo_series()``` &nbsp;&nbsp; $af(r)=\sum_{i=0}^{\infty}ar^i$ &nbsp;&nbsp; in &nbsp;&nbsp; geometric.py
@@ -26,4 +27,4 @@ Following are the function calls, in correspondance with the function's mathemat
 
 <br/>
 
- - ```nx_over_one_plus_nx()``` &nbsp;&nbsp; $f_{n}(x) = \dfrac{nx}{1+nx}$ &nbsp;&nbsp; in &nbsp;&nbsp; u_n_as_term_in_denom_num.py
+ - ```u_nx_over_one_plus_nx()``` &nbsp;&nbsp; $f_{n}(x) = \dfrac{nx}{1+nx}$ &nbsp;&nbsp; in &nbsp;&nbsp; u_n_as_term_in_denom_num.py
