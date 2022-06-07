@@ -589,8 +589,8 @@ where a>0"""
             while flag:
                 
                 
-                a_input = input('Choose a real number a between 8/100 and 2/10,'
-                    ' or press the return key to quit: ')
+                a_input = input('Choose a real number "a" between 8/100'\
+                    ' and 2/10, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -621,8 +621,8 @@ where a>0"""
             while flag:
                 
                 
-                x_input = input('Choose a real number x greater than a'
-                    ' and less than 1, or press the return key to quit: ')
+                x_input = input('Choose a real number x between "a"'
+                    ' and 10, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -636,7 +636,7 @@ where a>0"""
                 try:
                     x = float(x_input)
                     # When user input for x is out of specified range
-                    if x < a or x > 1:
+                    if x < a or x > 10:
                         logging.debug(f'Your value x={x} is not in the'\
                             ' requested range' + f'\n')
                         continue
@@ -653,8 +653,8 @@ where a>0"""
             while flag:
                 
                 
-                k_input = input('Choose a large natural number k, between 1' 
-                    ' and 100, or press the return key to quit: ')
+                k_input = input('Choose a large natural number k, between 20' 
+                    ' and 200, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -668,7 +668,7 @@ where a>0"""
                 try:
                     k = float(k_input)
                     # When user input for k is out of specified range
-                    if k < 1 or k > 100:
+                    if k < 20 or k > 200:
                         logging.debug(f'Your value k={k} is not in the' 
                             ' requested range' + f'\n')
                         continue
