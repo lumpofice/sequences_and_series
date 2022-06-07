@@ -307,7 +307,7 @@ However, we observe convergence on the positive portion of the graph."""
                     ax.plot(u, v)
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         else:
@@ -638,7 +638,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                     ax.scatter(x, abs((n*x)/(1+(n*x)) - 1))
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         else:
