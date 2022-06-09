@@ -351,7 +351,7 @@ where a>0"""
         
         
         # Users explore this sequence of
-        # function with a natural number or an epsilon
+        # functions with a natural number
         choose_k = input('We choose an arbitrarily'\
                 ' small number based on natural number k.'\
                 ' Press k for natural number k,'\
@@ -372,8 +372,8 @@ where a>0"""
             while flag:
                 
                 
-                a_input = input('Choose a real number a between 8/100 and 2/10,'
-                    ' or press the return key to quit: ')
+                a_input = input('Choose a real number "a" between 8/100 and'\
+                    ' 2/10, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -404,8 +404,8 @@ where a>0"""
             while flag:
                 
                 
-                x_input = input('Choose a real number x greater than a'
-                    ' and less than 1, or press the return key to quit: ')
+                x_input = input('Choose a real number x between "a"'
+                    ' and 2, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -419,7 +419,7 @@ where a>0"""
                 try:
                     x = float(x_input)
                     # When user input for x is out of specified range
-                    if x < a or x > 1:
+                    if x < a or x > 2:
                         logging.debug(f'Your value x={x} is not in the'\
                             ' requested range' + f'\n')
                         continue
@@ -436,8 +436,8 @@ where a>0"""
             while flag:
                 
                 
-                k_input = input('Choose a large natural number k, between 1' 
-                    ' and 100, or press the return key to quit: ')
+                k_input = input('Choose a large natural number k, between 20' 
+                    ' and 200, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -451,7 +451,7 @@ where a>0"""
                 try:
                     k = float(k_input)
                     # When user input for k is out of specified range
-                    if k < 1 or k > 100:
+                    if k < 20 or k > 200:
                         logging.debug(f'Your value k={k} is not in the' 
                             ' requested range' + f'\n')
                         continue
@@ -469,7 +469,7 @@ where a>0"""
             
             # Vector u is what defines our restricted domain of each function
             # with respect to x
-            u = np.linspace(a, 10, 1000)
+            u = np.linspace(a, 12, 1000)
             
             
             # We initiate the index n with a value of 1 to simulate a
@@ -507,8 +507,8 @@ where a>0"""
                     plt.ylabel('Range of Restricted Domain',\
                         fontsize=20)
                     plt.yticks(fontsize=10)
-                    plt.ylim(0, 1-(1/(2*a*k)))
-                    plt.xlim(0, 1 + (1/(a*k)))
+                    plt.ylim(0, 1)
+                    plt.xlim(0, 11)
                     fig.suptitle(r'$f_{n}(x) = \dfrac{nx}{1+nx}$', fontsize=20)
                     plt.legend(prop={'size':20})
                     plt.show()

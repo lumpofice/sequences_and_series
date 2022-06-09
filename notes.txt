@@ -4,3 +4,4 @@ Before a function can be considered "completed": Functionality, F, which is user
 
 Complete:
 u_nx_over_one_plus_nx_squared() 
+u_nx_over_one_plus_nx()
