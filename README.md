@@ -1,5 +1,3 @@
-⚠️ This is a warning: The programs in this repository are functional and render nice figures. However, there are small typos and incomplete pedagogy in the python script comments and jupyter markdown. 
-
 # Sequences and Series
 
 ## This is a respository with different sequences and series I have found useful or interesting through the years.
