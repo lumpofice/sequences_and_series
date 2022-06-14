@@ -46,8 +46,8 @@ where a>0"""
             while flag:
                 
                 
-                a_input = input('Choose a real number a greater than 1'\
-                    ' and less than 1000, or press the return key to quit: ')
+                a_input = input('Choose a real number "a" between 1'\
+                    ' and 100, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -61,7 +61,7 @@ where a>0"""
                 try:
                     a = float(a_input)
                     # When user input for a is out of specified range
-                    if a < 1 or a > 1000:
+                    if a < 1 or a > 100:
                         logging.debug(f'Your value a={a} is not in the'\
                             ' requested range' + f'\n')
                         continue
@@ -78,8 +78,8 @@ where a>0"""
             while flag:
                 
                 
-                x_input = input('Choose a real number x less than a and'\
-                    ' greater than 0, or press the return key to quit: ')
+                x_input = input('Choose a real number x between 0 and'\
+                    ' "a", or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -110,7 +110,7 @@ where a>0"""
             while flag:
                 
                 
-                k_input = input('Choose a large natural number k, between 10' 
+                k_input = input('Choose a large natural number k, between 100' 
                     ' and 1000, or press the return key to quit: ')
                 
                 
@@ -125,7 +125,7 @@ where a>0"""
                 try:
                     k = float(k_input)
                     # When user input for k is out of specified range
-                    if k < 10 or k > 1000:
+                    if k < 100 or k > 1000:
                         logging.debug(f'Your value k={k} is not in the' 
                             ' requested range' + f'\n')
                         continue
@@ -143,7 +143,7 @@ where a>0"""
             
             # Vector u is what defines our restricted domain of each function
             # with respect to x
-            u = np.linspace(0, 100, 1000)
+            u = np.linspace(0, 101, 1000)
             
             
             # We initiate the index n with a value of 1 to simulate a
@@ -181,7 +181,7 @@ where a>0"""
                         fontsize=20)
                     plt.yticks(fontsize=10)
                     plt.ylim(0, 1.02)
-                    plt.xlim(0, 100)
+                    plt.xlim(0, 101)
                     fig.suptitle(r'$f_{n}(x) = \dfrac{x}{n+x}$', fontsize=20)
                     plt.legend(prop={'size':20})
                     plt.show()
@@ -211,7 +211,7 @@ where a>0"""
                     ax.scatter(x, x/(n+x))
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         else:
