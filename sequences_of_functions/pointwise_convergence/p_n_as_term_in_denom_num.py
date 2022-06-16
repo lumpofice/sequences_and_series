@@ -23,6 +23,7 @@ However, we observe convergence on the positive portion of the graph."""
     starter = True
     while starter:
         
+        
         # We give users a choice of whether or not they wish to explore this
         # function with a natural number or an epsilon
         choose_k_or_e = input('Would you like to choose an arbitrarily'\
@@ -110,7 +111,7 @@ However, we observe convergence on the positive portion of the graph."""
             
             # Vector u is what defines our restricted domain of each function
             # with respect to x
-            u = np.linspace(0, 300, 1000)
+            u = np.linspace(0, 100, 2000)
             
             
             # We initiate the index n with a value of 1 to simulate a
@@ -144,7 +145,7 @@ However, we observe convergence on the positive portion of the graph."""
                         fontsize=20)
                     plt.yticks(fontsize=10)
                     plt.ylim(0, 0.02)
-                    plt.xlim(0, 300 + epsilon)
+                    plt.xlim(0, 100 + epsilon)
                     fig.suptitle(r'$f_{n}(x) = \dfrac{nx}{1+(nx)^2}$',\
                         fontsize=20)
                     plt.legend(prop={'size':20})
@@ -170,7 +171,7 @@ However, we observe convergence on the positive portion of the graph."""
                     ax.plot(u, v)
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         if choose_k_or_e == 'k':
@@ -247,7 +248,7 @@ However, we observe convergence on the positive portion of the graph."""
             
             # Vector u is what defines our restricted domain of each function
             # with respect to x
-            u = np.linspace(0, 300, 1000)
+            u = np.linspace(0, 100, 2000)
             
             
             # We initiate the index n with a value of 1 to simulate a
@@ -281,7 +282,7 @@ However, we observe convergence on the positive portion of the graph."""
                         fontsize=20)
                     plt.yticks(fontsize=10)
                     plt.ylim(0, 0.02)
-                    plt.xlim(0, 300 + (1/k))
+                    plt.xlim(0, 100 + (1/k))
                     fig.suptitle(r'$f_{n}(x) = \dfrac{nx}{1+(nx)^2}$',\
                         fontsize=20)
                     plt.legend(prop={'size':20})
