@@ -335,6 +335,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
     starter = True
     while starter:
         
+        
         # We give users a choice of whether or not they wish to explore this
         # function with a natural number or an epsilon
         choose_k_or_e = input('Would you like to choose an arbitrarily'\
@@ -440,8 +441,6 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
             # the function from our sequence at n=1 and f(x) is the function to 
             # which the sequence of functions converges for a fixed x.
             ax.plot(u, v)
-            ax.scatter(x, abs((n*x)/(1+(n*x)) - 1),\
-                label=r'$| f_n(x) - f(x) |$')
             
             
             flag = True
@@ -489,10 +488,9 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                     # function from our sequence at n=k and f(x) is the function 
                     # to which the sequence of functions converges, for fixed x.
                     ax.plot(u, v)
-                    ax.scatter(x, abs((n*x)/(1+(n*x)) - 1))
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         if choose_k_or_e == 'k':
@@ -587,8 +585,6 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
             # the function from our sequence at n=1 and f(x) is the function to 
             # which the sequence of functions converges for a fixed x.
             ax.plot(u, v)
-            ax.scatter(x, abs((n*x)/(1+(n*x)) - 1),\
-                label=r'$| f_n(x) - f(x) |$')
             
             
             flag = True
@@ -636,7 +632,6 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                     # function from our sequence at n=k and f(x) is the function 
                     # to which the sequence of functions converges, for fixed x.
                     ax.plot(u, v)
-                    ax.scatter(x, abs((n*x)/(1+(n*x)) - 1))
                     
                     
             return f'The number of functions on the graph: {n}'
