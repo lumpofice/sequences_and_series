@@ -78,7 +78,8 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                 
                 
                 epsilon_input = input('Choose a small number epsilon, between'\
-                    ' 1/100 and 1, or press the return key to quit: ')
+                    ' 1/100 and 1,'\
+                    ' decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -143,7 +144,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     plt.ylabel('Range of Restricted Domain',\
                         fontsize=20)
                     plt.yticks(fontsize=10)
-                    plt.ylim(0, 1)
+                    plt.ylim(0, 1 + epsilon)
                     plt.xlim(0, 100 + epsilon)
                     fig.suptitle(r'$f_{n}(x) = \dfrac{x}{x+n}$', fontsize=20)
                     plt.legend(prop={'size':20})
@@ -169,7 +170,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     ax.plot(u, v)
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         if choose_k_or_e == 'k':
@@ -279,7 +280,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     plt.ylabel('Range of Restricted Domain',\
                         fontsize=20)
                     plt.yticks(fontsize=10)
-                    plt.ylim(0, 1)
+                    plt.ylim(0, 1 + (1/k))
                     plt.xlim(0, 100 + (1/k))
                     fig.suptitle(r'$f_{n}(x) = \dfrac{x}{x+n}$', fontsize=20)
                     plt.legend(prop={'size':20})
@@ -305,7 +306,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                     ax.plot(u, v)
                     
                     
-            return f'\nThe number of functions on the graph: {n}'
+            return f'The number of functions on the graph: {n}'
         
         
         else:
