@@ -46,7 +46,7 @@ This sequence of functions converges uniformly to f=x, on (-\infty, \infty)"""
                 
                 
                 x_input = input('Choose a real number x between 2/10 and 1,'
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -190,7 +190,7 @@ This sequence of functions converges uniformly to f=x, on (-\infty, \infty)"""
                 
                 
                 x_input = input('Choose a real number x between 2/10 and 1,'
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -222,7 +222,8 @@ This sequence of functions converges uniformly to f=x, on (-\infty, \infty)"""
                 
                 
                 epsilon_input = input('Choose a small number epsilon, between'\
-                    ' 1/100 and 1/10, or press the return key to quit: ')
+                    ' 1/100 and 1/10, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -373,7 +374,7 @@ where a>0"""
                 
                 
                 a_input = input('Choose a real number "a" between 8/100 and'\
-                    ' 2/10, or press the return key to quit: ')
+                    ' 2/10, in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -405,7 +406,8 @@ where a>0"""
                 
                 
                 x_input = input('Choose a real number x between "a"'
-                    ' and 2, or press the return key to quit: ')
+                    ' and 2, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -590,7 +592,8 @@ where a>0"""
                 
                 
                 a_input = input('Choose a real number "a" between 8/100'\
-                    ' and 2/10, or press the return key to quit: ')
+                    ' and 2/10, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -622,7 +625,8 @@ where a>0"""
                 
                 
                 x_input = input('Choose a real number x between "a"'
-                    ' and 10, or press the return key to quit: ')
+                    ' and 10, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return

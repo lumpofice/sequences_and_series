@@ -79,7 +79,7 @@ This sequence of functions converges pointwise to f=0, on [0, \infty)"""
                 
                 epsilon_input = input('Choose a small number epsilon, between'\
                     ' 1/100 and 1,'\
-                    ' decimal form, or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return

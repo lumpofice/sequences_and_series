@@ -47,7 +47,7 @@ However, we observe convergence on the positive portion of the graph."""
                 
                 
                 x_input = input('Choose a real number x between 1/2 and 10,'\
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -79,7 +79,8 @@ However, we observe convergence on the positive portion of the graph."""
                 
                 
                 epsilon_input = input('Choose a small number epsilon, between'\
-                    ' 1/1000 and 1/100, or press the return key to quit: ')
+                    ' 1/1000 and 1/100, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -184,7 +185,7 @@ However, we observe convergence on the positive portion of the graph."""
                 
                 
                 x_input = input('Choose a real number x between 1/2 and 10,'\
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -359,7 +360,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                 
                 
                 x_input = input('Choose a real number x between 1/2 and 10,'\
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -391,7 +392,8 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                 
                 
                 epsilon_input = input('Choose a small number epsilon, between'\
-                    ' 1/1000 and 1/100, or press the return key to quit: ')
+                    ' 1/1000 and 1/100, in decimal form,'\
+                    ' or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
@@ -503,7 +505,7 @@ This sequence of functions converges pointwise to f=1, on [0, \infty)."""
                 
                 
                 x_input = input('Choose a real number x between 1/2 and 10,'\
-                    ' or press the return key to quit: ')
+                    ' in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return

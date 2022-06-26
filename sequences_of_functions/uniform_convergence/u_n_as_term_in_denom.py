@@ -79,7 +79,7 @@ where a>0"""
                 
                 
                 x_input = input('Choose a real number x between 0 and'\
-                    ' "a", or press the return key to quit: ')
+                    ' "a", in decimal form, or press the return key to quit: ')
                 
                 
                 # We take care of those scenarios when user input is the return
