@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{amsfonts} 
+
+\title{Sequences and Series}
+\author{Jonathan Parker}
+\date{Last Updated on \today}
+
+\renewcommand*\contentsname{Table of Contents}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{definition}{Definition}[section]
+
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   \noindent \textbf{Example~\theexample. #1} \rmfamily}{\medskip}
+
+\newcounter{exercise}[section]
+\newenvironment{exercise}[1][]{\refstepcounter{exercise}\par\medskip
+   \noindent \textbf{Exercise~\theexercise. #1} \rmfamily}{\medskip}
+   
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+
+\maketitle
+\tableofcontents
+
+\end{document}
