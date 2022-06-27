@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
 \usepackage{geometry}
 \usepackage{amsfonts} 
 
@@ -31,7 +33,7 @@
 \tableofcontents
 
 \newpage
-\section{Sequences of Numbers}
+\section{Introduction to Sequences of Numbers}
 
 \begin{definition}
 A sequence of real numbers is a mapping
@@ -96,9 +98,57 @@ Our job is to discover a pattern. Well, it seems every other term is negative. W
 \end{align*}
 \end{example}
 
+\begin{exercise}
+Find the general expression of the sequence following the pattern:
+\begin{align*}
+    \Big\{1, \hspace{4pt} -\dfrac{2}{3}, \hspace{4pt} \dfrac{4}{9}, \hspace{4pt} -\dfrac{8}{27}, \hspace{4pt} \cdots \Big\}
+\end{align*}
+\end{exercise}
 
+\newpage
+\section{Limits of Sequences of Numbers}
 
+\begin{definition}
+A sequence $\{f(n)\}_{n}^{\infty}$ has a limit $L$, which we denote as 
+\begin{align*}
+    \lim_{n \longrightarrow \infty} f(n) = L\\[2ex]
+    \text{if for all} \hspace{4pt} \epsilon > 0 \hspace{4pt} \text{there exists a natural number} \hspace{4pt} &N \hspace{4pt} \text{such that for all} \hspace{4pt} n \geq N \hspace{4pt} \text{we have}\\[2ex]
+    \lvert f(n) - L \rvert < \epsilon
+\end{align*}
+\label{definition_limit_sequence_numbers}
+\end{definition}
 
+\begin{example}
+$\lim_{n \longrightarrow \infty} \dfrac{1}{n} = 0$
+\begin{proof}
+Take $\epsilon = \dfrac{1}{k}$, where $k \in \mathbb{N}$ is arbitrary. Then by Definition \ref{definition_limit_sequence_numbers} we have
+\begin{align*}
+    &\Big\lvert \dfrac{1}{k+n} - 0 \Big\rvert\\[2ex]
+    &= \Big\lvert \dfrac{1}{k+n} \Big\rvert\\[2ex]
+    &< \dfrac{1}{k} = \epsilon, \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N}
+\end{align*}
+\end{proof}
+\label{limit_one_over_n}
+\end{example}
+
+Now that we have this result, we can use it to find limits of other sequences. 
+
+\begin{example}
+$\lim_{n \longrightarrow \infty} \dfrac{n}{n+1} = 1$
+\begin{proof}
+We have a trick we can employ to find the above limit. By Example \ref{limit_one_over_n},
+\begin{align*}
+    \dfrac{n}{n+1} &= 1 \times \dfrac{n}{n+1}
+    = \dfrac{1/n}{1/n} \times \dfrac{n}{n+1}
+    = \dfrac{(1/n) \times n}{(1/n) \times (n+1)}
+    = \dfrac{1}{1 + (1/n)}\\[2ex]
+    \Longrightarrow &\lim_{n \longrightarrow \infty} \dfrac{n}{n+1}
+    = \lim_{n \longrightarrow \infty} \dfrac{1}{1+(1/n)}
+    = \dfrac{\lim_{n \longrightarrow \infty}1}{\lim_{n \longrightarrow \infty}1 + \lim_{n \longrightarrow \infty}(1/n)}
+    = \dfrac{1}{1 + 0} = 1
+\end{align*}
+\end{proof}
+\end{example}
 
 
 \end{document}
