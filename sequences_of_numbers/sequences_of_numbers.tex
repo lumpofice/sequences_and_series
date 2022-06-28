@@ -16,6 +16,8 @@
 
 \newtheorem{definition}{Definition}[section]
 
+\newtheorem{note}{Note}[section]
+
 \newcounter{example}[section]
 \newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
    \noindent \textbf{Example~\theexample. #1} \rmfamily}{\medskip}
@@ -23,6 +25,10 @@
 \newcounter{exercise}[section]
 \newenvironment{exercise}[1][]{\refstepcounter{exercise}\par\medskip
    \noindent \textbf{Exercise~\theexercise. #1} \rmfamily}{\medskip}
+   
+\newcounter{recall}[section]
+\newenvironment{recall}[1][]{\refstepcounter{recall}\par\medskip
+   \noindent \textbf{Recall~\therecall. #1} \rmfamily}{\medskip}
    
 \setlength{\parindent}{0pt}
 
@@ -109,7 +115,7 @@ Find the general expression of the sequence following the pattern:
 \section{Limits of Sequences of Numbers}\label{limits_of_sequences_of_numbers}
 
 \begin{definition}
-A sequence $\{f(n)\}_{n}^{\infty}$ has a limit $L$, which we denote as 
+A sequence $\{f(n)\}_{n=1}^{\infty}$ has a limit $L$, which we denote as 
 \begin{align*}
     \lim_{n \longrightarrow \infty} f(n) = L\\[2ex]
     \text{if for all} \hspace{4pt} \epsilon > 0 \hspace{4pt} \text{there exists a natural number} \hspace{4pt} &N \hspace{4pt} \text{such that for all} \hspace{4pt} n \geq N \hspace{4pt} \text{we have}\\[2ex]
@@ -133,7 +139,7 @@ Take $\epsilon = \dfrac{1}{k}$, where $k \in \mathbb{N}$ is arbitrary. Then by D
 \end{example}
 
 \begin{theorem}
-If $\{f(n)\}_{n}^{\infty}$ and $\{g(n)\}_{n}^{\infty}$ are convergent sequences, and if $c \in \mathbb{R}$, then
+If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequences, and if $c \in \mathbb{R}$, then
 \begin{align*}
     &\lim_{n \longrightarrow \infty} (f(n) + g(n)) = \lim_{n \longrightarrow \infty} f(n) + \lim_{n \longrightarrow \infty} g(n) \\[2ex]
     &\lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
@@ -168,36 +174,109 @@ We have a trick we can employ to find the above limit. By Example \ref{limit_one
 \begin{exercise}
 Find the limit of 
 \begin{align*}
-    \Big\{\dfrac{n^{3}}{n^{3}+1}\Big\}
+    \Big\{\dfrac{n^{3}}{n^{3}+1}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Find the limit of 
 \begin{align*}
-    \Big\{\dfrac{3+5n^{2}}{n+n^{2}}\Big\}
+    \Big\{\dfrac{3+5n^{2}}{n+n^{2}}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Find the limit of 
 \begin{align*}
-    \{e^{1/n}\}_{n}^{\infty}
+    \{e^{1/n}\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Find the limit of
 \begin{align*}
-    \Big\{\tan\Big(\dfrac{2n\pi}{1+8n}\Big)\Big\}_{n}^{\infty}
+    \Big\{\tan\Big(\dfrac{2n\pi}{1+8n}\Big)\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Find the limit of
 \begin{align*}
-    \Big\{\sqrt{\dfrac{n+1}{9n+1}}\Big\}_{n}^{\infty}
+    \Big\{\sqrt{\dfrac{n+1}{9n+1}}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
+
+\begin{definition}
+Take a sequence $\{f(n)\}_{n=1}^{\infty}$ 
+\begin{align*}
+    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) &= \infty, \hspace{4pt} \text{then}\\[2ex]
+    \text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} &\text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) > N.
+\end{align*}
+\begin{align*}
+    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) &= -\infty, \hspace{4pt} \text{then}\\[2ex]
+    \text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} &\text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) < -N.
+\end{align*}
+Any sequence with an infinite limit is said to be divergent.
+\label{definition_infinite_limit_sequence}
+\end{definition}
+
+\begin{example}
+Take $\{n\}_{n=1}^{\infty}$. Clearly, as $n \longrightarrow \infty$, the sequence of function values push to infinity.
+\end{example}
+
+\begin{exercise}
+Show the sequence $\Big\{\dfrac{n^{3}}{n+1}\Big\}_{n=1}^{\infty}$ has an infinite limit. 
+\end{exercise}
+
+\begin{exercise}
+Show the sequence $\Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}$ has an infinite limit. 
+\end{exercise}
+
+\begin{theorem}
+A sequence of numbers can have at most one limit.
+\label{limit_uniqueness}
+\end{theorem}
+
+\begin{note}
+Any sequence that does not converge to a single, finite value is considered divergent.
+\end{note}
+
+\begin{exercise}
+Find the general expression of the divergent sequence following the pattern:
+\begin{align*}
+    \{5, \hspace{4pt} 1, \hspace{4pt} 5, \hspace{4pt} 1, \hspace{4pt} 5, \hspace{4pt} 1, \hspace{4pt} \cdots\}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the general expression of the divergent sequence following the pattern:
+\begin{align*}
+    \{2, \hspace{4pt} 7, \hspace{4pt} 12, \hspace{4pt} 17, \hspace{4pt} \cdots\}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Determine whether the sequence defined by the following is convergent or divergent:
+\begin{align*}
+    f(1) = 1 \hspace{20pt} f(n) = 4 - f(n-1), \hspace{20pt} n \geq 1
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Determine whether the sequence defined by the following is convergent or divergent:
+\begin{align*}
+    f(1) = 2 \hspace{20pt} f(n) = 4 - f(n-1), \hspace{20pt} n \geq 1
+\end{align*}
+\end{exercise}
+
+\begin{recall}
+For all $a, b \in \mathbb{R}$, we have
+\begin{align*}
+    \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert &\leq \lvert a - b \rvert \\[2ex]
+    \lvert a + b \rvert &\leq \lvert a \rvert + \lvert b \rvert
+\end{align*}
+\end{recall}
+
+
 
 \end{document}
