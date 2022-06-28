@@ -1,10 +1,12 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
 \usepackage{geometry}
 \usepackage{amsfonts} 
 
-\title{Sequences and Series}
+\title{Calculus}
 \author{Jonathan Parker}
 \date{Last Updated on \today}
 
@@ -14,6 +16,8 @@
 
 \newtheorem{definition}{Definition}[section]
 
+\newtheorem{note}{Note}[section]
+
 \newcounter{example}[section]
 \newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
    \noindent \textbf{Example~\theexample. #1} \rmfamily}{\medskip}
@@ -22,6 +26,10 @@
 \newenvironment{exercise}[1][]{\refstepcounter{exercise}\par\medskip
    \noindent \textbf{Exercise~\theexercise. #1} \rmfamily}{\medskip}
    
+\newcounter{recall}[section]
+\newenvironment{recall}[1][]{\refstepcounter{recall}\par\medskip
+   \noindent \textbf{Recall~\therecall. #1} \rmfamily}{\medskip}
+   
 \setlength{\parindent}{0pt}
 
 \begin{document}
@@ -29,5 +37,8 @@
 
 \maketitle
 \tableofcontents
+
+\newpage
+\input{sequences_of_numbers/sequences_of_numbers}
 
 \end{document}
