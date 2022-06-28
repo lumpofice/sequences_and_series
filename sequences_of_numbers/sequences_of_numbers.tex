@@ -275,8 +275,74 @@ For all $a, b \in \mathbb{R}$, we have
     \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert &\leq \lvert a - b \rvert \\[2ex]
     \lvert a + b \rvert &\leq \lvert a \rvert + \lvert b \rvert
 \end{align*}
+\label{triangle_inequality}
 \end{recall}
 
+\begin{theorem}
+Let $\{f(n)\}_{n=1}^{\infty}, \hspace{4pt} \{g(n)\}_{n=1}^{\infty}$ and $\{h(n)\}_{n=1}^{\infty}$ be sequences. If
+\begin{align*}
+    \text{If} \hspace{4pt} f(n)\leq g(n)\leq h(n) \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N} \hspace{20pt}
+    & \text{and if}  \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = \lim_{n \longrightarrow \infty} g(n) = L \\[2ex]
+    & \text{then} \hspace{4pt} \lim_{n \longrightarrow \infty} h(n) = L 
+\end{align*}
+\label{squeeze_theorem}
+\end{theorem}
 
+\begin{exercise}
+Show the following two different ways:
+\begin{itemize}
+    \item [1.] Using the triangle inequality from Recall \ref{triangle_inequality}
+    \item [2.] Using Theorem \ref{squeeze_theorem}
+\end{itemize}
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1}n}{n^{2}+1} = 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Prove the following theorem two different ways:
+\begin{itemize}
+    \item [1.] Using the triangle inequality from Recall \ref{triangle_inequality}
+    \item [2.] Using Theorem \ref{squeeze_theorem}
+\end{itemize}
+\begin{align*}
+    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} \lvert f(n) \rvert = L \hspace{20pt} \text{then} \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = L
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\sin(n)}{n}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\cos^{2}(n)}{2^{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\sin(2n)}{1+\sqrt{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{(-3)^{2}}{n!}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
 
 \end{document}
