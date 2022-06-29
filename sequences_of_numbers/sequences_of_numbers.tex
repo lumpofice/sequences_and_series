@@ -276,34 +276,6 @@ Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
 \end{align*}
 \end{exercise}
 
-\begin{exercise}
-Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
-\begin{align*}
-    \Big\{\dfrac{\cos^{2}(n)}{2^{n}}\Big\}_{n=1}^{\infty}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
-\begin{align*}
-    \Big\{\dfrac{\sin(2n)}{1+\sqrt{n}}\Big\}_{n=1}^{\infty}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Find the limit of the following sequence:
-\begin{align*}
-    \Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Find the limit of the following sequence:
-\begin{align*}
-    \Big\{\dfrac{(-3)^{2}}{n!}\Big\}_{n=1}^{\infty}
-\end{align*}
-\end{exercise}
-
 \begin{theorem}
 The sequence $\{r^{n}\}_{n=1}^{\infty}$ is convergent for $r \in [-1, 1]$ such that
 \begin{align*}
@@ -329,7 +301,183 @@ Find the limit of the following sequence:
 \end{align*}
 \end{exercise}
 
+\begin{exercise}
+If $\$1000$ is invested at $6\%$ interest, compounded annually, then after $n$ years the investment is worth
+\begin{align*}
+    f(n) = 1000(1.06)^{n} \hspace{4pt} \text{dollars}
+\end{align*}
+Find the first five terms of the sequence $\{f(n)\}_{n=1}^{\infty}$ and determine whether or not it is convergent.
+\end{exercise}
+
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\cos^{2}(n)}{2^{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{(-3)^{n}}{n!}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
 \newpage
 \section{Monotone and Bounded Sequences of Numbers}
 
+\begin{definition}
+We say $\{f(n)\}_{n=1}^{\infty}$ is increasing if $f(n-1) < f(n)$ for all $n \geq 1$.\\[1ex]
+We say $\{f(n)\}_{n=1}^{\infty}$ is decreasing if $f(n-1) > f(n)$ for all $n \geq 1$. When a function is either increasing or decreasing, it is referred to as monotonic. A function that is neither increasing nor decreasing is referred to as non-monotonic.
+\end{definition}
 
+\begin{example}
+The following sequence is decreasing:
+\begin{align*}
+    &\Big\{\dfrac{1}{n}\Big\}_{n=1}^{\infty}\\[2ex]
+    \text{since} \hspace{4pt} \dfrac{1}{n+1} &< \dfrac{1}{n} \hspace{4pt} \text{for all} \hspace{4pt} n
+\end{align*}
+\end{example}
+
+\begin{example}
+When it's not so obvious, we use direct comparisons, showing first $n=1$ compared with $n=2$. Then we assume it is true for some arbitrary $n=k$ compared with $n=k-1$, and we use this result to show it's true for $n=k+1$. By showing this holds for arbitrary natural number $k+1$, we can safely state this hold for all natural numbers. This process is called induction, and we will show it through the sequence $\Big\{\dfrac{1}{n} + 1\Big\}_{n=1}^{\infty}$
+\begin{align*}
+    &n=1: \hspace{20pt} f(1) = \dfrac{1}{1} + 1\\[2ex]
+    &n=2: \hspace{20pt} f(2) = \dfrac{1}{2} + 1 < \dfrac{1}{1} + 1 = f(1)\\[2ex]
+    \text{Assume} \hspace{4pt} &n=k: f(k) = \dfrac{1}{k} + 1 < f(k-1) = \dfrac{1}{k-1} + 1\\[2ex]
+    \text{Now, we know}& \hspace{4pt} \dfrac{1}{k+1} < \dfrac{1}{k} \hspace{20pt} \Longleftrightarrow \hspace{20pt} \dfrac{1}{k+1} + 1 < \dfrac{1}{k} + 1\\[2ex]
+    \text{Thus, we have}& \hspace{4pt} f(k+1) = \dfrac{1}{k+1} + 1 < \dfrac{1}{k} + 1 = f(k)
+\end{align*}
+and the sequence is monotonically decreasing.
+\end{example}
+
+\begin{exercise}
+Through induction, show the following sequence is monotonic decreasing:
+\begin{align*}
+    \Big\{\dfrac{3}{n+5}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Give an example of an increasing sequence. Through induction, show that it is increasing.
+\end{exercise}
+
+\begin{definition}
+A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded above if
+\begin{align*}
+    \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that} f(n) \leq M \hspace{4pt} \text{for all} \hspace{4pt} n
+\end{align*}
+A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded below if
+\begin{align*}
+    \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that} f(n) \geq M \hspace{4pt} \text{for all} \hspace{4pt} n
+\end{align*}
+A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded if it is both bounded above and bounded below.
+\end{definition}
+
+\begin{example}
+It is clear the sequence $\Big\{\dfrac{1}{n}\Big\}_{n=1}^{\infty}$ is bounded above by $1$. If we write the first few terms of the sequence
+\begin{align*}
+    \Big\{\dfrac{1}{1}, \hspace{4pt} \dfrac{1}{2}, \hspace{4pt} \dfrac{1}{3}, \hspace{4pt} \dfrac{1}{4}, \hspace{4pt} \dfrac{1}{5}, \hspace{4pt} \dfrac{1}{6}, \hspace{4pt} \dfrac{1}{7}, \hspace{4pt} \cdots \Big\}
+\end{align*}
+it appears that $0$ will be a lower bound. We can test this using induction.
+\begin{align*}
+    \text{For} \hspace{4pt} n=1: \hspace{2pt} 0 < f(1)
+    \text{For} \hspace{4pt} n=k: \hspace{20pt} 0 < f(k) \hspace{4pt} \text{is assumed true}\\[2ex]
+    \text{Since the sequence is decreasing, we have} \hspace{4pt} f(k+1) < f(k)\\[2ex]
+    \text{and we have} \hspace{4pt} f(k) = \dfrac{1}{k} > f(k+1) = \dfrac{1}{k+1} > 0 
+\end{align*}
+Thus, the sequence is bounded below by $0$. Being bounded both above and below, the sequence is bounded.
+\end{example}
+
+\begin{exercise}
+Through induction, show the sequence $\Big\{\dfrac{1}{n} + 1\Big\}_{n=1}^{\infty}$ is bounded.
+\end{exercise}
+
+\begin{theorem}
+Every bounded monotonic sequence is convergent.
+\label{monotone_bounded_convergent}
+\end{theorem}
+
+\begin{example}
+We already know, for the sequence $\Big\{\dfrac{1}{n}\Big\}_{n=1}^{\infty}$
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \dfrac{1}{n} = 0.
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Find the limit of the sequence
+\begin{align*}
+    \Big\{\dfrac{1}{n} + 1\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Suppose you know that $\{f(n)\}_{n=1}^{\infty}$ is a decreasing sequence and all its terms lie between $[5, 8]$. Explain why the sequence has a limit. What can you say about the value of the limit?
+\end{exercise}
+
+\begin{exercise}
+Determine where the sequence is increasing, decreasing, or not monotonic. Show, using induction. Is the sequence bounded? Show, using induction.
+\begin{flalign*}
+\text{a.} \hspace{20pt} &\{(-2)^{n+1}\}_{n=1}^{\infty}&\\[2ex]
+\text{b.} \hspace{20pt} &\Big\{\dfrac{1}{2n+3}\Big\}_{n=1}^{\infty}&\\[2ex]
+\text{c.} \hspace{20pt} &\Big\{\dfrac{2n-3}{3n+4}\Big\}_{n=1}^{\infty}&\\[2ex]
+\text{d.} \hspace{20pt} &\{n(-1)^{n}\}_{n=1}^{\infty}&\\[2ex]
+\text{e.} \hspace{20pt} &\Big\{\dfrac{n}{n^{2}+1}\Big\}_{n=1}^{\infty}&\\[2ex]
+\text{f.} \hspace{20pt} &\Big\{n + \dfrac{1}{n}\Big\}_{n=1}^{\infty}&\\[2ex]
+\end{flalign*}
+\end{exercise}
+
+\begin{theorem}
+For any $p > 0$, we have
+\begin{align*}
+    \lim_{n \longrightarrow \infty} n^{-p} = 0
+\end{align*}
+\begin{proof}
+\begin{align*}
+    1 > n^{-p} = \dfrac{1}{n^{p}} > \dfrac{1}{(n+k)^{p}} > 0 \hspace{4pt} \text{for all} \hspace{4pt} k \in \mathbb{N}
+\end{align*}
+Choose $\epsilon = \dfrac{1}{(m+k)^p}$. Then for all $n \geq m+k$, we have
+\begin{align*}
+    \Big\lvert \dfrac{1}{n^{p}} - 0 \Big\rvert = \dfrac{1}{n^{p}} < \dfrac{1}{(m + k)^{p}} = \epsilon
+\end{align*}
+\end{proof}
+\label{n_denom_limit}
+\end{theorem}
+
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} and Theorem \ref{n_denom_limit} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\sin(2n)}{1+\sqrt{n}}\Big\}_{n=1}^{\infty}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+A sequence $\{f(n)\}_{n=1}^{\infty}$ is defined by 
+\begin{align*}
+    f(1) = 1, \hspace{20pt} f(n) = \dfrac{1}{1+f(n-1)}, \hspace{20pt} n \geq 1
+\end{align*}
+Does the sequence have a limit? If so, find it.
+\end{exercise}
+
+\begin{exercise}
+A sequence $\{f(n)\}_{n=1}^{\infty}$ is given by 
+\begin{align*}
+    f(1) = \sqrt{2}, \hspace{20pt} f(n) = \sqrt{2 + f(n-1)}, \hspace{20pt} n \geq 1
+\end{align*}
+By induction, show the sequence is increasing. Also, show the sequence is bounded above by $3$. Does the sequence have a limit (yes/no)? Support your answer with relevant definitions or theorems.
+\end{exercise}
+
+\begin{exercise}
+Prove that if $\lim_{n \longrightarrow \infty} f(n) = 0$ and if $\{g(n)\}_{n=1}^{\infty}$ is bounded, then 
+\begin{align*}
+    \lim_{n \longrightarrow \infty} f(n)g(n) = 0
+\end{align*}
+\end{exercise}
