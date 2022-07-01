@@ -8,5 +8,22 @@ We say $f$ as a function of $x$ has a limit $L$ at $c \in \mathbb{R}$, denoted b
 \end{align*}
 \end{definition}
 
-
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    \draw (0, 0) -- (1, 0)
+    node[right] {\tiny$x$};
+    \draw (0, 0) -- (0, 1)
+    node[above] {\tiny$f(x)$};
+    \node at (0.7, 1.1) {\tiny$f(x)=\sin x \hspace{4pt} x \in [0, 0.5) \cup (0.5, 1]$};
+    \draw[dotted] (0, {sin(0.45 r)}) -- (0.6, {sin(0.45 r)});
+    \draw[dotted] (0, {sin(0.55 r)}) -- (0.6, {sin(0.55 r)});
+    \draw[dotted] (0.47, 0) -- (0.47, {sin(0.6 r)});
+    \draw[dotted] (0.53, 0) -- (0.53, {sin(0.6 r)});
+    \draw[blue] plot[smooth] file {limits_of_functions/sine_0_1_piece_0.table};
+    \draw[blue] plot[smooth] file {limits_of_functions/sine_0_1_piece_1.table};
+    \node[] at (-0.1 , {sin(0.5 r)}) {\tiny$\epsilon$};
+    \node[] at (0.5 , -0.1) {\tiny$\delta$};
+    \draw[blue, fill=white] (0.5,{sin(0.5 r)}) circle (.25mm);
+\end{tikzpicture}
+}
 
