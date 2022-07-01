@@ -1,9 +1,35 @@
 % This file was created with tikzplotlib v0.10.1.
-\starttikzpicture
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% Standard math packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts} 
+
+% Package for the layout
+\usepackage{geometry}
+
+% Packages for the tikzplotlib library
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.7}
+\usepackage{subcaption}
+\usepgfplotslibrary{groupplots}
+
+
+\begin{document}
+
+
+\begin{tikzpicture}
 
 \definecolor{darkgray176}{RGB}{176,176,176}
 
-\startaxis[
+\begin{axis}[
 tick align=outside,
 tick pos=both,
 x grid style={darkgray176},
@@ -10020,11 +10046,15 @@ table {%
 0.999901980396079 0.841418020547602
 1 0.841470984807897
 };
-\stopaxis
+\end{axis}
 
 \draw ({$(current bounding box.south west)!0.5!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.98!(current bounding box.north west)$}) node[
   anchor=north,
   text=black,
   rotate=0.0
 ]{$f(x)=\sin(x)$,   $x \in [0,0.5)\cup(0.5,1]$};
-\stoptikzpicture
+\end{tikzpicture}
+
+
+
+\end{document}

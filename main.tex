@@ -1,15 +1,29 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+
+% Standard math packages
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage{geometry}
 \usepackage{amsfonts} 
 
+% Package for the layout
+\usepackage{geometry}
+
+% Packages for the tikzplotlib library
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+
+% Title Page
 \title{Calculus}
 \author{Jonathan Parker}
 \date{Last Updated on \today}
 
+% Counters
 \renewcommand*\contentsname{Table of Contents}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -30,10 +44,11 @@
 \newenvironment{recall}[1][]{\refstepcounter{recall}\par\medskip
    \noindent \textbf{Recall~\therecall. #1} \rmfamily}{\medskip}
    
+% Removing indentations
 \setlength{\parindent}{0pt}
 
-\begin{document}
 
+\begin{document}
 
 \maketitle
 \tableofcontents
