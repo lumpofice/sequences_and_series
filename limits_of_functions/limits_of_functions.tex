@@ -53,11 +53,21 @@ which is equivalent to the following: For any $x \in$ Dom($f$) satisfying
 }
 \end{example}
 
-\newpage
+\begin{example}
+As a purely, mathematically symbolic example,
+\begin{align*}
+    \lim_{x \longrightarrow 1} \dfrac{x-1}{x^{2} - 1} = \lim_{x \longrightarrow 1} \dfrac{x-1}{(x-1)(x+1)} = \lim_{x \longrightarrow 1} \dfrac{1}{(x+1)} = \dfrac{1}{(1+1)} = \dfrac{1}{2}
+\end{align*}
+\end{example}
+
+\begin{example}
+Find the following:
+\end{example}
+
 \begin{example}
 Here is an example of a function with a one-sided limit. We call this the floor function, and we observe it on an attenuated domain $[0, 2]$, as opposed to its full domain, $\mathbb{R}$. 
 \begin{align*}
-    f(x) = \lfloor x \rfloor \hspace{4pt} x \in [0, 2]
+    f(x) = \lfloor x \rfloor, \hspace{4pt} x \in [0, 2]
 \end{align*}
 With this example, we will show the right-sided limit $L^{+} = 1$.
 \begin{proof}
@@ -102,3 +112,10 @@ Take $\epsilon = \delta$, where $n \in \mathbb{N}$ is arbitrary. We only need th
 \end{tikzpicture}
 }
 \end{example}
+
+\begin{exercise}
+Find the following: 
+\begin{align*}
+    \lim_{x \longrightarrow 1^{-}} f(x) \hspace{20pt} \text{where} \hspace{20pt} f(x) = \lfloor x \rfloor,  \hspace{4pt} x \in [0, 2]
+\end{align*}
+\end{exercise}
