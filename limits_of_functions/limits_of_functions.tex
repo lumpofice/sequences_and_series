@@ -11,7 +11,7 @@ We say $f$ as a function of $x$ has a limit $L$ at $c \in \mathbb{R}$, denoted b
 \begin{example}
 Below is a visual of how this $\epsilon - \delta$ interplay occurs. In general, if $L \in \mathbb{R}$ is the limit of $f$ at $c \in \mathbb{R}$, then for an arbitrarily small, open interval $(L-\epsilon, L+\epsilon)$ with center $L$, there is an open interval $(c-\delta, c+\delta)$ with center $c$ containing members $x \in$ Dom($f$). With this specific example, $c=1/2$. For any $x \in$ Dom($f$) satisfying 
 \begin{align*}
-    \Big\lvert x - \dfrac{1}{2} \Big\rvert < \delta \hspace{20pt} \text{we have} \hspace{4pt} \lvert f(x) - L \rvert = \lvert \sin(x) - L \rvert < \epsilon
+    \Big\lvert x - \dfrac{1}{2} \Big\rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - L \rvert = \lvert \sin(x) - L \rvert < \epsilon \hspace{20pt} \Longleftrightarrow \hspace{20pt} \lim_{x \longrightarrow 1/2} \sin(x) = L
 \end{align*}
 which is equivalent to the following: For any $x \in$ Dom($f$) satisfying
 \begin{align*}
@@ -53,16 +53,101 @@ which is equivalent to the following: For any $x \in$ Dom($f$) satisfying
 }
 \end{example}
 
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow 1/2} \sin(x) \hspace{20pt} x \in [0, 1]
+\end{align*}
+\end{exercise}
+
+\begin{theorem}
+If $f(x) = x, \hspace{4pt} x \in \mathbb{R}$, then $\lim_{x \longrightarrow c} f(x)$ exists for all $c \in \mathbb{R}$. Because $f$ is defined on the entire real line, we have 
+\begin{align*}
+    \lim_{x \longrightarrow c} f(x) = f(c) = c
+\end{align*}
+\label{limit_identity_function}
+\end{theorem}
+
+\begin{theorem}
+Suppose $c \in \mathbb{R}$ and suppose 
+\begin{align*}
+    \lim_{x \longrightarrow a} f(x) \hspace{20pt} \text{and} \hspace{20pt} \lim_{x \longrightarrow a} g(x)
+\end{align*}
+both exist. Then we have
+\begin{align*}
+    &\lim_{x \longrightarrow a} [f(x) + g(x)] = \lim_{x \longrightarrow a} f(x) + \lim_{x \longrightarrow a} g(x)\\[2ex]
+    &\lim_{x \longrightarrow a} [f(x) - g(x)] = \lim_{x \longrightarrow a} f(x) - \lim_{x \longrightarrow a} g(x)\\[2ex]
+    &\lim_{x \longrightarrow a} [c \cdot f(x)] = c \cdot \lim_{x \longrightarrow a} f(x)\\[2ex]
+    &\lim_{x \longrightarrow a} [f(x) \cdot g(x)] = \lim_{x \longrightarrow a} f(x) \cdot \lim_{x \longrightarrow a} g(x)\\[2ex]
+    &\lim_{x \longrightarrow a} \dfrac{f(x)}{g(x)} = \dfrac{\lim_{x \longrightarrow a} f(x)}{\lim_{x \longrightarrow a} g(x)} \hspace{20pt} \text{when} \hspace{4pt} \lim_{x \longrightarrow a} g(x) \neq 0
+\end{align*}
+\label{properties_limit_functions}
+\end{theorem}
+
 \begin{example}
-As a purely, mathematically symbolic example,
+Here is another example, taking the mathematical approach, using Theorems \ref{limit_identity_function}, \ref{properties_limit_functions}, to find the limit,
 \begin{align*}
     \lim_{x \longrightarrow 1} \dfrac{x-1}{x^{2} - 1} = \lim_{x \longrightarrow 1} \dfrac{x-1}{(x-1)(x+1)} = \lim_{x \longrightarrow 1} \dfrac{1}{(x+1)} = \dfrac{1}{(1+1)} = \dfrac{1}{2}
 \end{align*}
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/6.2cm]
+    % title and axes
+    \node at (1.5, 2.1) {\tiny$f(x)=\dfrac{x-1}{x^{2}-1} \hspace{4pt} x \in \Big[\dfrac{1}{2}, 1\Big) \cup (1, 2]$};
+    \draw (-0.5, 0) -- (2, 0)
+        node[right] {\tiny$x$};
+    \draw (0, 0) -- (0, 2)
+        node[above] {\tiny$f(x)$};
+    % ----------------------------------
+    % range boundaries lower
+    \draw[dotted] (0, 0.45) -- (1.05, 0.45);
+    \node[rotate=45] at (-0.20, 0.28) {\tiny$\dfrac{1}{2}-\epsilon \longrightarrow$};
+    \node [rotate=90] at (0, 0.45) {\tiny(};
+    % range boundaries upper
+    \draw[dotted] (0, 0.55) -- (1.05, 0.55);
+    \node[rotate=-45] at (-0.20, 0.72) {\tiny$\dfrac{1}{2}+\epsilon \longrightarrow$};
+    \node [rotate=-90] at (0, 0.55) {\tiny(};
+    % ----------------------------------
+    % domain boundaries lower
+    \draw[dotted] (0.95, 0) -- (0.95, 0.55);
+    \node [rotate=45] at (0.75, -0.2) {\tiny$1-\delta$ $\longrightarrow$};
+    \node [] at (0.95, 0) {\tiny(};
+    % domain boundaries upper
+    \draw[dotted] (1.05, 0) -- (1.05, 0.55);
+    \node [rotate=-45] at (1.25, -0.2) {\tiny$\longleftarrow$ \tiny$1+\delta$};
+    \node [] at (1.05, 0) {\tiny)};
+    % ----------------------------------
+    % graph
+    \draw[blue] plot[smooth] file {limits_of_functions/rational_neg1half_2_piece_0.table};
+    \draw[blue] plot[smooth] file {limits_of_functions/rational_neg1half_2_piece_1.table};
+    \draw[blue, fill=white] (1,0.5) circle (.25mm);
+\end{tikzpicture}
+}
 \end{example}
 
-\begin{example}
+\begin{exercise}
 Find the following:
-\end{example}
+\begin{align*}
+    \lim_{x \longrightarrow 1} g(x) \hspace{20pt} \text{when} \hspace{20pt} g(x) = 
+    \begin{cases}
+    \dfrac{x-1}{x^{2}-1}, \hspace{4pt} &x \neq 1\\[2ex]
+    2, \hspace{4pt} &x = 1
+    \end{cases}
+\end{align*}
+\end{exercise}
+
+\begin{exercise} Find the following:
+\begin{align*}
+    \lim_{h \longrightarrow 0} \dfrac{(3+h)^{2} - 9}{h}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow 2} \dfrac{x^{2}+x-6}{x-2}
+\end{align*}
+\end{exercise}
 
 \begin{example}
 Here is an example of a function with a one-sided limit. We call this the floor function, and we observe it on an attenuated domain $[0, 2]$, as opposed to its full domain, $\mathbb{R}$. 
@@ -88,11 +173,11 @@ Take $\epsilon = \delta$, where $n \in \mathbb{N}$ is arbitrary. We only need th
     % ----------------------------------
     % range boundaries lower
     \draw[dotted] (0, 0.95) -- (1.05, 0.95);
-    \node[] at (-0.2, 0.95) {$L-\epsilon$};
+    \node[] at (-0.2, 0.95) {$1-\epsilon$};
     \node [rotate=90] at (0, 0.95) {(};
     % range boundaries upper
     \draw[dotted] (0, 1.05) -- (1.05, 1.05);
-    \node[] at (-0.2, 1.05) {$L+\epsilon$};
+    \node[] at (-0.2, 1.05) {$1+\epsilon$};
     \node [rotate=-90] at (0, 1.05) {(};
     % ----------------------------------
     % domain boundaries lower
@@ -117,5 +202,30 @@ Take $\epsilon = \delta$, where $n \in \mathbb{N}$ is arbitrary. We only need th
 Find the following: 
 \begin{align*}
     \lim_{x \longrightarrow 1^{-}} f(x) \hspace{20pt} \text{where} \hspace{20pt} f(x) = \lfloor x \rfloor,  \hspace{4pt} x \in [0, 2]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Prove the following:
+\begin{align*}
+    \lim_{x \longrightarrow n} \lfloor x \rfloor \hspace{8pt} \text{DNE for any integer} \hspace{8pt} n 
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Prove the following:
+\begin{align*}
+    \lim_{x \longrightarrow 0} \dfrac{\lvert x \rvert}{x} \hspace{8pt} \text{DNE}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Determine if the following exists.
+\begin{align*}
+    \lim_{x \longrightarrow 4} f(x) \hspace{8pt} \text{given} \hspace{8pt} f(x) = 
+    \begin{cases}
+    \sqrt{x-4}, \hspace{4pt} &x > 4,\\[2ex]
+    8-2x, \hspace{4pt} &x < 4
+    \end{cases}
 \end{align*}
 \end{exercise}
