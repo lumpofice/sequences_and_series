@@ -1,6 +1,6 @@
 # Sequences and Series
 
-## This is a repository for anyone who wishes to student calculus concepts.
+## This is a repository for anyone who wishes to study calculus concepts.
 
 
 ## Following is a breakdown of the different directories and their contents. Relevant python scripts, jupyter files, python-generated tables, etc. can be located within separate directories within each section. Functions within the series and sequences sections are broken down by function calls, in correspondance with the function's mathematical structure, to the python files within this repository.
