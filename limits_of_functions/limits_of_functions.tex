@@ -173,6 +173,13 @@ if for all $\epsilon > 0$, there exists a $\delta > 0$ such that
 when $x \in \text{Dom($f$)} \cap (-\infty, c)$.
 \end{definition}
 
+\begin{theorem}
+We say function $f$ has a limit
+\begin{align*}
+    \lim_{x \longrightarrow c} f(x) = L \hspace{20pt} \text{if and only if} \hspace{20pt} \lim_{x \longrightarrow c^{+}} f(x) = L = \lim_{x \longrightarrow c^{-}} f(x)
+\end{align*}
+\end{theorem}
+
 \begin{example}
 Here is an example of a function with a one-sided limit. We call this the floor function, and we observe it on an attenuated domain $[0, 2]$, as opposed to its full domain, $\mathbb{R}$. 
 \begin{align*}
@@ -253,3 +260,55 @@ Determine if the following exists.
     \end{cases}
 \end{align*}
 \end{exercise}
+
+\begin{definition}
+We say $f$ has an infinite limit 
+\begin{align*}
+    \lim_{x \longrightarrow c} f(x) = \infty
+\end{align*}
+if for all $\alpha \in \mathbb{R}$ we have some $\delta > 0$ such that
+\begin{align*}
+    \text{for all} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{4pt} \text{we have} \hspace{4pt} f(x) > \alpha
+\end{align*}
+\end{definition}
+
+\begin{definition}
+We say $f$ has an infinite limit 
+\begin{align*}
+    \lim_{x \longrightarrow c} f(x) = -\infty
+\end{align*}
+if for all $\alpha \in \mathbb{R}$ we have some $\delta > 0$ such that
+\begin{align*}
+    \text{for all} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{4pt} \text{we have} \hspace{4pt} f(x) < \alpha
+\end{align*}
+\end{definition}
+
+\begin{recall}
+Vertical asymptotes
+\begin{align*}
+    \lim_{x \longrightarrow c^{+}} f(x) = \pm\infty \hspace{20pt} \lim_{x \longrightarrow c^{-}} f(x) = \pm\infty 
+\end{align*}
+are one-sided infinite limits.
+\end{recall}
+
+\begin{definition}
+We say $f$ has a limit $L$ at $\infty$ 
+\begin{align*}
+    \lim_{x \longrightarrow \infty} f(x) = L
+\end{align*}
+if for each $\alpha \in \mathbb{R}$ and all $\epsilon > 0$ 
+\begin{align*}
+    \text{there exists} \hspace{4pt} K \in \mathbb{N} \hspace{4pt} \text{such that} \hspace{4pt} K > \alpha \hspace{4pt} \text{and for any} \hspace{4pt} x > K \hspace{4pt} \text{we have} \hspace{4pt} \lvert f(x) - L \rvert < \epsilon
+\end{align*}
+\end{definition}
+
+\begin{definition}
+We say $f$ has a limit $L$ at $-\infty$ 
+\begin{align*}
+    \lim_{x \longrightarrow -\infty} f(x) = L
+\end{align*}
+if for each $\alpha \in \mathbb{R}$ and all $\epsilon > 0$ 
+\begin{align*}
+    \text{there exists} \hspace{4pt} K \in \mathbb{N} \hspace{4pt} \text{such that} \hspace{4pt} -K < \alpha \hspace{4pt} \text{and for any} \hspace{4pt} x < -K \hspace{4pt} \text{we have} \hspace{4pt} \lvert f(x) - L \rvert < \epsilon
+\end{align*}
+\end{definition}
