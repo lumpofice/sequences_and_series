@@ -356,8 +356,65 @@ Find the following:
 \end{exercise}
 
 \begin{exercise}
+Is it possible to evaluate the following? Why or why not?
+\begin{align*}
+    \lim_{x \longrightarrow 3^{-}} \ln(x^{2} - 9)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
 Find the following:
 \begin{align*}
     \lim_{x \longrightarrow 5^{-}} \dfrac{e^{x}}{(x-5)^{3}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow \pi^{-}} \cot x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow 2\pi^{-}} x\csc x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow 2^{-}} \dfrac{x^{2}-2x}{x^{2}-4x+4}
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{More Theorems and Properties of Limits}
+
+\begin{theorem}
+We have the following equivalence:
+\begin{align*}
+    &\lim_{x \longrightarrow c} g(x) = L \hspace{20pt} \text{if and only if}\\[2ex]
+    &\text{for all} \hspace{4pt} \{f(n)\}_{n=1}^{\infty} \hspace{4pt} \text{contained in Dom ($g$) such that} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n)=c\\[2ex]
+    &\text{we have} \hspace{20pt} \lim_{n \longrightarrow \infty} g(f(n)) = L
+\end{align*}
+\label{sequential_criterion_for_limits}
+\end{theorem}
+
+\begin{exercise}
+Using Theorems \ref{limit_passes_under_square_root}, \ref{sequential_criterion_for_limits}, find the following:
+\begin{align*}
+    &\text{Suppose} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all} \hspace{4pt} x \in \text{Dom($f$)}.\\[2ex]
+    &\text{If} \hspace{4pt} \lim_{x \longrightarrow c} f(x) = L, \hspace{4pt} \text{then}\\[2ex]
+    &\lim_{x \longrightarrow c} \sqrt{f(x)} = \hspace{4pt} ?
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+If $\lim_{x \longrightarrow c} f(x) = L$, prove that 
+\begin{align*}
+    \lim_{x \longrightarrow c} \lvert f(x) \rvert = \lvert L \rvert 
 \end{align*}
 \end{exercise}
