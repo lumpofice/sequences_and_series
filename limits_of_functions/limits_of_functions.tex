@@ -1,4 +1,4 @@
-\section{Limits of Functions}
+\section{Limits of Functions} \label{limits_of_functions_section}
 
 \begin{definition}
 We say $f$ as a function of $x$ has a limit $L$ at $c \in \mathbb{R}$, denoted by
@@ -6,6 +6,7 @@ We say $f$ as a function of $x$ has a limit $L$ at $c \in \mathbb{R}$, denoted b
     &\lim_{x \longrightarrow c} f(x) = L \hspace{4pt} \text{if} \hspace{20pt} &&\text{for all} \hspace{4pt} \epsilon > 0, \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
     &\text{for all} \hspace{4pt} x \in \text{Dom($f$)} \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta &&\text{we have} \hspace{4pt} \lvert f(x) - L \rvert < \epsilon
 \end{align*}
+\label{definition_limit_of_functions}
 \end{definition}
 
 \begin{example}
@@ -17,6 +18,44 @@ which is equivalent to the following: For any $x \in$ Dom($f$) satisfying
 \begin{align*}
     x \in \Big(\dfrac{1}{2} - \delta, \dfrac{1}{2} + \delta\Big) \hspace{20pt} \text{we have} \hspace{4pt} f(x) \in (L - \epsilon, L + \epsilon)
 \end{align*}
+
+This will be true whether or not $c$, which in this case is $1/2$, belongs to the domain of $f$. In the first figure below, we include $c=1/2$ in the domain of $f$.
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    % title and axes
+    \node at (0.7, 1.1) {\tiny$f(x)=\sin x \hspace{4pt} x \in \Big[0, 1 \Big]$};
+    \draw (0, 0) -- (1, 0)
+        node[right] {\tiny$x$};
+    \draw (0, 0) -- (0, 1)
+        node[above] {\tiny$f(x)$};
+    % ----------------------------------
+    % range boundaries lower
+    \draw[dotted] (0, {sin(0.45 r)}) -- (0.6, {sin(0.45 r)});
+    \node[] at (-0.15, {sin(0.45 r)}) {\tiny$L-\epsilon$};
+    \node [rotate=90] at (0, {sin(0.45 r)}) {\tiny(};
+    % range boundaries upper
+    \draw[dotted] (0, {sin(0.55 r)}) -- (0.6, {sin(0.55 r)});
+    \node[] at (-0.15, {sin(0.55 r)}) {\tiny$L+\epsilon$};
+    \node [rotate=-90] at (0, {sin(0.55 r)}) {\tiny(};
+    % ----------------------------------
+    % domain boundaries lower
+    \draw[dotted] (0.47, 0) -- (0.47, {sin(0.6 r)});
+    \node [rotate=45] at (0.35, -0.15) {\tiny$\dfrac{1}{2}-\delta$ $\longrightarrow$};
+    \node [] at (0.47, 0) {\tiny(};
+    % domain boundaries upper
+    \draw[dotted] (0.53, 0) -- (0.53, {sin(0.6 r)});
+    \node [rotate=-45] at (0.65, -0.15) {\tiny$\longleftarrow$ \tiny$\dfrac{1}{2}+\delta$};
+    \node [] at (0.53, 0) {\tiny)};
+    % ----------------------------------
+    % graph
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_0.table};
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_1.table};
+    \draw[blue, fill=red] (0.5,{sin(0.5 r)}) circle (.25mm);
+\end{tikzpicture}
+}
+
+In this second figure, $c=1/2$ will not belong to the domain of $f$. However, $f$ will still have a limit at this point.
 
 \resizebox{30em}{30em}{%
 \begin{tikzpicture}[scale=\textwidth/4.2cm]
@@ -50,7 +89,8 @@ which is equivalent to the following: For any $x \in$ Dom($f$) satisfying
     \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_1.table};
     \draw[blue, fill=white] (0.5,{sin(0.5 r)}) circle (.25mm);
 \end{tikzpicture}
-}
+} 
+\label{limit_of_sin_0_1}
 \end{example}
 
 \begin{exercise}
@@ -411,6 +451,20 @@ Find the following:
 \end{align*}
 \end{exercise}
 
+\begin{exercise}
+Find, if the following exists:
+\begin{align*}
+    \lim_{x \longrightarrow -2} \dfrac{x+2}{x^{3}+8}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find, if the following exists:
+\begin{align*}
+    \lim_{h \longrightarrow 0} \dfrac{(2+h)^{3}-8}{h}
+\end{align*}
+\end{exercise}
+
 \newpage
 \section{More Theorems and Properties of Limits}
 
@@ -455,3 +509,45 @@ If $f(x) \leq g(x) \leq h(x)$ for all $x$ satisfying $\lvert x - c \rvert < \del
     &\text{then} \hspace{20pt} \lim_{x \longrightarrow c} g(x) = L
 \end{align*}
 \end{theorem}
+
+\begin{exercise}
+Find $\lim_{x \longrightarrow 4} f(x)$, given
+\begin{align*}
+    4x-9 \leq f(x) \leq x^{2} - 4x + 7 \hspace{20pt} \text{for} \hspace{4pt} x \geq 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $\lim_{x \longrightarrow 1} g(x)$, given 
+\begin{align*}
+    2x \leq g(x) \leq x^{4} - x^{2} + 2 \hspace{20pt} \text{for all} \hspace{4pt} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find, if the following exists:
+\begin{align*}
+    \lim_{x \longrightarrow 3} (2x + \lvert x-3 \rvert)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find, if the following exists:
+\begin{align*}
+    \lim_{h \longrightarrow 0} \dfrac{\sqrt{1+h} - 1}{h}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Show the following:
+\begin{align*}
+    \lim_{x \longrightarrow 0} x^{4} \cos \dfrac{2}{x} = 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Show the following:
+\begin{align*}
+    \lim_{x \longrightarrow 0^{+}} \sqrt{x} e^{\sin (\pi/x)} = 0
+\end{align*}
+\end{exercise}

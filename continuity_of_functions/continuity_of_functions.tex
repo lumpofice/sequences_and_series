@@ -1,0 +1,99 @@
+\section{Continuity of Functions}
+
+\begin{definition}
+We say a function $f$ is continuous at a point $c \in \text{Dom($f$)}$ if
+\begin{align*}
+    &\text{For any} \hspace{4pt} \epsilon > 0, \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
+    &\text{for any} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
+\end{align*}
+This is equivalent to saying $\lim_{x \longrightarrow c} f(x) = f(c)$ when $f$ is continuous at $c$. For continuity to hold, we need three things to be true:
+\begin{itemize}
+    \item $f$ is defined at $c$. Meaning, $f(c)$ must exist.\\
+    \item $\lim_{x \longrightarrow c} f(x)$ must exist.\\
+    \item $lim_{x \longrightarrow c} f(x) = f(c)$
+\end{itemize}
+In fact, the definition of continuity is almost exactly the same as the definition of a limit, Definition \ref{definition_limit_of_functions} in section \ref{limits_of_functions_section}.
+\end{definition}
+
+\begin{exercise}
+What is the difference between the definition of the limit of a function, Definition \ref{definition_limit_of_functions} in section \ref{limits_of_functions_section}, and the definition of continuity of a function?
+\end{exercise}
+
+\begin{theorem}
+If $f$ is continuous at $c$, then $f$ has a limit at $c$.
+\end{theorem}
+
+\begin{definition}
+We say a function $f$ is continuous on Dom($f$) if for every $c \in \text{Dom($f$)}$ we have 
+\begin{align*}
+    &\text{For any} \hspace{4pt} \epsilon > 0, \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
+    &\text{for any} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
+\end{align*}
+\end{definition}
+
+\begin{example}
+Revisiting our example from earlier, Example \ref{limit_of_sin_0_1} in section \ref{limits_of_functions_section}, we discovered that $f(x) = \sin x$, where $x$ belongs to the interval $[0, 1]$, has a limit at $c=1/2$. Since $f$ is defined at $c=1/2$, we also have
+\begin{align*}
+    \lim_{x \longrightarrow 1/2} f(x) = f\Big(\dfrac{1}{2}\Big) = \sin \Big(\dfrac{1}{2}\Big)
+\end{align*}
+Since the sine function is defined at every point of the real line, 
+\begin{align*}
+    \lim_{x \longrightarrow c} \sin x = \sin c \hspace{20pt} \text{for all} x \in \mathbb{R}
+\end{align*}
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    % title and axes
+    \node at (0.7, 1.1) {\tiny$f(x)=\sin x \hspace{4pt} x \in \Big[0, 1 \Big]$};
+    \draw (0, 0) -- (1, 0)
+        node[right] {\tiny$x$};
+    \draw (0, 0) -- (0, 1)
+        node[above] {\tiny$f(x)$};
+    % ----------------------------------
+    % range boundaries lower
+    \draw[dotted] (0, {sin(0.45 r)}) -- (0.6, {sin(0.45 r)});
+    \node[] at (-0.15, {sin(0.45 r)}) {\tiny$L-\epsilon$};
+    \node [rotate=90] at (0, {sin(0.45 r)}) {\tiny(};
+    % range boundaries upper
+    \draw[dotted] (0, {sin(0.55 r)}) -- (0.6, {sin(0.55 r)});
+    \node[] at (-0.15, {sin(0.55 r)}) {\tiny$L+\epsilon$};
+    \node [rotate=-90] at (0, {sin(0.55 r)}) {\tiny(};
+    % ----------------------------------
+    % domain boundaries lower
+    \draw[dotted] (0.47, 0) -- (0.47, {sin(0.6 r)});
+    \node [rotate=45] at (0.35, -0.15) {\tiny$\dfrac{1}{2}-\delta$ $\longrightarrow$};
+    \node [] at (0.47, 0) {\tiny(};
+    % domain boundaries upper
+    \draw[dotted] (0.53, 0) -- (0.53, {sin(0.6 r)});
+    \node [rotate=-45] at (0.65, -0.15) {\tiny$\longleftarrow$ \tiny$\dfrac{1}{2}+\delta$};
+    \node [] at (0.53, 0) {\tiny)};
+    % ----------------------------------
+    % graph
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_0.table};
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_1.table};
+    \draw[blue, fill=red] (0.5,{sin(0.5 r)}) circle (.25mm);
+\end{tikzpicture}
+}
+\end{example}
+
+\begin{recall}
+From section \ref{limits_of_functions_section}, we stated that 
+\begin{align*}
+    \lim_{x \longrightarrow c} x = c \hspace{4pt} \text{for all} x \in \mathbb{R} \hspace{20pt} \text{when} \hspace{20pt} f(x) = x 
+\end{align*}
+This means that $f(x) = x$ is continuous on the real line. This fact brings us to another useful result:
+\end{recall}
+
+\begin{theorem}
+Every polynomial $p$, defined formally by
+\begin{align*}
+    &p(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \cdots + a_{2}x^{2} + a_{1}x + a_{0}\\[2ex]
+    &\text{where} \hspace{4pt} \{a_{n}, a_{n-1}, \cdots , a_{3}, a_{2}, a_{1}, a_{0}\} \hspace{4pt} \text{are all real numbers and} \hspace{4pt} a_{n} \neq 0
+\end{align*}
+is continuous on the real line. This, in turn, provides us with another useful result:
+\end{theorem}
+
+\begin{theorem}
+Every rational function $R(x)=\dfrac{p(x)}{q(x)}$, where $p$ and $q$ are polynomials, is continuous for all real numbers $c$ such that $q(c) \neq 0$.
+\end{theorem}
+
