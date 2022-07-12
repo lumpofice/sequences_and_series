@@ -8,8 +8,8 @@ We say a function $f$ is continuous at a point $c \in \text{Dom($f$)}$ if
 \end{align*}
 This is equivalent to saying $\lim_{x \longrightarrow c} f(x) = f(c)$ when $f$ is continuous at $c$. For continuity to hold, we need three things to be true:
 \begin{itemize}
-    \item $f$ is defined at $c$. Meaning, $f(c)$ must exist.\\
-    \item $\lim_{x \longrightarrow c} f(x)$ must exist.\\
+    \item $f$ is defined at $c$. Meaning, $f(c)$ must exist.
+    \item $\lim_{x \longrightarrow c} f(x)$ must exist.
     \item $lim_{x \longrightarrow c} f(x) = f(c)$
 \end{itemize}
 In fact, the definition of continuity is almost exactly the same as the definition of a limit, Definition \ref{definition_limit_of_functions} in section \ref{limits_of_functions_section}.
@@ -49,7 +49,7 @@ Since the sine function is defined at every point of the real line,
 \resizebox{30em}{30em}{%
 \begin{tikzpicture}[scale=\textwidth/4.2cm]
     % title and axes
-    \node at (0.7, 1.1) {\tiny$f(x)=\sin x \hspace{4pt} x \in \Big[0, 1 \Big]$};
+    \node at (0.7, 1.1) {\tiny$f(x)=\sin x \hspace{4pt} x \in [0, 1]$};
     \draw (0, 0) -- (1, 0)
         node[right] {\tiny$x$};
     \draw (0, 0) -- (0, 1)
@@ -77,6 +77,57 @@ Since the sine function is defined at every point of the real line,
     \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_0.table};
     \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_1.table};
     \draw[blue, fill=red] (0.5,{sin(0.5 r)}) circle (.25mm);
+\end{tikzpicture}
+}
+\end{example}
+
+\begin{example}
+As part of a piecewise function $f$, we again have the sine function on an attenuated domain, but with the function $f$ defined at at $c=1/2$ for a different function. Namely, the constant $1$. We see the function is discontinuous at $c=1/2$:
+\begin{align*}
+    \lim_{x \longrightarrow 1/2} f(x) \neq f\Big(\dfrac{1}{2}\Big)
+\end{align*}
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    % title and axes
+    \node at (0.7, 1.2) {
+    \tiny$f(x)= 
+    \begin{cases}
+    \sin x, &x \neq 1/2\\
+    1, &x = 1/2
+    \end{cases}$};
+    \draw (0, 0) -- (1, 0)
+        node[right] {\tiny$x$};
+    \draw (0, 0) -- (0, 1)
+        node[above] {\tiny$f(x)$};
+    % ----------------------------------
+    % range boundaries lower
+    \draw[dotted] (0, {sin(0.45 r)}) -- (0.6, {sin(0.45 r)});
+    \node[] at (-0.15, {sin(0.45 r)}) {\tiny$L-\epsilon$};
+    \node [rotate=90] at (0, {sin(0.45 r)}) {\tiny(};
+    % range boundaries upper
+    \draw[dotted] (0, {sin(0.55 r)}) -- (0.6, {sin(0.55 r)});
+    \node[] at (-0.15, {sin(0.55 r)}) {\tiny$L+\epsilon$};
+    \node [rotate=-90] at (0, {sin(0.55 r)}) {\tiny(};
+    % ----------------------------------
+    % domain boundaries lower
+    \draw[dotted] (0.47, 0) -- (0.47, {sin(0.6 r)});
+    \node [rotate=45] at (0.35, -0.15) {\tiny$\dfrac{1}{2}-\delta$ $\longrightarrow$};
+    \node [] at (0.47, 0) {\tiny(};
+    % domain boundaries upper
+    \draw[dotted] (0.53, 0) -- (0.53, {sin(0.6 r)});
+    \node [rotate=-45] at (0.65, -0.15) {\tiny$\longleftarrow$ \tiny$\dfrac{1}{2}+\delta$};
+    \node [] at (0.53, 0) {\tiny)};
+    % ----------------------------------
+    % graph
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_0.table};
+    \draw[blue] plot[smooth] file {limits_of_functions/python_generated_tables/sine_0_1_piece_1.table};
+    \draw[blue, fill=white] (0.5,{sin(0.5 r)}) circle (.25mm);
+    \draw[blue, fill=red] (0.5, 1) circle (.25mm);
+    \node at (-0.1, 1) {\tiny $1$};
+    \node at (-0.1, {sin(1 r)}) {\tiny $\sin (1)$};
+    \draw[dotted] (0, {sin(1 r)}) -- (1, {sin(1 r)});
+    \draw[dotted] (0, 1) -- (0.5, 1);
 \end{tikzpicture}
 }
 \end{example}
@@ -224,5 +275,35 @@ For the ceiling function $f(x) = \lceil x \rceil$, for an arbitrary integer $n$,
 \begin{align*}
     &\lim_{x \longrightarrow n^{-}} f(x)\\
     &\lim_{x \longrightarrow n^{+}} f(x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Is $f$ continuous at $c=-2$? If so, then:
+\begin{align*}
+    \text{For} \hspace{4pt} f(x) = \dfrac{x^{3}+2x^{2}-1}{5-3x} \hspace{20pt} \text{find} \hspace{20pt} \lim_{x \longrightarrow -2} f(x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+State the domain of the function and find where it is continuous:
+\begin{align*}
+    f(x) = \dfrac{\ln x + \arctan x}{x^{2}-1}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+State the domain of the function and find where it is continuous:
+\begin{align*}
+    &f(x) = \dfrac{\sin x}{2 + \cos x}\\
+    \text{Find} \hspace{4pt} &\lim_{x \longrightarrow \pi} f(x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+State the domain of the function and find where it is continuous:
+\begin{align*}
+    &f(x) = \dfrac{\sin x}{2 + 2\cos x}\\
+    \text{Find} \hspace{4pt} &\lim_{x \longrightarrow -\pi} f(x)
 \end{align*}
 \end{exercise}
