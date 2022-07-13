@@ -386,5 +386,50 @@ Regarding Theorems \ref{sequential_criterion_for_limits}, \ref{sequential_criter
 \end{align*}
 \end{exercise}
 
+\begin{exercise}
+At which points is the following function $f$ discontinuous? Also, find the following:
+\begin{flalign*}
+    &\text{a)} \hspace{4pt} \lim_{x \longrightarrow -1} f(x) &&\\[2ex]
+    &\text{b)} \hspace{4pt} \lim_{x \longrightarrow 0} f(x) &&\\[2ex]
+    &\text{c)} \hspace{4pt} \lim_{x \longrightarrow 1} f(x) &&\\[2ex]
+    &\text{d)} \hspace{4pt} \lim_{x \longrightarrow 2} f(x) &&
+\end{flalign*}
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    % axes
+    \draw (-1, 0) -- (2, 0)
+        node[right] {$x$};
+    \draw (0, -1) -- (0, 2.1)
+        node[above] {$f(x)$};
+    % graph
+    \draw[blue, very thick] plot[smooth] file {continuity_of_functions/python_generated_tables/arctan_neg1_1_piece_0.table};
+    \draw[blue, very thick] plot[smooth] file {continuity_of_functions/python_generated_tables/arctan_neg1_1_piece_1.table};
+    \draw[blue, very thick] plot[smooth] file {continuity_of_functions/python_generated_tables/id_1_2.table};
+    \draw[blue, fill=white] (0,0) circle (.25mm);
+    \draw[blue, fill=red] (-1,-pi/4) circle (.25mm);
+    \draw[blue, fill=white] (1, pi/4) circle (.25mm);
+    \draw[blue, fill=red] (1,1) circle (.25mm);
+    \draw[blue, fill=white] (2,2) circle (.25mm);
+    \draw[blue, fill=red] (0, {sin(pi/6 r)}) circle (.25mm);
+    \draw[blue, fill=red] (2, {sin(pi/6 r)}) circle (.25mm);
+    \node at (-1, -0.1) {-1};
+    \node at (0.05, -0.1) {0};
+    \node at (1, -0.1) {1};
+    \node at (2, -0.1) {2};
+    \draw[dotted] (0, -pi/4) -- (-1, -pi/4);
+    \node at (0.2, -pi/4) {$-\pi/4$};
+    \draw[dotted] (0, {sin(pi/6 r)}) -- (2, {sin(pi/6 r)});
+    \node at (-0.3, {sin(pi/6 r)}) {$\sin \Big(\dfrac{\pi}{6}\Big)$};
+    \draw[dotted] (0, pi/4) -- (1, pi/4);
+    \node at (-0.2, pi/4) {$\pi/4$};
+    \draw[dotted] (0, 1) -- (1, 1);
+    \node at (-0.2, 1) {1};
+    \draw[dotted] (0, 2) -- (2, 2);
+    \node at (-0.2, 2) {2};
+\end{tikzpicture}
+}
+\end{exercise}
+
 \newpage
 \section{Intermediate Value Theorem}
