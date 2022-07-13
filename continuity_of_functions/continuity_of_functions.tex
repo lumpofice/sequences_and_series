@@ -28,6 +28,20 @@ If $f$ is continuous at $c$, then $f$ has a limit at $c$.
 TRUE or FALSE: If $f$ is not continuous at $c$ (we say $f$ is discontinuous when $f$ is not continuous) then $f$ does not have a limit at $c$.
 \end{exercise}
 
+\begin{exercise}
+Prove the following theorem:
+\begin{theorem}
+If $f$ and $g$ are functions continuous at $a$, then the following functions are also continuous:
+\begin{align*}
+    &f + g\\[2ex]
+    &f - g\\[2ex]
+    &cf \hspace{20pt} \text{where} \hspace{20pt} c \in \mathbb{R}\\[2ex]
+    &fg\\[2ex]
+    &\dfrac{f}{g} \hspace{20pt} \text{where} \hspace{20pt} g(a) \neq 0
+\end{align*}
+\end{theorem}
+\end{exercise}
+
 \begin{definition}
 We say a function $f$ is continuous on Dom($f$) if for every $c \in \text{Dom($f$)}$ we have 
 \begin{align*}
@@ -307,3 +321,70 @@ State the domain of the function and find where it is continuous:
     \text{Find} \hspace{4pt} &\lim_{x \longrightarrow -\pi} f(x)
 \end{align*}
 \end{exercise}
+
+\begin{theorem}
+If $f$ is continuous at $b$ and $\lim_{x \longrightarrow a} g(x) = b$, then
+\begin{align*}
+    \lim_{x \longrightarrow a} f(g(x)) = f(b) \hspace{20pt} \text{which means, equivalently} \hspace{20pt} \lim_{x \longrightarrow a} f(g(x)) = f\Big(\lim_{x \longrightarrow a} g(x) \Big)
+\end{align*}
+\label{limit_passes_function}
+\end{theorem}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow 1} \arcsin \Big( \dfrac{1 - \sqrt{x}}{1 - x} \Big)
+\end{align*}
+\end{exercise}
+
+\begin{theorem}
+If $g$ is continuous at $a$ and if $f$ is continuous at $g(a)$, then
+\begin{align*}
+    f(g(x)) \hspace{20pt} \text{is continuous at} \hspace{20pt} a
+\end{align*}
+\label{continuity_passes_function}
+\end{theorem}
+
+\begin{exercise}
+Regarding Theorems \ref{limit_passes_function}, \ref{continuity_passes_function}, find the following:
+\begin{align*}
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{limit_passes_function}, $b$ necessarily belongs to Dom($f$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{limit_passes_function}, $a$ necessarily belongs to Dom($g$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{limit_passes_function}, $\lim_{x \longrightarrow a} g(x)$ necessarily belongs to Dom($f$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{continuity_passes_function}, $a$ necessarily belongs to Dom($g$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{continuity_passes_function}, $g(a)$ necessarily belongs to Dom($f$)}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+State the domain of the function and state where it is continuous:
+\begin{align*}
+    f(x) = \ln (1 + \cos x)
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{More Theorems and Properties of Continuity}
+
+\begin{theorem}
+We have the following equivalence:
+\begin{align*}
+    &\lim_{x \longrightarrow c} g(x) = g(c) \hspace{20pt} \text{if and only if}\\[2ex]
+    &\text{for all} \hspace{4pt} \{f(n)\}_{n=1}^{\infty} \hspace{4pt} \text{contained in Dom ($g$) such that} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n)=c\\[2ex]
+    &\text{we have} \hspace{20pt} \lim_{n \longrightarrow \infty} g(f(n)) = g(c)
+\end{align*}
+\label{sequential_criterion_for_continuity}
+\end{theorem}
+
+\begin{exercise}
+Regarding Theorems \ref{sequential_criterion_for_limits}, \ref{sequential_criterion_for_continuity}, find the following:
+\begin{align*}
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{sequential_criterion_for_limits}, $c$ necessarily belongs to Dom($g$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{sequential_criterion_for_limits}, $\lim_{n \longrightarrow \infty} f(n)$ necessarily belongs to Dom($g$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{sequential_criterion_for_continuity}, $c$ necessarily belongs to Dom($g$)}\\[2ex]
+    &\text{TRUE or FALSE:} \hspace{20pt} \text{For Theorem \ref{sequential_criterion_for_continuity}, $\lim_{n \longrightarrow \infty} f(n)$ necessarily belongs to Dom($g$)}
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{Intermediate Value Theorem}
