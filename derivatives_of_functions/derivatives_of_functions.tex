@@ -24,16 +24,25 @@ which can be written equivalently as
 \resizebox{30em}{30em}{%
 \begin{tikzpicture}[scale=\textwidth/4.2cm]
     % title and axes
-    \node at (0.6, 1.2) {$f(x)=\sin x \hspace{4pt} x \in \Big[0, \dfrac{\pi}{2}\Big]$};
-    \draw (0, 0) -- (pi/2, 0)
+    \node at (0.6, 1.2) {$f(x)=\sin x \hspace{4pt} x \in [0, \pi]$};
+    \draw (0, 0) -- (pi, 0)
         node[right] {$x$};
-    \draw (0, 0) -- (0, 1.3)
+    \draw (0, 0) -- (0, 2.4)
         node[above] {$f(x)$};
     % graph
-    \draw[red, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/linear_0_pi_by2.table};
-    \draw[blue, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_by2.table};
+    \draw[red, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/tangent_0_pi.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/secant1_0_pi.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/secant2_0_pi.table};
+    \draw[blue, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi.table};
     \draw[blue, fill=red] (pi/4, {sqrt(2)/2}) circle (.25mm);
+    \draw[black, fill=black] (2*pi/3, {sqrt(3)/2}) circle (.25mm);
+    \draw[black, fill=black] (pi/2, 1) circle (.25mm);
     \node at (pi/4, -0.1) {$\pi/4$};
+    \node at (2*pi/3, -0.1) {$2\pi/3$};
+    \node at (pi/2, -0.1) {$\pi/2$};
+    \draw[dotted] (pi/4, 0) -- (pi/4, {sqrt(2)/2});
+    \draw[dotted] (pi/2, 0) -- (pi/2, 1);
+    \draw[dotted] (2*pi/3, 0) -- (2*pi/3, {sqrt(3)/2});
 \end{tikzpicture}
 }
 \end{example}
