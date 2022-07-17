@@ -17,6 +17,7 @@ which can be written equivalently as
 \end{definition}
 
 \begin{example}
+The derivative is strongly associated with the concept of a slope, whether it be the slope of a $1$D line in $2$D space or the slope of a $2$D plane in $3$D space or the slope of a $(n-1)$D plane in $n$D space. Below, we show a subset of the secant lines (in black) passing through the point $(\pi/4, \sqrt{2}/2)$ that can be formed as we push towards the derivative (tangent line in red) passing through the point $(\pi/4, \sqrt{2}/2)$.
 \begin{align*}
     \lim_{h \longrightarrow 0} \dfrac{\sin\Big(\dfrac{\pi}{4} + h\Big) - \sin\Big(\dfrac{\pi}{4}\Big)}{h} 
 \end{align*}
@@ -30,10 +31,14 @@ which can be written equivalently as
     \draw (0, 0) -- (0, 2.4)
         node[above] {$f(x)$};
     % graph
-    \draw[red, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/tangent_0_pi.table};
-    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/secant1_0_pi.table};
-    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/secant2_0_pi.table};
+    \draw[red, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_tangent.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_5.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_6.table};
     \draw[blue, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_1.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_2.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_3.table};
+    \draw[black] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_line_4.table};
     \draw[blue, fill=red] (pi/4, {sqrt(2)/2}) circle (.25mm);
     \draw[black, fill=black] (2*pi/3, {sqrt(3)/2}) circle (.25mm);
     \draw[black, fill=black] (pi/2, 1) circle (.25mm);
