@@ -367,7 +367,7 @@ are one-sided infinite limits.
 \end{recall}
 
 \begin{definition}
-We say $f$ has a limit $L$ at $\infty$ 
+We say $f$ has a limit $L \in \mathbb{R} \cup \{-\infty, \infty\}$ at $\infty$ 
 \begin{align*}
     \lim_{x \longrightarrow \infty} f(x) = L
 \end{align*}
@@ -378,7 +378,7 @@ if for each $\alpha \in \mathbb{R}$ and all $\epsilon > 0$
 \end{definition}
 
 \begin{definition}
-We say $f$ has a limit $L$ at $-\infty$ 
+We say $f$ has a limit $L \in \mathbb{R} \cup \{-\infty, \infty\}$ at $-\infty$ 
 \begin{align*}
     \lim_{x \longrightarrow -\infty} f(x) = L
 \end{align*}
@@ -387,6 +387,48 @@ if for each $\alpha \in \mathbb{R}$ and all $\epsilon > 0$
     \text{there exists} \hspace{4pt} K \in \mathbb{N} \hspace{4pt} \text{such that} \hspace{4pt} -K < \alpha \hspace{4pt} \text{and for any} \hspace{4pt} x < -K \hspace{4pt} \text{we have} \hspace{4pt} \lvert f(x) - L \rvert < \epsilon
 \end{align*}
 \end{definition}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow -\infty} \arctan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow \infty} \arctan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow (\pi/2)^{+}} e^{\tan x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow \infty} (e^{-2x}\cos x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow \infty} \dfrac{x^{3} + 5x}{2x^{3} - x^{2} + 4}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+    \lim_{x \longrightarrow \infty} \dfrac{x+2}{\sqrt{9x^{2}+1}}
+\end{align*}
+\end{exercise}
 
 \begin{exercise}
 Find the following:
@@ -462,6 +504,13 @@ Find, if the following exists:
 Find, if the following exists:
 \begin{align*}
     \lim_{h \longrightarrow 0} \dfrac{(2+h)^{3}-8}{h}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $\lim_{x \longrightarrow \infty} f(x)$, given that for all $x>1$
+\begin{align*}
+    \dfrac{10e^{x} - 21}{2e^{x}} < f(x) < \dfrac{5\sqrt{x}}{\sqrt{x-1}}
 \end{align*}
 \end{exercise}
 

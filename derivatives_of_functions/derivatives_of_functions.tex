@@ -17,9 +17,12 @@ which can be written equivalently as
 \end{definition}
 
 \begin{example}
-The derivative is strongly associated with the concept of a slope, whether it be the slope of a $1$D line in $2$D space or the slope of a $2$D plane in $3$D space or the slope of a $(n-1)$D plane in $n$D space. Below, we show a subset of the secant lines (in black) passing through the point $(\pi/4, \sqrt{2}/2)$ that can be formed as we push towards the derivative (tangent line in red) passing through the point $(\pi/4, \sqrt{2}/2)$.
+The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of as the slope of the linear function $L(x)$ tangent to function $f$ at point $c$. The slope of a $1$-D line in $2$-D space is what we will deal with most in this course, but the slope of a $2$-D plane in $3$-D space or the slope of a $(n-1)$-D plane in $n$-D space can also be a derivative of some function in these respective spaces. Below, we show a subset of the secant lines (in black) passing through the point $(\pi/4, \sqrt{2}/2)$, all of which can be formed as we push towards the derivative (tangent line in red) passing through the point $(\pi/4, \sqrt{2}/2)$.
 \begin{align*}
-    \lim_{h \longrightarrow 0} \dfrac{\sin\Big(\dfrac{\pi}{4} + h\Big) - \sin\Big(\dfrac{\pi}{4}\Big)}{h} 
+    &\text{When} \hspace{4pt} f(x) = \sin x\\[2ex]
+    &\text{and when} \hspace{4pt} f^{'}\Big(\dfrac{\pi}{4}\Big) = \lim_{h \longrightarrow 0} \dfrac{\sin\Big(\dfrac{\pi}{4} + h\Big) - \sin\Big(\dfrac{\pi}{4}\Big)}{h}\\[2ex]
+    &\text{then we have the tangent line} \hspace{4pt} L(x) = (f^{'}(x))x + b \hspace{20pt}\\[2ex]
+    &\text{where $b$ is the intercept of the linear function $L$}
 \end{align*}
 
 \resizebox{30em}{30em}{%
