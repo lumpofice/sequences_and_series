@@ -10,7 +10,7 @@ We denote $L$ as
 \begin{align*}
 f^{'}(c) = \lim_{x \longrightarrow c} \dfrac{f(x)-f(c)}{x-c}
 \end{align*}
-which can be written equivalently as
+where $f^{'}$ is read '$f$ prime', which we refer to as prime notation. The above can be written equivalently as
 \begin{align*}
     f^{'}(c) = \lim_{h \longrightarrow 0} \dfrac{f(c+h)-f(c)}{h}
 \end{align*}
@@ -54,3 +54,87 @@ The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of a
 \end{tikzpicture}
 }
 \end{example}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = x^{3} \hspace{20pt} x \in \mathbb{R}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = \dfrac{1}{x} \hspace{20pt} x \in \mathbb{R}, \hspace{4pt} x \neq 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = \sqrt{x} \hspace{20pt} x > 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = \dfrac{1}{\sqrt{x}} \hspace{20pt} x > 0
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = x^{3} - x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = \dfrac{1-x}{2+x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to find the derivative $f^{'}(x)$ for
+\begin{align*}
+    f(x) = \lvert x \rvert
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{Derivatives of Functions and Properties of Derivatives}
+
+\begin{note}
+In addition to the prime notation, we will use $\dfrac{d}{dx}$ to represent the derivative operator. The derivative operator acts on a function $f$ to generate the derivative $f^{'}$ like so
+\begin{align*}
+    \dfrac{d}{dx}f(x) = f^{'}(x)
+\end{align*}
+\end{note}
+
+\begin{theorem}
+Derivative of constant $a$:
+\begin{align*}
+    \dfrac{d}{dx}a = 0 \hspace{20pt} a \in \mathbb{R}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}
+Derivative of $x^{a}$:
+\begin{align*}
+    \dfrac{d}{dx}x^{a} = ax^{a-1} \hspace{20pt} a \in \mathbb{R}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}
+Let $f$ and $g$ be functions differentiable at $c \in$ Dom($f$), Dom($g$). Then
+\begin{align*}
+    \text{For $a \in \mathbb{R}$} \hspace{20pt} &(af)^{'}(c) = af^{'}(c)\\[2ex]
+    &(f+g)^{'}(c) = f^{'}(c) + g^{'}(c)\\[2ex]
+    &(f-g)^{'}(c) = f^{'}(c) - g^{'}(c)\\[2ex]
+    &(fg)^{'}(c) = f^{'}(c)g(c) + f(c)g^{'}(c)\\[2ex]
+    \text{Assuming $g(c) \neq 0$} \hspace{20pt} &\Big(\dfrac{f}{g}\Big)^{'}(c) = \dfrac{f^{'}(c)g(c) - f(c)g^{'}(c)}{(g(c))^{2}}
+\end{align*}
+\end{theorem}
