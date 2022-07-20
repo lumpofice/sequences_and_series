@@ -1,8 +1,11 @@
 import numpy as np
 
+"""We will construct several functions, one of which will be the primative,
+the rest of which will be secant and tangent lines to the primative at
+a specific point."""
 
 #-------------------------------------------------------------------------------
-# The sine function
+# The sine function g(x) = sin(x) from [0, pi]
 # 1) function
 g = lambda v: np.sin(v)
 # 2) domain
@@ -17,7 +20,10 @@ with open('sin_0_pi.table', 'w') as file:
 
 
 #-------------------------------------------------------------------------------
-# A set of secant lines
+# A set of secant lines at the point (pi/4, sqrt(2)/2).
+
+
+# The following will generate four secant lines.
 for n in range(1, 5):
     # 1) slope
     m = (np.sin((np.pi/4) + (1/n)) - np.sin(np.pi/4))/(1/n)
@@ -37,7 +43,7 @@ for n in range(1, 5):
         
 
 #-------------------------------------------------------------------------------
-# Another set of secant lines
+# Another set of secant lines at the point (pi/4, sqrt(2)/2).
 
 
 # First line
@@ -77,7 +83,7 @@ with open('sin_0_pi_line_6.table', 'w') as file:
             
 
 #-------------------------------------------------------------------------------
-# The tangent line
+# The tangent line at the point (pi/4, sqrt(2)/2).
 # 1) slope
 m = np.sin(np.pi/4)
 # 2) intercept
