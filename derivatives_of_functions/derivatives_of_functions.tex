@@ -1,7 +1,7 @@
-\section{The Derivative}
+\section{The Derivative}\label{the_derivative}
 
 \begin{definition}
-We say a function $f$ has derivative $L$ at $c \in$ Dom($f$) if 
+We say a function $f$ has derivative $L \in \mathbb{R}$ at $c \in$ Dom($f$) if 
 \begin{align*}
     &\text{For all} \hspace{4pt} \epsilon > 0 \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
     &\text{all} \hspace{4pt} x \in \text{Dom($f$)} \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x-c \rvert < \delta \hspace{20pt} \Longrightarrow \hspace{20pt} \Big\lvert \dfrac{f(x)-f(c)}{x-c}-L \Big\rvert < \epsilon
@@ -17,12 +17,12 @@ where $f^{'}$ is read '$f$ prime', which we refer to as prime notation. The abov
 \end{definition}
 
 \begin{example}
-The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of as the slope of the linear function $L(x)$ tangent to function $f$ at point $c$. The slope of a $1$-D line in $2$-D space is what we will deal with most in this course, but the slope of a $2$-D plane in $3$-D space or the slope of a $(n-1)$-D plane in $n$-D space can also be a derivative of some function in these respective spaces. Below, we show a subset of the secant lines (in black) passing through the point $(\pi/4, \sqrt{2}/2)$, all of which can be formed as we push towards the derivative (tangent line in red) passing through the point $(\pi/4, \sqrt{2}/2)$.
+The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of as the slope of the linear function $T(x)$ tangent to function $f$ at point $c$. The slope of a $1$-D line in $2$-D space is what we will deal with most in this course, but the slope of a $2$-D plane in $3$-D space or the slope of a $(n-1)$-D plane in $n$-D space can also be a derivative of some function in these respective spaces. Below, we show a subset of the secant lines (in black) passing through the point $(\pi/4, \sqrt{2}/2)$, all of which can be formed as we push towards the derivative (tangent line in red) passing through the point $(\pi/4, \sqrt{2}/2)$.
 \begin{align*}
     &\text{When} \hspace{4pt} f(x) = \sin x\\[2ex]
     &\text{and when} \hspace{4pt} f^{'}\Big(\dfrac{\pi}{4}\Big) = \lim_{h \longrightarrow 0} \dfrac{\sin\Big(\dfrac{\pi}{4} + h\Big) - \sin\Big(\dfrac{\pi}{4}\Big)}{h}\\[2ex]
-    &\text{then we have the tangent line} \hspace{4pt} L(x) = (f^{'}(x))x + b \hspace{20pt}\\[2ex]
-    &\text{where $b$ is the intercept of the linear function $L$}
+    &\text{then we have the tangent line} \hspace{4pt} T(x) = (f^{'}(x))x + b \hspace{20pt}\\[2ex]
+    &\text{where $b$ is the intercept of the linear function $T$}
 \end{align*}
 
 \resizebox{30em}{30em}{%
@@ -53,6 +53,7 @@ The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of a
     \draw[dotted] (2*pi/3, 0) -- (2*pi/3, {sqrt(3)/2});
 \end{tikzpicture}
 }
+\label{sin_0_pi_tangent}
 \end{example}
 
 \begin{exercise}
@@ -115,6 +116,22 @@ In addition to the prime notation, we will use $\dfrac{d}{dx}$ to represent the 
 \end{note}
 
 \begin{theorem}
+If $f$ has a derivative at $c \in$ Dom($f$), then $f$ is continuous at $c$.
+\end{theorem}
+
+\begin{exercise}
+TRUE or FALSE: If $f$ does not have a derivative at $c \in$ Dom($f$) (we say $f$ is not differentiable at $c$ when $f$ does not have a derivative at $c$) then $f$ is discontinuous at $c$.
+\end{exercise}
+
+\begin{exercise}
+TRUE or FALSE: If $f$ is not continuous at $c \in$ Dom($f$)  then $f$ is not differentiable at $c$.
+\end{exercise}
+
+\begin{exercise}
+TRUE or FALSE: If $f$ does not have a derivative at $c$ then $f$ does not have a limit at $c$.
+\end{exercise}
+
+\begin{theorem}
 Derivative of constant $a$:
 \begin{align*}
     \dfrac{d}{dx}a = 0 \hspace{20pt} a \in \mathbb{R}
@@ -157,3 +174,68 @@ Derivatives of six of the trigonometric functions:
     &\dfrac{d}{dx}\cot x = -\csc^{2} x
 \end{align*}
 \end{theorem}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = 2 - \dfrac{2}{3}x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative 
+\begin{align*}
+    f(x) = \dfrac{1}{2}x^{6} - 3x^{4} + x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = (x-2)(2x+3)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = \dfrac{x^{2} + 4x + 3}{\sqrt{x}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = \dfrac{A}{x^{10}} + Be^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = e^{x+1} + 1
+\end{align*}
+\end{exercise}
+
+\begin{example}
+We revisit the Example \ref{sin_0_pi_tangent} from the previous Section \ref{the_derivative}.
+\begin{align*}
+    &\text{When} \hspace{4pt} f(x) = \sin x\\[2ex]
+\end{align*}
+
+\resizebox{30em}{30em}{%
+\begin{tikzpicture}[scale=\textwidth/4.2cm]
+    % title and axes
+    \node at (0.6, 1.2) {$f(x)=\sin x \hspace{4pt} x \in [0, \pi]$};
+    \draw (0, 0) -- (pi, 0)
+        node[right] {$x$};
+    \draw (0, 0) -- (0, 2.4)
+        node[above] {$f(x)$};
+    % graph
+    \draw[red, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi_tangent.table};
+    \draw[blue, very thick] plot[smooth] file {derivatives_of_functions/python_generated_tables/sin_0_pi.table};
+    \draw[blue, fill=red] (pi/4, {sqrt(2)/2}) circle (.25mm);
+    \node at (pi/4, -0.1) {$\pi/4$};
+\end{tikzpicture}
+}
+\end{example}
