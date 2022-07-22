@@ -28,7 +28,7 @@ The derivative of a function $f$ at a point $c \in$ Dom($f$) can be thought of a
 \resizebox{30em}{30em}{%
 \begin{tikzpicture}[scale=\textwidth/4.2cm]
     % title and axes
-    \node at (0.6, 2.2) {$f(x)=\sin x \hspace{4pt} x \in [0, \pi]$};
+    \node at (0.6, 2.2) {$f(x)=\sin x, \hspace{4pt} x \in [0, \pi]$};
     \draw (0, 0) -- (pi, 0)
         node[right] {$x$};
     \draw (0, 0) -- (0, 2.4)
@@ -218,7 +218,7 @@ Find the derivative
 \end{exercise}
 
 \begin{example}
-We revisit the Example \ref{sin_0_pi_tangent} from the previous Section \ref{the_derivative}. We have just learned that
+We revisit the Example \ref{sin_0_pi_tangent} from the previous Section \ref{the_derivative}. We have learned that
 \begin{align*}
     \dfrac{d}{dx} \sin x = \cos x
 \end{align*}
@@ -226,17 +226,17 @@ and we know that at $x = \dfrac{\pi}{4}$ we have
 \begin{align*}
     \cos \Big(\dfrac{\pi}{4} \Big) = \dfrac{\sqrt{2}}{2}
 \end{align*}
-This is the slope $m$ of our equation for $T$. All that remains now is to find the intercept. 
+This is the slope $f^{'}\Big(\dfrac{\pi}{4}\Big)$ of our equation for $T$. All that remains now is to find the intercept. 
 \begin{align*}
-    &\text{With} \hspace{4pt} T(x) = (f^{'}(x))x + b = \Big(\dfrac{\sqrt{2}}{2}\Big)x + b\\[2ex]
+    &\text{With} \hspace{4pt} T(x) = \Big(f^{'}\Big(\dfrac{\pi}{4}\Big)\Big)x + b = \Big(\dfrac{\sqrt{2}}{2}\Big)x + b\\[2ex]
     &\text{we can use the point} \hspace{4pt} \Big(\dfrac{\pi}{4}, \dfrac{\sqrt{2}}{2}\Big) \hspace{4pt} \text{to get}\\[2ex] &\dfrac{\sqrt{2}}{2} = T\Big(\dfrac{\pi}{4}\Big) = \Big(\dfrac{\sqrt{2}}{2}\Big)\Big(\dfrac{\pi}{4}\Big) + b \hspace{20pt} \Longleftrightarrow \hspace{20pt} b = \dfrac{\sqrt{2}}{2} - \Big(\dfrac{\sqrt{2}}{2}\Big) \Big(\dfrac{\pi}{4}\Big)
 \end{align*}
 
 \resizebox{30em}{30em}{%
 \begin{tikzpicture}[scale=\textwidth/4.2cm]
     % title and axes
-    \node at (2.1, 0.4) {$f(x)=\sin x \hspace{4pt} x \in [0, \pi] \longrightarrow$};
-    \node at (1.8, 2.2) {$T(x)=\Big(\dfrac{\sqrt{2}}{2} \Big) x + \dfrac{\sqrt{2}}{2} \Big(1 - \dfrac{\pi}{4}\Big) \hspace{4pt} x \in [0, \pi] \longrightarrow$};
+    \node at (2.1, 0.4) {$f(x)=\sin x, \hspace{4pt} x \in [0, \pi] \longrightarrow$};
+    \node at (1.8, 2.2) {$T(x)=\Big(\dfrac{\sqrt{2}}{2} \Big) x + \dfrac{\sqrt{2}}{2} \Big(1 - \dfrac{\pi}{4}\Big), \hspace{4pt} x \in [0, \pi] \longrightarrow$};
     \draw (0, 0) -- (pi, 0)
         node[right] {$x$};
     \draw (0, 0) -- (0, 2.4)
@@ -250,3 +250,49 @@ This is the slope $m$ of our equation for $T$. All that remains now is to find t
 \end{tikzpicture}
 }
 \end{example}
+
+\begin{exercise}
+Find an equation of the tangent line to the function $f$ at the point $(1,1)$
+\begin{align*}
+    f(x) = \sqrt[\leftroot{2}\uproot{2}]{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the tangent line to the function $f$ at the point $(1,2)$
+\begin{align*}
+    f(x) = x^{4} + 2x^{2} - x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the point(s) along $f(x) = 2x^{3} + 3x^{2} -12x + 1$ where the tangent line has a slope of zero. 
+\end{exercise}
+
+\begin{exercise}
+Show that the function $f(x) = 6x^{3} + 5x - 3$ has no tangent line with a slope of $4$.
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to the function $f(x) = x\sqrt{x}$ that is parallel to the line $f(x) = 1 + 3x$.
+\end{exercise}
+
+\begin{exercise}
+Is $f$ differentiable at $x=1$? Sketch $f$ and $f^{'}$.
+\begin{align*}
+    f(x) = \begin{cases}
+    2-x, &x\leq 1\\[2ex]
+    x^{2} - 2x + 2, &x> 1
+    \end{cases}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the values of $m$ and $b$ for which $f$ is differentiable everywhere.
+\begin{align*}
+    f(x) = \begin{cases}
+    x^{2}, &x\leq 2\\[2ex]
+    mx + b, &x>2
+    \end{cases}
+\end{align*}
+\end{exercise}
