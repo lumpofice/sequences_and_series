@@ -94,7 +94,7 @@ In this second figure, $c=1/2$ will not belong to the domain of $f$. However, $f
 \end{example}
 
 \begin{exercise}
-Find the following:
+Using the visuals above, find the following:
 \begin{align*}
     \lim_{x \longrightarrow 1/2} \sin(x) \hspace{20pt} x \in [0, 1]
 \end{align*}
@@ -180,13 +180,6 @@ Find the following:
 Find the following:
 \begin{align*}
 \lim_{x \longrightarrow -2} (3x^{4}+2x^{2}-x+1)
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Find the following:
-\begin{align*}
-\lim_{u \longrightarrow -2} \sqrt{u^4 + 3u + 6}
 \end{align*}
 \end{exercise}
 
@@ -312,11 +305,64 @@ Prove the following:
 \end{exercise}
 
 \begin{exercise}
+Determine if the following exists:
+\begin{align*}
+\lim_{x \longrightarrow -1} \dfrac{x^{2}-2x}{x^{2}-x-2}
+\end{align*}
+\end{exercise}
+
+
+
+\newpage
+\section{More Theorems and Properties of Limits}
+
+\begin{theorem}
+We have the following equivalence:
+\begin{align*}
+    &\lim_{x \longrightarrow c} g(x) = L \hspace{20pt} \text{if and only if}\\[2ex]
+    &\text{for all} \hspace{4pt} \{f(n)\}_{n=1}^{\infty} \hspace{4pt} \text{contained in Dom ($g$) such that} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n)=c\\[2ex]
+    &\text{we have} \hspace{20pt} \lim_{n \longrightarrow \infty} g(f(n)) = L
+\end{align*}
+\label{sequential_criterion_for_limits}
+\end{theorem}
+
+\begin{exercise}
+Using Theorems \ref{limit_passes_under_square_root}, \ref{sequential_criterion_for_limits}, find the following:
+\begin{align*}
+    &\text{Suppose} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all} \hspace{4pt} x \in \text{Dom($f$)}.\\[2ex]
+    &\text{If} \hspace{4pt} \lim_{x \longrightarrow c} f(x) = L, \hspace{4pt} \text{then}\\[2ex]
+    &\lim_{x \longrightarrow c} \sqrt{f(x)} = \hspace{4pt} ?
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the following:
+\begin{align*}
+\lim_{u \longrightarrow -2} \sqrt{u^4 + 3u + 6}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+If $\lim_{x \longrightarrow c} f(x) = L$, prove that 
+\begin{align*}
+    \lim_{x \longrightarrow c} \lvert f(x) \rvert = \lvert L \rvert 
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
 Prove the following:
 \begin{align*}
     \lim_{x \longrightarrow 0} \dfrac{\lvert x \rvert}{x} \hspace{8pt} \text{DNE}
 \end{align*}
 \end{exercise}
+
+\begin{theorem}
+For $n \in \mathbb{N}$, we have
+\begin{align*}
+    &\lim_{x \longrightarrow c} \sqrt[\leftroot{2}\uproot{2}n]{f(x)} = \sqrt[\leftroot{2}\uproot{2}n]{\lim_{x \longrightarrow c} f(x)}\\[2ex]
+    &\text{for even $n$ values, we assume} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all} \hspace{4pt} x \hspace{4pt} \text{in Dom($f$)}. 
+\end{align*}
+\end{theorem}
 
 \begin{exercise}
 Determine if the following exists.
@@ -326,13 +372,6 @@ Determine if the following exists.
     \sqrt{x-4}, \hspace{4pt} &x > 4,\\[2ex]
     8-2x, \hspace{4pt} &x < 4
     \end{cases}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Determine if the following exists:
-\begin{align*}
-\lim_{x \longrightarrow -1} \dfrac{x^{2}-2x}{x^{2}-x-2}
 \end{align*}
 \end{exercise}
 
@@ -513,43 +552,6 @@ Find $\lim_{x \longrightarrow \infty} f(x)$, given that for all $x>1$
     \dfrac{10e^{x} - 21}{2e^{x}} < f(x) < \dfrac{5\sqrt{x}}{\sqrt{x-1}}
 \end{align*}
 \end{exercise}
-
-\newpage
-\section{More Theorems and Properties of Limits}
-
-\begin{theorem}
-We have the following equivalence:
-\begin{align*}
-    &\lim_{x \longrightarrow c} g(x) = L \hspace{20pt} \text{if and only if}\\[2ex]
-    &\text{for all} \hspace{4pt} \{f(n)\}_{n=1}^{\infty} \hspace{4pt} \text{contained in Dom ($g$) such that} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n)=c\\[2ex]
-    &\text{we have} \hspace{20pt} \lim_{n \longrightarrow \infty} g(f(n)) = L
-\end{align*}
-\label{sequential_criterion_for_limits}
-\end{theorem}
-
-\begin{exercise}
-Using Theorems \ref{limit_passes_under_square_root}, \ref{sequential_criterion_for_limits}, find the following:
-\begin{align*}
-    &\text{Suppose} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all} \hspace{4pt} x \in \text{Dom($f$)}.\\[2ex]
-    &\text{If} \hspace{4pt} \lim_{x \longrightarrow c} f(x) = L, \hspace{4pt} \text{then}\\[2ex]
-    &\lim_{x \longrightarrow c} \sqrt{f(x)} = \hspace{4pt} ?
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-If $\lim_{x \longrightarrow c} f(x) = L$, prove that 
-\begin{align*}
-    \lim_{x \longrightarrow c} \lvert f(x) \rvert = \lvert L \rvert 
-\end{align*}
-\end{exercise}
-
-\begin{theorem}
-For $n \in \mathbb{N}$, we have
-\begin{align*}
-    &\lim_{x \longrightarrow c} \sqrt[\leftroot{2}\uproot{2}n]{f(x)} = \sqrt[\leftroot{2}\uproot{2}n]{\lim_{x \longrightarrow c} f(x)}\\[2ex]
-    &\text{for even $n$ values, we assume} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all} \hspace{4pt} x \hspace{4pt} \text{in Dom($f$)}. 
-\end{align*}
-\end{theorem}
 
 \begin{theorem}
 If $f(x) \leq g(x) \leq h(x)$ for all $x$ satisfying $\lvert x - c \rvert < \delta$, where $\delta > 0$ is arbitrary, and

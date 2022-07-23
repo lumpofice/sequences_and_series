@@ -151,8 +151,8 @@ Let $f$ and $g$ be functions differentiable at $c \in$ Dom($f$), Dom($g$). Then
     \text{For $a \in \mathbb{R}$} \hspace{20pt} &(af)^{'}(c) = af^{'}(c)\\[2ex]
     &(f+g)^{'}(c) = f^{'}(c) + g^{'}(c)\\[2ex]
     &(f-g)^{'}(c) = f^{'}(c) - g^{'}(c)\\[2ex]
-    &(fg)^{'}(c) = f^{'}(c)g(c) + f(c)g^{'}(c)\\[2ex]
-    \text{Assuming $g(c) \neq 0$} \hspace{20pt} &\Big(\dfrac{f}{g}\Big)^{'}(c) = \dfrac{f^{'}(c)g(c) - f(c)g^{'}(c)}{(g(c))^{2}}
+    &(fg)^{'}(c) = f^{'}(c)g(c) + f(c)g^{'}(c) \hspace{20pt} \text{(Product Rule)}\\[2ex]
+    \text{Assuming $g(c) \neq 0$} \hspace{20pt} &\Big(\dfrac{f}{g}\Big)^{'}(c) = \dfrac{f^{'}(c)g(c) - f(c)g^{'}(c)}{(g(c))^{2}} \hspace{20pt} \text{(Quotient Rule)}
 \end{align*}
 \end{theorem}
 
@@ -296,3 +296,147 @@ Find the values of $m$ and $b$ for which $f$ is differentiable everywhere.
     \end{cases}
 \end{align*}
 \end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = (x^{-2} + x^{-3})(x^{5} - 2x^{2})
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = \dfrac{x+1}{x^{3}+x-2}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = \dfrac{x}{(x-1)^{2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at the point $(1, 1)$
+\begin{align*}
+    f(x) = \dfrac{2x}{x+1}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at the point $(1, e)$
+\begin{align*}
+    f(x) = \dfrac{e^{x}}{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+How many tangent lines to $f$ pass through the point $(1, 2)$? At which points do these lines touch $f$?
+\begin{align*}
+    f(x) = \dfrac{x}{x+1}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find equations of the tangent lines to $f$ that are parallel to the line $T$
+\begin{align*}
+    f(x) = \dfrac{x-1}{x+1} \hspace{20pt} T(x) = \dfrac{x-2}{2}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the quotient rule to prove
+\begin{align*}
+    \dfrac{d}{dx} \csc x = -\csc x \cot x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the quotient rule to prove
+\begin{align*}
+    \dfrac{d}{dx} \sec x = \sec x \tan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the quotient rule to prove
+\begin{align*}
+    \dfrac{d}{dx} \cot x = -\csc^{2} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the quotient rule to prove
+\begin{align*}
+    \dfrac{d}{dx} \tan x = \sec^{2} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to prove
+\begin{align*}
+    \dfrac{d}{dx} \cos x = -\sin x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use the definition of the derivative to prove
+\begin{align*}
+    \dfrac{d}{dx} \sin x = \cos x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = xe^{x}\csc x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative
+\begin{align*}
+    f(x) = x^{2}\sin x \tan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at $\Big(\dfrac{\pi}{3}, 2\Big)$
+\begin{align*}
+    f(x) = \sec x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at $(0, 1)$
+\begin{align*}
+    f(x) = e^{x}\cos x 
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at $(0, 1)$
+\begin{align*}
+    f(x) = x + \cos x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find an equation of the line tangent to $f$ at $(0, 1)$
+\begin{align*}
+    f(x) = \dfrac{1}{\sin x + \cos x}
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{The Chain Rule}
+
+\begin{theorem}
+Let $f$ on Dom($f$) and $g$ on Dom($g$) be functions, where Dom($f$) and Dom($g$) are intervals and Dom($f$) is a subset of Dom($g$). 
+\begin{align*}
+    \text{If} \hspace{4pt} f \hspace{4pt} \text{is differentiable at} \hspace{4pt} c \in \hspace{4pt} &\text{Dom($f$) and if} \hspace{4pt} g \hspace{4pt} \text{is differentiable at} \hspace{4pt} f(c) \in \hspace{4pt} \text{Dom($g$) then}\\[2ex]
+    &g \circ f \hspace{4pt} \text{is differentiable at} \hspace{4pt} c 
+\end{align*}
+\end{theorem}

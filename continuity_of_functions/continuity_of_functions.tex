@@ -153,7 +153,7 @@ As part of a piecewise function $f$, we again have the sine function on an atten
 \begin{recall}
 From section \ref{limits_of_functions_section}, we stated that 
 \begin{align*}
-    \lim_{x \longrightarrow c} x = c \hspace{4pt} \text{for all} x \in \mathbb{R} \hspace{20pt} \text{when} \hspace{20pt} f(x) = x 
+    \lim_{x \longrightarrow c} x = c \hspace{4pt} \text{for all} \hspace{4pt} x \in \mathbb{R} \hspace{20pt} \text{when} \hspace{20pt} f(x) = x 
 \end{align*}
 This means that $f(x) = x$ is continuous on the real line. This fact brings us to another useful result:
 \end{recall}
@@ -303,6 +303,36 @@ Is $f$ continuous at $c=-2$? If so, then:
 \end{align*}
 \end{exercise}
 
+\begin{theorem}
+If $f$ is continuous at $b$ and $\lim_{x \longrightarrow a} g(x) = b$, then
+\begin{align*}
+    \lim_{x \longrightarrow a} f(g(x)) = f(b) \hspace{20pt} \text{which means, equivalently} \hspace{20pt} \lim_{x \longrightarrow a} f(g(x)) = f\Big(\lim_{x \longrightarrow a} g(x) \Big)
+\end{align*}
+\label{limit_passes_function}
+\end{theorem}
+
+\begin{theorem}
+If $g$ is continuous at $a$ and if $f$ is continuous at $g(a)$, then
+\begin{align*}
+    f(g(x)) \hspace{20pt} \text{is continuous at} \hspace{20pt} a
+\end{align*}
+\label{continuity_passes_function}
+\end{theorem}
+
+\begin{note}
+Although the reader could inspect this visually, we state the following classes of functions enjoy continuity within their respective domains:
+\begin{itemize}
+    \item [1.] Real numbers
+    \item [2.] Polynomials
+    \item [3.] Rationals
+    \item [4.] Exponentials
+    \item [5.] Logarithms 
+    \item [6.] Trigonometric Functions
+    \item [7.] Inverse Trigonometric Functions
+\end{itemize}
+We limit our statement to these classes of functions, as they will comprise the bulk of those found within this document. 
+\end{note}
+
 \begin{exercise}
 State the domain of the function and find where it is continuous:
 \begin{align*}
@@ -326,28 +356,12 @@ State the domain of the function and find where it is continuous:
 \end{align*}
 \end{exercise}
 
-\begin{theorem}
-If $f$ is continuous at $b$ and $\lim_{x \longrightarrow a} g(x) = b$, then
-\begin{align*}
-    \lim_{x \longrightarrow a} f(g(x)) = f(b) \hspace{20pt} \text{which means, equivalently} \hspace{20pt} \lim_{x \longrightarrow a} f(g(x)) = f\Big(\lim_{x \longrightarrow a} g(x) \Big)
-\end{align*}
-\label{limit_passes_function}
-\end{theorem}
-
 \begin{exercise}
 Find the following:
 \begin{align*}
     \lim_{x \longrightarrow 1} \arcsin \Big( \dfrac{1 - \sqrt{x}}{1 - x} \Big)
 \end{align*}
 \end{exercise}
-
-\begin{theorem}
-If $g$ is continuous at $a$ and if $f$ is continuous at $g(a)$, then
-\begin{align*}
-    f(g(x)) \hspace{20pt} \text{is continuous at} \hspace{20pt} a
-\end{align*}
-\label{continuity_passes_function}
-\end{theorem}
 
 \begin{exercise}
 Regarding Theorems \ref{limit_passes_function}, \ref{continuity_passes_function}, find the following:
