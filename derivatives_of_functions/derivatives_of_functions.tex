@@ -437,6 +437,43 @@ Find an equation of the line tangent to $f$ at $(0, 1)$
 Let $f$ on Dom($f$) and $g$ on Dom($g$) be functions, where Dom($f$) and Dom($g$) are intervals and Dom($f$) is a subset of Dom($g$). 
 \begin{align*}
     \text{If} \hspace{4pt} f \hspace{4pt} \text{is differentiable at} \hspace{4pt} c \in \hspace{4pt} &\text{Dom($f$) and if} \hspace{4pt} g \hspace{4pt} \text{is differentiable at} \hspace{4pt} f(c) \in \hspace{4pt} \text{Dom($g$) then}\\[2ex]
-    &g \circ f \hspace{4pt} \text{is differentiable at} \hspace{4pt} c 
+    &g \circ f \hspace{4pt} \text{is differentiable at} \hspace{4pt} c\\[2ex]
+    \text{and} \hspace{4pt} &(g\circ f)^{'}(c) = g^{'}(f(c))\cdot f^{'}(c)
+\end{align*}
+This is known as The Chain Rule
+\end{theorem}
+
+\begin{example}
+Let $g\circ f(x) = \sqrt{x^{2}}$, with $g(f) = \sqrt{f}$ and $f(x) = x^{2}$. Then
+\begin{align*}
+    &\dfrac{d}{dx}g\circ f(x) = \dfrac{d(g(f))}{df}\dfrac{df}{dx} \hspace{20pt} \text{giving us}\\[2ex]
+    \dfrac{d}{dx}g\circ f(x) = \dfrac{d}{dx}\sqrt{x^{2}} = \dfrac{d}{dx}(x^{2})^{1/2} &= \dfrac{1}{2}(x^{2})^{-1/2}\dfrac{d}{dx}x^{2} = \dfrac{1}{2x^{1/2}}\dfrac{d}{dx}x^{2} = \dfrac{2x}{2\sqrt{x}} = \dfrac{x}{\sqrt{x}} = \sqrt{x}
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Take the derivative of $g\circ f(x) = x^{2}$,  identifying the functions $g$ and $f$ in your response. 
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = e^{\sin x}
+\end{align*}
+\end{exercise}
+
+\begin{theorem}
+When $f(x) = a^{x}$, where $a > 0$
+\begin{align*}
+    f^{'}(x) = (\ln a)a^{x}
+\end{align*}
+We show this with the chain rule. Let's change the variable for this function. We define
+\begin{align*}
+    &g\circ x(y) = a^{y} = e^{\ln a^{y}} = e^{(\ln a)y}, \hspace{20pt} g(x) = a^{x}, \hspace{4pt} x(y) = (\ln a)y\\[2ex]
+    \text{By The Chain Rule} \hspace{4pt} &\dfrac{d}{dy} a^{y} = \dfrac{d}{dy} e^{(\ln a)y} = \dfrac{d}{dy} e^{x} = \dfrac{d(e^{x})}{dx} \dfrac{dx}{dy} = e^{x}\dfrac{dx}{dy} = e^{x} \dfrac{d}{dy} (\ln a)y = e^{x} \ln a
+\end{align*}
+Since $x = x(y) = (\ln a)y$, and since $e^{\ln b} = b$ for any $b$
+\begin{align*}
+    e^{x} \ln a = e^{x(y)} \ln a = e^{(\ln a)y} \ln a = e^{\ln a^{y}} \ln a = a^{y} \ln a
 \end{align*}
 \end{theorem}
