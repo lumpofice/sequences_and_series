@@ -446,7 +446,7 @@ This is known as The Chain Rule
 \begin{example}
 Let $g\circ f(x) = \sqrt{x^{2}}$, with $g(f) = \sqrt{f}$ and $f(x) = x^{2}$. Then
 \begin{align*}
-    &\dfrac{d}{dx}g\circ f(x) = \dfrac{d(g(f))}{df}\dfrac{df}{dx} \hspace{20pt} \text{giving us}\\[2ex]
+    &\dfrac{d}{dx}g\circ f(x) = \dfrac{d(g)}{df}\dfrac{df}{dx} \hspace{20pt} \text{giving us}\\[2ex]
     \dfrac{d}{dx}g\circ f(x) = \dfrac{d}{dx}\sqrt{x^{2}} = \dfrac{d}{dx}(x^{2})^{1/2} &= \dfrac{1}{2}(x^{2})^{-1/2}\dfrac{d}{dx}x^{2} = \dfrac{1}{2x^{1/2}}\dfrac{d}{dx}x^{2} = \dfrac{2x}{2\sqrt{x}} = \dfrac{x}{\sqrt{x}} = \sqrt{x}
 \end{align*}
 \end{example}
@@ -458,7 +458,21 @@ Take the derivative of $g\circ f(x) = x^{2}$,  identifying the functions $g$ and
 \begin{exercise}
 Differentiate the following
 \begin{align*}
-    f(x) = e^{\sin x}
+    f(x) = \sin 4x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = \tan (\sin x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = 3\cot (nx)
 \end{align*}
 \end{exercise}
 
@@ -467,13 +481,156 @@ When $f(x) = a^{x}$, where $a > 0$
 \begin{align*}
     f^{'}(x) = (\ln a)a^{x}
 \end{align*}
-We show this with the chain rule. Let's change the variable for this function. We define
+We show this with the chain rule. Let's change the variables for this function. We define
 \begin{align*}
-    &g\circ x(y) = a^{y} = e^{\ln a^{y}} = e^{(\ln a)y}, \hspace{20pt} g(x) = a^{x}, \hspace{4pt} x(y) = (\ln a)y\\[2ex]
-    \text{By The Chain Rule} \hspace{4pt} &\dfrac{d}{dy} a^{y} = \dfrac{d}{dy} e^{(\ln a)y} = \dfrac{d}{dy} e^{x} = \dfrac{d(e^{x})}{dx} \dfrac{dx}{dy} = e^{x}\dfrac{dx}{dy} = e^{x} \dfrac{d}{dy} (\ln a)y = e^{x} \ln a
+    &g\circ x(y) = a^{y} = e^{\ln a^{y}} = e^{(\ln a)y}, \hspace{20pt} \text{where} \hspace{20pt} g(x) = a^{x}, \hspace{4pt} x(y) = (\ln a)y\\[2ex]
+    &\text{By The Chain Rule} \hspace{4pt} \dfrac{d}{dy} a^{y} = \dfrac{d}{dy} e^{(\ln a)y} = \dfrac{d}{dy} e^{x} = \dfrac{d(e^{x})}{dx} \dfrac{dx}{dy} = e^{x}\dfrac{dx}{dy} = e^{x} \dfrac{d}{dy} (\ln a)y = e^{x} \ln a
 \end{align*}
 Since $x = x(y) = (\ln a)y$, and since $e^{\ln b} = b$ for any $b$
 \begin{align*}
     e^{x} \ln a = e^{x(y)} \ln a = e^{(\ln a)y} \ln a = e^{\ln a^{y}} \ln a = a^{y} \ln a
 \end{align*}
 \end{theorem}
+
+\begin{example}
+We already know, for $f(x) = e^{x}$
+\begin{align*}
+    f^{'}(x) = e^{x}
+\end{align*}
+We define
+\begin{align*}
+    g \circ f(x) = e^{x} = e^{(\ln e)x}, \hspace{20pt} \text{where} \hspace{20pt} g(f) = e^{f}, \hspace{4pt} f(x) = (\ln e)x
+\end{align*}
+Then 
+\begin{align*}
+    \dfrac{d(g)}{df} \dfrac{df}{dx} = e^{(\ln e)x}\ln e = e^{x}
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = e^{\sin x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = 2^{\sin \pi x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = 10^{1-x^2}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = \cos\Big(\dfrac{1-e^{2x}}{1+e^{2x}}\Big)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = e^{k \tan \sqrt{x}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = \tan (e^{x}) + e^{\tan x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = \sin^{2} (e^{\sin^{2} x})
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = 2^{3^{x^{2}}}
+\end{align*}
+\end{exercise}
+
+\begin{theorem}
+Derivative of $\arctan x$:
+\begin{align*}
+    \dfrac{d}{dx} \arctan x = \dfrac{1}{1+x^{2}}
+\end{align*}
+We show this with the chain rule. We know
+\begin{align*}
+    f(x) = \arctan x \hspace{20pt} \Longleftrightarrow \hspace{20pt} \tan(f(x)) = x
+\end{align*}
+By The Chain Rule
+\begin{align*}
+    \dfrac{d}{dx}\tan(f(x)) = \dfrac{d}{dx}x \hspace{20pt} \Longleftrightarrow \hspace{20pt} \sec^{2}(f(x))f^{'}(x) = 1
+\end{align*}
+Rearranging and recalling the trigonometric identity $\sec^{2}\theta = 1 + \tan^{2}\theta$
+\begin{align*}
+    \sec^{2}(f(x))f^{'}(x) = 1 \hspace{20pt} \Longleftrightarrow \hspace{20pt} f^{'}(x) = \dfrac{1}{\sec^{2}(f(x))} \hspace{20pt} \Longleftrightarrow \hspace{20pt} f^{'}(x) = \dfrac{1}{1 + \tan^{2}(f(x))} 
+\end{align*}
+Now we make use of the fact that $\tan x$ and $\arctan x$ are inverse functions on an attenuated domain $(-\pi/2, \pi/2)$
+\begin{align*}
+    f^{'}(x) = \dfrac{1}{1+\tan^{2}(f(x))} \hspace{20pt} \Longleftrightarrow \hspace{20pt} f^{'}(x) = \dfrac{1}{1+\tan^{2}(\arctan x)} \hspace{20pt} \Longleftrightarrow \hspace{20pt} f^{'}(x) = \dfrac{1}{1+x^{2}}
+\end{align*}
+\end{theorem}
+
+\begin{exercise}
+Use The Chain Rule to find the derivative for
+\begin{align*}
+    f(x) = \arcsin x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use The Chain Rule to find the derivative for
+\begin{align*}
+    f(x) = \arccos x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use The Chain Rule to find the derivative for
+\begin{align*}
+    f(x) = \arccot x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use The Chain Rule to find the derivative for
+\begin{align*}
+    f(x) = \arccsc x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Use The Chain Rule to find the derivative for
+\begin{align*}
+    f(x) = \arcsec x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = \dfrac{1}{\arcsin x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Differentiate the following
+\begin{align*}
+    f(x) = x\arctan \sqrt{x}
+\end{align*}
+\end{exercise}
