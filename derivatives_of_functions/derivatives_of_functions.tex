@@ -741,3 +741,51 @@ Find an equation of the line tangent to $f$ at $(2, 0)$
 \end{align*}
 \end{exercise}
 
+\begin{theorem}
+We will show
+\begin{align*}
+    e = \lim_{x \longrightarrow 0} (1 + x)^{1/x}
+\end{align*}
+\begin{proof}
+We know, for $f(x) = \ln x$, that $f^{'}(x) = \dfrac{1}{x}$. So, $f^{'}(1) = 1$. Using the definition of the limit
+\begin{align*}
+    &1 = f^{'}(1) = \lim_{x \longrightarrow 0} \dfrac{\ln (1+x) - \ln (1)}{x} = \lim_{x \longrightarrow 0} \dfrac{1}{x} \ln (x + 1) = \lim_{x \longrightarrow 0} \ln (x+1)^{1/x}\\[2ex]
+    &\Longrightarrow \hspace{20pt} e = e^{1} = e^{\lim_{x \longrightarrow 0} \ln (x+1)^{1/x}} = \lim_{x \longrightarrow 0} e^{\ln (x+1)^{1/x}} = \lim_{x \longrightarrow 0} (x + 1)^{1/x}
+\end{align*}
+\end{proof}
+\end{theorem}
+
+\begin{exercise}
+Find the derivative of the following
+\begin{align*}
+    f(x) = x^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of the following
+\begin{align*}
+    f(x) = (\sqrt{x})^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of the following
+\begin{align*}
+    f(x) = (\sin x)^{\ln x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of the following
+\begin{align*}
+    f(x) = (\tan x)^{1/x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Show the following
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \Big(1+\dfrac{x}{n}\Big)^{n} = e^{x} \hspace{20pt} \text{for any} \hspace{4pt} x > 0
+\end{align*}
+\end{exercise}
