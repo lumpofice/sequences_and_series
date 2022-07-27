@@ -789,3 +789,39 @@ Show the following
     \lim_{n \longrightarrow \infty} \Big(1+\dfrac{x}{n}\Big)^{n} = e^{x} \hspace{20pt} \text{for any} \hspace{4pt} x > 0
 \end{align*}
 \end{exercise}
+
+\newpage
+\section{The $n^{\text{th}}$ Derivative}
+
+\begin{note}
+The derivative of a function $f$ is again a function $f^{'}$. 
+\end{note}
+
+\begin{example}
+Take $f(x) = x^{2} + x$. We know $\dfrac{df}{dx} = f^{'}(x) = 2x + 1$. The second derivative of $f$ is the first derivative of $f^{'}$, and the notation used to represent the second derivative is as follows
+\begin{align*}
+    f^{''}(x) = \dfrac{d^{2}f}{(dx)^{2}} = \dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{df^{'}}{dx} =  \dfrac{d}{dx} (2x + 1) = 2  
+\end{align*}
+If we wanted the third derivative of $f$, which would be the second derivative of $f^{'}$, we could write
+\begin{align*}
+    f^{(3)}(x) = \dfrac{d^{3}f}{(dx)^{3}} = \dfrac{d}{dx}\dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{d}{dx}\dfrac{df^{'}}{dx} = \dfrac{df^{''}}{dx} = \dfrac{d}{dx} (2) = 0
+\end{align*}
+Of course, we could take further derivatives, since $g(x) \equiv 0$ is infinitely differentiable along $\mathbb{R}$ ---we will come across examples in which a function fails to be differentiable after some $k^{\text{th}}$ derivative. To save us the trouble of writing each derivative, we could write more concisely
+\begin{align*}
+    \dfrac{d^{n}f}{(dx)^{n}} = f^{(n)}(x) = 0 \hspace{20pt} \text{for all} \hspace{4pt} n \geq 3
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Find $f^{'}$, $f^{''}$, and $f^{(3)}$ for the following
+\begin{align*}
+    f(x) = 1 + 4x - x^{2}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{'}$, $f^{''}$, and $f^{(3)}$ for the following. Establish a pattern and provide a general equation for $f^{(n)}$.
+\begin{align*}
+    f(x) = \dfrac{1}{x}
+\end{align*}
+\end{exercise}
