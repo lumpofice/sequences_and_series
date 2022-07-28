@@ -1,7 +1,7 @@
 \section{The Derivative}\label{the_derivative}
 
 \begin{definition}
-We say a function $f$ has derivative $L \in \mathbb{R}$ at $c \in$ Dom($f$) if 
+We say a function $f$ has derivative $L \in \mathbb{R}$ at $c \in$ Dom($f$) $=I$, where $I$ is an interval along the real line, if 
 \begin{align*}
     &\text{For all} \hspace{4pt} \epsilon > 0 \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
     &\text{all} \hspace{4pt} x \in \text{Dom($f$)} \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x-c \rvert < \delta \hspace{20pt} \Longrightarrow \hspace{20pt} \Big\lvert \dfrac{f(x)-f(c)}{x-c}-L \Big\rvert < \epsilon
@@ -130,6 +130,16 @@ TRUE or FALSE: If $f$ is not continuous at $c \in$ Dom($f$)  then $f$ is not dif
 \begin{exercise}
 TRUE or FALSE: If $f$ does not have a derivative at $c$ then $f$ does not have a limit at $c$.
 \end{exercise}
+
+\begin{theorem}
+Given $f$ is differentiable at $x$, the following two expressions are equivalent
+\begin{align*}
+    f^{'}(x) = \lim_{h \longrightarrow 0}&\dfrac{f(x+h)-f(x)}{h} \hspace{20pt}\\[2ex]
+    &\Longleftrightarrow\\[2ex]
+    f^{'}_{-}(x) = \lim_{h \longrightarrow 0^{-}} \dfrac{f(x+h)-f(x)}{h} &= \lim_{h \longrightarrow 0^{+}} \dfrac{f(x+h)-f(x)}{h} = f^{'}_{+}(x) 
+\end{align*}
+Meaning, the derivative of $f$ exists at $x$ if and only if the left and right derivatives of $f$ exists at $x$ and if the left and right derivatives are equal to each other at $x$.
+\end{theorem}
 
 \begin{theorem}
 Derivative of constant $a$:
@@ -800,15 +810,15 @@ The derivative of a function $f$ is again a function $f^{'}$.
 \begin{example}
 Take $f(x) = x^{2} + x$. We know $\dfrac{df}{dx} = f^{'}(x) = 2x + 1$. The second derivative of $f$ is the first derivative of $f^{'}$, and the notation used to represent the second derivative is as follows
 \begin{align*}
-    f^{''}(x) = \dfrac{d^{2}f}{(dx)^{2}} = \dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{df^{'}}{dx} =  \dfrac{d}{dx} (2x + 1) = 2  
+    f^{''}(x) = \dfrac{d^{2}f}{dx^{2}} = \dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{df^{'}}{dx} =  \dfrac{d}{dx} (2x + 1) = 2  
 \end{align*}
 If we wanted the third derivative of $f$, which would be the second derivative of $f^{'}$, we could write
 \begin{align*}
-    f^{(3)}(x) = \dfrac{d^{3}f}{(dx)^{3}} = \dfrac{d}{dx}\dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{d}{dx}\dfrac{df^{'}}{dx} = \dfrac{df^{''}}{dx} = \dfrac{d}{dx} (2) = 0
+    f^{(3)}(x) = \dfrac{d^{3}f}{dx^{3}} = \dfrac{d}{dx}\dfrac{d}{dx}\dfrac{df}{dx} = \dfrac{d}{dx}\dfrac{df^{'}}{dx} = \dfrac{df^{''}}{dx} = \dfrac{d}{dx} (2) = 0
 \end{align*}
 Of course, we could take further derivatives, since $g(x) \equiv 0$ is infinitely differentiable along $\mathbb{R}$ ---we will come across examples in which a function fails to be differentiable after some $k^{\text{th}}$ derivative. To save us the trouble of writing each derivative, we could write more concisely
 \begin{align*}
-    \dfrac{d^{n}f}{(dx)^{n}} = f^{(n)}(x) = 0 \hspace{20pt} \text{for all} \hspace{4pt} n \geq 3
+    \dfrac{d^{n}f}{dx^{n}} = f^{(n)}(x) = 0 \hspace{20pt} \text{for all} \hspace{4pt} n \geq 3
 \end{align*}
 \end{example}
 
@@ -823,5 +833,79 @@ Find $f^{'}$, $f^{''}$, and $f^{(3)}$ for the following
 Find $f^{'}$, $f^{''}$, and $f^{(3)}$ for the following. Establish a pattern and provide a general equation for $f^{(n)}$.
 \begin{align*}
     f(x) = \dfrac{1}{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find a second-degree polynomial $f$ such that $P(2) = 5$, $P^{'}(2) = 3$, and $P^{''}(2) = 2$.
+\end{exercise}
+
+\begin{exercise}
+Find both $f^{'}$ and $f^{''}$ for
+\begin{align*}
+    f(x) = x^{4}e^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find both $f^{'}$ and $f^{''}$ for
+\begin{align*}
+    f(x) = \dfrac{x}{3+e^{x}} 
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find a general expression $f^{(n)}$ for the following
+\begin{align*}
+    f(x) = x^{2}e^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+If $y = f(u)$ and $u = g(x)$, where $f$ and $g$ are both twice differentiable functions, show
+\begin{align*}
+    \dfrac{d^{2}y}{dx^{2}} = \dfrac{d^{2}y}{du^{2}}\Big(\dfrac{du}{dx}\Big)^{2} + \dfrac{dy}{du}\dfrac{d^{2}u}{dx^{2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find a general formula $f^{(n)}$ for
+\begin{align*}
+    f(x) = \ln(x-1)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{'}$ and $f^{''}$ for
+\begin{align*}
+    f(x) = x^{2}\ln(2x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{'}$ and $f^{''}$ for 
+\begin{align*}
+    f(x) = \ln(\sec x + \tan x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{''}$ for
+\begin{align*}
+    9x^{2} + (f(x))^{2} = 9
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{''}$ for 
+\begin{align*}
+    \sqrt{x} + \sqrt{f(x)} = 1
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find $f^{''}$ for 
+\begin{align*}
+    x^{3} + (f(x))^{3} = 1
 \end{align*}
 \end{exercise}
