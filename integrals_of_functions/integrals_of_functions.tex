@@ -1,0 +1,36 @@
+\section{The Riemann Integral}
+
+\begin{definition}
+Let $I = [a, b]$, where $a$ and $b$ are real numbers, be a subset of $\mathbb{R}$ and let 
+\begin{align*}
+    P = \{x_{0}, x_{1}, x_{2}, ..., x_{n-1}, x_{n}\} \hspace{20pt} \text{such that} \hspace{20pt} a = x_{0} < x_{1} < x_{2} < \cdots < x_{n-1} < x_{n} = b
+\end{align*}
+be a finite subset of numbers contained in $I$. Take each of member $x_{i}$ of $P$ and use it to create a sub-interval $I_{i}$ of $I$, such that the union of these sub-intervals is $I$, as follows
+\begin{align*}
+    I_{0} = [x_{0}, x_{1}) \hspace{20pt} I_{1} = [x_{1}, x_{2})& \hspace{20pt} \cdots \hspace{20pt} I_{n-2} = [x_{n-2}, x_{n-1}) \hspace{20pt} I_{n-1} = [x_{n-1}, x_{n}]\\[2ex]
+    &I = I_{0} \cup I_{1} \cup I_{2} \cup \cdots \cup I_{n-1} \cup I_{n}
+\end{align*}
+From each $I_{i}$, choose a number $t_{i}$. We call the following set of ordered pairs a tagged partition
+\begin{align*}
+    \dot P = \{ \hspace{4pt} ( \hspace{4pt} [x_{i}, x_{i+1}), t_{i} \hspace{4pt} ) \hspace{4pt}\}_{x = 0}^{n-2} \hspace{10pt} \cup \hspace{10pt} \{ \hspace{4pt} ( \hspace{4pt} [x_{n-1}, x_{n}], t_{n-1} \hspace{4pt} ) \hspace{4pt} \}
+\end{align*}
+\end{definition}
+
+\begin{definition}
+The norm of a tagged partition is defined as
+\begin{align*}
+    \lvert \lvert \dot P \rvert \rvert = \max \{x_{1} - x_{0}, x_{2} - x_{1}, \cdots , x_{n-1} - x_{n-2}, x_{n} - x_{n-1}\}
+\end{align*}
+\end{definition}
+
+\begin{definition}
+A function $f$ on $I=[a, b]$ is said to be Riemann integrable on $[a, b]$ if there exists a real number $L$ such that for every $\epsilon > 0$ there exists a $\delta > 0$ satisfying the following
+\begin{align*}
+    &\text{whenever} \hspace{4pt} \dot P \hspace{4pt} \text{is a tagged partition of $[a, b]$}\\[2ex]
+    &\text{if} \hspace{20pt} \lvert \lvert \dot P \rvert \rvert < \delta \hspace{20pt} \text{then} \hspace{20pt} \Big\lvert \sum_{i=0}^{n-1} f(t_{i})(x_{i+1} - x_{i}) - L \Big\rvert < \epsilon  
+\end{align*}
+For this course, we will use the following notation for $L$
+\begin{align*}
+    L = \int_{a}^{b} f(x) dx
+\end{align*}
+\end{definition}
