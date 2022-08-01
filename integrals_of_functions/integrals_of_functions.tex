@@ -134,28 +134,49 @@ So, for our partition, we have the endpoints
 \end{align*}
 Taking a partition with uncountable infinitely many points between $0$ and $1$ is the key to computing the integral. The rectangles seen in this example each have an area: base times height. The difference $(x_{i+1} - x_{i})$ for each $i$ represent the bases, while the function value at $t_{i}$ for each $i$ represents the height. So, the integral of our function $f$ ---the value of which we will discuss shortly--- can be expressed as the limit 
 \begin{align*}
-    \lim_{n \longrightarrow \infty} \sum_{i=0}^{n-1} \cos(t_{i}) (x_{i+1} - x_{i}) = \sin x
+    \lim_{n \longrightarrow \infty} \sum_{i=0}^{n-1} \cos(t_{i}) (x_{i+1} - x_{i}) = \int_{0}^{1} \cos x dx = \sin x \hspace{4pt} x \in [0, 1]
 \end{align*}
+\label{integral_of_cosine}
 \end{example}
 
-Most of the functions that we see in this course will be continuous, and integration on these continuous functions will more times than not require the use of antidifferentiation, as opposed to the computation of sums, on these continuous functions. 
+\begin{theorem}
+A function $f$ continuous on $[a, b]$ or continuous at all but a finite number of points along $[a, b]$ is integrable on $[a, b]$.
+\end{theorem}
+
+Integration on these functions will more times than not require the use of antidifferentiation, as opposed to the computation of sums, on these functions, using The Fundamental Theorem of Calculus, which we will get to later. For now, let's simply practice our antidifferentiating skills and explore some properties of the Riemann integral. 
 
 \begin{example}
-Take $f(x) = 1$. Let's say we want to take the integral of $f$. The question you should ask yourself is:
+Take $f(x) = 1$ on some arbitrary domain $D$. The form of the integral on $f$ along this non-explicitly defined domain $D$ is referred to as the indeterminant form of the integral. Meaning, the function domain is not bounded above or below by any specific real numbers. We will later discuss the difference between this indeterminant form and the determinant form of an integral, which is the integral form of the cosine function in Example \ref{integral_of_cosine}. The domain is explicitly defined for cosine in that example, whereas the domain for $f$ in this example is not. More on this, later. In taking either form of the integral on a function $f$, the first question you should always ask yourself:
 \begin{align*}
-    &\text{The derivative of which function is equal to} \hspace{4pt} 1?\\[2ex]
-    &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{d}{dx}g(x) = 1
+    &\text{The derivative of which function $g$ is equal to} \hspace{4pt} 1?\\[2ex]
+    &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{d}{dx}g(x) = 1 \hspace{4pt} \text{?}
 \end{align*}
-Because we already learned
+This is what we mean by the term `antiderivative.' Once you find the antiderivative $g$ of your function $f$, \textbf{THAT} is the integral. With the indeterminant form, we must consider the crucial detail of a real number (constant) as being part of the expression for our function $g$. Particularly, for our example, we know
 \begin{align*}
-    \dfrac{d}{dx} (x+c) = \dfrac{d}{dx} x + \dfrac{d}{dx} c = 1 + 0 = 1 \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}
+f(x) = 1 \hspace{20pt} f(x) = 1 + 0
 \end{align*}
-we have that $g(x) = x+c$ and 
+and we know that the derivative of a constant is $0$. So, when searching for our antiderivative $g$, we not only must antiderive the `kernel' (the main part) of the function $f$, we must also antiderive the implied $0$. 
+Continuing with our example:
 \begin{align*}
-    g(x) = \int_{} 1 dx = x + c
+    \text{we know that} \hspace{20pt} \dfrac{d}{dx} (x+c) = \dfrac{d}{dx} x + \dfrac{d}{dx} c = 1 + 0 = 1 \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}
+\end{align*}
+So, we have that $g(x) = x+c$, because taking the derivative of $g$ gives us our function $f$. 
+\begin{align*}
+    g(x) = \int_{D} 1 dx = x + c \hspace{20pt} \text{where $D$ is the domain of the function}
 \end{align*}
 which we could represent without the $1$ under the integral sign as 
 \begin{align*}
-    g(x) = \int_{} dx = x+c
+    g(x) = \int_{D} dx = x+c
+\end{align*}
+\end{example}
+
+\begin{example}
+Let's take the integral of $f(x) = x$. We know 
+\begin{align*}
+    \dfrac{d}{dx} \Big(\dfrac{x^{2}}{2} + c \Big) = \dfrac{d}{dx} \dfrac{x^{2}}{2} + \dfrac{d}{dx} c = \dfrac{2x}{2} + 0 = x
+\end{align*}
+So, by using antidifferentiation, we see that we have
+\begin{align*}
+    g(x) = x^{2} + c \hspace{20pt} \text{and} \hspace{20pt} \int_{D} x dx  =  x^{2} + c = g(x)
 \end{align*}
 \end{example}
