@@ -36,7 +36,7 @@ For this course, we will use the following notation for $L$
 \end{definition}
 
 \begin{example}
-This is an example of a Riemann sum. There are infinitely many tagged partitions we could use for any example. We've chosen one that demonstrates the flexibility of these partitions. Notice that the widths of the rectangles are visibly different, and notice the visible difference in where $t$ is positioned for each interval. This particular partition for the function $f$ can be written as
+This is an example of a Riemann sum. There are infinitely many tagged partitions we could use for any example, all of which are merely an approximation of the integral of the function, except in the limit. We've chosen one that demonstrates the flexibility of these partitions. Notice that the widths of the rectangles are visibly different, and notice the visible difference in where $t$ is positioned for each interval. This particular partition for the function $f$ can be written as
 \begin{align*}
     \dot P = \{ \hspace{4pt} ( \hspace{4pt} [x_{i}, x_{i+1}), t_{i} \hspace{4pt} ) \hspace{4pt} \}_{i = 0}^{6} \hspace{10pt} \cup \hspace{10pt} \{ \hspace{4pt} ( \hspace{4pt} [x_{7}, x_{8}], t_{7} \hspace{4pt} ) \hspace{4pt} \} \hspace{20pt} \text{where} \hspace{20pt} f(x) = \cos x \hspace{20pt} x \in [0, 1]  
 \end{align*}
@@ -129,4 +129,33 @@ So, for our partition, we have the endpoints
     \draw[blue, fill=red] (22*pi/23, {cos(22*pi/23 r)}) circle (.25mm);
 \end{tikzpicture}
 }
+\begin{align*}
+    &\text{The approximation can be computed with} \hspace{20pt} \sum_{i=0}^{7} f(t_{i})(x_{i+1} - x_{i})
+\end{align*}
+Taking a partition with uncountable infinitely many points between $0$ and $1$ is the key to computing the integral. The rectangles seen in this example each have an area: base times height. The difference $(x_{i+1} - x_{i})$ for each $i$ represent the bases, while the function value at $t_{i}$ for each $i$ represents the height. So, the integral of our function $f$ ---the value of which we will discuss shortly--- can be expressed as the limit 
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \sum_{i=0}^{n-1} \cos(t_{i}) (x_{i+1} - x_{i}) = \sin x
+\end{align*}
+\end{example}
+
+Most of the functions that we see in this course will be continuous, and integration on these continuous functions will more times than not require the use of antidifferentiation, as opposed to the computation of sums, on these continuous functions. 
+
+\begin{example}
+Take $f(x) = 1$. Let's say we want to take the integral of $f$. The question you should ask yourself is:
+\begin{align*}
+    &\text{The derivative of which function is equal to} \hspace{4pt} 1?\\[2ex]
+    &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{d}{dx}g(x) = 1
+\end{align*}
+Because we already learned
+\begin{align*}
+    \dfrac{d}{dx} (x+c) = \dfrac{d}{dx} x + \dfrac{d}{dx} c = 1 + 0 = 1 \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}
+\end{align*}
+we have that $g(x) = x+c$ and 
+\begin{align*}
+    g(x) = \int_{} 1 dx = x + c
+\end{align*}
+which we could represent without the $1$ under the integral sign as 
+\begin{align*}
+    g(x) = \int_{} dx = x+c
+\end{align*}
 \end{example}
