@@ -5,10 +5,10 @@ Let $I = [a, b]$, where $a$ and $b$ are real numbers, be a subset of $\mathbb{R}
 \begin{align*}
     P = \{x_{0}, x_{1}, x_{2}, ..., x_{n-1}, x_{n}\} \hspace{20pt} \text{such that} \hspace{20pt} a = x_{0} < x_{1} < x_{2} < \cdots < x_{n-1} < x_{n} = b
 \end{align*}
-be a finite subset of numbers contained in $I$. Take each of member $x_{i}$ of $P$ and use it to create a sub-interval $I_{i}$ of $I$, such that the union of these sub-intervals is $I$, as follows
+be a finite subset of numbers contained in $I$. Take each member $x_{i}$ of $P$ and use it to create a sub-interval $I_{i}$ of $I$, such that the union of these sub-intervals is $I$, as follows
 \begin{align*}
     I_{0} = [x_{0}, x_{1}) \hspace{20pt} I_{1} = [x_{1}, x_{2})& \hspace{20pt} \cdots \hspace{20pt} I_{n-2} = [x_{n-2}, x_{n-1}) \hspace{20pt} I_{n-1} = [x_{n-1}, x_{n}]\\[2ex]
-    &I = I_{0} \cup I_{1} \cup I_{2} \cup \cdots \cup I_{n-1} \cup I_{n}
+    &I = I_{0} \cup I_{1} \cup I_{2} \cup \cdots \cup I_{n-2} \cup I_{n-1}
 \end{align*}
 From each $I_{i}$, choose a number $t_{i}$. We call the following set of ordered pairs a tagged partition
 \begin{align*}
@@ -36,7 +36,7 @@ For this course, we will use the following notation for $L$
 \end{definition}
 
 \begin{example}
-This is an example of a Riemann sum. There are infinitely many tagged partitions we could use for any example, all of which are merely an approximation of the integral of the function, except in the limit. We've chosen one that demonstrates the flexibility of these partitions. Notice that the widths of the rectangles are visibly different, and notice the visible difference in where $t$ is positioned for each interval. This particular partition for the function $f$ can be written as
+This is an example of a Riemann sum. There are infinitely many tagged partitions we could use for any example, all of which are merely an approximation of the integral of the function, except in the limit. We've chosen one that demonstrates the flexibility of these partitions. Notice that the widths of the rectangles are visibly different, and notice the visible difference in where $t_{i}$ is positioned for each interval. This particular partition for the function $f$ can be written as
 \begin{align*}
     \dot P = \{ \hspace{4pt} ( \hspace{4pt} [x_{i}, x_{i+1}), t_{i} \hspace{4pt} ) \hspace{4pt} \}_{i = 0}^{6} \hspace{10pt} \cup \hspace{10pt} \{ \hspace{4pt} ( \hspace{4pt} [x_{7}, x_{8}], t_{7} \hspace{4pt} ) \hspace{4pt} \} \hspace{20pt} \text{where} \hspace{20pt} f(x) = \cos x \hspace{20pt} x \in [0, 1]  
 \end{align*}
@@ -132,7 +132,7 @@ So, for our partition, we have the endpoints
 \begin{align*}
     &\text{The approximation can be computed with} \hspace{20pt} \sum_{i=0}^{7} f(t_{i})(x_{i+1} - x_{i})
 \end{align*}
-Taking a partition with uncountable infinitely many points between $0$ and $1$ is the key to computing the integral. The rectangles seen in this example each have an area: base times height. The difference $(x_{i+1} - x_{i})$ for each $i$ represent the bases, while the function value at $t_{i}$ for each $i$ represents the height. So, the integral of our function $f$ ---the value of which we will discuss shortly--- can be expressed as the limit 
+Taking a partition with uncountable infinitely many points between $0$ and $1$ is the key to computing the integral. The rectangles seen in this example each have an area: base times height. The difference $(x_{i+1} - x_{i})$ for each $i$ represents the base, while the function value at $t_{i}$ for each $i$ represents the height. So, the integral of our function $f$ ---the value of which we will discuss shortly--- can be expressed as the limit 
 \begin{align*}
     \lim_{n \longrightarrow \infty} \sum_{i=0}^{n-1} \cos(t_{i}) (x_{i+1} - x_{i}) = \int_{0}^{1} \cos x dx = \sin x \hspace{4pt} x \in [0, 1]
 \end{align*}
@@ -146,23 +146,23 @@ A function $f$ continuous on $[a, b]$ or continuous at all but a finite number o
 Integration on these functions will more times than not require the use of antidifferentiation, as opposed to the computation of sums, on these functions, using The Fundamental Theorem of Calculus, which we will get to later. For now, let's simply practice our antidifferentiating skills and explore some properties of the Riemann integral. 
 
 \begin{example}
-Take $f(x) = 1$ on some arbitrary domain $D$. The form of the integral on $f$ along this non-explicitly defined domain $D$ is referred to as the indeterminant form of the integral. Meaning, the function domain is not bounded above or below by any specific real numbers. We will later discuss the difference between this indeterminant form and the determinant form of an integral, which is the integral form of the cosine function in Example \ref{integral_of_cosine}. The domain is explicitly defined for cosine in that example, whereas the domain for $f$ in this example is not. More on this, later. In taking either form of the integral on a function $f$, the first question you should always ask yourself:
+Take $f(x) = 1$ on some arbitrary domain $D$. The form of the integral on $f$ along this non-explicitly defined domain $D$ is referred to as the indeterminant form of the integral. Meaning, the function domain is not bounded above or below by any specific real numbers. We will later discuss the difference between this indeterminant form and what is known as the determinant form of an integral, which we used in Example \ref{integral_of_cosine}. The domain is explicitly defined and bounded for cosine in that example, whereas the domain for $f$ in this example is not defined at all. More on this, later. In taking either form of the integral on a function $f$, the first question you should always ask yourself:
 \begin{align*}
-    &\text{The derivative of which function $g$ is equal to} \hspace{4pt} 1?\\[2ex]
-    &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{d}{dx}g(x) = 1 \hspace{4pt} \text{?}
+    &\text{The derivative of which function $g$ is equal to} \hspace{4pt} f?\\[2ex]
+    &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{dg}{dx} = f(x) \hspace{4pt} \text{?}
 \end{align*}
 This is what we mean by the term `antiderivative.' Once you find the antiderivative $g$ of your function $f$, \textbf{THAT} is the integral. With the indeterminant form, we must consider the crucial detail of a real number (constant) as being part of the expression for our function $g$. Particularly, for our example, we know
 \begin{align*}
 f(x) = 1 \hspace{20pt} f(x) = 1 + 0
 \end{align*}
-and we know that the derivative of a constant is $0$. So, when searching for our antiderivative $g$, we not only must antiderive the `kernel' (the main part) of the function $f$, we must also antiderive the implied $0$. 
+and we know that the derivative of a constant is $0$ and the derivative of $x$ is $1$. So, when searching for our antiderivative $g$, we not only must antiderive the `kernel' (the main part) of the function $f$, which in our case is $1$, we must also antiderive the implied $0$. 
 Continuing with our example:
 \begin{align*}
     \text{we know that} \hspace{20pt} \dfrac{d}{dx} (x+c) = \dfrac{d}{dx} x + \dfrac{d}{dx} c = 1 + 0 = 1 \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}
 \end{align*}
-So, we have that $g(x) = x+c$, because taking the derivative of $g$ gives us our function $f$. 
+So, we have that $g(x) = x+c$, because $\dfrac{dg}{dx} = \dfrac{d}{dx}(x+c) = 1 + 0 = 1 = f(x)$. Thus, we have the indeterminant integral
 \begin{align*}
-    g(x) = \int_{D} 1 dx = x + c \hspace{20pt} \text{where $D$ is the domain of the function}
+    g(x) = \int_{D} f(x)dx = \int_{D} 1 dx = x + c \hspace{20pt} \text{where $D$ is the domain of the function}
 \end{align*}
 which we could represent without the $1$ under the integral sign as 
 \begin{align*}
@@ -175,8 +175,94 @@ Let's take the integral of $f(x) = x$. We know
 \begin{align*}
     \dfrac{d}{dx} \Big(\dfrac{x^{2}}{2} + c \Big) = \dfrac{d}{dx} \dfrac{x^{2}}{2} + \dfrac{d}{dx} c = \dfrac{2x}{2} + 0 = x
 \end{align*}
-So, by using antidifferentiation, we see that we have
+So, $g(x) = \dfrac{x^{2}}{2} + c$ is the antiderivative of $f(x) = x$, giving us the indeterminant integral
 \begin{align*}
-    g(x) = x^{2} + c \hspace{20pt} \text{and} \hspace{20pt} \int_{D} x dx  =  x^{2} + c = g(x)
+    \int_{D} f(x)dx = \int_{D} x dx  =  \dfrac{x^{2}}{2} + c = g(x)
 \end{align*}
 \end{example}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = x^{n} \hspace{20pt} \text{where $n$ is a positive number} 
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = x^{-n} \hspace{20pt} \text{where $n$ is a positive number}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = e^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = \cos x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = \sin x
+\end{align*}
+\end{exercise}
+
+\begin{theorem}
+Following are some of the basic properties of the Reimann integral
+\begin{align*}
+    &\int_{D} c f(x) dx = c \int_{D} f(x) dx \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}\\[2ex]
+    &\int_{D} (f(x) + g(x)) dx = \int_{D} f(x) dx + \int_{D} g(x) dx\\[2ex]
+    &\int_{D} (f(x) - g(x)) dx = \int_{D} f(x) dx - \int_{D} g(x) dx
+\end{align*}
+\end{theorem}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = 1 + 3x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = x^{2} + 2x - 5
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = 2 - x^{2}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = 1 + 2x^{3}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = \dfrac{1}{2}x - 1
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the integral of the following
+\begin{align*}
+    f(x) = 3 - 2x
+\end{align*}
+\end{exercise}
