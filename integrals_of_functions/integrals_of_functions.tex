@@ -187,35 +187,35 @@ So, $g(x) = \dfrac{x^{2}}{2} + c$ is the indefinite integral of $f$ and it also 
 \end{example}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = x^{n} \hspace{20pt} \text{where $n$ is a positive number} 
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = x^{-n} \hspace{20pt} \text{where $n$ is a positive number}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = e^{x}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = \cos x
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = \sin x
 \end{align*}
@@ -231,42 +231,42 @@ Following are some of the basic properties of the Riemann integral
 \end{theorem}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = 1 + 3x
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = x^{2} + 2x - 5
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = 2 - x^{2}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = 1 + 2x^{3}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = \dfrac{1}{2}x - 1
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
-Find the integral of the following
+Find the indefinite integral of the following
 \begin{align*}
     f(x) = 3 - 2x
 \end{align*}
@@ -299,6 +299,48 @@ where $g$ is continuous on $[a, b]$. Also, $g$ is differentiable on $(a, b)$, sa
 When $f$ is continuous on $[a, b]$, $g$ is an antiderivative of $f$.
 \end{theorem}
 
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = 1 + 3x \hspace{20pt} x \in [-1, 5]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = x^{2} + 2x - 5 \hspace{20pt} x \in [1, 4]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = 2 - x^{2} \hspace{20pt} x \in [0, 2]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = 1 + 2x^{3} \hspace{20pt} x \in [0, 5]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = \dfrac{1}{2}x - 1 \hspace{20pt} x \in [0, 3]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = 3 - 2x \hspace{20pt} x \in [-1, 3]
+\end{align*}
+\end{exercise}
+
 \begin{theorem}
 Following are more of the basic properties of the Riemann integral
 \begin{align*}
@@ -306,3 +348,28 @@ Following are more of the basic properties of the Riemann integral
     &\text{If} \hspace{4pt} f(x) \leq g(x) \hspace{4pt} \text{for all $x \in D$} \hspace{20pt} \text{then} \hspace{20pt} \int_{D} f(x) dx \leq \int_{D} g(x) dx 
 \end{align*}
 \end{theorem}
+
+\begin{example}
+In many situations, we could make use of a substitution method to simplify our process of integration. Take the following
+\begin{align*}
+    f(x) = \sqrt{2x + 1} \hspace{20pt} x \in [0, 4]
+\end{align*}
+We have the definite integral represented as 
+\begin{align*}
+    g(x) = \int_{0}^{4} \sqrt{2x + 1} dx
+\end{align*}
+To make the job of integration easier, we could set $u(x) = 2x + 1$. This would imply the following
+\begin{align*}
+    \dfrac{du}{dx} = 2 \hspace{10pt} \Longleftrightarrow \hspace{10pt} \dfrac{du}{2} = dx \hspace{20pt} \text{and} \hspace{20pt} u(x) \in [1, 9]
+\end{align*}
+Thus, the integral can be rewritten from this substitution as
+\begin{align*}
+    g(x) = \int_{1}^{9} \dfrac{1}{2}\sqrt{u(x)} du = \int_{1}^{9} \dfrac{1}{2} \hspace{4pt} (u(x))^{1/2} \hspace{4pt} du = \dfrac{1}{3} (u(x))^{3/2} \hspace{20pt} u(x) \in [1, 9]
+\end{align*}
+The right hand side of the equality evaluates to $26/3$. Of course, we can always revert back to expressions in terms of $x$.
+\begin{align*}
+    g(x) &= \int_{1}^{9} \dfrac{1}{2}\sqrt{u(x)} du = \dfrac{1}{3} (u(x))^{3/2} \hspace{20pt} u(x) \in [1, 9]\\[2ex]
+    &= \dfrac{1}{3} (\sqrt{2x + 1})^{3/2} \hspace{20pt} x \in [0, 4]\\[2ex]
+    &= \dfrac{1}{3} (\sqrt{2(4) + 1})^{3/2} - \dfrac{1}{3} (\sqrt{2(0) + 1})^{3/2} = \dfrac{26}{3}
+\end{align*}
+\end{example}
