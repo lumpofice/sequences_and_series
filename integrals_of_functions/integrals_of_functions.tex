@@ -141,30 +141,35 @@ Taking a partition with uncountable infinitely many points between $0$ and $1$ i
 
 \begin{theorem}
 A function $f$ continuous on $[a, b]$ or continuous at all but a finite number of points along $[a, b]$ is integrable on $[a, b]$.
+\label{monotone_continuous_functions_are_integrable}
 \end{theorem}
 
-Integration on these functions will more times than not require the use of antidifferentiation, as opposed to the computation of sums, on these functions, using The Fundamental Theorem of Calculus, which we will get to later. For now, let's simply practice our antidifferentiating skills and explore some properties of the Riemann integral. 
+Integration on the continuous functions mentioned in Theorem \ref{monotone_continuous_functions_are_integrable} will more times than not require us to use something referred to as antidifferentiation, as opposed to the computation of sums, using a result known as The Fundamental Theorem of Calculus, which we will get to later. For now, let's simply practice antidifferentiation on continuous functions and explore some properties of the Riemann integral. 
 
 \begin{example}
-Take $f(x) = 1$ on some arbitrary domain $D$. The form of the integral on $f$ along this non-explicitly defined domain $D$ is referred to as the indeterminant form of the integral. Meaning, the function domain is not bounded above or below by any specific real numbers. We will later discuss the difference between this indeterminant form and what is known as the determinant form of an integral, which we used in Example \ref{integral_of_cosine}. The domain is explicitly defined and bounded for cosine in that example, whereas the domain for $f$ in this example is not defined at all. More on this, later. In taking either form of the integral on a function $f$, the first question you should always ask yourself:
+The function $f(x) = \cos x$ is continuous on $[0, 1]$. Thus, for Example \ref{integral_of_cosine}, the antiderivative of $f$ is $g(x) = \sin x$.
+\end{example}
+
+\begin{example}
+Take $f(x) = 1$ on some arbitrary domain $D$. The form of the integral on $f$ along this non-explicitly defined domain $D$ is referred to as the indefinite form of the integral. Meaning, the function domain is not bounded above or below by any specific real numbers. We will later discuss the difference between this indefinite form and what is known as the definite form of an integral, which we used in Example \ref{integral_of_cosine}. The domain is explicitly defined and bounded for cosine in that example, whereas the domain for $f$ in this example is not defined at all. More on this, later. In taking either form of the integral on a function $f$, the first question you should always ask yourself:
 \begin{align*}
     &\text{The derivative of which function $g$ is equal to} \hspace{4pt} f?\\[2ex]
     &\text{Meaning, what is $g$, when} \hspace{4pt} \dfrac{dg}{dx} = f(x) \hspace{4pt} \text{?}
 \end{align*}
-This is what we mean by the term `antiderivative.' Once you find the antiderivative $g$ of your function $f$, \textbf{THAT} is the integral. With the indeterminant form, we must consider the crucial detail of a real number (constant) as being part of the expression for our function $g$. Particularly, for our example, we know
+Once you find $g$, \textbf{THAT} is the integral of $f$. With the indefinite form, we must consider the crucial detail of a real number (constant) as being part of the expression for our function $g$. Particularly, for our example, we know
 \begin{align*}
 f(x) = 1 \hspace{20pt} f(x) = 1 + 0
 \end{align*}
-and we know that the derivative of a constant is $0$ and the derivative of $x$ is $1$. So, when searching for our antiderivative $g$, we not only must antiderive the `kernel' (the main part) of the function $f$, which in our case is $1$, we must also antiderive the implied $0$. 
+and we know that the derivative of a constant is $0$ and the derivative of $x$ is $1$. So, when searching for the indefinite integral $g$, we not only must consider the `kernel' (the main part) of the function $f$, which in our case is $1$, we must also consider the implied $0$. 
 Continuing with our example:
 \begin{align*}
     \text{we know that} \hspace{20pt} \dfrac{d}{dx} (x+c) = \dfrac{d}{dx} x + \dfrac{d}{dx} c = 1 + 0 = 1 \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}
 \end{align*}
-So, we have that $g(x) = x+c$, because $\dfrac{dg}{dx} = \dfrac{d}{dx}(x+c) = 1 + 0 = 1 = f(x)$. Thus, we have the indeterminant integral
+So, we have that $g(x) = x+c$, because $\dfrac{dg}{dx} = \dfrac{d}{dx}(x+c) = 1 + 0 = 1 = f(x)$. Additionally, because $f$ is continuous on $D$, we call $g$ an antiderivative of $f$. Thus, we have the indefinite integral
 \begin{align*}
     g(x) = \int_{D} f(x)dx = \int_{D} 1 dx = x + c \hspace{20pt} \text{where $D$ is the domain of the function}
 \end{align*}
-which we could represent without the $1$ under the integral sign as 
+which also happens to be an antiderivative. We could represent this integral without the $1$ under the integral sign, as follows
 \begin{align*}
     g(x) = \int_{D} dx = x+c
 \end{align*}
@@ -175,7 +180,7 @@ Let's take the integral of $f(x) = x$. We know
 \begin{align*}
     \dfrac{d}{dx} \Big(\dfrac{x^{2}}{2} + c \Big) = \dfrac{d}{dx} \dfrac{x^{2}}{2} + \dfrac{d}{dx} c = \dfrac{2x}{2} + 0 = x
 \end{align*}
-So, $g(x) = \dfrac{x^{2}}{2} + c$ is the antiderivative of $f(x) = x$, giving us the indeterminant integral
+So, $g(x) = \dfrac{x^{2}}{2} + c$ is the indefinite integral of $f$ and it also happens to be an antiderivative of $f$, since $f$ is continuous on $D$. The results are summarized below.
 \begin{align*}
     \int_{D} f(x)dx = \int_{D} x dx  =  \dfrac{x^{2}}{2} + c = g(x)
 \end{align*}
@@ -217,7 +222,7 @@ Find the integral of the following
 \end{exercise}
 
 \begin{theorem}
-Following are some of the basic properties of the Reimann integral
+Following are some of the basic properties of the Riemann integral
 \begin{align*}
     &\int_{D} c f(x) dx = c \int_{D} f(x) dx \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}\\[2ex]
     &\int_{D} (f(x) + g(x)) dx = \int_{D} f(x) dx + \int_{D} g(x) dx\\[2ex]
@@ -266,3 +271,38 @@ Find the integral of the following
     f(x) = 3 - 2x
 \end{align*}
 \end{exercise}
+
+\newpage
+\section{The Fundamental Theorem of Calculus}
+
+\begin{theorem}
+For function $f$ as described in Theorem \ref{monotone_continuous_functions_are_integrable}, we have the indefinite integral of $f$ represented as
+\begin{align*}
+    g(x) = \int_{a}^{x} f(t) dt \hspace{20pt} x \in [a, b]
+\end{align*}
+where $a$ is referred to as a basepoint. On the interval $[a, b]$, we have $g$ is continuous, and on the interval $(a, b)$, save for possibly finitely many points, we have $g$ is differentiable, with
+\begin{align*}
+    g^{'}(z) = f(z) \hspace{20pt} \text{for all} \hspace{4pt} z \in (a, b) \hspace{20pt} \text{save possibly finitely many points where $f$ is discontinuous}
+\end{align*}
+When $f$ is continuous on the domain $[a, b]$, we call $g$ an antidervative of $f$. 
+\end{theorem}
+
+\begin{theorem}
+For function $f$ as described in Theorem \ref{monotone_continuous_functions_are_integrable}, we have 
+\begin{align*}
+    g(b) - g(a) = \int_{a}^{b} f(x) dx \hspace{20pt} x \in [a, b]
+\end{align*}
+where $g$ is continuous on $[a, b]$. Also, $g$ is differentiable on $(a, b)$, save for finitely many points, with
+\begin{align*}
+    g^{'}(x) = f(x) \hspace{20pt} \text{for all} \hspace{4pt} x \in (a, b) \hspace{20pt} \text{save for possibly finitely many points where $f$ is discontinuous}
+\end{align*}
+When $f$ is continuous on $[a, b]$, $g$ is an antiderivative of $f$.
+\end{theorem}
+
+\begin{theorem}
+Following are more of the basic properties of the Riemann integral
+\begin{align*}
+    &\text{If} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all $x \in D$} \hspace{20pt} \text{then} \hspace{20pt} \int_{D} f(x) dx \geq 0\\[2ex]
+    &\text{If} \hspace{4pt} f(x) \leq g(x) \hspace{4pt} \text{for all $x \in D$} \hspace{20pt} \text{then} \hspace{20pt} \int_{D} f(x) dx \leq \int_{D} g(x) dx 
+\end{align*}
+\end{theorem}
