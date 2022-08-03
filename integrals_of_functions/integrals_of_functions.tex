@@ -366,10 +366,59 @@ Thus, the integral can be rewritten from this substitution as
 \begin{align*}
     g(x) = \int_{1}^{9} \dfrac{1}{2}\sqrt{u(x)} du = \int_{1}^{9} \dfrac{1}{2} \hspace{4pt} (u(x))^{1/2} \hspace{4pt} du = \dfrac{1}{3} (u(x))^{3/2} \hspace{20pt} u(x) \in [1, 9]
 \end{align*}
-The right hand side of the equality evaluates to $26/3$. Of course, we can always revert back to expressions in terms of $x$.
+The right hand side of the equality evaluates to $26/3$. However, if one wishes to revert back to expressions in terms of $x$, as opposed to $u(x)$, the numerically computation will be the same.
 \begin{align*}
     g(x) &= \int_{1}^{9} \dfrac{1}{2}\sqrt{u(x)} du = \dfrac{1}{3} (u(x))^{3/2} \hspace{20pt} u(x) \in [1, 9]\\[2ex]
     &= \dfrac{1}{3} (\sqrt{2x + 1})^{3/2} \hspace{20pt} x \in [0, 4]\\[2ex]
     &= \dfrac{1}{3} (\sqrt{2(4) + 1})^{3/2} - \dfrac{1}{3} (\sqrt{2(0) + 1})^{3/2} = \dfrac{26}{3}
 \end{align*}
 \end{example}
+
+\begin{example}
+Consider the following indefinite integral
+\begin{align*}
+    g(x) = \int_{D} \cos^{3} x \sin x dx
+\end{align*}
+It looks tough, but we got this. Define
+\begin{align*}
+    u(x) = \cos x
+\end{align*}
+By differentiating $u$ with respect to $x$, we get
+\begin{align*}
+    \dfrac{du}{dx} = -\sin x \hspace{20pt} \Longleftrightarrow \hspace{20pt} -du = \sin x dx
+\end{align*}
+Thus, our indefinitie integral becomes
+\begin{align*}
+    g(x) &= \int_{D} -(u(x))^{3} du\\[2ex]
+    &= \hspace{4pt} -\dfrac{1}{4} (u(x))^{4} + c\\[2ex]
+    &= \hspace{4pt} -\dfrac{1}{4} \cos^{4} x + c
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{\sec^{2} \Big(\dfrac{1}{x}\Big)}{x^{2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = x \sin(x^{2})
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{x}{(x^{2} + 1)^{2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = e^{x} \sin (e^{x})
+\end{align*}
+\end{exercise}
