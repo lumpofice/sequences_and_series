@@ -226,7 +226,9 @@ Following are some of the basic properties of the Riemann integral
 \begin{align*}
     &\int_{D} c f(x) dx = c \int_{D} f(x) dx \hspace{20pt} \text{where} \hspace{4pt} c \in \mathbb{R}\\[2ex]
     &\int_{D} (f(x) + g(x)) dx = \int_{D} f(x) dx + \int_{D} g(x) dx\\[2ex]
-    &\int_{D} (f(x) - g(x)) dx = \int_{D} f(x) dx - \int_{D} g(x) dx
+    &\int_{D} (f(x) - g(x)) dx = \int_{D} f(x) dx - \int_{D} g(x) dx\\[2ex]
+    &\text{If} \hspace{4pt} f(x) \geq 0 \hspace{4pt} \text{for all $x \in D$} \hspace{20pt} \text{then} \hspace{20pt} \int_{D} f(x) dx \geq 0\\[2ex]
+    &\text{If} \hspace{4pt} f(x) \leq g(x) \hspace{4pt} \text{for all $x \in D$} \hspace{20pt} \text{then} \hspace{20pt} \int_{D} f(x) dx \leq \int_{D} g(x) dx
 \end{align*}
 \end{theorem}
 
@@ -284,6 +286,7 @@ where $a$ is referred to as a basepoint. On the interval $[a, b]$, we have $g$ i
 \begin{align*}
     g^{'}(z) = f(z) \hspace{20pt} \text{for all} \hspace{4pt} z \in (a, b) \hspace{20pt} \text{save possibly finitely many points where $f$ is discontinuous}
 \end{align*}
+We refer to this as The Fundamental Theorem of Calculus I.\\[1ex]
 When $f$ is continuous on the domain $[a, b]$, we call $g$ an antidervative of $f$. \label{FTC_1}
 \end{theorem}
 
@@ -296,6 +299,7 @@ where $g$ is continuous on $[a, b]$. Also, $g$ is differentiable on $(a, b)$, sa
 \begin{align*}
     g^{'}(x) = f(x) \hspace{20pt} \text{for all} \hspace{4pt} x \in (a, b) \hspace{20pt} \text{save for possibly finitely many points where $f$ is discontinuous}
 \end{align*}
+We refer to this as The Fundamental Theorem of Calculus II.\\[1ex]
 When $f$ is continuous on $[a, b]$, $g$ is an antiderivative of $f$.
 \end{theorem}
 
@@ -530,7 +534,7 @@ The function under the integral sign is continuous. Additionally, we have $x^{4}
 \begin{align*}
     g(x) = (v \circ u)(x) = \int_{1}^{u(x)} \sec t dt
 \end{align*}
-By The Fundamental Theorem of Calculus, along with The Chain Rule 
+By The Fundamental Theorem of Calculus I, along with The Chain Rule 
 \begin{align*}
     \dfrac{dg}{dx} &= v^{'}(u(x)) \cdot u^{'}(x)\\[2ex] 
     &= \dfrac{d}{du} \Big( \int_{1}^{u(x)} \sec t dt \Big) \dfrac{du}{dx}\\[2ex]
@@ -545,3 +549,70 @@ Find the derivative of $g$.
     g(x) = \int_{1}^{x} \dfrac{1}{t^{3} + 1} dt
 \end{align*}
 \end{exercise}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{2}^{x} t^{2} \sin t dt
+\end{align*}
+\end{exercise}
+
+\begin{note}
+\begin{align*}
+    \int_{b}^{a} f(x) dx = -\int_{a}^{b} f(x) dx \hspace{20pt} a, b \in \mathbb{R}
+\end{align*}
+\end{note}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{x}^{\pi} \sqrt{1 + \sec t} dt
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{2}^{1/x} \arctan t dt
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{1}^{\cos x} (1 + t^{2})^{10} dt
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{e^{x}}^{0} \sin^{3} t dt
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{Integration by Parts}
+
+\begin{theorem}
+Let $u$, $v$ be differentiable on $[a, b]$ and let $f = u^{'}$ and $g = v^{'}$ be Riemann integrable. Then the following holds
+\begin{align*}
+    \int_{a}^{b} ug = uv \Big|_{a}^{b} - \int_{a}^{b} vf
+\end{align*}
+\begin{proof}
+By the product rule
+\begin{align*}
+    (uv)^{'} = fv + ug = vf + ug
+\end{align*}
+We know differentiable functions are Riemann integrable, and we are told that $f$ and $g$ are integrable. Thus,
+\begin{align*}
+    \int_{a}^{b} (uv)^{'} &= \int_{a}^{b} vf + \int_{a}^{b} ug\\[2ex]
+    &\Longleftrightarrow\\[2ex]
+    uv \Big|_{a}^{b} &= \int_{a}^{b} vf + \int_{a}^{b} ug\\[2ex] 
+    &\Longleftrightarrow\\[2ex]
+    \int_{a}^{b} ug &= uv \Big|_{a}^{b} - \int_{a}^{b} vf\\[2ex]
+    \int_{a}^{b} u dv &= uv \Big|_{a}^{b} - \int_{a}^{b} v du
+\end{align*}
+\end{proof}
+We refer to this integration technique as Integration by Parts.
+\end{theorem}
