@@ -284,7 +284,7 @@ where $a$ is referred to as a basepoint. On the interval $[a, b]$, we have $g$ i
 \begin{align*}
     g^{'}(z) = f(z) \hspace{20pt} \text{for all} \hspace{4pt} z \in (a, b) \hspace{20pt} \text{save possibly finitely many points where $f$ is discontinuous}
 \end{align*}
-When $f$ is continuous on the domain $[a, b]$, we call $g$ an antidervative of $f$. 
+When $f$ is continuous on the domain $[a, b]$, we call $g$ an antidervative of $f$. \label{FTC_1}
 \end{theorem}
 
 \begin{theorem}
@@ -420,5 +420,128 @@ Find the indefinite integral of the following
 Find the indefinite integral of the following 
 \begin{align*}
     f(x) = e^{x} \sin (e^{x})
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{x}{x^{2} + 1}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{(\ln x)^{2}}{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = (1 + \tan x)^{5} \sec^{2} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = e^{x} \sin (e^{x})
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{\sin(\ln x)}{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{\cos x}{\sin^{2} x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \sqrt{\cot x} \csc^{2} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \sec^{3} x \tan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{1+x}{1 + x^{2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{x^{2}}{\sqrt{1 - x}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{x}{\sqrt[\leftroot{2}\uproot{2}4]{x + 2}}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following 
+\begin{align*}
+    f(x) = x^{3} \sqrt{x^{2} + 1}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following 
+\begin{align*}
+    f(x) = x^{2} (1 + 2x^{3})^{5} \hspace{20pt} x \in [0, 1]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following 
+\begin{align*}
+    f(x) = \dfrac{e^{1/x}}{x^{2}} \hspace{20pt} x \in [1, 2]
+\end{align*}
+\end{exercise}
+
+\begin{example}
+Using Theorem \ref{FTC_1}, we can find the derivative of an indefinite integral. Take the following
+\begin{align*}
+    \int_{1}^{x^{4}} \sec t dt
+\end{align*}
+The function under the integral sign is continuous. Additionally, we have $x^{4}$ as our upper bound on the integral sign. Let's define $u(x) = x^{4}$. Our function $g$ can now be written as 
+\begin{align*}
+    g(x) = (v \circ u)(x) = \int_{1}^{u(x)} \sec t dt
+\end{align*}
+By The Fundamental Theorem of Calculus, along with The Chain Rule 
+\begin{align*}
+    \dfrac{dg}{dx} &= v^{'}(u(x)) \cdot u^{'}(x)\\[2ex] 
+    &= \dfrac{d}{du} \Big( \int_{1}^{u(x)} \sec t dt \Big) \dfrac{du}{dx}\\[2ex]
+    &= ( \sec u(x) ) \cdot 4x^{3}\\[2ex]
+    &= 4x^{3} \sec x^{4} 
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Find the derivative of $g$.
+\begin{align*}
+    g(x) = \int_{1}^{x} \dfrac{1}{t^{3} + 1} dt
 \end{align*}
 \end{exercise}
