@@ -383,7 +383,7 @@ Consider the following indefinite integral
 \begin{align*}
     g(x) = \int_{D} \cos^{3} x \sin x dx
 \end{align*}
-It looks tough, but we got this. Define
+It looks tough, but with a tool referred to as \textbf{U-Substitution}, we got this. Define
 \begin{align*}
     u(x) = \cos x
 \end{align*}
@@ -616,3 +616,135 @@ We know differentiable functions are Riemann integrable, and we are told that $f
 \end{proof}
 We refer to this integration technique as Integration by Parts.
 \end{theorem}
+
+\begin{example}
+We find the following integral
+\begin{align*}
+    \int_{D} \ln x dx
+\end{align*}
+by defining the following
+\begin{align*}
+    &u(x) = \ln x \hspace{20pt} \Longrightarrow \hspace{20pt} \dfrac{du}{dx} = \dfrac{1}{x} \hspace{20pt} \Longleftrightarrow \hspace{20pt} du = \dfrac{dx}{x}\\[2ex]
+    &dv = dx \hspace{20pt} \Longrightarrow \hspace{20pt} v(x) = \int_{D} dv = \int_{D} dx = x
+\end{align*}
+Using Integration by Parts, with $c_{0}, c_{1} \in \mathbb{R}$ this gives us the following setup
+\begin{align*}
+    \int_{D} \ln x dx = \int_{D} u(x) dv = u(x)v(x) - \int_{D} v(x) du = \ln x \cdot x + c_{0} - \int_{D} x \dfrac{dx}{x} = \ln x \cdot x + c_{0} - x + c_{1}
+\end{align*}
+We now combine our constants into one constant $c$ for the final result
+\begin{align*}
+    \int_{D} \ln x dx = x \ln x - x + c
+\end{align*}
+\end{example}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x^{2} \ln x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x \cos x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x \cos(mx) \hspace{20pt} m \in \mathbb{R}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x^{2} e^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = \sin x \cdot e^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = \arctan x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x \sec^{2} x
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x \cdot 2^{x}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = e^{-x} \cos(2x)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = \dfrac{\ln x}{x^{2}} \hspace{20pt} x \in [1, 2]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = \dfrac{x}{e^{2x}} \hspace{20pt} [0, 1]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = \arccos x \hspace{20pt} \Big[0, \hspace{4pt} \dfrac{1}{2}\Big]
+\end{align*}
+\end{exercise}
+
+\begin{note}
+There are times when multiple integration approaches/techniques make integration easier.
+\end{note}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = x^{3} \cos(x^{2}) \hspace{20pt} \Big[\sqrt{\dfrac{\pi}{2}}, \hspace{4pt} \sqrt{\pi} \Big]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the definite integral of the following
+\begin{align*}
+    f(x) = e^{\cos x} \sin(2x) \hspace{20pt} [0, \pi]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Find the indefinite integral of the following
+\begin{align*}
+    f(x) = \cos \sqrt{x}
+\end{align*}
+\end{exercise}
+
+\newpage
+\section{Trigonometric Integrals}
