@@ -894,16 +894,31 @@ Let
     f(x) = \dfrac{x^{3} + x}{x - 1}
 \end{align*}
 Using the long division
-\setstackgap{S}{4pt}
-\stackMath\def\stackalignment{r}
 \begin{align*}
+\setstackgap{S}{1.5pt}
+\stackMath\def\stackalignment{r}
 \stackunder{%
-  x-1 \hspace{4pt} \stackon[4pt]{\showdiv{ \hspace{4pt} x^{3} + x}}{2469}%
+  x-1 \stackon[1pt]{\showdiv{x^{3} + \hspace{10pt} + x}}{x^{2} + x + 2}%
 }{%
-  \Shortstack[l]{{\underline{x^{3}}} \ph{1}23 {\ph{1}\underline{20}} \ph{12}34 {\ph{12}\underline{30}} %
+  \Shortstack[l]{{\underline{x^{3}-x^{2}}\ph{+ x}} \ph{x^{3}-}x^{2}+x {\ph{x^{3}-}\underline{x^{2}-x}} \ph{12}34 {\ph{12}\underline{30}} %
    \ph{123}45 {\ph{123}\underline{45}} \ph{1234}0}%
 }
 \end{align*}
+
+
+\begin{align*}
+    \setstackgap{S}{1.5pt}
+\stackMath\def\stackalignment{r}
+\stackunder{%
+  5 \stackon[1pt]{\showdiv{12345}}{2469}%
+}{%
+  \Shortstack[l]{{\underline{10}} \ph{1}23 {\ph{1}\underline{20}} \ph{12}34 {\ph{12}\underline{30}} %
+   \ph{123}45 {\ph{123}\underline{45}} \ph{1234}0}%
+}
+\end{align*}
+
+
+
 \end{example}
 
 \begin{example}

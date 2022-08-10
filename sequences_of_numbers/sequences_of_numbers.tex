@@ -294,13 +294,6 @@ Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
 \begin{exercise}
 Find the limit of the following sequence:
 \begin{align*}
-    \Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Find the limit of the following sequence:
-\begin{align*}
     \Big\{\dfrac{(-3)^{n}}{n!}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
@@ -347,11 +340,11 @@ Give an example of an increasing sequence. Through induction, show that it is in
 \begin{definition}
 A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded above if
 \begin{align*}
-    \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that} f(n) \leq M \hspace{4pt} \text{for all} \hspace{4pt} n
+    \text{there exists an} \hspace{4pt} M \in \mathbb{Z} \hspace{4pt} \text{such that} \hspace{4pt} f(n) \leq M \hspace{4pt} \text{for all} \hspace{4pt} n
 \end{align*}
 A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded below if
 \begin{align*}
-    \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that} f(n) \geq M \hspace{4pt} \text{for all} \hspace{4pt} n
+    \text{there exists an} \hspace{4pt} M \hspace{4pt} \text{such that} \hspace{4pt} M \in \mathbb{Z} \hspace{4pt} \text{and} \hspace{4pt} f(n) \geq M \hspace{4pt} \text{for all} \hspace{4pt} n
 \end{align*}
 A sequence $\{f(n)\}_{n=1}^{\infty}$ is bounded if it is both bounded above and bounded below.
 \end{definition}
@@ -363,10 +356,10 @@ It is clear the sequence $\Big\{\dfrac{1}{n}\Big\}_{n=1}^{\infty}$ is bounded ab
 \end{align*}
 it appears that $0$ will be a lower bound. We can test this using induction.
 \begin{align*}
-    \text{For} \hspace{4pt} n=1: \hspace{2pt} 0 < f(1)
-    \text{For} \hspace{4pt} n=k: \hspace{20pt} 0 < f(k) \hspace{4pt} \text{is assumed true}\\[2ex]
-    \text{Since the sequence is decreasing, we have} \hspace{4pt} f(k+1) < f(k)\\[2ex]
-    \text{and we have} \hspace{4pt} f(k) = \dfrac{1}{k} > f(k+1) = \dfrac{1}{k+1} > 0 
+    &\text{For} \hspace{4pt} n=1: \hspace{20pt} 0 < f(1)\\[2ex]
+    &\text{For} \hspace{4pt} n=k: \hspace{20pt} 0 < f(k) \hspace{4pt} \text{is assumed true}\\[2ex]
+    &\text{Since the sequence is decreasing, we have} \hspace{4pt} f(k+1) < f(k)\\[2ex]
+    &\text{and we have} \hspace{4pt} f(k) = \dfrac{1}{k} > f(k+1) = \dfrac{1}{k+1} > 0 
 \end{align*}
 Thus, the sequence is bounded below by $0$. Being bounded both above and below, the sequence is bounded.
 \end{example}
@@ -399,7 +392,7 @@ Suppose you know that $\{f(n)\}_{n=1}^{\infty}$ is a decreasing sequence and all
 \end{exercise}
 
 \begin{exercise}
-Determine where the sequence is increasing, decreasing, or not monotonic. Show, using induction. Is the sequence bounded? Show, using induction.
+Determine whether the sequence is increasing, decreasing, or not monotonic. Show, using induction. Is the sequence bounded? Show, using induction.
 \begin{flalign*}
 \text{a.} \hspace{20pt} &\{(-2)^{n+1}\}_{n=1}^{\infty}&\\[2ex]
 \text{b.} \hspace{20pt} &\Big\{\dfrac{1}{2n+3}\Big\}_{n=1}^{\infty}&\\[2ex]
