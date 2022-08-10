@@ -7,6 +7,10 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 
+% Other packages
+\usepackage{scalerel}
+\usepackage{stackengine}
+
 % Packages for images
 \usepackage{tikz}
 
@@ -43,6 +47,10 @@
 \DeclareMathOperator*{\arccot}{arccot}
 \DeclareMathOperator*{\arcsec}{arcsec}
 \DeclareMathOperator*{\arccsc}{arccsc}
+
+% Commands
+\newcommand\showdiv[1]{\overline{\smash{\hstretch{.5}{)}\mkern-3.2mu\hstretch{.5}{)}}#1}}
+\let\ph\phantom
    
 % Removing indentations
 \setlength{\parindent}{0pt}

@@ -894,6 +894,16 @@ Let
     f(x) = \dfrac{x^{3} + x}{x - 1}
 \end{align*}
 Using the long division
+\setstackgap{S}{4pt}
+\stackMath\def\stackalignment{r}
+\begin{align*}
+\stackunder{%
+  x-1 \hspace{4pt} \stackon[4pt]{\showdiv{ \hspace{4pt} x^{3} + x}}{2469}%
+}{%
+  \Shortstack[l]{{\underline{x^{3}}} \ph{1}23 {\ph{1}\underline{20}} \ph{12}34 {\ph{12}\underline{30}} %
+   \ph{123}45 {\ph{123}\underline{45}} \ph{1234}0}%
+}
+\end{align*}
 \end{example}
 
 \begin{example}
