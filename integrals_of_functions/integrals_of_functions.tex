@@ -871,10 +871,11 @@ We call the quotient of two polynomials a rational function. Let $p$ and $q$ be 
 \begin{align*}
     r(x) = \dfrac{p(x)}{q(x)}
 \end{align*}
+In this section, we will deal with rational functions, some of which may require long division. Following are a few details about which forms of rational functions we are likely to encounter within this section, as well as some examples of how to break these forms down into partial fractions that are relatively easier to integrate.
 \end{recall}
 
 \begin{note}
-The rational functions that we will deal with in this section include
+The rational functions that we will deal with in this section may include within their denominators some of the following:
 \begin{itemize}
     \item Distinct, linear factors
     \item Non-distinct, linear factors
@@ -904,6 +905,10 @@ Using an algorithm for long division of polynomials
    \ph{x^{3}-x^{2}-}0}
   }
 \end{align*}
+Thus,
+\begin{align*}
+    f(x) = \dfrac{x^{3} + x}{x - 1} = x^{2} + x + 2 + \dfrac{0}{x - 1} = x^{2} + x + 2
+\end{align*}
 \end{example}
 
 \begin{example}
@@ -915,7 +920,7 @@ Our goal is to rewrite this rational function in one of the four forms mentioned
 \begin{align*}
     \dfrac{x^{2} + 2x - 1}{2x^{3} + 3x^{2} - 2x} = \dfrac{x^{2} + 2x - 1}{x(2x - 1)(x + 2)}
 \end{align*}
-We may now break the single fraction into multiple fractions, as follows
+We see that each linear factor in the denominator. We may now break the single fraction into multiple fractions, as follows
 \begin{align*}
     \dfrac{x^{2} + 2x - 1}{x(2x - 1)(x + 2)} = \dfrac{a}{x} + \dfrac{b}{2x - 1} + \dfrac{c}{x + 2}
 \end{align*}
@@ -946,6 +951,41 @@ giving us the resulting integral
     &= \dfrac{1}{2}\ln \lvert x \rvert + \dfrac{1}{10}\ln \lvert 2x - 1 \rvert - \dfrac{1}{10}\ln \lvert x + 2 \rvert + k
 \end{align*}
 where $k \in \mathbb{R}$
+\end{example}
+
+\begin{example}
+The general form resulting from the breakdown of rational functions with (exclusively) distinct linear factors within the denominator is as follows
+\begin{align*}
+    f(x) = \frac{p(x)}{q(x)} &= \dfrac{p(x)}{(a_{1}x + b_{1})(a_{2}x + b_{2}) \cdots (a_{n-1}x + b_{n-1})(a_{n}x + b_{n})}\\[2ex]
+    &= \dfrac{c_{1}}{a_{1}x + b_{1}} + \dfrac{c_{2}}{a_{2}x + b_{2}} + \cdots + \dfrac{c_{n-1}}{a_{n-1}x + b_{n-1}} + \dfrac{c_{n}}{a_{n}x + b_{n}}
+\end{align*}
+\end{example}
+
+\begin{example}
+As an example of how we may break a rational function down into multiple partial fractions, the denominator of which containing non-distinct linear factors, take
+\begin{align*}
+    f(x) = \dfrac{x^{4} - 2x^{2} + 4x + 1}{x^{3} - x^{2} - x + 1}
+\end{align*}
+Using long division, we can rewrite $f$ as follows
+\begin{align*}
+    f(x) = \dfrac{x^{4} - 2x^{2} + 4x + 1}{x^{3} - x^{2} - x + 1} = x + 1 + \dfrac{4x}{x^{3} - x^{2} - x + 1}
+\end{align*}
+Factoring the denominator of the resulting fractional portion of the rational function, we get
+\begin{align*}
+    f(x) = x + 1 + \dfrac{4x}{x^{3} - x^{2} - x + 1} = x + 1 + \dfrac{4x}{(x-1)^{2} (x+1)}
+\end{align*}
+Breaking this down to partial fractions, noting that $(x-1)$ occurs twice, we get
+\begin{align*}
+    f(x) = x + 1 + \dfrac{4x}{(x-1)^{2} (x+1)} = x + 1 + \dfrac{a}{x - 1} + \dfrac{b}{(x - 1)^{2}} + \dfrac{c}{x + 1}
+\end{align*}
+\end{example}
+
+\begin{example}
+The general form resulting from the breakdown of rational functions with (exclusively) repeating linear factors within the denominator is as follows
+\begin{align*}
+    f(x) = \dfrac{p(x)}{q(x)} &= \dfrac{p(x)}{(ax + b)^{n}}\\[2ex]
+    &= \dfrac{c_{1}}{(ax + b)} + \dfrac{c_{2}}{(ax + b)^{2}} + \cdots \dfrac{c_{n-1}}{(ax + b)^{n-1}} + \dfrac{c_{n}}{(ax + b)^{n}}
+\end{align*}
 \end{example}
 
 \newpage
