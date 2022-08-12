@@ -988,5 +988,45 @@ The general form resulting from the breakdown of rational functions with (exclus
 \end{align*}
 \end{example}
 
+\begin{example}
+As an example of how to break a rational function down into multiple partial functions, the denominator of which containing irreducible quadratic factors, take
+\begin{align*}
+    f(x) = \dfrac{x}{(x-2)(x^{2} + 1)(x^{2} + 4)}
+\end{align*}
+We can now take the function $f$ and rewrite it as multiple rationals, each with a single factor in its denominator
+\begin{align*}
+    f(x) &= \dfrac{x}{(x-2)(x^{2} + 1)(x^{2} + 4)}\\[2ex]
+    &= \dfrac{a}{x-2} + \dfrac{bx + c}{x^{2} + 1} + \dfrac{dx + e}{x^{2} + 4}
+\end{align*}
+\end{example}
+
+\begin{example}
+The general form resulting from the breakdown of rational functions with (exclusively) distinct, irreducible quadratic factors within the denominator is as follows
+\begin{align*}
+    f(x) = \dfrac{p(x)}{q(x)} &= \dfrac{p(x)}{(a_{1}x^{2} + b_{1}x + c_{1}) \cdots (a_{n}x^{2} + b_{n}x + c)}\\[2ex]
+    &= \dfrac{d_{1}x + e_{1}}{a_{1}x^{2} + b_{1}x + c_{1}} + \cdots + \dfrac{d_{n}x + e_{n}}{a_{n}x^{2} + b_{n}x + c_{n}}
+\end{align*}
+\end{example}
+
+\begin{example}
+As an example of how to break a rational function down into multiple partial functions, the denominator of which containing repeating, irreducible quadratic factors, take
+\begin{align*}
+    f(x) = \dfrac{x^{3} + x^{2} + 1}{x(x-1)(x^{2} + x + 1)(x^{2} + 1)^{3}}
+\end{align*}
+We can now take the function $f$ and rewrite it as multiple rationals, each with a single factor in its denominator
+\begin{align*}
+    f(x) &= \dfrac{x^{3} + x^{2} + 1}{x(x-1)(x^{2} + x + 1)(x^{2} + 1)^{3}}\\[2ex]
+    &= \dfrac{a}{x} + \dfrac{b}{x-1} + \dfrac{cx + d}{x^{2} + x + 1} + \dfrac{ex + f}{x^{2} + 1} + \dfrac{gx + h}{(x^{2} + 1)^{2}} + \dfrac{ux + v}{(x^{2} + 1)^{3}}
+\end{align*}
+\end{example}
+
+\begin{example}
+The general form resulting from the breakdown of rational functions with (exclusively) repeating, irreducible quadratic factors within the denominator is as follows
+\begin{align*}
+    f(x) &= \dfrac{p(x)}{q(x)} = \dfrac{p(x)}{(ax^{2} + bx + c)^{n}}\\[2ex]
+    &= \dfrac{c_{1}x + d_{1}}{ax^{2} + bx + c} + \dfrac{c_{2}x + d_{2}}{(ax^{2} + bx + c)^{2}} + \cdots + \dfrac{c_{n-1}x + d_{n-1}}{(ax^{2} + bx + c)^{n-1}} + \dfrac{c_{n}x + d_{n}}{(ax^{2} + bx + c)^{n}}
+\end{align*}
+\end{example}
+
 \newpage
 \section{Improper Integrals}
