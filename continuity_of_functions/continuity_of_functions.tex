@@ -4,7 +4,7 @@
 We say a function $f$ is continuous at a point $c \in \text{Dom($f$)}$ if
 \begin{align*}
     &\text{For any} \hspace{4pt} \epsilon > 0, \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
-    &\text{for any} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
+    &\text{for any} \hspace{4pt} x \in \text{Dom($f$)} \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
 \end{align*}
 This is equivalent to saying $\lim_{x \longrightarrow c} f(x) = f(c)$ when $f$ is continuous at $c$. For continuity to hold, we need three things to be true:
 \begin{itemize}
@@ -46,11 +46,56 @@ If $f$ and $g$ are functions continuous at $a$, then the following functions are
 \end{theorem}
 \end{exercise}
 
+\begin{example}
+Define $f(x) = 2$ and $g(x) = \sgn(x)$, where
+\begin{align*}
+    \sgn(x) =
+    \begin{cases}
+    1, &x > 0,\\
+    0, &x = 0,\\
+    -1, &x < 0
+    \end{cases}
+\end{align*}
+Because $g$ is not continuous at $x = 0$, we see 
+\begin{align*}
+    (f + g)(x) = 
+    \begin{cases}
+    1, &x < 0,\\
+    2, &x = 0,\\
+    3, &x > 0
+    \end{cases}\\[2ex]
+    (f - g)(x) =
+    \begin{cases}
+    3, &x < 0,\\
+    2, &x = 0,\\
+    1, &x > 0
+    \end{cases}\\[2ex]
+    cg(x) = 
+    \begin{cases}
+    -c, &x < 0,\\
+    0, &x = 0,\\
+    c, &x > 0
+    \end{cases}\\[2ex]
+    fg(x) = 
+    \begin{cases}
+    -2, &x < 0,\\
+    0, &x = 0,\\
+    2, &x > 0
+    \end{cases}\\[2ex]
+    \dfrac{f}{g}(x) = 
+    \begin{cases}
+    -2, &x < 0,\\
+    2, &x > 0
+    \end{cases}
+\end{align*}
+None of the combinations are continuous at $x = 0$.
+\end{example}
+
 \begin{definition}
 We say a function $f$ is continuous on Dom($f$) if for every $c \in \text{Dom($f$)}$ we have 
 \begin{align*}
     &\text{For any} \hspace{4pt} \epsilon > 0, \hspace{4pt} \text{there exists a} \hspace{4pt} \delta > 0 \hspace{4pt} \text{such that}\\[2ex]
-    &\text{for any} \hspace{4pt} x \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
+    &\text{for any} \hspace{4pt} x \in \text{Dom($f$)} \hspace{4pt} \text{satisfying} \hspace{4pt} \lvert x - c \rvert < \delta \hspace{20pt} \text{we have} \hspace{20pt} \lvert f(x) - f(c) \rvert < \epsilon
 \end{align*}
 \end{definition}
 
@@ -181,6 +226,17 @@ Where along the real line is the following continuous:
 \begin{exercise}
 Where along the real line is the following continuous:
 \begin{align*}
+    f(x) = 
+    \begin{cases}
+    \dfrac{x^{2}-x-2}{x-2}, &x \neq 2 \\
+    3, & x=2
+    \end{cases}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Where along the real line is the following continuous:
+\begin{align*}
     f(x) =
     \begin{cases}
     \dfrac{1}{x^{2}}, &x \neq 0\\
@@ -217,6 +273,18 @@ A function $f$ is continuous if and only if
     \lim_{x \longrightarrow c^{-}} f(x) = f(c) = \lim_{x \longrightarrow c^{+}} f(x) 
 \end{align*}
 \end{theorem}
+
+\begin{definition}
+For discontinuities of the first kind, 
+\begin{align*}
+    \lim_{x \longrightarrow c^{+}} f(x) \hspace{10pt} \text{and} \hspace{10pt} \lim_{x \longrightarrow c^{-}} f(x)
+\end{align*}
+both exist and exactly one of the following holds
+\begin{align*}
+    &1) \hspace{10pt} \lim_{x \longrightarrow c^{+} f(x)} \neq \lim_{x \longrightarrow c^{-}} f(x) \hspace{20pt} \text{(Jump Discontinuity)}\\[2ex]
+    &2) \hspace{10pt} \lim_{x \longrightarrow c^{+} f(x)} = \lim_{x \longrightarrow c^{-}} f(x) \neq f(c) \hspace{20pt} \text{(Removable Discontinuity)}
+\end{align*}
+\end{definition}
 
 \begin{example}
 Below is a visual of the floor function on the attenuated domain $[0, 2)$, with the open, white-colored circles depicting where a function is discontinuous from the left, and the closed, red-colored circles depicting where a function is continuous from the right. We see that $f$ is discontinuous at $1$:
@@ -262,7 +330,7 @@ Here we have the ceiling function on the attenuated domain (-1, 1]:
 \end{align*}
 We see that it is discontinuous at $0$:
 \begin{align*}
-    &\lim_{x \longrightarrow 0^{-}} \lceil x \rceil = 0 \hspace{20pt} \lim_{x \longrightarrow 0^{+}} \lceil x \rceil 1\\[2ex]
+    &\lim_{x \longrightarrow 0^{-}} \lceil x \rceil = 0 \hspace{20pt} \lim_{x \longrightarrow 0^{+}} \lceil x \rceil = 1\\[2ex]
     &\text{Since} \hspace{4pt} \lim_{x \longrightarrow 0^{+}}f(x) \neq f(0) \hspace{4pt} f \hspace{4pt} \text{is discontinuous at} \hspace{4pt} 0
 \end{align*}
 
@@ -293,13 +361,6 @@ For the ceiling function $f(x) = \lceil x \rceil$, for an arbitrary integer $n$,
 \begin{align*}
     &\lim_{x \longrightarrow n^{-}} f(x)\\
     &\lim_{x \longrightarrow n^{+}} f(x)
-\end{align*}
-\end{exercise}
-
-\begin{exercise}
-Is $f$ continuous at $c=-2$? If so, then:
-\begin{align*}
-    \text{For} \hspace{4pt} f(x) = \dfrac{x^{3}+2x^{2}-1}{5-3x} \hspace{20pt} \text{find} \hspace{20pt} \lim_{x \longrightarrow -2} f(x)
 \end{align*}
 \end{exercise}
 
@@ -349,10 +410,9 @@ State the domain of the function and find where it is continuous:
 \end{exercise}
 
 \begin{exercise}
-State the domain of the function and find where it is continuous:
+State the domain of the function and find where it is continuous. Then find $\lim_{x \longrightarrow -\pi} f(x)$
 \begin{align*}
-    &f(x) = \dfrac{\sin x}{2 + 2\cos x}\\
-    \text{Find} \hspace{4pt} &\lim_{x \longrightarrow -\pi} f(x)
+    &f(x) = \dfrac{\sin x}{2 + 2\cos x}
 \end{align*}
 \end{exercise}
 
