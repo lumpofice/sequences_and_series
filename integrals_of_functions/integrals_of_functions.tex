@@ -1098,34 +1098,3 @@ Find the definite integral of the following
 \end{align*}
 \end{exercise}
 
-\newpage
-\section{Improper Integrals}
-
-\begin{theorem}
-For functions that follow the structure
-\begin{align*}
-    f(x) = \dfrac{1}{x^{p}} \hspace{20pt} x \in [1, \infty)
-\end{align*}
-we have the following
-\begin{align*}
-    \int_{1}^{\infty} \dfrac{1}{x^{p}} dx
-\end{align*}
-is convergent for $p > 1$ and divergent for $p \leq 1$
-\end{theorem}
-
-\begin{example}
-Take $f(x) = \dfrac{1}{x}$ from $[1, \infty)$. We set up the integral as follows
-\begin{align*}
-    \int_{1}^{\infty} \dfrac{1}{x} dx
-\end{align*}
-and then replace the $\infty$ in the upper bound with a variable, say $b$, and push that variable to $\infty$ as follows
-\begin{align*}
-    \int_{1}^{\infty} \dfrac{1}{x} dx = \lim_{b \longrightarrow \infty} \int_{1}^{b} \dfrac{1}{x} dx
-\end{align*}
-Now, we can evaluate using the Fundamental Theorem of Calculus, per usual
-\begin{align*}
-    \lim_{b \longrightarrow \infty} \int_{1}^{b} \dfrac{1}{x} dx &= \lim_{b \longrightarrow \infty} (\ln x) \Big|_{1}^{b}\\[2ex]
-    &= \lim_{b \longrightarrow \infty} \ln b - \ln 1 
-\end{align*}
-As you can see, when $b \longrightarrow \infty$, the integral pushes to infinity. 
-\end{example}
