@@ -17,9 +17,46 @@ This limit on the sequence $\{S_{k}\}_{k=1}^{\infty}$ we refer to as a series, a
 \begin{align*}
     S = \sum_{n=1}^{\infty} f(n)
 \end{align*}
-If $S$ is finite, then the series is convergent. If $S$ is infinite, then the series is divergent. There are some series that begin with $n=0$ as opposed to $n=1$. We will discover that the important results covered in this section focus less on where we begin in a series and more on where we end.
+If $S$ is finite, then the series is convergent. If $S$ is infinite, then the series is divergent. There are some series that begin with $n=0$ as opposed to $n=1$. We will discover that the important results covered in this section focus less on where we begin in a series and more on where we end. In fact, there is a theorem for this:
 \end{definition}
-Geometric\\
+
+\begin{theorem}
+$\sum f(n)$ converges if and only if for every $\epsilon > 0$ there is a natural number $N$ such that 
+\begin{align*}
+    \Big\lvert \sum_{n = k}^{m} f(n) \Big\rvert \leq \epsilon
+\end{align*}
+for all $k \geq m \geq N$. So, we have
+\begin{align*}
+    \Big\lvert \sum_{n = k}^{m} f(n) \Big\rvert = \lvert f(m) \rvert \leq \epsilon
+\end{align*}
+when $k = m$. This leads us to the following theorem:
+\end{theorem}
+
+\begin{theorem}
+If $\sum f(n)$ converges, then $\lim_{n \longrightarrow \infty} f(n) = 0$
+\end{theorem}
+
+\begin{theorem}
+If, for a fixed natural number $N$, $\lvert f(n) \rvert \leq g(n)$ for all $n \geq N$ then
+\begin{align*}
+    \sum f(n) \hspace{4pt} \text{converges} \hspace{20pt} \text{if} \hspace{20pt} \sum g(n) \hspace{4pt} \text{converges}
+\end{align*}
+If, for a fixed natural number $N$, $f(n) \geq g(n) \geq 0$ for all $n \geq N$ then
+\begin{align*}
+    \sum f(n) \hspace{4pt} \text{diverges} \hspace{20pt} \text{if} \hspace{20pt} \sum g(n) \hspace{4pt} \text{diverges}
+\end{align*}
+\end{theorem}
+
+\begin{recall}
+By Theorem \ref{geometric_term_sequence}, we have, for the sequence $\{r^{n}\}_{n=1}^{\infty}$
+\begin{align*}
+    \lim_{n \longrightarrow \infty} r^{n} = \begin{cases}
+    0, \hspace{4pt} \text{if} \hspace{4pt} -1 < r < 1,\\[2ex]
+    1, \hspace{4pt} \text{if} \hspace{4pt} r = 1
+    \end{cases}
+\end{align*}
+\end{recall}
+
 Integral Test\\
 Comparison Tests\\
 Alternating Series\\
