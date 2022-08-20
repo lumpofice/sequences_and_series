@@ -101,6 +101,139 @@ Push $m \longrightarrow \infty$. If $\lvert \varphi \rvert < 1$, $\lim_{m \longr
 \end{proof}
 \end{theorem}
 
+\begin{theorem}
+When $p > 1$, 
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{n^{p}}
+\end{align*}
+converges. When $p \leq 1$,
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{n^{p}}
+\end{align*}
+diverges.
+\end{theorem}
+
+\begin{example}
+Oftentimes, it is shown that a series is divergent, using a comparison test with
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{n}
+\end{align*}
+For instance, take the following series
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{\ln n}{n}
+\end{align*}
+Because $\dfrac{\ln n}{n} > \dfrac{1}{n}$ for all natural numbers $n \geq 3$, we have
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{\ln n}{n} 
+\end{align*}
+diverges by the comparison test.
+\end{example}
+
+\begin{definition}
+A series $\sum f(n)$ is absolutely convergent if $\sum \lvert f(n) \rvert$ is convergent. 
+\end{definition}
+
+\begin{definition}
+A series is conditionally convergent if it is convergent but not absolutely convergent.
+\end{definition}
+
+\begin{example}
+We see that, as the following series progresses, its partial sums remain within a finite window
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{(-1)^{n}}{n}
+\end{align*}
+For each partial sum of the series, we denote that partial sum as follows
+\begin{align*}
+    -1 = S_{1} \hspace{20pt} -1 + \dfrac{1}{2} = S_{2} \hspace{20pt} -1 + \dfrac{1}{2} + \dfrac{-1}{3} = S_{3} \hspace{20pt} \cdots
+\end{align*}
+\begin{tikzpicture}[scale=\textwidth/1.2cm]
+    % title and axes
+    \node at (-0.6, 0.01) {};
+    \draw (-1, 0) -- (0, 0);
+    % graph
+    \node at (-0.95, -0.05) {$S_{1} = -1$};
+    \draw[blue, fill=red] (-1, 0) circle (.15mm);
+    \node at (-0.45, -0.05) {$S_{2} = \dfrac{-1}{2}$};
+    \draw[blue, fill=red] (-0.5, 0) circle (.15mm);
+    \node at (-0.83333, -0.05) {$S_{3}$};
+    \draw[blue, fill=red] (-0.83333, 0) circle (.15mm);
+    \node at (-0.583333, -0.05) {$S_{4}$};
+    \draw[blue, fill=red] (-0.583333, 0) circle (.15mm);
+    \node at (-0.783333, -0.05) {$S_{5}$};
+    \draw[blue, fill=red] (-0.783333, 0) circle (.15mm);
+    \node at (-0.616666, -0.05) {$S_{6}$};
+    \draw[blue, fill=red] (-0.616666, 0) circle (.15mm);
+    \node at (-0.7, -0.05) {$\cdots$};
+    \node at (0, -0.05) {$0$};
+    \draw[blue, fill=black] (0, 0) circle (.15mm);
+\end{tikzpicture}
+\begin{align*}
+    \text{Following the pattern} \hspace{4pt} -1 + \dfrac{1}{2} - \dfrac{1}{3} + \dfrac{1}{4} - \dfrac{1}{5} + \dfrac{1}{6} - \cdots
+\end{align*}
+This function is conditionally convergent, since it does not converge absolutely
+\begin{align*}
+    \sum_{n=1}^{\infty} \Big\lvert \dfrac{(-1)^{n}}{n} \Big\rvert = \sum_{n=1}^{\infty} \dfrac{1}{n}
+\end{align*}
+which we know diverges. This brings us to another result:
+\end{example}
+
+\begin{theorem}
+If the alternating series
+\begin{align*}
+    \sum_{n=1}^{\infty} (-1)^{n}f(n) = -f(1) + f(2) - f(3) + \cdots \hspace{20pt} f(n) > 0
+\end{align*}
+satisfies
+\begin{align*}
+    &f(n+1) \leq f(n) \hspace{20pt} \text{for all} \hspace{4pt} n\\[2ex]
+    &\lim_{n \longrightarrow \infty} f(n) = 0
+\end{align*}
+then the series is convergent by The Alternating Series Test.
+\end{theorem}
+
+\begin{example}
+Take the series
+\begin{align*}
+    \sum_{n=1}^{\infty} \dfrac{(-1)^{n}}{n}
+\end{align*}
+\end{example}
+
+\begin{theorem}
+If a series is absolutely convergent, then it is convergent.
+\end{theorem}
+
+\begin{theorem}
+Take a sequence $A = \{f(n)\}_{n = 1}^{\infty}$. Define the limit of ratios of members of $A$ as follows
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{f(n+1)}{f(n)} \Big\rvert = L
+\end{align*}
+where $L \in \mathbb{R^{+}} \cup \{\infty\}$. Then we have the following
+\begin{align*}
+    &\text{If} \hspace{4pt} L < 1, \hspace{4pt} \text{then} \hspace{4pt} \sum_{n = 1}^{\infty} f(n) \hspace{4pt} \text{is absolutely convergent.}\\[2ex]
+    &\text{If} \hspace{4pt} L > 1, \hspace{4pt} \text{then} \hspace{4pt} \sum_{n = 1}^{\infty} f(n) \hspace{4pt} \text{is divergent.}\\[2ex]
+    &\text{If} \hspace{4pt} L = 1, \hspace{4pt} \text{then this test, known as The Ratio Test, is inconclusive.}
+\end{align*}
+\end{theorem}
+
+\begin{example}
+We can use The Ratio Test to test for converge of the series
+\begin{align*}
+    \sum_{n = 1}^{\infty} (-1)^{n} \dfrac{n^{3}}{3^{n}}
+\end{align*}
+The sequence of terms is as follows
+\begin{align*}
+    \Big\{(-1)^{n} \dfrac{n^{3}}{3^{n}}\Big\}_{n = 1}^{\infty}
+\end{align*}
+Using The Ratio Test, we have
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{(-1)^{n+1}(n+1)^{3}}{3^{n+1}} \cdot \dfrac{3^{n}}{(-1)^{n}n^{3}} \Big\rvert &= \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{-(n+1)^{3}}{3n^{3}} \Big\rvert\\[2ex]
+    &= \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{-(n^{3} + 3n^{2} + 3^{2}n + 1)}{3n^{3}} \Big\rvert\\[2ex]
+    &= \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{-(1 + (3/n) + (3^{2}/n^{2}) + (1/n^{3}))}{3} \Big\rvert\\[2ex]
+    &= \Big\lvert \dfrac{-1}{3} \Big\rvert\\[2ex]
+    &= \dfrac{1}{3}
+\end{align*}
+By The Ratio Test, and because the series is absolutely convergent, the series converges. 
+\end{example}
+
 Integral Test\\
 Limit Comparison Test\\
 Alternating Series\\
