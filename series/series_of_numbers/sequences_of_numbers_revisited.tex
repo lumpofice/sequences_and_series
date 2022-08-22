@@ -249,6 +249,22 @@ Let $\sum f(n)$ and $\sum g(n)$ be series with positive terms.
 then either both series converge or both series diverge. This is known as The Limit Comparison Test.
 \end{theorem}
 
+\begin{example}
+Take the following series
+\begin{align*}
+    \varphi = \sum_{n = 1}^{\infty} \dfrac{1}{2^{n} - 1}
+\end{align*}
+This series has a structure similar to that of the geometric series
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{2^{n}}
+\end{align*}
+Using The Limit Comparison Test, we see
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \dfrac{1}{2^{n} - 1} \cdot \dfrac{2^{n}}{1} = \lim_{n \longrightarrow \infty} \dfrac{2^{n}}{2^{n} - 1} = \dfrac{\lim_{n \longrightarrow \infty} 2^{n}}{\lim_{n \longrightarrow \infty} (2^{n} - 1)} = 1
+\end{align*}
+Since the geometric series converges, then by The Limit Comparison Test, so does $\varphi$.
+\end{example}
+
 Integral Test\\
 Limit Comparison Test\\
 Alternating Series\\
