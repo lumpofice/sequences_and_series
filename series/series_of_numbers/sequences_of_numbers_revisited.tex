@@ -79,7 +79,7 @@ If $-1 < \varphi < 1$, then
 \begin{align*}
     \sum_{n = 0}^{\infty} c \cdot \varphi^{n} = c \cdot \Big(\dfrac{1}{1 - \varphi}\Big)
 \end{align*}
-If $\varphi \geq 1$, then the series diverges.
+Meaning, the series converges. If $\varphi \geq 1$, then the series diverges.
 \begin{proof}
 Take the partial sum
 \begin{align*}
@@ -100,6 +100,13 @@ By factoring out the $S_{m}$ factor, and by a simple rearrangement
 Push $m \longrightarrow \infty$. If $\lvert \varphi \rvert < 1$, $\lim_{m \longrightarrow \infty} \varphi^{m+1} = 0$, by Theorem \ref{geometric_term_sequence}, if $\lvert \varphi \rvert = 1$, we see $1 + 1 + 1 + \cdots$ heads to infinity, and if $\lvert \varphi \rvert > 1$, the series takes a trip to infinity. 
 \end{proof}
 \end{theorem}
+
+\begin{exercise}
+Show the following convergence
+\begin{align*}
+    \sum_{k=0}^{\infty} \dfrac{1}{(n+1)!} \Big(\dfrac{1}{n+1}\Big)^{k} = \dfrac{1}{n!n}
+\end{align*}
+\end{exercise}
 
 \begin{theorem}
 When $p > 1$, 
@@ -265,8 +272,38 @@ Using The Limit Comparison Test, we see
 Since the geometric series converges, then by The Limit Comparison Test, so does $\varphi$.
 \end{example}
 
-Integral Test\\
-Limit Comparison Test\\
-Alternating Series\\
-Ratio, Root Tests\\
+\begin{example}
+Another type of series we may encounter is know as the \textbf{telescoping series}. This will be a series, much like in the technique to show convergence for geometric series, in which many of the middle terms will cancel, leaving us with a limit on the end terms. For instance, take the following series
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{n(n+1)}
+\end{align*}
+We can use our partial fractions technique to separate this single fraction summand in to multiple fractions summand
+\begin{align*}
+    &\dfrac{1}{n(n+1)} = \dfrac{a_{1}}{n} + \dfrac{a_{2}}{n+1} \hspace{20pt} \Longleftrightarrow \hspace{20pt} 1 = a_{1}(n+1) + a_{2}n \hspace{20pt} \Longleftrightarrow \hspace{20pt} 1 = a_{1} + (a_{1} + a_{n})n
+\end{align*}
+So we have the following
+\begin{align*}
+    a_{1} = 1, \hspace{10pt} (a_{1} + a_{2}) = 0 \hspace{20pt} \Longrightarrow \hspace{20pt} a_{2} = -1
+\end{align*}
+Thus, we have the series
+\begin{align*}
+    \sum_{n = 1}^{\infty} \dfrac{1}{n(n+1)} = \sum_{n = 1}^{\infty} \Big(\dfrac{1}{n} - \dfrac{1}{n+1}\Big)
+\end{align*}
+For any natural number $k$, we have the following partial sum
+\begin{align*}
+    S_{k} = \sum_{n = 1}^{k} \Big(\dfrac{1}{n} - \dfrac{1}{n+1}\Big) &= \Big(\dfrac{1}{1} - \dfrac{1}{2}\Big) + \Big(\dfrac{1}{2} - \dfrac{1}{3}\Big) + \Big(\dfrac{1}{3} - \dfrac{1}{4}\Big) + \cdots + \Big(\dfrac{1}{k-1} - \dfrac{1}{k}\Big) + \Big(\dfrac{1}{k} - \dfrac{1}{k+1}\Big)\\[2ex]
+    &= \dfrac{1}{1} - \Big(\dfrac{1}{2} - \dfrac{1}{2}\Big) - \Big(\dfrac{1}{3} - \dfrac{1}{3}\Big) - \cdots - \Big(\dfrac{1}{k-1} - \dfrac{1}{k-1}\Big) - \Big(\dfrac{1}{k} - \dfrac{1}{k}\Big) - \dfrac{1}{k+1}\\[2ex]
+    &= 1 - \dfrac{1}{k+1}
+\end{align*}
+Now, we take a limit
+\begin{align*}
+    \lim_{k \longrightarrow \infty} S_{k} = \lim_{k \longrightarrow \infty} \Big(\dfrac{1}{k+1}\Big) = 1
+\end{align*}
+So, we have
+\begin{align*}
+    \lim_{k \longrightarrow \infty} S_{k} = \lim_{k \longrightarrow \infty} \sum_{n=1}^{k} \Big(\dfrac{1}{n} - \dfrac{1}{n+1}\Big) = \sum_{n=1}^{\infty} \Big(\dfrac{1}{n} - \dfrac{1}{n+1}\Big) = \sum_{n = 1}^{\infty} \dfrac{1}{n(n+1)} = 1
+\end{align*}
+\end{example}
+
+
 
