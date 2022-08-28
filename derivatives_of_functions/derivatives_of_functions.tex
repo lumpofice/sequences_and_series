@@ -910,4 +910,72 @@ Find $f^{''}$ for
 \end{align*}
 \end{exercise}
 
+\newpage
+\section{L'Hospital's Rule}
 
+L'Hospital's Rule is an application of differentiation that handles indeterminate forms $\dfrac{0}{0}$ and $\dfrac{\infty}{\infty}$ and $\dfrac{\pm \infty}{\mp \infty}$.
+
+\vspace{0.1in}
+\begin{theorem}
+Let $-\infty \leq a < b \leq \infty$ and let $f, g$ be differentiable on $(a, b)$, with $g(x) \neq 0$ for all $a < x < b$. Suppose 
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} f(x) = 0 = \lim_{x \longrightarrow a^{+}} g(x)
+\end{align*}
+If
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} \dfrac{f^{'}(x)}{g^{'}(x)} = L \in \mathbb{R} \cup \{-\infty, \infty\}
+\end{align*}
+then
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} \dfrac{f(x)}{g(x)} = L
+\end{align*}
+\label{L'Hospital_1}
+\end{theorem}
+
+\begin{note}
+This theorem applies in the same way for left-sided and two-sided limits.
+\end{note}
+
+\begin{theorem}
+Let $-\infty \leq a < b \leq \infty$ and let $f, g$ be differentiable on $(a, b)$, where $g(x) \neq 0$ for all $a < x < b$. Suppose
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} g(x) = \pm \infty 
+\end{align*}
+If
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} \dfrac{f^{'}(x)}{g^{'}(x)} = L \in \mathbb{R} \cup \{-\infty, \infty\}
+\end{align*}
+then
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} \dfrac{f(x)}{g(x)} = L
+\end{align*}
+\label{L'Hospital_2}
+\end{theorem}
+
+\begin{note}
+This theorem applies in the same way for left-sided and two-sided limits.
+\end{note}
+
+\begin{note}
+For Theorem \ref{L'Hospital_2}, we only require $\lim_{x \longrightarrow a^{+}} g(x) = \pm \infty$. If 
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} f(x
+\end{align*} 
+is finite,
+\begin{align*}
+    \lim_{x \longrightarrow a^{+}} \dfrac{f(x)}{g(x)} = 0
+\end{align*}
+and L'Hospital's Rule is not required. So, L'Hospital's Rule is only used if both $f, g$ have infinite limits.
+\end{note}
+
+\begin{note}
+Indeterminate forms, such as
+\begin{align*}
+    &\infty - \infty\\
+    &0 \cdot \infty\\
+    &1^{\infty}\\
+    &0^{0}\\
+    &\infty^{0}
+\end{align*}
+can be reduced to those cases considered previously in Theorem \ref{L'Hospital_1} and Theorem \ref{L'Hospital_2}. 
+\end{note}

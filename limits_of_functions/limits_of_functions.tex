@@ -329,6 +329,32 @@ We have the following equivalence:
 \label{sequential_criterion_for_limits}
 \end{theorem}
 
+\begin{note}
+One way to show that a function $f$ has no limit at $c$ is to find a sequence converging to $c$ in the domain of $f$, for which $f$ evaluated along its members has no limit. 
+\end{note}
+
+\begin{example}
+Take the signum function
+\begin{align*}
+    f(x) = \sgn(x) = \begin{cases}
+    \dfrac{x}{\lvert x \rvert}, & x \neq 0\\
+    0, & x = 0
+    \end{cases} \hspace{10pt} = \hspace{10pt} \begin{cases}
+    -1, & x<0\\
+    0, & x=0\\
+    1, & x>0
+    \end{cases}
+\end{align*}
+Take the sequence
+\begin{align*}
+    \{g(n)\}_{n=1}^{\infty} = \Big\{\dfrac{(-1)^{n}}{n}\Big\}_{n=1}^{\infty}
+\end{align*}
+Clearly, $\lim_{n \longrightarrow \infty} g(n) = 0$, but $f\Big(\dfrac{(-1)^{n}}{n}\Big)$ toggles between $\pm 1$ as $n$ approaches $\infty$. Thus,
+\begin{align*}
+    \lim_{x \longrightarrow 0} f(x) \hspace{10pt} \text{DNE}
+\end{align*}
+\end{example}
+
 \begin{exercise}
 Using Theorems \ref{limit_passes_under_square_root}, \ref{sequential_criterion_for_limits}, find the following:
 \begin{align*}
