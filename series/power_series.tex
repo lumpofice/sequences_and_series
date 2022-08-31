@@ -1,0 +1,25 @@
+\section{Power Series}
+
+\begin{definition}
+Given a sequence $\{c_{n}\}_{n=1}^{\infty}$ of real numbers and
+\begin{align*}
+    f(x) = \sum_{n=1}^{\infty} c_{n} (x - a)^{n}
+\end{align*}
+where $a$ is a real number, we say $f$ is a power series centered at $a$.
+\end{definition}
+
+\begin{note}
+The reader may replace the word ``radius" in this section with the word ``interval", but in general, ``radius" means ``ball", whether that ``ball" be a one-dimensional interval, a two-dimensional disk, a three-dimensional sphere, etc. Thus, for any natural number $n$, one may refer to a ``radius" in $n$-dimensional space as a ``ball".
+\end{note}
+
+Function $f$ will have a radius of convergence for some $x$, since
+\begin{align*}
+    f(x) &= c_{0} (x - a)^{0} + c_{1} (x - a)^{1} + c_{2} (x - a)^{2} + \cdots\\[2ex]
+    &= c_{0} + c_{1} (x - a) + c_{2} (x - a)^{2} + \cdots
+\end{align*}
+which becomes the finite number, $c_{0}$, as soon as $x = a$. Our job is to find this radius of convergence and the object to which the series converges. We begin with finding the radius of convergence, for which there are three possible outcomes
+\begin{itemize}
+    \item $f$ converges for $x \in \{a\}$
+    \item $f$ converges for $x \in (-\infty, \infty)$
+    \item $f$ converges for $x \in (-R, R)$, where $R$ is finite. 
+\end{itemize}
