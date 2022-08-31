@@ -1,1 +1,28 @@
 \section{Integral Test}
+
+\begin{theorem}
+Suppose $f$ is continuous, positive, and decreasing on the interval $[1, \infty)$. Then
+\begin{align*}
+    \sum_{n=1}^{\infty} f(n) \hspace{4pt} \text{converges} \hspace{20pt} \text{if and only if} \hspace{20pt} \int_{1}^{\infty} f(x) dx \hspace{4pt} \text{converges}
+\end{align*}
+\end{theorem}
+
+\begin{example}
+To test the convergence or divergence of 
+\begin{align*}
+    \sum_{n=2}^{\infty} \dfrac{1}{n \ln (n)}
+\end{align*}
+we integrate the summand with variable $n$ replaced with $x$
+\begin{align*}
+    \int_{2}^{\infty} \dfrac{1}{x \ln (x)} dx 
+\end{align*}
+We need to find where the integrand is decreasing. We have
+\begin{align*}
+    \dfrac{d}{dx} \dfrac{1}{x \ln (x)} = -\dfrac{\ln (x) + 1}{(x \ln (x))^{2}} < 0 \hspace{10pt} \Longleftrightarrow \hspace{10pt} \ln (x) > -1 \hspace{10pt} \Longleftrightarrow \hspace{10pt} x \in (e^{-1}, 1) \cup (1, \infty)
+\end{align*}
+So, we integrate on $[2, \infty)$, setting $u(x) = \ln x$, which implies $du = \dfrac{1}{x} dx$.
+\begin{align*}
+    \int_{\ln 2}^{\infty} \dfrac{du}{u} = \lim_{t \longrightarrow \infty} \int_{\ln 2}^{t} \dfrac{du}{u} = \lim_{t \longrightarrow \infty} \ln u \hspace{4pt} \Big|_{\ln 2}^{t} = \lim_{t \longrightarrow \infty} \ln t - \ln(\ln 2) = \infty
+\end{align*}
+Since the integral diverges, so does the series.
+\end{example}
