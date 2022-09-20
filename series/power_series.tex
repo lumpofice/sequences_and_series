@@ -17,9 +17,26 @@ Function $f$ will have a radius of convergence for some $x$, since
     f(x) &= c_{0} (x - a)^{0} + c_{1} (x - a)^{1} + c_{2} (x - a)^{2} + \cdots\\[2ex]
     &= c_{0} + c_{1} (x - a) + c_{2} (x - a)^{2} + \cdots
 \end{align*}
-which becomes the finite number, $c_{0}$, as soon as $x = a$. Our job is to find this radius of convergence and the object to which the series converges. We begin with finding the radius of convergence, for which there are three possible outcomes
+which becomes the finite number, $c_{0}$, as soon as $x = a$. Our job is to find this radius of convergence and the object to which the series converges. 
+
+\begin{note}
+A series converges if its sequence of partial sums converges.
+\end{note}
+
+We begin with finding the radius of convergence, for which there are three possible outcomes
 \begin{itemize}
     \item $f$ converges for $x \in \{a\}$
     \item $f$ converges for $x \in (-\infty, \infty)$
     \item $f$ converges for $x \in (-R, R)$, where $R$ is finite. 
 \end{itemize}
+
+\begin{example}
+Take the function
+\begin{align*}
+    f(x) = \sum_{n=0}^{\infty} x^{n} = 1 + x + x^{2} + x^{3} + \cdots = \dfrac{1}{1-x}
+\end{align*}
+which we discovered is convergent when $x \in (-1, 1)$. Using the ratio test
+\begin{align*}
+    \Big\lvert \dfrac{x^{n+1}}{x^{n}} \Big\rvert = \lvert x \rvert \hspace{20pt} \text{and} \hspace{20pt} \lim_{n \longrightarrow \infty} \lvert x \rvert = \lvert x \rvert < 1 \hspace{20pt} \text{if and only if} \hspace{20pt} -1 < x < 1
+\end{align*}
+\end{example}
