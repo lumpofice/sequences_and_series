@@ -1,9 +1,9 @@
 \section{Power Series}
 
 \begin{definition}
-Given a sequence $\{c_{n}\}_{n=1}^{\infty}$ of real numbers and
+Given a sequence $\{c_{n}\}_{n=0}^{\infty}$ of real numbers and
 \begin{align*}
-    f(x) = \sum_{n=1}^{\infty} c_{n} (x - a)^{n}
+    f(x) = \sum_{n=0}^{\infty} c_{n} (x - a)^{n}
 \end{align*}
 where $a$ is a real number, we say $f$ is a power series centered at $a$.
 \end{definition}
@@ -35,8 +35,36 @@ Take the function
 \begin{align*}
     f(x) = \sum_{n=0}^{\infty} x^{n} = 1 + x + x^{2} + x^{3} + \cdots = \dfrac{1}{1-x}
 \end{align*}
-which we discovered is convergent when $x \in (-1, 1)$. Using the ratio test
+which we discovered is convergent when $x \in (-1, 1)$. Function $f$ is the power series centered about $a=0$. Using the ratio test
 \begin{align*}
     \Big\lvert \dfrac{x^{n+1}}{x^{n}} \Big\rvert = \lvert x \rvert \hspace{20pt} \text{and} \hspace{20pt} \lim_{n \longrightarrow \infty} \lvert x \rvert = \lvert x \rvert < 1 \hspace{20pt} \text{if and only if} \hspace{20pt} -1 < x < 1
 \end{align*}
 \end{example}
+
+\begin{theorem}
+Let $n$ be a natural number on $[a, b]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[a, b]$ and $f^{(n+1)}$ exists on $(a, b)$. If $x_{0}$ is in $[a, b]$, then for any $x$ in $[a, b]$, there exists a point $c$ between $x$ and $x_{0}$ such that
+\begin{align*}
+    f(x) = f(x_{0}) + f^{(1)}(x_{0})(x-x_{0}) + \dfrac{f^{(2)}(x_{0})}{2!}(x-x_{0})^{2} + \cdots + \dfrac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
+\end{align*}
+where
+\begin{align*}
+    f(x_{0}) + f^{(1)}(x_{0})(x-x_{0}) + \dfrac{f^{(2)}(x_{0})}{2!}(x-x_{0})^{2} + \cdots + \dfrac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}
+\end{align*}
+is the $n^{th}$ term in the sequence
+\begin{align*}
+    \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(x_{0})}{i!}(x-x_{0})^{i}\Big\}_{k=0}^{\infty}
+\end{align*}
+which we may abbreviate as $T_{n}(x)$, and 
+\begin{align*}
+    \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
+\end{align*}
+is referred to as the remainder, which we may abbreviate as $R_{n}(x)$.
+\end{theorem}
+
+\begin{theorem}
+We can write $f$ as
+\begin{align*}
+    f(x) = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(a)}{n!}(x-a)^{n}
+\end{align*}
+if and only if
+\end{theorem}
