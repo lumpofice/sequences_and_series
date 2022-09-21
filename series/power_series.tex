@@ -42,29 +42,42 @@ which we discovered is convergent when $x \in (-1, 1)$. Function $f$ is the powe
 \end{example}
 
 \begin{theorem}
-Let $n$ be a natural number on $[a, b]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[a, b]$ and $f^{(n+1)}$ exists on $(a, b)$. If $x_{0}$ is in $[a, b]$, then for any $x$ in $[a, b]$, there exists a point $c$ between $x$ and $x_{0}$ such that
+Let $n$ be a natural number on $[\alpha, \beta]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[\alpha, \beta]$ and $f^{(n+1)}$ exists on $(\alpha, \beta)$. If $a$ is in $[\alpha, \beta]$, then for any $x$ in $[\alpha, \beta]$, there exists a point $c$ between $x$ and $a$ such that
 \begin{align*}
-    f(x) = f(x_{0}) + f^{(1)}(x_{0})(x-x_{0}) + \dfrac{f^{(2)}(x_{0})}{2!}(x-x_{0})^{2} + \cdots + \dfrac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
+    f(x) = f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 \end{align*}
 where
 \begin{align*}
-    f(x_{0}) + f^{(1)}(x_{0})(x-x_{0}) + \dfrac{f^{(2)}(x_{0})}{2!}(x-x_{0})^{2} + \cdots + \dfrac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}
+    f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n}
 \end{align*}
 is the $n^{th}$ term in the sequence
 \begin{align*}
-    \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(x_{0})}{i!}(x-x_{0})^{i}\Big\}_{k=0}^{\infty}
+    \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(x_{0})}{i!}(x-a)^{i}\Big\}_{k=0}^{\infty}
 \end{align*}
 which we may abbreviate as $T_{n}(x)$, and 
 \begin{align*}
-    \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-x_{0})^{n+1}
+    \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 \end{align*}
 is referred to as the remainder, which we may abbreviate as $R_{n}(x)$.
 \end{theorem}
 
-\begin{theorem}
-We can write $f$ as
+
+We refer to $f$ as the Taylor Series and can write it as
 \begin{align*}
-    f(x) = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(a)}{n!}(x-a)^{n}
+    f(x) = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(a)}{n!}(x-a)^{n} \hspace{20pt} \text{for} \hspace{4pt} x \in (-R + a, R + a)
 \end{align*}
 if and only if
-\end{theorem}
+\begin{align*}
+    \lim_{n \longrightarrow \infty} R_{n}(x) = 0 \hspace{20pt} \text{for each} \hspace{4pt} x \in (-R + a, R + a)
+\end{align*}
+
+\begin{note}
+Each $T_{n}(x)$ is a partial sum and is referred to as the $n^{th}$ Taylor polynomial.
+\end{note}
+
+\begin{note}
+From the definition of a power series to the Taylor polynomial, we see
+\begin{align*}
+    c_{n} = \dfrac{f^{(n)}(a)}{n!}
+\end{align*}
+\end{note}
