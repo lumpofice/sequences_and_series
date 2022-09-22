@@ -59,6 +59,7 @@ which we may abbreviate as $T_{n}(x)$, and
     \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 \end{align*}
 is referred to as the remainder, which we may abbreviate as $R_{n}(x)$.
+\label{taylors_theorem}
 \end{theorem}
 
 
@@ -69,6 +70,15 @@ We refer to $f$ as the Taylor Series and can write it as
 if and only if
 \begin{align*}
     \lim_{n \longrightarrow \infty} R_{n}(x) = 0 \hspace{20pt} \text{for each} \hspace{4pt} x \in (-R + a, R + a)
+\end{align*}
+We may obtain this limit if there exists a bound on $f^{(n)}(a)$ in a sufficiently small enough window of $a$. Using the limit
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \dfrac{x^{n}}{n!} = 0
+\end{align*}
+we have the following
+\begin{align*}
+    &\text{If} \hspace{10pt} \lvert f^{(n+1)}(x) \rvert \leq M \hspace{10pt} \text{on} \hspace{10pt} \lvert x - a \rvert \leq \delta \\[2ex]
+    &\text{then} \hspace{10pt} \lvert R_{n}(x) \rvert \leq \dfrac{M}{(n+1)!} \lvert x - a \rvert^{n+1} \hspace{10pt} \text{on} \hspace{10pt} \lvert x - a \rvert \leq \delta
 \end{align*}
 
 \begin{note}
@@ -81,3 +91,29 @@ From the definition of a power series to the Taylor polynomial, we see
     c_{n} = \dfrac{f^{(n)}(a)}{n!}
 \end{align*}
 \end{note}
+
+\begin{example}
+The Taylor series for $f(x) = e^{x}$ centered at $0$ can be found as follows. We have the general setup
+\begin{align*}
+    e^{x} = f(x) = c_{0} + c_{1} (x - a) + c_{2} (x - a)^{2} + c_{3} (x - a)^{3} + c_{4} (x - a)^{4} + \cdots 
+\end{align*}
+Knowing that $a = 0$,
+\begin{align*}
+    e^{x} = f(x) = c_{0} + c_{1}x + c_{2}x^{2} + c_{3}x^{3} + c_{4}x^{4} + \cdots 
+\end{align*}
+We may use Theorem \ref{taylors_theorem} to write out the terms of this series, or we may evaluate each derivative at $0$ to establish a pattern
+\begin{align*}
+    &1 = e^{0} = f(0) = c_{0} + 0 + 0 + \cdots = c_{0} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{0} = 1\\[2ex]
+    &1 = e^{0} = f^{(1)}(0) = 1 \cdot c_{1} + 0 + 0 + \cdots = 1!c_{1} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{1} = \dfrac{1}{1!}\\[2ex]
+    &1 = e^{0} = f^{(2)}(0) = 1 \cdot 2 \cdot c_{2} + 0 + 0 + \cdots = 2!c_{2} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{2} = \dfrac{1}{2!}\\[2ex]
+    &1 = e^{0} = f(0) = 1 \cdot 2 \cdot 3 \cdot c_{3} + 0 + 0 + \cdots = 3!c_{3} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{3} = \dfrac{1}{3!}\\[1ex]
+    &\cdots\\[1ex]
+    &\cdots\\[1ex]
+    &\cdots
+\end{align*}
+Now we may rewrite the series
+\begin{align*}
+    e^{x} = f(x) &= 1 + \dfrac{1}{1!}x + \dfrac{1}{2!}x^{2} + \dfrac{1}{3!}x^{3} + \dfrac{1}{4!}x^{4} + \cdots = \sum_{n=0}^{\infty} \dfrac{1}{n!}x^{n}
+\end{align*}
+We prove that $e^{x}$ may be represented by this Taylor series
+\end{example}
