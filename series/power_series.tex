@@ -78,7 +78,7 @@ We may obtain this limit if there exists a bound on $f^{(n)}(a)$ in a sufficient
 we have the following
 \begin{align*}
     &\text{If} \hspace{10pt} \lvert f^{(n+1)}(x) \rvert \leq M \hspace{10pt} \text{on} \hspace{10pt} \lvert x - a \rvert \leq \delta \\[2ex]
-    &\text{then} \hspace{10pt} \lvert R_{n}(x) \rvert \leq \dfrac{M}{(n+1)!} \lvert x - a \rvert^{n+1} \hspace{10pt} \text{on} \hspace{10pt} \lvert x - a \rvert \leq \delta
+    &\text{then} \hspace{10pt} \lvert R_{n}(x) \rvert \leq \dfrac{M}{(n+1)!} \lvert x - a \rvert^{n+1} \hspace{10pt} \text{on} \hspace{10pt} \lvert x - a \rvert < \delta
 \end{align*}
 
 \begin{note}
@@ -115,5 +115,9 @@ Now we may rewrite the series
 \begin{align*}
     e^{x} = f(x) &= 1 + \dfrac{1}{1!}x + \dfrac{1}{2!}x^{2} + \dfrac{1}{3!}x^{3} + \dfrac{1}{4!}x^{4} + \cdots = \sum_{n=0}^{\infty} \dfrac{1}{n!}x^{n}
 \end{align*}
-We prove that $e^{x}$ may be represented by this Taylor series
+We prove that $e^{x}$ may be represented by this Taylor series by showing $lim_{n \longrightarrow \infty}R_{n}(x) = 0$. For any positive integer $n$
+\begin{align*}
+    \lvert R_{n}(x) \rvert \leq \dfrac{1}{(n+1)!} \lvert x \rvert^{n+1} < \dfrac{e^{\delta}}{(n+1)!} \lvert x \rvert^{n+1} < \delta \hspace{20pt} \text{since} \hspace{10pt} \delta > 0
+\end{align*}
+By Squeeze Theorem, we have our desired result.
 \end{example}
