@@ -42,6 +42,34 @@ which we discovered is convergent when $x \in (-1, 1)$. Function $f$ is the powe
 \end{example}
 
 \begin{theorem}
+Suppose
+\begin{align*}
+    f(x) = \sum_{n=0}^{\infty} c_{n} (x-a)^{n}
+\end{align*}
+converges on $\lvert x - a \rvert < R$. Then $f$ converges on $(a-R, a+R)$, $f$ is continuous and differentiable on $(a-R, a+R)$, and 
+\begin{align*}
+    f^{'}(x) = \sum_{n=0}^{\infty} n c_{n} x^{n-1}
+\end{align*}
+\end{theorem}
+
+Since $f$ is continuous on $(a-R, a+R)$, we have that $f$ is integrable on $(a-R, a+R)$.
+
+\begin{theorem}
+Let
+\begin{align*}
+    f(x) = \sum_{n=0}^{\infty} c_{n} (x-a)^{n}
+\end{align*}
+Then $f$ has derivatives of all orders on $(a-R, a+R)$, represented as 
+\begin{align*}
+    f^{(k)}(x) = \sum_{n=k}^{\infty} n(n-1) \cdots (n-(k-1)) c_{n} (x-a)^{n-k}
+\end{align*}
+Particularly, we have
+\begin{align*}
+    f^{(k)}(a) = k!c_{k} \hspace{20pt} \text{for all} \hspace{10pt} k \in \{0, 1, 2, 3, \cdots \}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}
 Let $n$ be a natural number on $[\alpha, \beta]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[\alpha, \beta]$ and $f^{(n+1)}$ exists on $(\alpha, \beta)$. If $a$ is in $[\alpha, \beta]$, then for any $x$ in $[\alpha, \beta]$, there exists a point $c$ between $x$ and $a$ such that
 \begin{align*}
     f(x) = f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
