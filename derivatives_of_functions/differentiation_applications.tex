@@ -1,3 +1,55 @@
+\newpage
+\section{Extrema}
+
+\begin{definition}
+Let $f$ be a function on $[a, b]$. We say $f$ has a local minimum at $c \in [a, b]$ if for any $\delta > 0$ we have, for all $x$ such that $\lvert x - c \rvert < \delta$, $f(x) \geq f(c)$.
+\end{definition}
+
+\begin{definition}
+Let $f$ be a function on $[a, b]$. We say $f$ has a local maximum at $c \in [a, b]$ if for any $\delta > 0$ we have, for all $x$ such that $\lvert x - c \rvert < \delta$, $f(x) \leq f(c)$.
+\end{definition}
+
+\begin{theorem}
+If $f$ has a local minimum or maximum at $c \in [a, b]$ and if $f^{'}(c)$ exists, then $f^{'}(c) = 0$.
+\end{theorem}
+
+\begin{definition}
+Let $f$ be a function on $[a, b]$. We say $f$ has an absolute minimum, say at $c \in [a, b]$, if $f(c) \leq f(x)$ for all $x \in [a, b]$.
+\end{definition}
+
+\begin{definition}
+Let $f$ be a function on $[a, b]$. We say $f$ has an absolute maximum, say at $c \in [a, b]$, if $f(c) \geq f(x)$ for all $x \in [a, b]$.
+\end{definition}
+
+\begin{theorem}
+If function $f$ is defined on a closed and bounded interval $[a, b]$, then the range of $f$ will also be closed and bounded. Meaning
+\begin{align*}
+    f \hspace{10pt} \text{continuous on} \hspace{10pt} [a, b] \hspace{20pt} \Longrightarrow \hspace{20pt} \text{Rng}(f) = [c, d]
+\end{align*}
+This necessarily implies that $\text{Rng}(f)$ will contain an absolute maximum and an absolute minimum.
+\end{theorem}
+
+\begin{exercise}
+If $a$ and $b$ are both positive numbers, then find the maximum value $f$, given $f$ is defined as follows
+\begin{align*}
+    f(x) = x^{a}(1-x)^{b} \hspace{20pt} x \in [0, 1]
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+An object with weight $W$ is dragged along a horizontal plane by a force acting along a rope attached to the object. If the rope makes an angle $\theta$ with the plane, then the magnitude of the force is 
+\begin{align*}
+    F(\theta) = \dfrac{\mu W}{\mu \sin(\theta) + \cos(\theta)} \hspace{20pt} \theta \in \Big[0, \dfrac{\pi}{2}\Big] 
+\end{align*}
+where $\mu$ is a positive constant called the coefficient of friction. Show that $F$ has a minimum at $\theta = \arctan(\mu)$.
+\end{exercise}
+
+\newpage
+\section{The Mean Value Theorem}
+
+
+
+\newpage
 \section{L'Hospital's Rule}
 
 L'Hospital's Rule is an application of differentiation that handles indeterminate forms $\dfrac{0}{0}$ and $\dfrac{\infty}{\infty}$ and $\dfrac{\pm \infty}{\mp \infty}$.
@@ -66,6 +118,3 @@ Indeterminate forms, such as
 \end{align*}
 can be reduced to those cases considered previously in Theorem \ref{L'Hospital_1} and Theorem \ref{L'Hospital_2}.
 \end{note}
-
-\newpage
-\section{The Mean Value Theorem}
