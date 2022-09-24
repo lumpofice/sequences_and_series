@@ -47,7 +47,37 @@ where $\mu$ is a positive constant called the coefficient of friction. Show that
 \newpage
 \section{The Mean Value Theorem}
 
+\begin{theorem}
+Suppose that $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there exists a point $c \in (a, b)$ such that
+\begin{align*}
+    f(b) - f(a) = f^{'}(c)(b - a)
+\end{align*}
+This is known as the Mean Value Theorem.
+\end{theorem}
 
+\begin{exercise}
+Let 
+\begin{align*}
+    f(x) = (x-3)^{-2}
+\end{align*}
+Show there is no value $c \in (1,4)$ satisfying the Mean Value Theorem, and explain why this does not contradict the Mean Value Theorem. 
+\end{exercise}
+
+\begin{exercise}
+Let $f$ and $g$ be continuous on $[a, b]$ and differentiable on $(a, b)$. Let $f(a) = g(a)$, let $f^{'}(x) \leq g^{'}(x)$ for all $x \in (a, b)$. Prove, using
+\begin{align*}
+    h = f - g
+\end{align*}
+that $f(b) < g(b)$.
+\end{exercise}
+
+\begin{exercise}
+Suppose two runners start a race at time $t = 0$, and suppose these two runners finish the race in a tie at time $t = T$. Using
+\begin{align*}
+    f = g - h
+\end{align*}
+where $g$ and $h$ are position functions of the two runners, along with the fact that the derivative of the position is the velocity (speed), show that at some time during the race the two runners had the same speed.
+\end{exercise}
 
 \newpage
 \section{L'Hospital's Rule}
