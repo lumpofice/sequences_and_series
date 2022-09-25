@@ -1,0 +1,86 @@
+\section{Gamma-Poisson Connection}
+
+\begin{definition}
+Let $X$ be a function from space $S$ to the real numbers that follows the mapping
+\begin{align*}
+    X(s) = x \hspace{20pt} \text{where} \hspace{10pt} s \in S \hspace{10pt} \text{and} \hspace{10pt} x \in \mathbb{R}
+\end{align*}
+\label{random_variable}
+\end{definition}
+
+\begin{definition}
+The cumulative distribution function of a function $X$, as described in Definition \ref{random_variable}, denoted by $F_{X}(x)$ is defined as
+\begin{align*}
+    F_{X}(x) = P_{X}(X \leq x) \hspace{20pt} \text{for all} \hspace{10pt} x \in \text{Rng}(X)
+\end{align*}
+\label{cumulative_distribution_function}
+\end{definition}
+
+\begin{theorem}
+The function $F_{X}$ is a cumulative distribution function if and only if it meets the following three conditions:
+\begin{align*}
+    &\text{i)} \hspace{10pt} \lim_{x \longrightarrow -\infty} F_{X}(x) = 0 \hspace{10pt} \text{and} \hspace{10pt} \lim_{x \longrightarrow \infty} F_{X}(x) = 1\\[2ex]
+    &\text{ii)} \hspace{10pt} F_{X} \hspace{4pt} \text{is a nondecreasing function of} \hspace{4pt} x\\[2ex]
+    &\text{iii)} \hspace{10pt} F_{X} \hspace{4pt} \text{is right-continuous. Meaning, for each} \hspace{4pt} x_{0} \in \text{Rng}(X) \hspace{4pt} \text{we have} \hspace{10pt} \lim_{x \longrightarrow x_{0}^{+}} F_{X}(x) = F_{X}(x_{0})
+\end{align*}
+\end{theorem}
+
+\begin{definition}
+A function $X$, as described in Definition \ref{random_variable}, is continuous if $F_{X}$ is a continuous function of $x$.
+\end{definition}
+
+\begin{definition}
+A function $X$, as described in Definition \ref{random_variable}, is discrete if $F_{X}$ is a step function of $x$.
+\end{definition}
+
+\begin{definition}
+The probability mass function of a discrete function $X$, as described in Definition \ref{random_variable}, is given by 
+\begin{align*}
+    f_{X}(x) = P_{X}(x) \hspace{20pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)
+\end{align*}
+\label{probability_mass_function}
+\end{definition}
+
+\begin{note}
+Connecting Definition \ref{cumulative_distribution_function} with Definition \ref{probability_mass_function}, we have
+\begin{align*}
+    F_{X}(x) = P_{X}(X \leq x) = \sum_{i \leq x} P(X = i) = \sum_{i \leq x} f_{X}(i)
+\end{align*}
+\end{note}
+
+\begin{definition}
+The probability density function, $f_{X}$, of a continuous function $X$, as described in Definition \ref{random_variable}, is the function that satisfies 
+\begin{align*}
+    F_{X}(x) = \int_{-\infty}^{x} f_{X}(t) dt \hspace{10pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)
+\end{align*}
+\end{definition}
+
+\begin{theorem}
+A function $f_{X}$ is a probability mass function (or a probability density function) of a random variable $X$, as describe in Definition \ref{random_variable}, if and only if
+\begin{align*}
+    &i) \hspace{10pt} f_{X}(x) \geq 0 \hspace{10pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)\\[2ex]
+    &ii)_\text{(discrete)} \hspace{10pt} \sum_{x \in Rng(X)} f_{X}(x) = 1\\[2ex]
+    &ii)_\text{(continuous)} \hspace{10pt} \int_{-\infty}^{\infty} f_{X}(x) dx = 1
+\end{align*}
+\end{theorem}
+
+\begin{definition}
+The probability mass function of the Poisson distribution, followed by a function $X$, as described in Definition \ref{random_variable}, where $X$ has a range of nonnegative integers, has a parameter $\lambda$ and is defined as
+\begin{align*}
+    \text{Poisson}(x | \lambda) = P_{X}(X = x) = f(x | \lambda) =  \dfrac{e^{-\lambda} \lambda^{x}}{x!} \hspace{10pt} \text{where} \hspace{4pt} x \in \text{Rng}(X) = \{0, 1, 2, 3, 4, \cdots\}, \hspace{10pt} \lambda > 0
+\end{align*}
+\end{definition}
+
+\begin{definition}
+The gamma function is defined as follows
+\begin{align*}
+    \Gamma(\alpha) = \int_{0}^{\infty} t^{\alpha - 1} e^{-t} dt \hspace{20pt} \alpha > 0 
+\end{align*}
+\end{definition}
+
+\begin{definition}
+The probability density function for the gamma distribution, followed by a function $X$, as described in Definition \ref{random_variable}, has parameters $\alpha$ and $\beta$ and is defined as 
+\begin{align*}
+    gamma(\alpha, \beta) = f(x | \alpha, \beta) = \dfrac{x^{\alpha - 1} e^{-x/\beta}}{\Gamma(\alpha)\beta^{\alpha}} \hspace{10pt} \text{where} \hspace{4pt} x \in (0, \infty), \hspace{10pt} \alpha > 0, \hspace{10pt} \beta > 0
+\end{align*}
+\end{definition}
