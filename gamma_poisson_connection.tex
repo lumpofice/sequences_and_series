@@ -84,3 +84,39 @@ The probability density function for the gamma distribution, followed by a funct
     gamma(\alpha, \beta) = f(x | \alpha, \beta) = \dfrac{x^{\alpha - 1} e^{-x/\beta}}{\Gamma(\alpha)\beta^{\alpha}} \hspace{10pt} \text{where} \hspace{4pt} x \in (0, \infty), \hspace{10pt} \alpha > 0, \hspace{10pt} \beta > 0
 \end{align*}
 \end{definition}
+
+\begin{exercise}
+Show that the following cumulative distribution function is nondecreasing
+\begin{align*}
+    F_{Y}(y) = \sum_{n = 0}^{y} \dfrac{e^{-x/\beta}\Big(\dfrac{x}{\beta}\Big)^{n}}{n!}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Graph the following cumulative distribution function. Use that graph to make an argument for right continuity.
+\begin{align*}
+    F_{Y}(y) = \sum_{n = 0}^{y} \dfrac{e^{-x/\beta}\Big(\dfrac{x}{\beta}\Big)^{n}}{n!}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Show 
+\begin{align*}
+    \sum_{y = 0}^{\infty} \dfrac{e^{-x/\beta}\Big(\dfrac{x}{\beta}\Big)^{y}}{y!} = 1
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+For function $X$ following the gamma distribution 
+\begin{align*}
+    gamma(\alpha, \beta) \hspace{20pt} \text{where} \hspace{4pt} \alpha \in \mathbb{Z}
+\end{align*}
+and for function $Y$ following a Poisson distribution
+\begin{align*}
+    Poisson(y | x/\beta)
+\end{align*}
+show that
+\begin{align*}
+    P(X \leq x) = P(Y \geq \alpha)
+\end{align*}
+\end{exercise}
