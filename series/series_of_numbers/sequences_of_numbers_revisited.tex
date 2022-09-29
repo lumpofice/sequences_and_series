@@ -249,6 +249,35 @@ By The Ratio Test, and because the series is absolutely convergent, the series c
 \end{example}
 
 \begin{theorem}
+Take a sequence $A = \{f(n)\}_{n = 1}^{\infty}$. Define the limit of $n^{\text{th}}$ roots of members of $A$ as follows
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \sqrt[\leftroot{2}\uproot{2}n]{\lvert f(n) \rvert} = L
+\end{align*}
+where $L \in \mathbb{R^{+}} \cup \{\infty\}$. Then we have the following
+\begin{align*}
+    &\text{If} \hspace{4pt} L < 1, \hspace{4pt} \text{then} \hspace{4pt} \sum_{n = 1}^{\infty} f(n) \hspace{4pt} \text{is absolutely convergent.}\\[2ex]
+    &\text{If} \hspace{4pt} L > 1, \hspace{4pt} \text{then} \hspace{4pt} \sum_{n = 1}^{\infty} f(n) \hspace{4pt} \text{is divergent.}\\[2ex]
+    &\text{If} \hspace{4pt} L = 1, \hspace{4pt} \text{then this test, known as The Root Test, is inconclusive.}
+\end{align*}
+\end{theorem}
+
+\begin{example}
+Take the following sequence
+\begin{align*}
+    \Big\{\Big(\dfrac{2n+3}{3n+2}\Big)^{n}\Big\}_{n=1}^{\infty}
+\end{align*}
+We use the Root Test to predict the behavior of the series produced by the terms of this sequence.
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \sqrt[\leftroot{2}\uproot{2}n]{\Big(\dfrac{2n+3}{3n+2}\Big)^{n}} = \lim_{n \longrightarrow \infty} \dfrac{2n+3}{3n+2} = \dfrac{2}{3} < 1
+\end{align*}
+By the Root Test, 
+\begin{align*}
+\sum_{n=1}^{\infty} \dfrac{2n+3}{3n+2}
+\end{align*}
+converges.
+\end{example}
+
+\begin{theorem}
 Let $\sum f(n)$ and $\sum g(n)$ be series with positive terms. 
 \begin{align*}
     \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} \dfrac{f(n)}{g(n)} = c \hspace{20pt} \text{where} \hspace{4pt} c \hspace{4pt} \text{is finite and positive} 
