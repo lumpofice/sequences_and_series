@@ -1,0 +1,39 @@
+\section{Alternating Series Error Bound}
+
+\begin{theorem}
+If a series can be shown to converge by The Alternating Series test, meaning
+\begin{align*}
+    &\text{If for} \hspace{20pt} \sum_{n=1}^{\infty} (-1)^{n}f(n) \hspace{20pt} \text{we have}\\[2ex]
+    &f(n) \geq f(n+1) \hspace{10pt} \text{for all} \hspace{4pt} n \geq N \hspace{20pt} \text{where} \hspace{4pt} N \hspace{4pt} \text{is fixed} \hspace{20pt} \text{and}\\[2ex]
+    &\lim_{n \longrightarrow \infty} f(n) = 0
+\end{align*}
+then we have the remainder term $R_{n}$ of the sequence bounded, as follows
+\begin{align*}
+    \lvert R_{n} \rvert = \Big\lvert \sum_{n=1}^{\infty} (-1)^{n} f(n) - S_{k} \Big\rvert \leq f(k+1)
+\end{align*}
+where $S_{k}$ is the $k^{th}$ partial sum of the series.
+\end{theorem}
+
+\begin{example}
+Approximate the sum of the series correct to $4$ decimal places.
+\begin{align*}
+    \sum_{n=1}^{\infty} \dfrac{(-1)^{n+1}}{n^{5}}
+\end{align*}
+We start by finding all the terms in the series that affect the first $4$ decimal places.
+\begin{align*}
+    \sum_{n=1}^{\infty} \dfrac{(-1)^{n+1}}{n^{5}} = 1 - \dfrac{1}{32} + \dfrac{1}{243} - \dfrac{1}{1024} + \dfrac{1}{3125} - \dfrac{1}{7776} + \cdots
+\end{align*}
+We see that there sum comes to 
+\begin{align*}
+    \sum_{n = 1}^{6} \dfrac{(-1)^{n+1}}{n^{5}} = 0.9721
+\end{align*}
+In finding the absolute value of the $7^{th}$ term of the sequence
+\begin{align*}
+    f(7) = \Big\lvert \dfrac{1}{16807} \Big\rvert \approx 0.00006 
+\end{align*}
+we have our first term of the sequence that does not affect the desired approximation to $4$ decimal places. Thus, we have
+\begin{align*}
+    \Big\lvert \sum_{n=1}^{\infty} \dfrac{(-1)^{n+1}}{n^{5}} - \sum_{n = 1}^{6} \dfrac{(-1)^{n+1}}{n^{5}} \Big\rvert \leq \dfrac{1}{16807}
+\end{align*}
+and the series approximation to $4$ decimal places being $0.9721$. 
+\end{example}
