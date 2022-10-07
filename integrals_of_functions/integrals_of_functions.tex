@@ -626,6 +626,21 @@ Find the derivative of $g$
 \end{exercise}
 
 \newpage
+\section{MVT on Integrals of Continuous Functions}
+
+\begin{theorem}
+Let $f$ be a continuous function on $[a, b]$. Define
+\begin{align*}
+    g(x) = \int_{a}^{x} f(t) dt
+\end{align*}
+Then there exists a number $c \in [a, b]$ such that
+\begin{align*}
+    f(c) = \dfrac{g(b) - g(a)}{b - a} = \dfrac{\int_{a}^{b} f(x) dx}{b - a}
+\end{align*}
+This is the average rate of change of $g$ from $[a, b]$.
+\end{theorem}
+
+\newpage
 \section{Integration by Parts}
 
 \begin{theorem}
