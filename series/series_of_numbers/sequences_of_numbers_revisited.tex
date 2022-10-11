@@ -91,15 +91,29 @@ We can multiply that partial sum by one of the terms for which $n$ greater than 
 \end{align*}
 Now, we take the difference of those two partial sums
 \begin{align*}
-    S_{m} - \varphi \cdot S_{m} = c - \varphi^{m+1}
+    S_{m} - \varphi \cdot S_{m} = c - c \cdot \varphi^{m+1}
 \end{align*}
 By factoring out the $S_{m}$ factor, and by a simple rearrangement
 \begin{align*}
-    S_{m} = \dfrac{c - \varphi^{m + 1}}{1 - \varphi}
+    S_{m} = \dfrac{c - c \cdot \varphi^{m + 1}}{1 - \varphi}
 \end{align*}
 Push $m \longrightarrow \infty$. If $\lvert \varphi \rvert < 1$, $\lim_{m \longrightarrow \infty} \varphi^{m+1} = 0$, by Theorem \ref{geometric_term_sequence}, if $\lvert \varphi \rvert = 1$, we see $1 + 1 + 1 + \cdots$ heads to infinity, and if $\lvert \varphi \rvert > 1$, the series takes a trip to infinity. 
 \end{proof}
 \end{theorem}
+
+\begin{note}
+When $n=1$ is the start of the index, we have the following sum of the geometric series
+\begin{align*}
+    \sum_{n=1}^{\infty} c \cdot \varphi ^{n} = c \cdot \dfrac{\varphi}{1 - \varphi} \hspace{20pt} \lvert \varphi \rvert < 1 
+\end{align*}
+
+When $n=2$ is the start of the index, we have the following sum of the geometric series
+\begin{align*}
+    \sum_{n=2}^{\infty} c \cdot \varphi ^{n} = c \cdot \dfrac{\varphi ^{2}}{1 - \varphi} \hspace{20pt} \lvert \varphi \rvert < 1
+\end{align*}
+
+So on, and so forth.
+\end{note}
 
 \begin{exercise}
 For $n \in \mathbb{N}$, show the following convergence
