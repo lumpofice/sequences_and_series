@@ -150,6 +150,28 @@ We prove that $e^{x}$ may be represented by this Taylor series by showing $lim_{
 By Squeeze Theorem, we have our desired result.
 \end{example}
 
+
+\begin{example}
+The Taylor series for $f(x) = \dfrac{1}{1-x}$, centered at $0$, can be found from the general setup of a power series for this function
+\begin{align*}
+    \dfrac{1}{1-x} = f(x) = c_{0} + c_{1}x + c_{2}x^{2} + c_{3}x^{3} + c_{4}x^{4} + \cdots
+\end{align*}
+as follows
+\begin{align*}
+    &1 = \dfrac{1}{1-0} = f(0) = c_{0} + 0 + 0 + \cdots = c_{0} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{0} = 1\\[2ex]
+    &1! = \dfrac{(-1)}{(1-0)^{2}}(-1) = f^{(1)}(0) = 1 \cdot c_{1} + 0 + 0 + \cdots = 1!c_{1} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{1} = 1\\[2ex]
+    &2! = \dfrac{(-1)(-2)}{(1-0)^{3}}(-1)(-1) = f^{(2)}(0) = 1 \cdot 2 \cdot c_{2} + 0 + 0 + \cdots = 2!c_{2} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{2} = 1\\[2ex]
+    &3! = \dfrac{(-1)(-2)(-3)}{(1-0)^{4}}(-1)(-1)(-1) = f(0) = 1 \cdot 2 \cdot 3 \cdot c_{3} + 0 + 0 + \cdots = 3!c_{3} \hspace{20pt} \Longleftrightarrow \hspace{20pt} c_{3} = 1\\[1ex]
+    &\cdots\\[1ex]
+    &\cdots\\[1ex]
+    &\cdots
+\end{align*}
+which gives us
+\begin{align*}
+    \dfrac{1}{1-x} = f(x) = 1 + x + x^{2} + x^{3} + \cdots = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(0)x^{n}}{n!} = \sum_{n=0}^{\infty} x^{n}
+\end{align*}
+\end{example}
+
 \begin{exercise}
 Find the Taylor series for $f(x) = \sin x$ centered about $a = 0$. Prove that this series represents $\sin x$ for all $x$.
 \end{exercise}
