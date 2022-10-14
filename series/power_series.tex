@@ -69,6 +69,8 @@ Particularly, we have
 \end{align*}
 \end{theorem}
 
+What follows is known as Taylor's Inequality.
+
 \begin{theorem}
 Let $n$ be a natural number on $[\alpha, \beta]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[\alpha, \beta]$ and $f^{(n+1)}$ exists on $(\alpha, \beta)$. If $a$ is in $[\alpha, \beta]$, then for any $x$ in $[\alpha, \beta]$, there exists a point $c$ between $x$ and $a$ such that
 \begin{align*}
@@ -78,7 +80,7 @@ where
 \begin{align*}
     f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n}
 \end{align*}
-is the $n^{th}$ term in the sequence
+is the $n^{th}$-term Taylor polynomial in the sequence
 \begin{align*}
     \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(x_{0})}{i!}(x-a)^{i}\Big\}_{k=0}^{\infty}
 \end{align*}
@@ -170,6 +172,7 @@ which gives us
 \begin{align*}
     \dfrac{1}{1-x} = f(x) = 1 + x + x^{2} + x^{3} + \cdots = \sum_{n=0}^{\infty} \dfrac{f^{(n)}(0)x^{n}}{n!} = \sum_{n=0}^{\infty} x^{n}
 \end{align*}
+as expected.
 \end{example}
 
 \begin{exercise}
@@ -207,3 +210,46 @@ Find the Taylor series for $f(x) = xe^{x}$ centered about $a = 0$. Find the radi
 \begin{exercise}
 Find the Taylor series for $f(x) = \sin x$ centered about $a = \pi/2$. Find the radius of convergence. Prove that this series represents $\sin x$ for all $x$.
 \end{exercise}
+
+\newpage
+\section{$n^{\text{th}}$-term Taylor Polynomials}
+
+The remainder term of a Taylor series, under condition that $\lvert f^{(n+1)}(x) \rvert \leq M$ on $\lvert x - a \rvert \leq \delta$, may be bounded as follows   
+\begin{align*}
+    \lvert R_{n}(x) \rvert \leq \dfrac{M}{(n+1)!} \lvert x - a \rvert^{n+1}
+\end{align*}
+Since Taylor's Inequality, Theorem \ref{taylors_theorem}, states
+\begin{align*}
+    f(x) &= f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}\\[2ex] 
+    &= T_{n}(x) + R_{n}(x) \hspace{20pt} \text{we have}\\[2ex]
+    &\lvert f(x) - T_{n}(x) \rvert = \lvert R_{n}(x) \rvert \leq \dfrac{M}{(n+1)!} \lvert x - a \rvert^{n+1}
+\end{align*}
+which allows us to approximate $f$ by $T_{n}$ to an accuracy of our choosing.
+
+\begin{example}
+Take the function
+\begin{align*}
+    f(x) = (1+x)^{k} \hspace{20pt} \lvert x \rvert < 1
+\end{align*}
+This is the binomial series, centered at $0$, which expands by the definition
+\begin{align*}
+    f(x) = \sum_{n=0}^{\infty} \binom{k}{n} x^{n} &= \sum_{n=0}^{\infty} \dfrac{k(k-1)(k-2) \cdots (k-n+1)}{n!} x^{n}\\[2ex]
+    &= 1 + kx + \dfrac{k(k-1)x^{2}}{2!} + \cdots
+\end{align*}
+If we set restrictions on both $x$ and $k$, say
+\begin{align*}
+    0 < x < 0.01 \hspace{20pt} \text{and} \hspace{20pt} 0 < k < 30
+\end{align*}
+we could set a bound on $f^{(2)}(0)$, say
+\begin{align*}
+    \lvert f^{(2)}(0) \rvert \leq 30^{2}
+\end{align*}
+Then we would get
+\begin{align*}
+    \lvert R_{1}(x) \rvert \leq \dfrac{30^{2}\lvert x \rvert^{2}}{2!} \leq \dfrac{0.09}{2!} = 0.045
+\end{align*}
+which gives us
+\begin{align*}
+    (1+x)^{k} \approx 1 + kx
+\end{align*}
+\end{example}
