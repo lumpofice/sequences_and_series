@@ -72,7 +72,7 @@ Particularly, we have
 What follows is known as Taylor's Inequality.
 
 \begin{theorem}
-Let $n$ be a natural number on $[\alpha, \beta]$, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[\alpha, \beta]$ and $f^{(n+1)}$ exists on $(\alpha, \beta)$. If $a$ is in $[\alpha, \beta]$, then for any $x$ in $[\alpha, \beta]$, there exists a point $c$ between $x$ and $a$ such that
+Let $n$ be a natural number, let $f$ be a function such that $f$ and all of its derivatives are continuous on $[\alpha, \beta]$ and $f^{(n+1)}$ exists on $(\alpha, \beta)$. If $a$ is in $[\alpha, \beta]$, then for any $x$ in $[\alpha, \beta]$, there exists a point $c$ between $x$ and $a$ such that
 \begin{align*}
     f(x) = f(a) + f^{(1)}(a)(x-a) + \dfrac{f^{(2)}(a)}{2!}(x-a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x-a)^{n} + \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}
 \end{align*}
@@ -82,7 +82,7 @@ where
 \end{align*}
 is the $n^{th}$-term Taylor polynomial in the sequence
 \begin{align*}
-    \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(x_{0})}{i!}(x-a)^{i}\Big\}_{k=0}^{\infty}
+    \Big\{\sum_{i=0}^{k} \dfrac{f^{(i)}(a)}{i!}(x-a)^{i}\Big\}_{k=0}^{\infty}
 \end{align*}
 which we may abbreviate as $T_{n}(x)$, and 
 \begin{align*}
