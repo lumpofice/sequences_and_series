@@ -211,6 +211,26 @@ Find the Taylor series for $f(x) = xe^{x}$ centered about $a = 0$. Find the radi
 Find the Taylor series for $f(x) = \sin x$ centered about $a = \pi/2$. Find the radius of convergence. Prove that this series represents $\sin x$ for all $x$.
 \end{exercise}
 
+\begin{example}
+Take the following function
+\begin{align*}
+    f(x) = \dfrac{1}{1-x}
+\end{align*}
+Expressing $f$ as a series, we have
+\begin{align*}
+    \dfrac{1}{1-x} = 1 + x + x^{2} + x^{3} + \cdots = \sum_{n=0}^{\infty} x^{n}
+\end{align*}
+Differentiating $f$ gives us
+\begin{align*}
+    \dfrac{1}{(1-x)^{2}} = 1 + 2x + 3x^{2} + \cdots = \sum_{n=1}^{\infty} nx^{n-1}
+\end{align*}
+The radius of convergence for this function, $f^{'}$, is 
+\begin{align*}
+    \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{(n+1)x^{n}}{nx^{n-1}}\Big\rvert = \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{(n+1)x}{n}\Big\rvert = \lvert x \rvert < 1
+\end{align*}
+which is the same result we found for $f$ earlier within this section.
+\end{example}
+
 \newpage
 \section{$n^{\text{th}}$-term Taylor Polynomials}
 
