@@ -50,6 +50,7 @@ converges on $\lvert x - a \rvert < R$. Then $f$ converges on $(a-R, a+R)$, $f$ 
 \begin{align*}
     f^{'}(x) = \sum_{n=0}^{\infty} n c_{n} x^{n-1}
 \end{align*}
+\label{derivative_of_power_series}
 \end{theorem}
 
 Since $f$ is continuous on $(a-R, a+R)$, we have that $f$ is integrable on $(a-R, a+R)$.
@@ -212,7 +213,7 @@ Find the Taylor series for $f(x) = \sin x$ centered about $a = \pi/2$. Find the 
 \end{exercise}
 
 \begin{example}
-Take the following function
+Regarding Theorem \ref{derivative_of_power_series}, take the following function
 \begin{align*}
     f(x) = \dfrac{1}{1-x}
 \end{align*}
@@ -228,7 +229,27 @@ The radius of convergence for this function, $f^{'}$, is
 \begin{align*}
     \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{(n+1)x^{n}}{nx^{n-1}}\Big\rvert = \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{(n+1)x}{n}\Big\rvert = \lvert x \rvert < 1
 \end{align*}
-which is the same result we found for $f$ earlier within this section.
+which is the same result we found for $f$ earlier within this section. While we have our radius of convergence, sometimes it is requested that we find the interval of convergence. 
+\begin{align*}
+    \sum_{n=1}^{\infty} nx^{n-1} = \dfrac{1}{(1-x)^{2}} \hspace{20pt} \text{converges for} \hspace{4pt} -1 < x < 1 \hspace{20pt} \text{(and possibly $\{-1, 1\}$)}
+\end{align*}
+We test those two possible points by plugging each one in for argument $x$ and then running tests on the resulting series. For $x = -1$,
+\begin{align*}
+    \sum_{n=1}^{\infty} n(-1)^{n-1}
+\end{align*}
+we see the series diverges, since
+\begin{align*}
+    \lim_{n \longrightarrow \infty} n(-1)^{n-1} \neq 0
+\end{align*}
+Likewise, for $x = 1$,
+\begin{align*}
+    \sum_{n=1}^{\infty} n(1)^{n-1} = \sum_{n=1}^{\infty} n
+\end{align*}
+diverges, since
+\begin{align*}
+    \lim_{n \longrightarrow \infty} n \neq 0
+\end{align*}
+Thus, the interval of convergence for $f^{'}$ would be $(-1, 1)$.
 \end{example}
 
 \newpage
