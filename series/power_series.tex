@@ -9,7 +9,7 @@ where $a$ is a real number, we say $f$ is a power series centered at $a$.
 \end{definition}
 
 \begin{note}
-The reader may replace the word ``radius" in this section with the word ``interval", but in general, ``radius" means ``ball", whether that ``ball" be a one-dimensional interval, a two-dimensional disk, a three-dimensional sphere, etc. Thus, for any natural number $n$, one may refer to a ``radius" in $n$-dimensional space as a ``ball".
+The reader may replace the word ``radius" in this section with the words ``open interval", but in general, ``radius" means ``open ball", whether that ``open ball" be a one-dimensional open interval, a two-dimensional open disk, a three-dimensional open sphere, etc. Thus, for any natural number $n$, one may refer to a ``radius" in $n$-dimensional space as an ``open ball".
 \end{note}
 
 Function $f$ will have a radius of convergence for some $x$, since
@@ -37,8 +37,31 @@ Take the function
 \end{align*}
 which we discovered is convergent when $x \in (-1, 1)$. Function $f$ is the power series centered about $a=0$. Using the ratio test
 \begin{align*}
-    \Big\lvert \dfrac{x^{n+1}}{x^{n}} \Big\rvert = \lvert x \rvert \hspace{20pt} \text{and} \hspace{20pt} \lim_{n \longrightarrow \infty} \lvert x \rvert = \lvert x \rvert < 1 \hspace{20pt} \text{if and only if} \hspace{20pt} -1 < x < 1
+    \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{x^{n+1}}{x^{n}} \Big\rvert = \lim_{n \longrightarrow \infty} \lvert x \rvert = \lvert x \rvert < 1 \hspace{20pt} \text{if and only if} \hspace{20pt} -1 < x < 1
 \end{align*}
+\label{example_1_power_series}
+\end{example}
+
+By Example \ref{example_1_power_series}, we have that, for any $-1 < x < 1$, $f$ converges absolutely. We may plug in the endpoints for this interval to determine the interval of convergence. Sometimes, these endpoints may be included in the interval of convergence by way of conditional convergence.
+
+\begin{example}
+Consider the power series
+\begin{align*}
+    f(x) = \sum_{n = 1}^{\infty} \dfrac{x^{n}}{n}
+\end{align*}
+Finding the radius of convergence through the ratio test
+\begin{align*}
+    \lim_{n \longrightarrow \infty}\Big\lvert \dfrac{x^{n+1}}{n+1} \cdot \dfrac{n}{x^{n}} \Big\rvert = \lim_{n \longrightarrow \infty} \Big\lvert \dfrac{x \cdot n}{n+1} \Big\rvert = \lvert x \rvert < 1
+\end{align*}
+we have that $f$ is absolute convergent for all $-1 < x < 1$. Now we test the endpoints $\{-1, 1\}$. We know from Example \ref{example_3_conditional_convergence} that
+\begin{align*}
+    f(-1) = \sum_{n = 1}^{\infty} \dfrac{(-1)^{n}}{n}
+\end{align*} 
+converges conditionally. Meaning, by Definition \ref{conditional_convergence}, 
+\begin{align*}
+    f(1) = \sum_{n = 1}^{\infty} \dfrac{1^{n}}{n} = \sum_{n = 1}^{\infty} \Big\lvert \dfrac{(-1)^{n}}{n} \Big\rvert
+\end{align*}
+is not convergent. Thus, the interval of convergence is $[-1 , 1)$, with $-1 < x < 1$ being absolutely convergent and $\{-1\}$ being conditionally convergent. 
 \end{example}
 
 \begin{theorem}
