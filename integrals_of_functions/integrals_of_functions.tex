@@ -371,6 +371,14 @@ The right hand side of the equality evaluates to $26/3$. However, if one wishes 
 \end{example}
 
 \begin{example}
+    We can use integration to show $\ln(x) < x \hspace{10pt} \forall x \in (1, \infty)$.
+    \begin{align*}
+        &\ln(x) = \int_{1}^{x} \dfrac{1}{t} dt \hspace{20pt} \text{and} \hspace{20pt} x = 1 + \int_{1}^{x} dt\\
+        &\text{So,} \hspace{20pt} \ln(x) - x = \int_{1}^{x} \Big(\dfrac{1}{t} - 1\Big) dt - 1 < 0 \hspace{20pt} \Longleftrightarrow \hspace{20pt} \ln(x) < x
+    \end{align*}
+\end{example}
+
+\begin{example}
 Consider the following indefinite integral
 \begin{align*}
     g(x) = \int_{D} \cos^{3} x \sin x dx
