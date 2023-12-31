@@ -23,14 +23,14 @@ Here, $f(n) = \dfrac{1}{n}$ is the function definition from the natural numbers 
 \begin{exercise}
 Write the $5^{\text{th}}$ term for the following sequence of real numbers:
 \begin{align*}
-    \Big\{\dfrac{n}{n+1}\Big\}_{n=1}^{\infty}
+    \Big\{\dfrac{n}{n+(1/n)}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Write the first five terms for the following sequence of real numbers:
 \begin{align*}
-    \Big\{\dfrac{(-1)^{n}(n+1)}{3^{n}}\Big\}_{n=1}^{\infty}
+    \Big\{\dfrac{(-1)^{n} \cdot n}{(4^{n}/3)}\Big\}_{n=1}^{\infty}
 \end{align*}
 \end{exercise}
 
@@ -39,14 +39,14 @@ Sometimes, the domain is extended or attenuated a bit to accommodate the functio
 \begin{exercise}
 Write the first five terms for the following sequence of real numbers:
 \begin{align*}
-    \{\sqrt{n-10}\}_{n=10}^{\infty}
+    \{\sqrt{n-b} \hspace{2pt}\}_{n=c}^{\infty} \hspace{4pt} \text{,} \hspace{10pt} \text{where $b > 1$ and $c = \lceil b \rceil$}
 \end{align*}
 \end{exercise}
 
 \begin{exercise}
 Write the first five terms for the following sequence of real numbers:
 \begin{align*}
-    \Big\{\cos{\Big(\dfrac{n\pi}{4}\Big)}\Big\}_{n=0}^{\infty}
+    \Big\{\cos{\Big(\dfrac{n\pi}{4} + (n \pi) \Big)}\Big\}_{n=0}^{\infty}
 \end{align*}
 \end{exercise}
 
@@ -55,18 +55,18 @@ A tricky part of this concept is using a sequence's function values to determine
 \begin{example}
 Let's take the following sequence of terms:
 \begin{align*}
-    \Big\{\dfrac{3}{5}, \hspace{4pt} -\dfrac{4}{25}, \hspace{4pt} \dfrac{5}{125}, \hspace{4pt} -\dfrac{6}{625}, \hspace{4pt} \dfrac{7}{3125}, \hspace{4pt} \cdots \Big\}
+    \Big\{\dfrac{5}{2}, \hspace{4pt} -\dfrac{6}{4}, \hspace{4pt} \dfrac{7}{8}, \hspace{4pt} -\dfrac{8}{16}, \hspace{4pt} \dfrac{9}{32}, \hspace{4pt} \cdots \Big\}
 \end{align*}
-Our job is to discover a pattern. Well, it seems every other term is negative. We know this can be established with the factor $(-1)^{n}$, but given that there are other factors we've yet to analyze thoroughly, it's not certain that this is a factor in our general expression for the sequence. It also seems the numerator begins at $3$ and increments by one unit as the sequence progresses. Given that the sequence begins at $n=3$, will our first term in the sequence be positive? We see $(-1)^{3}$ is negative. So, we fix this by adding or subtracting a $1$ from the power $n$. While it is not always the case that either adding or subtracting a $1$ will work, in this example, either approach will. So, we add a $1$, giving us $(-1)^{n+1}$ as a factor in our general sequence. Finally, the denominator seems to be some power of $5$ in each term of the sequence, and it seems those powers begin at $1$, which is equal to $3-2$. Checking the power in our second term, we have a power of $2$, which is equal to $4-2$. It seems our powers progress through the expression $n-2$, where $n$ is the index of the sequence. Thus, we have the following general expression for our sequence:
+Our job is to discover a pattern. Well, it seems every other term is negative. We know this can be established with the factor $(-1)^{n}$, but given that there are other factors we've yet to analyze thoroughly, it's not certain that this is a factor in our general expression for the sequence. It also seems the numerator begins at $5$ and increments by one unit as the sequence progresses. Given that the sequence begins at $n=5$, will our first term in the sequence be positive? We see $(-1)^{5}$ is negative. So, we fix this by adding or subtracting a $1$ from the power $n$. While it is not always the case that either adding or subtracting a $1$ will work, in this example, either approach will. So, we add a $1$, giving us $(-1)^{n+1}$ as a factor in our general sequence. Finally, the denominator seems to be some power of $2$ in each term of the sequence, and it seems those powers begin at $1$, which is equal to $5-4$. Checking the power in our second term, we have a power of $2$, which is equal to $6-4$. It seems our powers progress through the expression $n-4$, where $n$ is the index of the sequence. Thus, we have the following general expression for our sequence:
 \begin{align*}
-    \Big\{\dfrac{(-1)^{n+1}n}{5^{n-2}}\Big\}_{n=3}^{\infty}
+    \Big\{\dfrac{(-1)^{n+1}n}{2^{n-4}}\Big\}_{n=5}^{\infty}
 \end{align*}
 \end{example}
 
 \begin{exercise}
 Find the general expression of the sequence following the pattern:
 \begin{align*}
-    \Big\{1, \hspace{4pt} -\dfrac{2}{3}, \hspace{4pt} \dfrac{4}{9}, \hspace{4pt} -\dfrac{8}{27}, \hspace{4pt} \cdots \Big\}
+    \Big\{9, \hspace{4pt} -\dfrac{8}{3}, \hspace{4pt} \dfrac{9}{9}, \hspace{4pt} -\dfrac{8}{27}, \hspace{4pt} \cdots \Big\}
 \end{align*}
 \end{exercise}
 
