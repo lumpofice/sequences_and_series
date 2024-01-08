@@ -244,6 +244,13 @@ Show the following, using Theorem \ref{squeeze_theorem}
 \begin{align*}
     \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1}n}{n^{2}+1} = 0
 \end{align*}
+\begin{proof}
+    \begin{align*}
+        &-\dfrac{1}{n} \leq \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \leq \dfrac{n}{n^{2} + 1} \leq \dfrac{n}{n^{2}} = \dfrac{1}{n}\\[2ex]
+        &\lim_{n \longrightarrow \infty} \hspace{2pt} \pm \hspace{2pt} \dfrac{1}{n} = 0\\[2ex]
+        &\text{So,} \hspace{4pt} 0 = \lim_{n \longrightarrow \infty} -\dfrac{1}{n} \leq \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \leq \lim_{n \longrightarrow \infty} \dfrac{1}{n} = 0
+    \end{align*}
+\end{proof}
 \end{exercise}
 
 \begin{exercise}
