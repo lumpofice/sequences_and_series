@@ -253,16 +253,21 @@ Show the following, using Theorem \ref{squeeze_theorem}
 \end{proof}
 \end{exercise}
 
-\begin{exercise}
-Prove the following theorem two different ways:
-\begin{itemize}
-    \item [1.] Using the triangle inequality from Recall \ref{triangle_inequality}
-    \item [2.] Using Theorem \ref{squeeze_theorem}
-\end{itemize}
+\begin{theorem} 
+Let $\{f(n)\}_{n = 1}^{\infty}$ be a sequence of numbers.
 \begin{align*}
     \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} \lvert f(n) \rvert = L \hspace{20pt} \text{then} \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = L
 \end{align*}
-\end{exercise}
+\begin{proof}
+    From Definition \ref{definition_limit_sequence_numbers}, we have
+    \begin{align*}
+        &\lim_{n \longrightarrow \infty}\lvert f(n) \rvert = L \hspace{20pt} \Longleftrightarrow \hspace{20pt} \text{For} \hspace{4pt} \forall \epsilon>0, \hspace{4pt} \exists K \in \mathbb{N} \hspace{4pt} \text{such that} \\[2ex] 
+        &\text{when} \hspace{4pt} n \geq K, \hspace{4pt} \text{we have} \hspace{4pt} \Big\lvert \lvert f(n) \rvert - L \Big\rvert < \epsilon \\[2ex]
+        &\text{Well, for all such} \hspace{4pt} n, \hspace{4pt} \text{since} \hspace{4pt} f(n) \leq \lvert f(n) \rvert, \hspace{4pt} \text{we have} \hspace{4pt} \lvert f(n) - L \rvert \leq \Big\lvert \lvert f(n) \rvert - L \Big\rvert < \epsilon \\[2ex]
+        &\text{So,} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) = L
+    \end{align*}
+\end{proof}
+\end{theorem}
 
 \begin{exercise}
 Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
