@@ -547,6 +547,29 @@ Prove that $f$ is continuous at $c$ if and only if
 \end{align*}
 \end{exercise}
 
+\begin{exercise}
+Use Theorem \ref{squeeze_theorem} to find the limit of the following sequence:
+\begin{align*}
+    \Big\{\dfrac{\sin(1/n)}{1/n}\Big\}_{n=1}^{\infty}
+\end{align*}
+\begin{proof}
+    Consider the unit circle. Inscribing a right triangle into Quadrant I, such that the vertex of measure $\theta$ is located at the origin and initial side along the $x$-axis, the vertical leg of this triangle is $\sin(\theta)$. The arclength, $s$, of the sector of the circle formed by angle $\theta$ is equal to
+    \begin{align*}
+        s = r \theta = 1 \cdot \theta = \theta > \sin(\theta)
+    \end{align*}
+    Considering the similar triangle with vertex of measure $\theta$ located at the origin, initial side along the $x$-axis of length $1$. The vertical leg of this triangle is longer than $\theta$, with measure $y$. We can follow the logic of similar right triangles to discover more about $y$:
+    \begin{align*}
+        &\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)} = \dfrac{y}{1} = y > \theta \hspace{20pt} \Longleftrightarrow \hspace{20pt} \sin(\theta) > \theta \cdot \cos(\theta) \\[2ex]
+        &\text{This gives us} \hspace{20pt} \theta > \sin(\theta) > \theta \cdot \cos(\theta) \hspace{20pt} \Longleftrightarrow \hspace{20pt} 1 > \dfrac{\sin(\theta)}{\theta} > \cos(\theta)\\[2ex]
+        &\Longrightarrow \hspace{20pt} 1 = \lim_{\theta \longrightarrow 0} 1 > \lim_{\theta \longrightarrow 0} \dfrac{\sin(\theta)}{\theta} > \lim_{\theta \longrightarrow 0} \cos(\theta) = 1
+    \end{align*}
+    The proof is done, but for clarity, set $\theta = 1/n$. We know that $\lim_{n \longrightarrow \infty} 1/n = 0$. So,
+    \begin{align*}
+        1 = \lim_{n \longrightarrow \infty} 1 > \lim_{n \longrightarrow \infty} \dfrac{\sin(1/n)}{1/n} > \lim_{n \longrightarrow \infty} \cos(1/n) = 1
+    \end{align*}
+\end{proof}
+\end{exercise}
+
 \newpage
 \section{Intermediate Value Theorem}
 
