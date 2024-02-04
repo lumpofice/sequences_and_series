@@ -281,6 +281,12 @@ The sequence $\{r^{n}\}_{n=1}^{\infty}$ is convergent for $r \in [-1, 1]$ such t
 \end{align*}
 and is divergent, otherwise.
 \label{geometric_term_sequence}
+\begin{proof}
+    If $\lvert r \rvert = 1$, is the result obvious? If $\lvert r \rvert < 1$, then $\lvert r \rvert \in \Big[\dfrac{k-1}{m}, \dfrac{k}{m}\Big)$, where $k < m$ and $k, m \in \mathbb{N}$. Choose $\epsilon = \dfrac{1}{k}$. Then when $N = k^{2}$ and $n > N$, we have
+    \begin{align*}
+        \Big|\hspace{4pt} \Big(\dfrac{k}{m}\Big)^{n} - 0 \hspace{4pt} \Big| \leq \dfrac{k^{n}}{(k+1)^{n}} \leq \dfrac{k^{n}}{k^{n} + n \cdot k^{n-1}} \leq \dfrac{k^{n}}{n \cdot k^{n-1}} = \dfrac{k}{n} < \dfrac{1}{k} = \epsilon
+    \end{align*}
+\end{proof}
 \end{theorem}
 
 \begin{exercise}
