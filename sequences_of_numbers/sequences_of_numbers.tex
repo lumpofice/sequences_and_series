@@ -166,8 +166,18 @@ Take $\{n\}_{n=1}^{\infty}$. Clearly, as $n \longrightarrow \infty$, the sequenc
 Show the sequence $\Big\{\dfrac{5n^{3}}{3n+1}\Big\}_{n=1}^{\infty}$ has an infinite limit. 
 \end{exercise}
 
-\begin{exercise}
-Show the sequence $\Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}$ has an infinite limit. 
+\begin{exercise}\label{exercise_4_ch_2}
+Show the sequence $\Big\{\dfrac{n!}{2^{n}}\Big\}_{n=1}^{\infty}$ has an infinite limit.\\[1ex]
+For this exercise, we merely need to show 
+\begin{align*}
+    n! \hspace{2pt} \geq \hspace{2pt} 2^{n} \hspace{4pt}, \hspace{10pt} \forall n \hspace{2pt} \geq \hspace{2pt} 4
+\end{align*}
+To show this, we use the Induction method. 
+\begin{align*}
+    &i) \hspace{4pt} \text{For} \hspace{4pt} n = 4 \hspace{2pt}, \hspace{10pt} 4! = 24 \hspace{2pt} \geq \hspace{2pt} 16 = 2^{4}\\[2ex]
+    &ii) \hspace{4pt} \text{We assume for some} \hspace{4pt} n \in \mathbb{N}, \hspace{10pt} n! \hspace{2pt} \geq \hspace{2pt} 2^{n}\\[2ex]
+    &iii) \hspace{4pt} (n+1)! = (n+1)n! \hspace{2pt} \geq \hspace{2pt} (n+1) \cdot 2^{n} \hspace{2pt} \geq \hspace{2pt} 2 \cdot 2^{n} = 2^{n+1}
+\end{align*}
 \end{exercise}
 
 \begin{theorem}
@@ -205,12 +215,14 @@ Find the general expression of the divergent sequence following the pattern:
 \end{align*}
 \end{exercise}
 
-\begin{exercise}
+\begin{exercise}\label{exercise_6_ch_2}
 Determine whether the sequence defined by the following is convergent or divergent:
 \begin{align*}
     f(1) = 1 \hspace{20pt} f(n) = 4 - f(n-1), \hspace{20pt} n \geq 1
 \end{align*}
 \end{exercise}
+
+For Exercise \ref{exercise_6_ch_2}, you could use the method of Induction shown in Exercise \ref{exercise_4_ch_2}
 
 \begin{exercise}
 Determine whether the sequence defined by the following is convergent or divergent:
