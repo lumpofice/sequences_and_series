@@ -234,11 +234,20 @@ Determine whether the sequence defined by the following is convergent or diverge
 \begin{recall}
 For all $a, b \in \mathbb{R}$, we have
 \begin{align*}
-    \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert &\leq \lvert a - b \rvert \\[2ex]
-    \lvert a + b \rvert &\leq \lvert a \rvert + \lvert b \rvert
+    &i) \hspace{4pt} \lvert a + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert + \lvert b \rvert \\[2ex]
+    &ii) \hspace{4pt} \lvert a - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[2ex]
+    &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert 
 \end{align*}
 These are forms of a relationship known as the Triangle Inequality.
 \label{triangle_inequality}
+\begin{proof}
+    \begin{align*}
+        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[2ex]
+        &\text{this gives us} \\[2ex]
+        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[4ex]
+        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert
+    \end{align*}
+\end{proof}
 \end{recall}
 
 \begin{theorem}
