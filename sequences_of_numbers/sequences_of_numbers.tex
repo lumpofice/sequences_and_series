@@ -118,11 +118,11 @@ $\lim_{n \longrightarrow \infty} \dfrac{n}{n+1} = 1$
 \begin{proof}
 We have a trick we can employ to find the above limit. By Example \ref{limit_one_over_n} and Theorem \ref{properties_limit_sequence_numbers},
 \begin{align*}
-    \dfrac{n}{n+1} &= 1 \cdot \dfrac{n}{n+1}
+    &\dfrac{n}{n+1} = 1 \cdot \dfrac{n}{n+1}
     = \dfrac{1/n}{1/n} \cdot \dfrac{n}{n+1}
     = \dfrac{(1/n) \cdot n}{(1/n) \cdot (n+1)}
     = \dfrac{1}{1 + (1/n)}\\[2ex]
-    \Longrightarrow &\lim_{n \longrightarrow \infty} \dfrac{n}{n+1}
+    &\Longrightarrow \hspace{10pt} \lim_{n \longrightarrow \infty} \dfrac{n}{n+1}
     = \lim_{n \longrightarrow \infty} \dfrac{1}{1+(1/n)}
     = \dfrac{\lim_{n \longrightarrow \infty}1}{\lim_{n \longrightarrow \infty}1 + \lim_{n \longrightarrow \infty}(1/n)}
     = \dfrac{1}{1 + 0} = 1
@@ -186,12 +186,12 @@ A sequence of numbers can have at most one limit.
     Let $\{f(n)\}_{n=1}^{\infty}$ be a sequence, $L = \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$, and $L' = \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$ .\\
     We have that for all $\epsilon > 0$, there exist $N_{1}, \hspace{4pt} N_{2} > 0$ such that
     \begin{align*}
-        n > N_{1} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L \rvert < \epsilon \\[2ex]
-        n > N_{2} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L' \rvert < \epsilon
+        &n > N_{1} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L \rvert < \epsilon \\[2ex]
+        &n > N_{2} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L' \rvert < \epsilon
     \end{align*}
     We can choose $M = \max\{N_1, \hspace{4pt} N_{2}\}$. Then
     \begin{align*}
-        n > M \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert L - L' \rvert \leq \lvert f(n) - L \rvert + \lvert f(n) - L' \rvert < 2\epsilon
+        &n > M \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert L - L' \rvert \leq \lvert f(n) - L \rvert + \lvert f(n) - L' \rvert < 2\epsilon
     \end{align*}
 \end{proof}
 \label{limit_uniqueness}
@@ -242,10 +242,14 @@ These are forms of a relationship known as the Triangle Inequality.
 \label{triangle_inequality}
 \begin{proof}
     \begin{align*}
-        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[2ex]
-        &\text{this gives us} \\[2ex]
-        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[4ex]
-        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert
+        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[1ex]
+        &\text{this gives us} \\[1ex]
+        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[6ex]
+        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[6ex]
+        &iii_{j}) \hspace{4pt} \lvert a \rvert = \lvert a - b + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert + \lvert b \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert a \rvert - \lvert b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert \\[1ex]
+        &iii_{jj}) \hspace{4pt} \lvert b \rvert = \lvert b - a + a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert + \lvert a \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert b \rvert - \lvert a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert = \lvert a - b \rvert \\[1ex]
+        &\text{By $iii_{j})$ and $iii_{jj}$, we have} \\[1ex]
+        &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert
     \end{align*}
 \end{proof}
 \end{recall}
