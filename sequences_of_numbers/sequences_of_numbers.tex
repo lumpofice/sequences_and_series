@@ -147,12 +147,10 @@ Find the limit of
 \begin{definition}
 Take a sequence $\{f(n)\}_{n=1}^{\infty}$ 
 \begin{align*}
-    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) &= \infty, \hspace{4pt} \text{then}\\[2ex]
-    \text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} &\text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) > N.
-\end{align*}
-\begin{align*}
-    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) &= -\infty, \hspace{4pt} \text{then}\\[2ex]
-    \text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} &\text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) < -N.
+    &i) \hspace{4pt} \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) = \infty, \hspace{4pt} \text{then}\\[1ex]
+    &\text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) > N. \\[6ex]
+    &ii) \hspace{4pt} \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) = -\infty, \hspace{4pt} \text{then}\\[1ex]
+    &\text{for all} \hspace{4pt} N \in \mathbb{N}, \hspace{4pt} \text{there exists an} \hspace{4pt} M \in \mathbb{N} \hspace{4pt} \text{such that for all} \hspace{4pt} n > M \hspace{4pt} \text{we have} \hspace{4pt} f(n) < -N.
 \end{align*}
 Any sequence with an infinite limit is said to be divergent.
 \label{definition_infinite_limit_sequence}
@@ -180,6 +178,29 @@ To show this, we use the Induction method.
 \end{align*}
 \end{exercise}
 
+\begin{recall}
+For all $a, b \in \mathbb{R}$, we have
+\begin{align*}
+    &i) \hspace{4pt} \lvert a + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert + \lvert b \rvert \\[2ex]
+    &ii) \hspace{4pt} \lvert a - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[2ex]
+    &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert 
+\end{align*}
+These are forms of a relationship known as the Triangle Inequality.
+\label{triangle_inequality}
+\begin{proof}
+    \begin{align*}
+        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[1ex]
+        &\text{this gives us} \\[1ex]
+        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[6ex]
+        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[6ex]
+        &iii_{j}) \hspace{4pt} \lvert a \rvert = \lvert a - b + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert + \lvert b \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert a \rvert - \lvert b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert \\[1ex]
+        &iii_{jj}) \hspace{4pt} \lvert b \rvert = \lvert b - a + a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert + \lvert a \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert b \rvert - \lvert a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert = \lvert a - b \rvert \\[1ex]
+        &\text{By $iii_{j})$ and $iii_{jj}$, we have} \\[1ex]
+        &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert
+    \end{align*}
+\end{proof}
+\end{recall}
+
 \begin{theorem}
 A sequence of numbers can have at most one limit.
 \begin{proof}
@@ -193,6 +214,7 @@ A sequence of numbers can have at most one limit.
     \begin{align*}
         &n > M \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert L - L' \rvert \leq \lvert f(n) - L \rvert + \lvert f(n) - L' \rvert < 2\epsilon
     \end{align*}
+    So, $L = L^{'}$.
 \end{proof}
 \label{limit_uniqueness}
 \end{theorem}
@@ -231,35 +253,14 @@ Determine whether the sequence defined by the following is convergent or diverge
 \end{align*}
 \end{exercise}
 
-\begin{recall}
-For all $a, b \in \mathbb{R}$, we have
-\begin{align*}
-    &i) \hspace{4pt} \lvert a + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert + \lvert b \rvert \\[2ex]
-    &ii) \hspace{4pt} \lvert a - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[2ex]
-    &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert 
-\end{align*}
-These are forms of a relationship known as the Triangle Inequality.
-\label{triangle_inequality}
-\begin{proof}
-    \begin{align*}
-        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[1ex]
-        &\text{this gives us} \\[1ex]
-        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[6ex]
-        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[6ex]
-        &iii_{j}) \hspace{4pt} \lvert a \rvert = \lvert a - b + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert + \lvert b \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert a \rvert - \lvert b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert \\[1ex]
-        &iii_{jj}) \hspace{4pt} \lvert b \rvert = \lvert b - a + a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert + \lvert a \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert b \rvert - \lvert a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert = \lvert a - b \rvert \\[1ex]
-        &\text{By $iii_{j})$ and $iii_{jj}$, we have} \\[1ex]
-        &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert
-    \end{align*}
-\end{proof}
-\end{recall}
+
 
 \begin{theorem}
 Let $\{f(n)\}_{n=1}^{\infty}, \hspace{4pt} \{g(n)\}_{n=1}^{\infty}$ and $\{h(n)\}_{n=1}^{\infty}$ be sequences. If
 \begin{align*}
-    \text{If} \hspace{4pt} f(n)\leq h(n)\leq g(n) \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N} \hspace{20pt}
-    & \text{and if}  \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = \lim_{n \longrightarrow \infty} g(n) = L \\[2ex]
-    & \text{then} \hspace{4pt} \lim_{n \longrightarrow \infty} h(n) = L 
+    &\text{If} \hspace{4pt} f(n) \hspace{2pt} \leq \hspace{2pt} h(n) \hspace{2pt} \leq \hspace{2pt} g(n) \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N} \hspace{20pt}
+    \text{and if}  \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = \lim_{n \longrightarrow \infty} g(n) = L \\[2ex]
+    &\text{then} \hspace{4pt} \lim_{n \longrightarrow \infty} h(n) = L 
 \end{align*}
 \label{squeeze_theorem}
 \end{theorem}
