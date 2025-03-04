@@ -97,21 +97,58 @@ Take $\epsilon = \dfrac{1}{k}$, where $k \in \mathbb{N}$ is arbitrary. Then by D
 \label{limit_one_over_n}
 \end{example}
 
+\begin{recall}
+For all $a, b \in \mathbb{R}$, we have
+\begin{align*}
+    &i) \hspace{4pt} \lvert a + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert + \lvert b \rvert \\[2ex]
+    &ii) \hspace{4pt} \lvert a - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[2ex]
+    &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert 
+\end{align*}
+These are forms of a relationship known as the Triangle Inequality.
+\label{triangle_inequality}
+\begin{proof}
+    \begin{align*}
+        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[1ex]
+        &\text{this gives us} \\[1ex]
+        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[6ex]
+        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[6ex]
+        &iii_{j}) \hspace{4pt} \lvert a \rvert = \lvert a - b + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert + \lvert b \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert a \rvert - \lvert b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert \\[1ex]
+        &iii_{jj}) \hspace{4pt} \lvert b \rvert = \lvert b - a + a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert + \lvert a \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert b \rvert - \lvert a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert = \lvert a - b \rvert \\[1ex]
+        &\text{By $iii_{j})$ and $iii_{jj}$, we have} \\[1ex]
+        &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert
+    \end{align*}
+\end{proof}
+\end{recall}
+
 \begin{theorem}
 If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequences, and if $c \in \mathbb{R}$, then
 \begin{align*}
-    &\lim_{n \longrightarrow \infty} (f(n) + g(n)) = \lim_{n \longrightarrow \infty} f(n) + \lim_{n \longrightarrow \infty} g(n) \\[2ex]
-    &\lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
-    &\lim_{n \longrightarrow \infty} cf(n) = c\lim_{n \longrightarrow \infty} f(n)\\[2ex]
-    &\lim_{n \longrightarrow \infty} (f(n) \cdot g(n)) = \lim_{n \longrightarrow \infty} f(n) \cdot \lim_{n \longrightarrow \infty} g(n)\\[2ex]
-    &\lim_{n \longrightarrow \infty}\dfrac{f(n)}{g(n)} = \dfrac{\lim_{n \longrightarrow \infty} f(n)}{\lim_{n \longrightarrow \infty} g(n)}, \hspace{4pt} \text{when} \hspace{4pt} \lim_{n \longrightarrow \infty} g(n) \neq 0\\[2ex]
-    &\lim_{n \longrightarrow \infty} (f(n))^{p} = (\lim_{n \longrightarrow \infty} f(n))^{p}, \hspace{4pt} \text{where} \hspace{4pt} p > 0 \hspace{4pt} \text{and} \hspace{4pt} f(n) > 0\\[2ex]
-    &\lim_{n \longrightarrow \infty} c = c
+    &i) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n) + g(n)) = \lim_{n \longrightarrow \infty} f(n) + \lim_{n \longrightarrow \infty} g(n) \\[2ex]
+    &ii) \hspace{4pt} \lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
+    &iii) \hspace{4pt} \lim_{n \longrightarrow \infty} cf(n) = c\lim_{n \longrightarrow \infty} f(n)\\[2ex]
+    &iv) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n) \cdot g(n)) = \lim_{n \longrightarrow \infty} f(n) \cdot \lim_{n \longrightarrow \infty} g(n)\\[2ex]
+    &v) \hspace{4pt} \lim_{n \longrightarrow \infty}\dfrac{f(n)}{g(n)} = \dfrac{\lim_{n \longrightarrow \infty} f(n)}{\lim_{n \longrightarrow \infty} g(n)}, \hspace{4pt} \text{when} \hspace{4pt} \lim_{n \longrightarrow \infty} g(n) \neq 0\\[2ex]
+    &vi) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n))^{p} = (\lim_{n \longrightarrow \infty} f(n))^{p}, \hspace{4pt} \text{where} \hspace{4pt} p > 0 \hspace{4pt} \text{and} \hspace{4pt} f(n) > 0\\[2ex]
+    &vii) \hspace{4pt} \lim_{n \longrightarrow \infty} c = c
 \end{align*}
 \label{properties_limit_sequence_numbers}
+\begin{proof}
+    \begin{align*}
+        &\text{Since } \{f(n)\}_{n = 1}^{\infty} \text{ and } \{g(n)\}_{n = 1}^{\infty} \text{ are convergent, we let there limits be } f \text{ and } g, \text{ respectively.} \\[2ex]
+        &i) \hspace{4pt} \text{Take } \epsilon \hspace{2pt} > \hspace{2pt} 0; \text{ then there exists } K_{1} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{1}, \\
+        &\text{and there exists } K_{2} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{2}, \text{ such that}
+        \end{align*}
+        \begin{align*}
+            \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon \hspace{20pt} \text{and} \hspace{20pt} \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} \epsilon. 
+        \end{align*}
+        \begin{align*}
+            &\text{Thus, for all } n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\} \text{ we have} \\
+            &\lvert (f(n) - g(n)) - (f-g) \rvert = \lvert (f(n) - f) + (g - g(n)) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert + \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon
+        \end{align*}
+\end{proof}
 \end{theorem}
 
-Now that we have these result, we can use them to find limits of other sequences.
+Now that we have these results, we can use them to find limits of other sequences.
 
 \begin{example}
 $\lim_{n \longrightarrow \infty} \dfrac{n}{n+1} = 1$
@@ -178,28 +215,7 @@ To show this, we use the Induction method.
 \end{align*}
 \end{exercise}
 
-\begin{recall}
-For all $a, b \in \mathbb{R}$, we have
-\begin{align*}
-    &i) \hspace{4pt} \lvert a + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert + \lvert b \rvert \\[2ex]
-    &ii) \hspace{4pt} \lvert a - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[2ex]
-    &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert 
-\end{align*}
-These are forms of a relationship known as the Triangle Inequality.
-\label{triangle_inequality}
-\begin{proof}
-    \begin{align*}
-        &i) \hspace{4pt} (a + b)^{2} = a^{2} + 2ab + b^{2} \hspace{2pt} \leq \hspace{2pt} \lvert a \rvert ^{2} + 2 \lvert a \rvert \lvert b \rvert + \lvert b \rvert ^{2} = (\lvert a \rvert + \lvert b \rvert)^{2} \\[1ex]
-        &\text{this gives us} \\[1ex]
-        &\lvert a + b \rvert = \sqrt{(a + b)^{2}} \hspace{2pt} \leq \hspace{2pt} \sqrt{(\lvert a \rvert + \lvert b \rvert)^{2}} = \Big\lvert \lvert a \rvert + \lvert b \rvert \Big\rvert = \lvert a \rvert + \lvert b \rvert \\[6ex]
-        &ii) \hspace{4pt} \lvert a - b \rvert = \lvert a - c + c - b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - c \rvert + \lvert c - b \rvert \\[6ex]
-        &iii_{j}) \hspace{4pt} \lvert a \rvert = \lvert a - b + b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert + \lvert b \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert a \rvert - \lvert b \rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert \\[1ex]
-        &iii_{jj}) \hspace{4pt} \lvert b \rvert = \lvert b - a + a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert + \lvert a \rvert \hspace{10pt} \Longleftrightarrow \hspace{10pt} \lvert b \rvert - \lvert a \rvert \hspace{2pt} \leq \hspace{2pt} \lvert b - a \rvert = \lvert a - b \rvert \\[1ex]
-        &\text{By $iii_{j})$ and $iii_{jj}$, we have} \\[1ex]
-        &iii) \hspace{4pt} \Big\lvert \lvert a \rvert - \lvert b \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert a - b \rvert
-    \end{align*}
-\end{proof}
-\end{recall}
+
 
 \begin{theorem}
 A sequence of numbers can have at most one limit.
