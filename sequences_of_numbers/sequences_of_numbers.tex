@@ -124,9 +124,9 @@ These are forms of a relationship known as the Triangle Inequality.
 If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequences, and if $c \in \mathbb{R}$, then
 \begin{align*}
     &i) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n) + g(n)) = \lim_{n \longrightarrow \infty} f(n) + \lim_{n \longrightarrow \infty} g(n) \\[2ex]
-    &ii) \hspace{4pt} \lim_{n \longrightarrow \infty} cf(n) = c\lim_{n \longrightarrow \infty} f(n)\\[2ex]
-    &iii) \hspace{4pt} \lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
-    &iv) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n) \cdot g(n)) = \lim_{n \longrightarrow \infty} f(n) \cdot \lim_{n \longrightarrow \infty} g(n)\\[2ex]
+    &ii) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n) \cdot g(n)) = \lim_{n \longrightarrow \infty} f(n) \cdot \lim_{n \longrightarrow \infty} g(n)\\[2ex]
+    &iii) \hspace{4pt} \lim_{n \longrightarrow \infty} cf(n) = c\lim_{n \longrightarrow \infty} f(n)\\[2ex]
+    &iv) \hspace{4pt} \lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
     &v) \hspace{4pt} \lim_{n \longrightarrow \infty}\dfrac{f(n)}{g(n)} = \dfrac{\lim_{n \longrightarrow \infty} f(n)}{\lim_{n \longrightarrow \infty} g(n)}, \hspace{4pt} \text{when} \hspace{4pt} \lim_{n \longrightarrow \infty} g(n) \neq 0\\[2ex]
     &vi) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n))^{p} = (\lim_{n \longrightarrow \infty} f(n))^{p}, \hspace{4pt} \text{where} \hspace{4pt} p > 0 \hspace{4pt} \text{and} \hspace{4pt} f(n) > 0\\[2ex]
     &vii) \hspace{4pt} \lim_{n \longrightarrow \infty} c = c
@@ -134,31 +134,45 @@ If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequen
 \label{properties_limit_sequence_numbers}
 \newpage
 \begin{proof} 
-    \hspace{2pt}\\[1ex]
-    \text{Since } $\{f(n)\}_{n = 1}^{\infty}$ \text{ and } $\{g(n)\}_{n = 1}^{\infty}$
-    \begin{align*}
-        &\text{Since } \{f(n)\}_{n = 1}^{\infty} \text{ and } \{g(n)\}_{n = 1}^{\infty} \text{ are convergent, we let there limits be } f \text{ and } g, \text{ respectively.} \\[2ex]
-        &i) \hspace{4pt} \text{Take } \epsilon \hspace{2pt} > \hspace{2pt} 0; \text{ then there exists } K_{1} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{1}, \\
-        &\text{and there exists } K_{2} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{2}, \text{ we have}
-    \end{align*}
+    \text{We prove each part, using previous results in the proof of subsequent results.}\\[1ex]
+    \text{Since } $\{f(n)\}_{n = 1}^{\infty}$ \text{ and } $\{g(n)\}_{n = 1}^{\infty}$ \text{ are convergent, we let their limits be } $f$ \text{ and } $g$, \text{ respectively.}\\
+    i) \text{Take } $\epsilon \hspace{2pt} > \hspace{2pt} 0$; \text{ then there exists } $K_{1} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{1}$, \text{ and there exists } $K_{2} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{2}$, \text{ and we have}
     \begin{align*}
         \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon \hspace{20pt} \text{and} \hspace{20pt} \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} \epsilon. 
     \end{align*}
+    \text{Thus, for all } $n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\}$, \text{ we have} 
     \begin{align*}
-        &\text{Thus, for all } n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\} \text{ we have} \\
-        &\lvert (f(n) - g(n)) - (f-g) \rvert = \lvert (f(n) - f) + (g - g(n)) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert + \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon
+        \lvert (f(n) - g(n)) - (f-g) \rvert = \lvert (f(n) - f) + (g - g(n)) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert + \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon \\[4ex]
     \end{align*}
+    ii) \text{Take } $\epsilon \hspace{2pt} > \hspace{2pt} 0$; \text{ then there exists } $K_{1} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{1}$, \text{and there exists } $K_{2} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{2}$, \text{ and we have}
     \begin{align*}
-        &\text{Since } \{f(n)\}_{n = 1}^{\infty} \text{ and } \{(-1)g(n)\}_{n = 1}^{\infty} \text{ are convergent, we let there limits be } f \text{ and } -g \text{, respectively} \\[2ex]
-        &iii) \hspace{4pt} \text{Take } \epsilon \hspace{2pt} > \hspace{2pt} 0; \text{ then there exists } K_{1} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{1}, \\
-        &\text{and there exists } K_{2} \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K_{2}, \text{ we have}
+        \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon \hspace{20pt} \text{and} \hspace{20pt} \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} \epsilon. 
     \end{align*}
+    \text{Thus, for all } $n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\}$, \text{ we have} 
+    \begin{align*}
+        \lvert f(n)g(n) - fg \rvert = \lvert f(n)g(n) - fg(n) + fg(n) - fg) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert \hspace{2pt} \lvert g(n) \rvert + \lvert f \rvert \hspace{2pt} \lvert g(n) - g \rvert
+    \end{align*}
+    \text{The sequence } $\{g(n)\}_{n = 1}^{\infty}$ \text{ being convergent means that it is bounded. So, }
+    \begin{align*}
+        \exists M \in \mathbb{N} \text{ such that } \forall n \in \mathbb{N}, \hspace{4pt} \lvert g(n) \rvert \leq M 
+    \end{align*}
+    \text{As well, the sequence } $\{f(n)\}_{n = 1}^{\infty}$ \text{ being convergent means that it is bounded. So, }
+    \begin{align*}
+        \exists M \in \mathbb{N} \text{ such that } \forall n \in \mathbb{N}, \hspace{4pt} \lvert f(n) \rvert \hspace{2pt} \leq \hspace{2pt} M \hspace{10pt} \Longrightarrow \hspace{10pt} \lvert f \rvert \hspace{2pt} \leq \hspace{2pt} M  
+    \end{align*}
+    \text{This gives us}
+    \begin{align*}
+        \lvert f(n) - f \rvert \hspace{2pt} \lvert g(n) \rvert + \lvert f \rvert \hspace{2pt} \lvert g(n) - g \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert \hspace{2pt} M + M \hspace{2pt} \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon \\[4ex]
+    \end{align*}
+    \text{By iii) } $\{f(n)\}_{n = 1}^{\infty}$ \text{ and } $\{(-1)g(n)\}_{n = 1}^{\infty}$ \text{ are convergent.} \\
+    \text{Let their limits be } $f$ \text{ and } $-g$, \text{ respectively.} \\
+    iv) \text{Take } $\epsilon \hspace{2pt} > \hspace{2pt} 0$; \text{ then there exists } $K_{1} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{1}$, \text{and there exists } $K_{2} \in \mathbb{N}$ \text{ such that } $\forall n \hspace{2pt} \geq \hspace{2pt} K_{2}$, \text{ and we have}
     \begin{align*}
         \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon \hspace{20pt} \text{and} \hspace{20pt} \lvert (-g(n)) - (-g) \rvert \hspace{2pt} < \hspace{2pt} \epsilon. 
     \end{align*}
+    \text{Thus, for all } $n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\}$ \text{ we have} 
     \begin{align*}
-        &\text{Thus, for all } n \hspace{2pt} \geq \hspace{2pt} K = \max\{K_{1}, K_{2}\} \text{ we have} \\
-        &\lvert (f(n) - (-g(n))) - (f - (-g)) \rvert = \lvert (f(n) - f) + (-g + g(n)) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert + \lvert (-g(n)) - (-g) \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon
+        &\lvert (f(n) - (-g(n))) - (f - (-g)) \rvert = \lvert (f(n) - f) + (-g + g(n)) \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - f \rvert + \lvert (-g(n)) - (-g) \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon \\[4ex]
     \end{align*}
 \end{proof}
 \end{theorem}
