@@ -153,7 +153,7 @@ If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequen
     &iii) \hspace{4pt} \lim_{n \longrightarrow \infty} cf(n) = c\lim_{n \longrightarrow \infty} f(n)\\[2ex]
     &iv) \hspace{4pt} \lim_{n \longrightarrow \infty}(f(n) - g(n)) = \lim_{n \longrightarrow \infty} f(n) - \lim_{n \longrightarrow \infty} g(n)\\[2ex]
     &v) \hspace{4pt} \lim_{n \longrightarrow \infty}\dfrac{f(n)}{g(n)} = \dfrac{\lim_{n \longrightarrow \infty} f(n)}{\lim_{n \longrightarrow \infty} g(n)}, \hspace{4pt} \text{ when } \hspace{4pt} \lim_{n \longrightarrow \infty} g(n) \neq 0\\[2ex]
-    &vi) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n))^{p} = (\lim_{n \longrightarrow \infty} f(n))^{p}, \hspace{4pt} \text{ where } \hspace{4pt} p > 0 \hspace{4pt} \text{and} \hspace{4pt} f(n) > 0\\[2ex]
+    &vi) \hspace{4pt} \lim_{n \longrightarrow \infty} (f(n))^{k} = (\lim_{n \longrightarrow \infty} f(n))^{k}, \hspace{4pt} \forall k \in \mathbb{N}\\[2ex]
     &vii) \hspace{4pt} \lim_{n \longrightarrow \infty} c = c
 \end{align*}
 \label{properties_limit_sequence_numbers}
@@ -238,7 +238,35 @@ If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequen
     \end{align*}
     \text{Now, by iii), setting } $\varphi \hspace{2pt} = \hspace{2pt} \lim_{n \longrightarrow \infty} \varphi (n) \hspace{2pt} = \hspace{2pt} \lim_{n \longrightarrow \infty} \dfrac{1}{g(n)} \hspace{2pt} = \hspace{2pt} \dfrac{1}{g},$ \text{ we have}
     \begin{align*}
-        \lim_{n \longrightarrow \infty} \dfrac{f(n)}{g(n)} \hspace{2pt} = \hspace{2pt} \lim_{n \longrightarrow \infty} f(n) \varphi (n) \hspace{2pt} = \hspace{2pt} f \cdot \varphi \hspace{2pt} = \hspace{2pt} \dfrac{f}{g} 
+        \lim_{n \longrightarrow \infty} \dfrac{f(n)}{g(n)} \hspace{2pt} = \hspace{2pt} \lim_{n \longrightarrow \infty} f(n) \varphi (n) \hspace{2pt} = \hspace{2pt} f \cdot \varphi \hspace{2pt} = \hspace{2pt} \dfrac{f}{g} \\[4ex] 
+    \end{align*}
+    vi) \text{We can use induction to prove this portion of the theorem. Take } $\epsilon \hspace{2pt} > \hspace{2pt} 0$ \text{ and consider } $\{f(n)\}_{n = 1}^{\infty}.$ \text{Then we have}
+    \begin{align*}
+        \exists K \in \mathbb{N} \hspace{10pt} \text{ such that } \hspace{10pt} \forall n \hspace{2pt} \geq \hspace{2pt} K \hspace{10pt} \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+    \text{ For the case } $n \hspace{2pt} = \hspace{2pt} 1,$ \text{ we have } $\{(f(n))^{2}\}_{n = 1}^{\infty},$ \text{ and } $\forall n \hspace{2pt} \geq \hspace{2pt} K,$ \text{ and by the boundedness of } $\{f(n)\}_{n = 1}^{\infty}$ 
+    \begin{align*}
+        &\lvert (f(n))^{2} - (f)^{2} \rvert \hspace{2pt} = \hspace{2pt} \lvert f(n) \cdot f(n) - f(n) \cdot f + f(n) \cdot f - f \cdot f \rvert \\[1ex]
+        &\leq \hspace{2pt} \lvert f(n) \cdot f(n) - f(n) \cdot f \rvert + \lvert f(n) \cdot f - f \cdot f \rvert \\[1ex]
+        &\leq \hspace{2pt} \lvert f(n) \rvert \hspace{2pt} \lvert f(n) - f \rvert + \lvert f(n) - f \rvert \hspace{2pt} \lvert f \rvert \hspace{2pt} < \hspace{2pt} 2M \epsilon \hspace{10pt} \text{where} \hspace{10pt} \mathbb{N} \ni M \hspace{2pt} = \hspace{2pt} \max_{n \in \mathbb{N}}\{(f(n))\}
+    \end{align*}
+    \text{This gives us}
+    \begin{align*}
+        \lim_{n \longrightarrow \infty} (f(n))^{2} \hspace{2pt} = \hspace{2pt} f^{2} \hspace{2pt} = \hspace{2pt} (\lim_{n \longrightarrow \infty} f(n))^{2}
+    \end{align*}
+    \text{We assume the statement holds for an arbitrary } $n \hspace{2pt} = \hspace{2pt} k - 1.$ \text{ Meaning, the statement holds for } $\{(f(n))^{k - 1}\}_{n = 1}^{\infty}.$ \text{ So, for the given } $\epsilon \hspace{2pt} > \hspace{2pt} 0$ \text{ we have that there exists } $K \in \mathbb{N}$ \text{ such that for all } $n \hspace{2pt} \geq \hspace{2pt} K$
+    \begin{align*}
+        \lim_{n \longrightarrow \infty} (f(n))^{k - 1} \hspace{2pt} = \hspace{2pt} f^{k - 1} \hspace{2pt} = \hspace{2pt} (\lim_{n \longrightarrow \infty} f(n))^{k - 1}
+    \end{align*}
+    \text{Let } $N \hspace{2pt} = \hspace{2pt} \max_{n \longrightarrow \infty}\{(f(n))^{k - 1}\}.$ \text{ Then we have, for } $n \hspace{2pt} = \hspace{2pt} k,$ \text{ for } $\{(f(n))^{k}\}_{n = 1}^{\infty}, \hspace{2pt} \forall n \hspace{2pt} \geq \hspace{2pt} K,$ \text{and by the boundedness of } $\{f(n)\}_{n = 1}^{\infty}$
+    \begin{align*}
+        &\lvert (f(n))^{k} - (f)^{k} \rvert \hspace{2pt} = \hspace{2pt} \lvert f(n) \cdot (f(n))^{k - 1} - f(n) \cdot f^{k - 1} + f(n) \cdot f^{k - 1} - f \cdot f^{k - 1} \rvert \\[1ex]
+        &\leq \hspace{2pt} \lvert f(n) \cdot (f(n))^{k - 1} - f(n) \cdot f^{k - 1} \rvert + \lvert f(n) \cdot f^{k - 1} - f \cdot f^{k - 1} \rvert \\[1ex]
+        &\leq \hspace{2pt} \lvert f(n) \rvert \hspace{2pt} \lvert (f(n))^{k - 1} - f^{k - 1} \rvert + \lvert f(n) - f \rvert \hspace{2pt} \lvert f^{k - 1} \rvert \hspace{2pt} < \hspace{2pt} 2H \epsilon \hspace{10pt} \text{where} \hspace{10pt} \mathbb{N} \ni H \hspace{2pt} = \hspace{2pt} \max\{M, N\}
+    \end{align*}
+    \text{Finally, we have that for any } $k \in \mathbb{N}$
+    \begin{align*}
+        \lim_{n \longrightarrow \infty} (f(n))^{k} \hspace{2pt} = \hspace{2pt} f^{k} \hspace{2pt} = \hspace{2pt} (\lim_{n \longrightarrow \infty} f(n))^{k}
     \end{align*}
 \end{proof}
 \end{theorem}
