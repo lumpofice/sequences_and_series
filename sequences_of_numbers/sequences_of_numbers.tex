@@ -232,7 +232,7 @@ If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequen
     \begin{align*}
         \Big\lvert \dfrac{1}{g(n)} - \dfrac{1}{g} \Big\rvert \hspace{2pt} < \hspace{2pt} \dfrac{2}{\lvert g \cdot g \rvert} \hspace{2pt} \lvert g(n) - g \rvert \hspace{2pt} < \hspace{2pt} \dfrac{2}{\lvert g \cdot g \rvert} \hspace{2pt} \epsilon
     \end{align*}
-    \text{So, we have our limit for } $\Big\{\dfrac{1}{g(n)}\Big\}$
+    \text{So, we have our limit for } $\Big\{\dfrac{1}{g(n)}\Big\}_{n = 1}^{\infty}$
     \begin{align*}
         \lim_{n \longrightarrow \infty} \dfrac{1}{g(n)} \hspace{2pt} = \hspace{2pt} \dfrac{1}{g}
     \end{align*}
@@ -266,8 +266,13 @@ If $\{f(n)\}_{n=1}^{\infty}$ and $\{g(n)\}_{n=1}^{\infty}$ are convergent sequen
     \end{align*}
     \text{Finally, we have that for any } $k \in \mathbb{N}$
     \begin{align*}
-        \lim_{n \longrightarrow \infty} (f(n))^{k} \hspace{2pt} = \hspace{2pt} f^{k} \hspace{2pt} = \hspace{2pt} (\lim_{n \longrightarrow \infty} f(n))^{k}
+        \lim_{n \longrightarrow \infty} (f(n))^{k} \hspace{2pt} = \hspace{2pt} f^{k} \hspace{2pt} = \hspace{2pt} (\lim_{n \longrightarrow \infty} f(n))^{k} \\[4ex]
     \end{align*}
+    vii) \text{Let } $\epsilon \hspace{2pt} > \hspace{2pt} 0$. \text{ Then, as } $n \longrightarrow \infty,$ \text{ we have}
+    \begin{align*}
+        0 \hspace{2pt} = \hspace{2pt} \lvert c - c \rvert \hspace{2pt} < \hspace{2pt} \epsilon 
+    \end{align*}
+    \text{So, } $\lim_{n \longrightarrow \infty} c \hspace{2pt} = \hspace{2pt} c$
 \end{proof}
 \end{theorem}
 
@@ -336,6 +341,7 @@ To show this, we use the Induction method.
     &ii) \hspace{4pt} \text{We assume for some} \hspace{4pt} n \in \mathbb{N}, \hspace{10pt} n! \hspace{2pt} \geq \hspace{2pt} 2^{n}\\[2ex]
     &iii) \hspace{4pt} (n+1)! = (n+1)n! \hspace{2pt} \geq \hspace{2pt} (n+1) \cdot 2^{n} \hspace{2pt} \geq \hspace{2pt} 2 \cdot 2^{n} = 2^{n+1}
 \end{align*}
+Thus, $\hspace{2pt} n! \hspace{2pt} \geq \hspace{2pt} 2^{n} \hspace{2pt}$ for all $\hspace{2pt} n \hspace{2pt} \geq \hspace{2pt} 4. \hspace{2pt}$ So, as $\hspace{2pt} n \longrightarrow \infty, \hspace{4pt} \dfrac{n!}{2^{n}} \hspace{2pt}$ diverges.  
 \end{exercise}
 
 
