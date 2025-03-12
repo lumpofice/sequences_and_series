@@ -401,13 +401,35 @@ Determine whether the sequence defined by the following is convergent or diverge
 
 
 \begin{theorem}
-Let $\{f(n)\}_{n=1}^{\infty}, \hspace{4pt} \{g(n)\}_{n=1}^{\infty}$ and $\{h(n)\}_{n=1}^{\infty}$ be sequences. If
+Let $\{f(n)\}_{n=1}^{\infty}, \hspace{4pt} \{g(n)\}_{n=1}^{\infty}$ and $\{h(n)\}_{n=1}^{\infty}$ be sequences.
 \begin{align*}
-    &\text{If} \hspace{4pt} f(n) \hspace{2pt} \leq \hspace{2pt} h(n) \hspace{2pt} \leq \hspace{2pt} g(n) \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N} \hspace{20pt}
-    \text{and if}  \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = \lim_{n \longrightarrow \infty} g(n) = L \\[2ex]
-    &\text{then} \hspace{4pt} \lim_{n \longrightarrow \infty} h(n) = L 
+    \text{If} &\hspace{8pt} f(n) \hspace{2pt} \leq \hspace{2pt} h(n) \hspace{2pt} \leq \hspace{2pt} g(n) \hspace{4pt} \text{for all} \hspace{4pt} n \in \mathbb{N} \\[1ex]
+    \text{and if} \hspace{8pt} &\lim_{n \longrightarrow \infty} f(n) = \lim_{n \longrightarrow \infty} g(n) = L \\[1ex]
+    \text{then} \hspace{8pt} &\lim_{n \longrightarrow \infty} h(n) = L 
 \end{align*}
 \label{squeeze_theorem}
+\begin{proof}
+    \text{Let } $\epsilon \hspace{2pt} > \hspace{2pt} 0.$ \text{ Then } $\exists K_{1} \in \mathbb{N}$ \text{ such that}
+    \begin{align*}
+        \forall n \hspace{2pt} \geq \hspace{2pt} K_{1}, \hspace{10pt} \lvert f(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+    \text{ and } $\exists K_{2} \in \mathbb{N}$ \text{ such that}
+    \begin{align*}
+        \forall n \hspace{2pt} \geq \hspace{2pt} K_{2}, \hspace{10pt} \lvert g(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon 
+    \end{align*}
+    \text{So, we take } $k = \max\{K_{1}, K_{2}\}.$ \text{ Then } $\forall n \hspace{2pt} \geq \hspace{2pt} K,$ \text{ we have}
+    \begin{align*}
+        f(n) \hspace{2pt} \leq \hspace{2pt} h(n) \hspace{2pt} \leq \hspace{2pt} g(n) \hspace{20pt} \Longleftrightarrow \hspace{20pt} f(n) - L \hspace{2pt} \leq \hspace{2pt} h(n) - L \hspace{2pt} \leq \hspace{2pt} g(n) - L
+    \end{align*}
+    \text{which gives us}
+    \begin{align*}
+        -\epsilon \hspace{2pt} < \hspace{2pt} f(n) - L \hspace{2pt} \leq \hspace{2pt} h(n) - L \hspace{2pt} \leq \hspace{2pt} g(n) - L \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+    \text{Thus, } $\forall n \hspace{2pt} \geq \hspace{2pt} K,$ \text{ we have our result}
+    \begin{align*}
+        -\epsilon \hspace{2pt} < \hspace{2pt} h(n) - L \hspace{2pt} < \hspace{2pt} \epsilon \hspace{20pt} \Longleftrightarrow \hspace{20pt} \lvert h(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+\end{proof}
 \end{theorem}
 
 \begin{exercise}
