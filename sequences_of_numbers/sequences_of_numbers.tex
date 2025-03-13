@@ -435,13 +435,16 @@ Let $\{f(n)\}_{n=1}^{\infty}, \hspace{4pt} \{g(n)\}_{n=1}^{\infty}$ and $\{h(n)\
 \begin{exercise}
 Show the following, using Theorem \ref{squeeze_theorem}
 \begin{align*}
-    \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1}n}{n^{2}+1} = 0
+    \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1}n}{n^{2}+1} \hspace{2pt} = \hspace{2pt} 0
 \end{align*}
 \begin{proof}
     \begin{align*}
-        &-\dfrac{1}{n} \leq \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \leq \dfrac{n}{n^{2} + 1} \leq \dfrac{n}{n^{2}} = \dfrac{1}{n}\\[2ex]
-        &\lim_{n \longrightarrow \infty} \hspace{2pt} \pm \hspace{2pt} \dfrac{1}{n} = 0\\[2ex]
-        &\text{So,} \hspace{4pt} 0 = \lim_{n \longrightarrow \infty} -\dfrac{1}{n} \leq \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \leq \lim_{n \longrightarrow \infty} \dfrac{1}{n} = 0
+        &-\dfrac{1}{n} \hspace{2pt} \leq \hspace{2pt} \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \hspace{2pt} \leq \hspace{2pt} \dfrac{n}{n^{2} + 1} \hspace{2pt} \leq \hspace{2pt} \dfrac{n}{n^{2}} = \dfrac{1}{n}\\[2ex]
+        &\lim_{n \longrightarrow \infty} \hspace{2pt} \pm \hspace{2pt} \dfrac{1}{n} \hspace{2pt} = \hspace{2pt} 0
+    \end{align*}
+    \text{So,}
+    \begin{align*}
+        &0 = \lim_{n \longrightarrow \infty} -\dfrac{1}{n} \leq \lim_{n \longrightarrow \infty} \dfrac{(-1)^{n-1} \hspace{2pt} n}{n^{2} + 1} \leq \lim_{n \longrightarrow \infty} \dfrac{1}{n} = 0
     \end{align*}
 \end{proof}
 \end{exercise}
@@ -449,15 +452,21 @@ Show the following, using Theorem \ref{squeeze_theorem}
 \begin{theorem} 
 Let $\{f(n)\}_{n = 1}^{\infty}$ be a sequence of numbers.
 \begin{align*}
-    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} \lvert f(n) \rvert = L \hspace{20pt} \text{then} \hspace{20pt} \lim_{n \longrightarrow \infty} f(n) = L
+    \text{If} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) \hspace{2pt} = \hspace{2pt} L \hspace{20pt} \text{then} \hspace{20pt} \lim_{n \longrightarrow \infty} \lvert f(n) \rvert \hspace{2pt} = \hspace{2pt} \lvert L \rvert
 \end{align*}
 \begin{proof}
     From Definition \ref{definition_limit_sequence_numbers}, we have
     \begin{align*}
-        &\lim_{n \longrightarrow \infty}\lvert f(n) \rvert = L \hspace{20pt} \Longleftrightarrow \hspace{20pt} \text{For} \hspace{4pt} \forall \epsilon>0, \hspace{4pt} \exists K \in \mathbb{N} \hspace{4pt} \text{such that} \\[2ex] 
-        &\text{when} \hspace{4pt} n \geq K, \hspace{4pt} \text{we have} \hspace{4pt} \Big\lvert \lvert f(n) \rvert - L \Big\rvert < \epsilon \\[2ex]
-        &\text{Well, for all such} \hspace{4pt} n, \hspace{4pt} \text{since} \hspace{4pt} f(n) \leq \lvert f(n) \rvert, \hspace{4pt} \text{we have} \hspace{4pt} \lvert f(n) - L \rvert \leq \Big\lvert \lvert f(n) \rvert - L \Big\rvert < \epsilon \\[2ex]
-        &\text{So,} \hspace{4pt} \lim_{n \longrightarrow \infty} f(n) = L
+        &\lim_{n \longrightarrow \infty} f(n) \hspace{2pt} = \hspace{2pt} L 
+    \end{align*}    
+    \text{if and only if for } $\forall \epsilon \hspace{2pt} > \hspace{2pt} 0, \hspace{4pt} \exists K \in \mathbb{N}$ \text{ such that when } $n \hspace{2pt} \geq \hspace{2pt} K, \hspace{4pt}$ \text{ we have}
+    \begin{align*}
+        &\lvert f(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+    \text{By The Triangle Inequality, for all such } $n \hspace{2pt} \geq \hspace{2pt} K,$ \text{ we have}
+    \begin{align*}
+        &\Big\lvert \lvert f(n) \rvert - \lvert L \rvert \Big\rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon \\[2ex]
+        &\text{So,} \hspace{4pt} \lim_{n \longrightarrow \infty} \lvert f(n) \rvert \hspace{2pt} = \hspace{2pt} \lvert L \rvert
     \end{align*}
 \end{proof}
 \end{theorem}
