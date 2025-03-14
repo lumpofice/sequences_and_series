@@ -349,17 +349,17 @@ Thus, $\hspace{2pt} n! \hspace{2pt} \geq \hspace{2pt} 2^{n} \hspace{2pt}$ for al
 \begin{theorem}
 A sequence of numbers can have at most one limit.
 \begin{proof}
-    Let $\{f(n)\}_{n=1}^{\infty}$ be a sequence, $L = \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$, and $L' = \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$ .\\
-    We have that for all $\epsilon > 0$, there exist $N_{1}, \hspace{4pt} N_{2} > 0$ such that
+    Let $\{f(n)\}_{n=1}^{\infty}$ be a sequence, $L \hspace{2pt} = \hspace{2pt}  \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$, and $L' \hspace{2pt} = \hspace{2pt} \lim_{n \longrightarrow \infty} \{f(n)\}_{n=1}^{\infty}$ .\\
+    We have that for all $\epsilon \hspace{2pt} > \hspace{2pt} 0$, there exist $N_{1}, \hspace{4pt} N_{2} \hspace{2pt} > \hspace{2pt} 0$ such that
     \begin{align*}
-        &n > N_{1} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L \rvert < \epsilon \\[2ex]
-        &n > N_{2} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L' \rvert < \epsilon
+        &n \hspace{2pt} > \hspace{2pt} N_{1} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L \rvert \hspace{2pt} < \hspace{2pt} \epsilon \\[2ex]
+        &n \hspace{2pt} > \hspace{2pt} N_{2} \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert f(n) - L' \rvert \hspace{2pt} < \hspace{2pt} \epsilon
     \end{align*}
-    We can choose $M = \max\{N_1, \hspace{4pt} N_{2}\}$. Then
+    We can choose $M \hspace{2pt} = \hspace{2pt} \max\{N_1, \hspace{4pt} N_{2}\}$. Then
     \begin{align*}
-        &n > M \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert L - L' \rvert \leq \lvert f(n) - L \rvert + \lvert f(n) - L' \rvert < 2\epsilon
+        &n \hspace{2pt} >\hspace{2pt} M \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert L - L' \rvert \hspace{2pt} \leq \hspace{2pt} \lvert f(n) - L \rvert + \lvert f(n) - L' \rvert \hspace{2pt} < \hspace{2pt} 2\epsilon
     \end{align*}
-    So, $L = L^{'}$.
+    So, $L \hspace{2pt} = \hspace{2pt} L^{'}$.
 \end{proof}
 \label{limit_uniqueness}
 \end{theorem}
@@ -385,7 +385,7 @@ Find the general expression of the divergent sequence following the pattern:
 \begin{exercise}\label{exercise_6_ch_2}
 Determine whether the sequence defined by the following is convergent or divergent:
 \begin{align*}
-    f(1) = 1 \hspace{20pt} f(n) = 4 - f(n-1), \hspace{20pt} n \geq 1
+    f(1) \hspace{2pt} = \hspace{2pt} 1 \hspace{20pt} f(n) \hspace{2pt} = \hspace{2pt} 4 - f(n-1), \hspace{20pt} n \hspace{2pt} \geq \hspace{2pt} 1
 \end{align*}
 \end{exercise}
 
@@ -394,7 +394,7 @@ For Exercise \ref{exercise_6_ch_2}, you could use the method of Induction shown 
 \begin{exercise}
 Determine whether the sequence defined by the following is convergent or divergent:
 \begin{align*}
-    f(1) = 3 \hspace{20pt} f(n) = 6 - f(n-1), \hspace{20pt} n \geq 1
+    f(1) \hspace{2pt} = \hspace{2pt} 3 \hspace{20pt} f(n) \hspace{2pt} = \hspace{2pt} 6 - f(n-1), \hspace{20pt} n \hspace{2pt} \geq \hspace{2pt} 1
 \end{align*}
 \end{exercise}
 
@@ -476,15 +476,15 @@ Let $\{f(n)\}_{n = 1}^{\infty}$ be a sequence of numbers.
 \begin{theorem}
 The sequence $\{r^{n}\}_{n=1}^{\infty}$ is convergent for $r \in [-1, 1]$ such that
 \begin{align*}
-    \lim_{n \longrightarrow \infty} r^{n} = \begin{cases}
-    0, \hspace{4pt} \text{if} \hspace{4pt} -1 < r < 1,\\[2ex]
-    1, \hspace{4pt} \text{if} \hspace{4pt} r = 1
+    \lim_{n \longrightarrow \infty} r^{n} \hspace{2pt} = \hspace{2pt} \begin{cases}
+    0, \hspace{4pt} \text{if} \hspace{4pt} -1 \hspace{2pt} < \hspace{2pt} r \hspace{2pt} < \hspace{2pt} 1,\\[2ex]
+    1, \hspace{4pt} \text{if} \hspace{4pt} r \hspace{2pt} = \hspace{2pt} 1
     \end{cases}
 \end{align*}
 and is divergent, otherwise.
 \label{geometric_term_sequence}
 \begin{proof}
-    If $\lvert r \rvert = 1$, is the result obvious? If $\lvert r \rvert < 1$, then $\lvert r \rvert \in \Big[\dfrac{k-1}{m}, \dfrac{k}{m}\Big)$, where $k < m$ and $k, m \in \mathbb{N}$. Choose $\epsilon = \dfrac{1}{k}$. Then when $N = k^{2}$ and $n > N$, we have
+    If $\lvert r \rvert \hspace{2pt} = \hspace{2pt} 1$, is the result obvious? If $\lvert r \rvert \hspace{2pt} < \hspace{2pt} 1$, then $\lvert r \rvert \in \Big[\dfrac{k-1}{m}, \dfrac{k}{m}\Big)$, where $k \hspace{2pt} < \hspace{2pt} m$ and $k, m \in \mathbb{N}$. Choose $\epsilon \hspace{2pt} = \hspace{2pt} \dfrac{1}{k}$. Then when $N \hspace{2pt} = \hspace{2pt} k^{2} + 1$ and $n \hspace{2pt} \geq \hspace{2pt} N$, we have
     \begin{align*}
         \Big|\hspace{4pt} \Big(\dfrac{k}{m}\Big)^{n} - 0 \hspace{4pt} \Big| \leq \dfrac{k^{n}}{(k+1)^{n}} \leq \dfrac{k^{n}}{k^{n} + n \cdot k^{n-1}} \leq \dfrac{k^{n}}{n \cdot k^{n-1}} = \dfrac{k}{n} < \dfrac{1}{k} = \epsilon
     \end{align*}
