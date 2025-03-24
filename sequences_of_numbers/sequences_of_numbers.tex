@@ -618,6 +618,24 @@ Through induction, show the sequence $\Big\{\dfrac{1}{n} + 1\Big\}_{n=1}^{\infty
 \begin{theorem}
 Every bounded monotonic sequence is convergent.
 \label{monotone_bounded_convergent}
+\begin{proof}
+    \text{Let } $\{f(n)\}_{n = 1}^{\infty}$ \text{ be a bounded, monotone sequence.} \\
+    \text{We can choose an increasing function without loss of generality.} \\
+    \text{Let } $\epsilon \hspace{2pt} > \hspace{2pt} 0.$ \text{ Then } 
+    \begin{align*}
+        \exists K \in \mathbb{N}, \hspace{10pt} \text{ such that } \hspace{10pt} f - \epsilon \hspace{2pt} < \hspace{2pt} f(K) \hspace{2pt} \leq \hspace{2pt} f
+    \end{align*}
+    \text{where } $f \hspace{2pt} = \hspace{2pt} \sup_{n} f(n).$\\ 
+    \text{Our sequence is bounded. So, since our sequence is increasing, there must be a supremum.} \\
+    \text{So, since our sequence in monotone increasing, we have}
+    \begin{align*}
+        \forall n \hspace{2pt} \geq \hspace{2pt} K \hspace{20pt} f - \epsilon \hspace{2pt} < \hspace{2pt} f(K) \hspace{2pt} \leq \hspace{2pt} f(n) \hspace{2pt} \leq \hspace{2pt} f \hspace{2pt} < \hspace{2pt} f + \epsilon
+    \end{align*}
+    \text{So, by Definition} \ref{definition_limit_sequence_numbers} \text{we have that}
+    \begin{align*}
+        \text{For arbitrary } \epsilon \hspace{2pt} > \hspace{2pt} 0, \hspace{10pt}  \exists K \in \mathbb{N} \text{ such that } \forall n \hspace{2pt} \geq \hspace{2pt} K, \hspace{10pt} \lvert f(n) - f \rvert \hspace{2pt} < \hspace{2pt} \epsilon
+    \end{align*}
+\end{proof}
 \end{theorem}
 
 \begin{example}
