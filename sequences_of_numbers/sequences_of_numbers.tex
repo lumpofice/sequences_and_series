@@ -530,8 +530,33 @@ Find the limit of the following sequence:
 \begin{exercise}
 Find the limit of the following sequence:
 \begin{align*}
-    \Big\{\Big(\sqrt[\leftroot{2}\uproot{2}n]{n} - 1\Big)^{n}\Big\}_{n=1}^{\infty}
+    \Big\{\Big(\sqrt[\leftroot{2}\uproot{2}n]{n} - 1\Big)\Big\}_{n=1}^{\infty}
 \end{align*}
+\begin{proof}
+    \text{We know that}
+    \begin{align*}
+        \sqrt[\leftroot{2}\uproot{2}n]{n} \hspace{2pt} > \hspace{2pt} 1 \hspace{10pt} \forall n \in \mathbb{N}
+    \end{align*}
+    \text{So, for each } $n \in \mathbb{N},$ \text{ we have}
+    \begin{align*}
+        \sqrt[\leftroot{2}\uproot{2}n]{n} \hspace{2pt} = \hspace{2pt} 1 + k_{n} \hspace{20pt} \Longrightarrow \hspace{20pt} n \hspace{2pt} = \hspace{2pt} (1 + k_{n})^n \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} \binom{n}{i} k_{n}^{i}
+    \end{align*}
+    \text{Expanding this expression,}
+    \begin{align*}
+        n \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} \binom{n}{i} k_{n}^{i} &= \dfrac{n!}{0!n!}k_{n}^{0} + \dfrac{n!}{1!(n-1)!}k_{n}^{1} + \dfrac{n!}{2!(n-2)!}k_{n}^{2} + \cdots + \dfrac{n!}{n!0!}k_{n}^{n} \\[1ex]
+        &\geq \hspace{2pt} \dfrac{n!}{0!n!}k_{n}^{0} + \dfrac{n!}{1!(n-1)!}k_{n}^{1} + \dfrac{n!}{2!(n-2)!}k_{n}^{2} \\[1ex]
+        &\geq \hspace{2pt} \dfrac{n!}{0!n!}k_{n}^{0}  + \dfrac{n!}{2!(n-2)!}k_{n}^{2} \\[1ex]
+        &= \hspace{2pt} 1 + \dfrac{n(n-1)}{2}k_{n}^{2} \\[1ex]
+    \end{align*}
+    \text{By rearrangement, we have}
+    \begin{align*}
+        n - 1 \hspace{2pt} \geq \hspace{2pt} \dfrac{n(n-1)}{2}k_{n}^{2} \hspace{20pt} \Longleftrightarrow \hspace{20pt} 1 \hspace{2pt} \geq \hspace{2pt} \dfrac{n}{2}k_{n}^{2} \hspace{20pt} \Longleftrightarrow \hspace{20pt} \dfrac{2}{n} \hspace{2pt} \geq \hspace{2pt} k_{n}^{2}
+    \end{align*}
+    \text{So, if we let } $\epsilon \hspace{2pt} > \hspace{2pt} \sqrt{\dfrac{2}{n}} \hspace{2pt} > \hspace{2pt} 0,$ \text{ then } $\exists K \in \mathbb{N}$ \text{ such that}
+    \begin{align*}
+        \forall n \hspace{2pt} \geq \hspace{2pt} K \hspace{20pt} \lvert \sqrt[\leftroot{2}\uproot{2}n]{n}  - 1 \rvert \hspace{2pt} = \hspace{2pt} k_{n} \hspace{2pt} < \hspace{2pt} \sqrt{\dfrac{2}{n}} \hspace{2pt} < \hspace{2pt} \epsilon 
+    \end{align*}
+\end{proof}
 \end{exercise}
 
 \newpage
