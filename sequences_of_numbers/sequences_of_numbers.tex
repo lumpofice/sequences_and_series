@@ -687,6 +687,21 @@ Determine whether the sequence is increasing, decreasing, or not monotonic. Show
 \text{e.} \hspace{20pt} &\Big\{\dfrac{n}{n^{2}+1}\Big\}_{n=1}^{\infty}&\\[2ex]
 \text{f.} \hspace{20pt} &\Big\{n + \dfrac{1}{n}\Big\}_{n=1}^{\infty}&\\[2ex]
 \end{flalign*}
+
+\text{We seek to prove the boundedness and monotonicity for part c., for all } $n \hspace{2pt} > \hspace{2pt} 1$ \\[1ex]
+\begin{proof}
+    \text{Bounded:} 
+    \begin{align*}
+        &0 \hspace{2pt} < \hspace{2pt} \dfrac{2n - 3}{3n + 4} \hspace{2pt} < \hspace{2pt} \dfrac{2n}{3n + 4} \hspace{2pt} < \hspace{2pt} \dfrac{2n}{3n} \hspace{2pt} = \hspace{2pt} \dfrac{2}{3}
+    \end{align*}
+    \text{Monotone: For an arbitrary } $k \in \mathbb{N}$
+    \begin{align*}
+        -10 \hspace{2pt} \leq \hspace{2pt} 7 \hspace{20pt} &\Longleftrightarrow \hspace{20pt} 6k^{2} + 17k - 10 \hspace{2pt} \leq \hspace{2pt} 6k^{2} + 17k + 7 \\[1ex]
+        &\Longleftrightarrow \hspace{20pt} (3k + 10)(2k - 1) \hspace{2pt} \leq \hspace{2pt} (2k + 1)(3k + 7) \\[1ex]
+        &\Longleftrightarrow \hspace{20pt} (3(k + 2) + 4)(2(k + 1) - 3) \hspace{2pt} \leq \hspace{2pt} (2(k + 2) - 3)(3(k + 1) + 4) \\[1ex]
+        &\Longleftrightarrow \hspace{20pt} a_{k + 1} \hspace{2pt} = \hspace{2pt} \dfrac{2(k + 1) - 3}{3(k + 1) + 4} \hspace{2pt} \leq \hspace{2pt} \dfrac{2(k + 2) - 3}{3(k + 2) + 4} \hspace{2pt} = \hspace{2pt} a_{k + 2}
+    \end{align*}
+\end{proof}
 \end{exercise}
 
 \begin{theorem}
