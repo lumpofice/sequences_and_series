@@ -678,7 +678,7 @@ Find the limit of the sequence
 \end{exercise}
 
 \begin{exercise}
-Determine whether the sequence is increasing, decreasing, or not monotonic. Show, using induction. Is the sequence bounded? Show, using induction.
+Determine whether the sequence is increasing, decreasing, or not monotonic. Is the sequence bounded?
 \begin{flalign*}
 \text{a.} \hspace{20pt} &\{(-2)^{n+1}\}_{n=1}^{\infty}&\\[2ex]
 \text{b.} \hspace{20pt} &\Big\{\dfrac{1}{2n+3}\Big\}_{n=1}^{\infty}&\\[2ex]
@@ -688,7 +688,12 @@ Determine whether the sequence is increasing, decreasing, or not monotonic. Show
 \text{f.} \hspace{20pt} &\Big\{n + \dfrac{1}{n}\Big\}_{n=1}^{\infty}&\\[2ex]
 \end{flalign*}
 
-\text{We seek to prove the boundedness and monotonicity for part c., for all } $n \hspace{2pt} > \hspace{2pt} 1$ \\[1ex]
+We seek to prove the boundedness, monotonicity, and the convergence for part c. We note that boundedness applies for all $n \hspace{2pt} > \hspace{2pt} 1$. Monotonicity holds for all $n$, but we show it holds for all $n$ greater than $1$. \\[2ex]
+
+\text{Monotonicity, Boundedness, and Convergence holds for}
+\begin{align*}
+\Big\{ \dfrac{2n - 3}{3n + 4} \Big\}_{n = 1}^{\infty}
+\end{align*}
 \begin{proof}
     \text{Bounded:} 
     \begin{align*}
@@ -701,6 +706,7 @@ Determine whether the sequence is increasing, decreasing, or not monotonic. Show
         &\Longleftrightarrow \hspace{20pt} (3(k + 2) + 4)(2(k + 1) - 3) \hspace{2pt} \leq \hspace{2pt} (2(k + 2) - 3)(3(k + 1) + 4) \\[1ex]
         &\Longleftrightarrow \hspace{20pt} a_{k + 1} \hspace{2pt} = \hspace{2pt} \dfrac{2(k + 1) - 3}{3(k + 1) + 4} \hspace{2pt} \leq \hspace{2pt} \dfrac{2(k + 2) - 3}{3(k + 2) + 4} \hspace{2pt} = \hspace{2pt} a_{k + 2}
     \end{align*}
+    By Theorem \ref{monotone_bounded_convergent}, we have that this sequence is convergent.
 \end{proof}
 \end{exercise}
 
@@ -739,7 +745,7 @@ Does the sequence have a limit? If so, find it.
 \begin{exercise}
 A sequence $\{f(n)\}_{n=1}^{\infty}$ is given by 
 \begin{align*}
-    f(1) = \sqrt{2}, \hspace{20pt} f(n) = \sqrt{2 + f(n-1)}, \hspace{20pt} n \geq 1
+    f(1) \hspace{2pt} = \hspace{2pt} \sqrt{2}, \hspace{20pt} f(n) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(n-1)}, \hspace{20pt} n \hspace{2pt} \geq \hspace{2pt} 1
 \end{align*}
 By induction, show the sequence is increasing. Also, show the sequence is bounded above by $3$. Does the sequence have a limit (yes/no)? Support your answer with relevant definitions or theorems.
 \end{exercise}
