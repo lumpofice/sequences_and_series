@@ -727,6 +727,28 @@ Choose $\epsilon \hspace{2pt} > \hspace{2pt} \dfrac{1}{(m+k)^p}$. Then for all $
 \label{n_denom_limit}
 \end{theorem}
 
+There is another approach that can be taken here, using something called the Archimedean Property; the Inductive Property of the natural numbers, $\mathbb{N}$; and The Squeeze Theorem. The assertion of the Archimedean Property is that for any real number, $x$, there is a natural number that sits above this $x$, as it is quite obvious that the natural numbers have no upper bound. The proof of this assertion involves the Inductive Property of $\mathbb{N}$. Using that assertion, we can proceed with the following analysis:\\[1ex]
+For a given $p > 0$, for any $n \in \mathbb{N},$ there exists a $K \in \mathbb{N}$ such that
+\begin{align*}
+    K \hspace{2pt} \geq \hspace{2pt} n^{1/p}
+\end{align*}
+This leads to
+\begin{align*}
+    K^{p} \hspace{2pt} \geq \hspace{2pt} n
+\end{align*}
+and taking the reciprocal on both sides of the inequality, we have
+\begin{align*}
+    \dfrac{1}{K^{p}} \hspace{2pt} \leq \hspace{2pt} \dfrac{1}{n}
+\end{align*}
+Noting that
+\begin{align*}
+    0 \hspace{2pt} \leq \hspace{2pt} \dfrac{1}{K^{p}}
+\end{align*}
+we push $n$ to infinity to achieve the result, by The Squeeze Theorem
+\begin{align*}
+    0 \hspace{2pt} \leq \hspace{2pt} \dfrac{1}{K^{p}} \hspace{2pt} \leq \hspace{2pt} \dfrac{1}{n} \hspace{2pt} \longrightarrow \hspace{2pt} 0
+\end{align*}
+
 \begin{exercise}
 Use Theorem \ref{squeeze_theorem} and Theorem \ref{n_denom_limit} to find the limit of the following sequence:
 \begin{align*}
