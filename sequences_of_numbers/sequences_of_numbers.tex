@@ -769,7 +769,22 @@ A sequence $\{f(n)\}_{n=1}^{\infty}$ is given by
 \begin{align*}
     f(1) \hspace{2pt} = \hspace{2pt} \sqrt{2}, \hspace{20pt} f(n) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(n-1)}, \hspace{20pt} n \hspace{2pt} \geq \hspace{2pt} 1
 \end{align*}
-By induction, show the sequence is increasing. Also, show the sequence is bounded above by $3$. Does the sequence have a limit (yes/no)? Support your answer with relevant definitions or theorems.
+Show the sequence is increasing. Also, by induction, show the sequence is bounded above by $2$. Does the sequence have a limit (yes/no)? Support your answer with relevant definitions or theorems.
+\begin{proof}
+    $\{f(n)\}_{n \in \mathbb{N}}$ is an increasing sequence is somewhat obvious:\\[1ex]
+    We show $\{n \hspace{2pt} : \hspace{2pt} f(n+1) \hspace{2pt} \geq \hspace{2pt} f(n)\} \hspace{2pt} = \hspace{2pt} \mathbb{N}$ \\[1ex] 
+    $n \hspace{2pt} = \hspace{2pt} 1: \hspace{10pt} f(1 + 1) = \sqrt{2 + f(1)} \hspace{2pt} = \hspace{2pt} \sqrt{2 + \sqrt{2}} \hspace{2pt} \geq \hspace{2pt} f(1)$ \\[1ex]
+    $n \hspace{2pt} = \hspace{2pt} k: \hspace{10pt} f(k + 1) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(k)} \hspace{2pt} \geq \hspace{2pt} f(k)$ \\[1ex]
+    $n \hspace{2pt} = \hspace{2pt} k + 1: \hspace{10pt} f((k + 1) + 1) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(k + 1)} \hspace{2pt} \geq \hspace{2pt} f(k + 1)$ \\[4ex]
+    We show $f(n) \hspace{2pt} \leq \hspace{2pt} 2, \hspace{4pt} \forall n \in \mathbb{N}$ \\[1ex]
+    $n \hspace{2pt} = \hspace{2pt} 1: \hspace{10pt} f(1) \hspace{2pt} = \hspace{2pt} \sqrt{2} \hspace{2pt} \leq \hspace{2pt} 2$ \\[1ex]
+    $n \hspace{2pt} = \hspace{2pt} k: \hspace{10pt} f(k) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(k - 1)} \hspace{2pt} \leq \hspace{2pt} 2$ \\[1ex]
+    $n \hspace{2pt} = \hspace{2pt} k + 1:$
+    \begin{align*}
+        f(k) \hspace{2pt} \leq \hspace{2pt} 2 \hspace{10pt} &\Longrightarrow \hspace{10pt} 2 + f(k) \hspace{2pt} \leq \hspace{2pt} 2 + 2 \hspace{2pt} = \hspace{2pt} 4 \\[2ex]
+        &\Longrightarrow \hspace{10pt} f(k + 1) \hspace{2pt} = \hspace{2pt} \sqrt{2 + f(k)} \hspace{2pt} \leq \hspace{2pt} \sqrt{4} \hspace{2pt} = \hspace{2pt} 2
+    \end{align*}
+\end{proof}
 \end{exercise}
 
 \begin{exercise}
