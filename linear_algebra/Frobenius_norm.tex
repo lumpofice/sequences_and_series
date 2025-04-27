@@ -1,0 +1,376 @@
+\section{Frobenius Norm}
+
+\begin{definition}
+    For vector space, $V$, and for the inner product, $\langle \cdot, \cdot \rangle$, on vector space $V$, we have the norm of $\vec{v} \in V$ following the form:
+    \begin{align*}
+        \norm{\vec{v}} \hspace{2pt} = \hspace{2pt} \sqrt{\langle \vec{v}, \vec{v} \rangle}
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    For vector space, $V$, and for $\vec{v}, \vec{u} \in V$, where 
+    \begin{align*}
+        \vec{v} \hspace{2pt} = \hspace{2pt} \begin{bmatrix}
+            v_{1}\\ 
+            v_{2}\\ 
+            \vdots\\
+            v_{n}
+        \end{bmatrix}, \hspace{10pt}
+        \vec{u} \hspace{2pt} = \hspace{2pt}
+        \begin{bmatrix}
+            u_{1}\\
+            u_{2}\\
+            \vdots\\
+            u_{n}
+        \end{bmatrix}
+    \end{align*}
+    we have the dot product inner space assuming the following form:
+    \begin{align*}
+        \langle \vec{v}, \vec{u} \rangle \hspace{2pt} = \hspace{2pt} \vec{v} \cdot \vec{u} \hspace{2pt} = \hspace{2pt} v_{1} \cdot u_{1} + v_{2} \cdot u_{2} + \cdots + v_{n} \cdot u_{n}
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    The Frobenius Norm of matrix $A$ takes on the following form:
+    \begin{align*}
+        \norm{A}_{F} = \sqrt{\sum_{i}^{m}\sum_{j}^{n}(a_{i,j})^{2}}
+    \end{align*}
+\end{definition}
+
+How can we think about this norm? Take all rows in matrix $A$ strung together in a single vector. The Frobenius Norm is dot product of this vector with itself. 
+
+\begin{example}
+Take the following matrix:
+    \begin{align*}
+        A \hspace{2pt} = \hspace{2pt}
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix} \hspace{2pt} = \hspace{2pt} 
+        \begin{bmatrix}
+            a_{1,1} & a_{1,2}\\
+            a_{2,1} & a_{2,2}
+        \end{bmatrix} \hspace{2pt} = \hspace{2pt} 
+        \begin{bmatrix}
+            \vec{a}_{1}\\
+            \vec{a}_{2}
+        \end{bmatrix}
+    \end{align*}
+Then the Frobenius Norm on $A$ is 
+    \begin{align*}
+        \norm{A}_{F} \hspace{2pt} = \hspace{2pt} \sqrt{\vec{a}_{1} \cdot \vec{a}_{1} + \vec{a}_{2} \cdot \vec{a}_{2}} \hspace{2pt} &= \hspace{2pt} \sqrt{(a_{1,1})^{2} + (a_{1,2})^{2} + (a_{2,1})^{2} + (a_{2,2})^{2}}\\[1ex]
+        &= \hspace{2pt} \sqrt{(1)^{2} + (2)^{2} + (3)^{2} + (4)^{2}}
+    \end{align*}
+
+    \begin{tcolorbox}[sharp corners, colback=black!5!white, colframe=black!75!black, fontupper=\color{black}]
+        \begin{lstlisting}[language=python, gobble = 12]
+            import numpy as np
+
+            A = np.array([[1,2],[3,4]])
+            print("A:")
+            print(A)
+            
+            A_frob = np.linalg.norm(A,'fro')
+            print("")
+            print("A_frob:")
+            print(A_frob)
+        \end{lstlisting}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[sharp corners, colback=green!10!white, colframe=black!75!black, fontupper=\color{black}]
+        \begin{lstlisting}[language=python, gobble = 12]
+            A:
+            [[1 2]
+            [3 4]]
+
+            A_frob:
+            5.477225575051661
+        \end{lstlisting}
+    \end{tcolorbox}
+\end{example}
+
+\begin{theorem}
+    The Cauchy-Schwarz Inequality states that, where $V$ is a vector space, 
+    \begin{align*}
+        \vec{v}, \vec{u} \in V \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert \langle \vec{v} , \vec{u} \rangle \rvert \hspace{2pt} \leq \hspace{2pt} \norm{\vec{v}} \norm{\vec{u}}
+    \end{align*}
+\end{theorem}
+
+The Cauchy-Schwarz Inequality will be used to show the following inequality:
+\begin{align*}
+    \norm{A\vec{v}} \hspace{2pt} \leq \hspace{2pt} \norm{A}_{F} \norm{\vec{v}}
+\end{align*}
+
+\begin{proof}
+    With our vector space fashioned with the dot product, we have that
+    \begin{align*}
+        \norm{A\vec{v}} \hspace{2pt} &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            \vec{a}_{1}\\
+            \vec{a}_{2}\\
+            \vdots\\
+            \vec{a}_{m}
+        \end{bmatrix}
+        \vec{v} \hspace{2pt}
+        } \hspace{2pt} = \hspace{2pt} \norm{
+        \begin{bmatrix}
+            \vec{a}_{1} \cdot \vec{v}\\
+            \vec{a}_{2} \cdot \vec{v}\\
+            \vdots\\
+            \vec{a}_{m} \cdot \vec{v}
+        \end{bmatrix}
+        } \hspace{2pt} = \hspace{2pt} \norm{
+        \begin{bmatrix}
+            a_{1,1} \cdot v_{1} + a_{1,2} \cdot v_{2} + \cdots a_{1,n} \cdot v_{n}\\
+            a_{2,1} \cdot v_{1} + a_{2,2} \cdot v_{2} + \cdots a_{2,n} \cdot v_{n}\\
+            \vdots\\
+            a_{m,1} \cdot v_{1} + a_{m,2} \cdot v_{2} + \cdots a_{m,n} \cdot v_{n}\\
+        \end{bmatrix}
+        }\\[2ex]
+        &= \hspace{2pt} \sqrt{ 
+        \begin{bmatrix}
+            a_{1,1} \cdot v_{1} + a_{1,2} \cdot v_{2} + \cdots a_{1,n} \cdot v_{n}\\
+            a_{2,1} \cdot v_{1} + a_{2,2} \cdot v_{2} + \cdots a_{2,n} \cdot v_{n}\\
+            \vdots\\
+            a_{m,1} \cdot v_{1} + a_{m,2} \cdot v_{2} + \cdots a_{m,n} \cdot v_{n}\\
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            a_{1,1} \cdot v_{1} + a_{1,2} \cdot v_{2} + \cdots a_{1,n} \cdot v_{n}\\
+            a_{2,1} \cdot v_{1} + a_{2,2} \cdot v_{2} + \cdots a_{2,n} \cdot v_{n}\\
+            \vdots\\
+            a_{m,1} \cdot v_{1} + a_{m,2} \cdot v_{2} + \cdots a_{m,n} \cdot v_{n}\\
+        \end{bmatrix}
+        } \\[2ex]
+        &= \hspace{2pt} \sqrt{(a_{1,1} \cdot v_{1} + \cdots a_{1,n} \cdot v_{n})^{2} + (a_{2,1} \cdot v_{1} + \cdots a_{2,n} \cdot v_{n})^{2} + \cdots + (a_{m,1} \cdot v_{1} + \cdots a_{m,n} \cdot v_{n})^{2}}
+    \end{align*}
+    By the Cauchy-Schwarz Inequality, and by the definition of the Frobenius Norm, we have
+    \begin{align*}
+        \norm{A\vec{v}}^{2} \hspace{2pt} &= \hspace{2pt} (a_{1,1} \cdot v_{1} + \cdots a_{1,n} \cdot v_{n})^{2} + (a_{2,1} \cdot v_{1} + \cdots a_{2,n} \cdot v_{n})^{2} + \cdots + (a_{m,1} \cdot v_{1} + \cdots a_{m,n} \cdot v_{n})^{2}\\[2ex]
+        &= \hspace{2pt} \left( \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)^{2}
+        + \cdots +
+        \left( \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)^{2}\\[2ex]
+        &= \hspace{2pt} \left( \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)
+        \cdot
+        \left( \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)
+        + \cdots +
+        \left( \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)
+        \cdot
+        \left( \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)\\[2ex]
+        &= \hspace{2pt} \left(\sqrt{\left( \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)
+        \cdot
+        \left( \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)}\right)^{2}
+        + \cdots +
+        \left(\sqrt{\left( \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)
+        \cdot
+        \left( \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix} \right)}\right)^{2}\\[2ex]
+        &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix}
+        }^{2} 
+        + \cdots + 
+        \norm{
+        \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            v_{1}\\
+            \vdots\\
+            v_{n}
+        \end{bmatrix}
+        }^{2}\\[2ex]
+        &= \hspace{2pt} \norm{\vec{a}_{1} \cdot \vec{v}}^{2} + \cdots + \norm{\vec{a}_{m} \cdot \vec{v}}^{2}\\[1ex]
+        &\leq \hspace{2pt} \norm{\vec{a}_{1}}^{2} \norm{\vec{v}}^{2} + \cdots + \norm{\vec{a}_{m}}^{2} \norm{\vec{v}}^{2}\\[1ex]
+        &= \hspace{2pt} (\norm{\vec{a}_{1}}^{2} + \cdots + \norm{\vec{a}_{m}}^{2}) \norm{\vec{v}}^{2}\\[1ex]
+        &= \hspace{2pt} \left( \hspace{10pt}
+        \left(
+        \sqrt{
+        \left( 
+        \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2}
+        + \cdots +
+        \left(
+        \sqrt{
+        \left( 
+        \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2} \hspace{10pt}
+        \right) \norm{\vec{v}}^{2}\\[2ex]
+        &= \hspace{2pt} \left( \hspace{10pt}
+        \left(
+        \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            a_{1,1}\\
+            \vdots\\
+            a_{1,n}
+        \end{bmatrix}
+        \right)
+        + \cdots +
+        \left( 
+        \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            a_{m,1}\\
+            \vdots\\
+            a_{m,n}
+        \end{bmatrix}
+        \right) \hspace{10pt}
+        \right) \norm{\vec{v}}^{2}\\[2ex]
+        &= \hspace{2pt} ( \hspace{10pt} (a_{1,1})^{2} + \cdots + (a_{1,n})^{2} + \cdots \hspace{10pt} \cdots \hspace{10pt} \cdots \hspace{10pt} + (a_{m,1})^{2} + \cdots + (a_{m,n})^{2} \hspace{10pt} ) \norm{\vec{v}}^{2}\\[1ex]
+        &= \hspace{2pt} \sum_{i}^{m}\sum_{j}^{n}(a_{i,j})^{2} \norm{\vec{v}}^{2}\\[1ex]
+        &= \hspace{2pt} \norm{A}_{F}^{2} \norm{\vec{v}}^{2}
+    \end{align*}
+    Finally, we have
+    \begin{align*}
+        \norm{A\vec{v}}^{2} \hspace{2pt} \leq \hspace{2pt} \norm{A}_{F}^{2} \norm{\vec{v}}^{2}
+    \end{align*}
+    which gives us
+    \begin{align*}
+        \norm{A\vec{v}} \hspace{2pt} \leq \hspace{2pt} \norm{A}_{F} \norm{\vec{v}}
+    \end{align*}
+\end{proof}
+

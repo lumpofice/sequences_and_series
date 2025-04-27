@@ -14,6 +14,11 @@
 % Packages for images
 \usepackage{tikz}
 
+% Packages for code
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{blindtext}
+
 % Package for the layout
 \usepackage{geometry}
 
@@ -52,6 +57,8 @@
 % Commands
 \newcommand\showdiv[1]{\overline{\smash{\hstretch{.5}{)}\mkern-3.2mu\hstretch{.5}{)}}#1}}
 \let\ph\phantom
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
    
 % Removing indentations
 \setlength{\parindent}{0pt}
@@ -94,6 +101,9 @@
 
 \newpage
 \input{series/power_series.tex}
+
+\newpage
+\input{linear_algebra/Frobenius_norm}
 
 \newpage
 \input{gamma_poisson_connection}
