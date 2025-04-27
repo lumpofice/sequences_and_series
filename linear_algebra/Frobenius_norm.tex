@@ -1,12 +1,17 @@
 \section{Frobenius Norm}
 
+\begin{tcolorbox}[sharp corners, colback=red!5!white, colframe=black!75!black, fontupper=\color{black}]
 \begin{definition}
     For vector space, $V$, and for the inner product, $\langle \cdot, \cdot \rangle$, on vector space $V$, we have the norm of $\vec{v} \in V$ following the form:
     \begin{align*}
         \norm{\vec{v}} \hspace{2pt} = \hspace{2pt} \sqrt{\langle \vec{v}, \vec{v} \rangle}
     \end{align*}
 \end{definition}
+\end{tcolorbox}
 
+For any vector space, $V$, fashioned with an inner product, we may refer to $V$ as an inner product space.
+
+\begin{tcolorbox}[sharp corners, colback=red!5!white, colframe=black!75!black, fontupper=\color{black}]
 \begin{definition}
     For vector space, $V$, and for $\vec{v}, \vec{u} \in V$, where 
     \begin{align*}
@@ -24,22 +29,25 @@
             u_{n}
         \end{bmatrix}
     \end{align*}
-    we have the dot product inner space assuming the following form:
+    we have the dot product on inner product space, $V$, assuming the following form:
     \begin{align*}
         \langle \vec{v}, \vec{u} \rangle \hspace{2pt} = \hspace{2pt} \vec{v} \cdot \vec{u} \hspace{2pt} = \hspace{2pt} v_{1} \cdot u_{1} + v_{2} \cdot u_{2} + \cdots + v_{n} \cdot u_{n}
     \end{align*}
 \end{definition}
+\end{tcolorbox}
 
+\begin{tcolorbox}[sharp corners, colback=red!5!white, colframe=black!75!black, fontupper=\color{black}]
 \begin{definition}
     The Frobenius Norm of matrix $A$ takes on the following form:
     \begin{align*}
         \norm{A}_{F} = \sqrt{\sum_{i}^{m}\sum_{j}^{n}(a_{i,j})^{2}}
     \end{align*}
 \end{definition}
+\end{tcolorbox}
 
 How can we think about this norm? Take all rows in matrix $A$ strung together in a single vector. The Frobenius Norm is dot product of this vector with itself. 
 
-\begin{example}
+\begin{example} \label{frobenius_example_1}
 Take the following matrix:
     \begin{align*}
         A \hspace{2pt} = \hspace{2pt}
@@ -89,12 +97,15 @@ Then the Frobenius Norm on $A$ is
     \end{tcolorbox}
 \end{example}
 
+\begin{tcolorbox}[sharp corners, colback=yellow!5!white, colframe=black!75!black, fontupper=\color{black}]
 \begin{theorem}
     The Cauchy-Schwarz Inequality states that, where $V$ is a vector space, 
     \begin{align*}
         \vec{v}, \vec{u} \in V \hspace{20pt} \Longrightarrow \hspace{20pt} \lvert \langle \vec{v} , \vec{u} \rangle \rvert \hspace{2pt} \leq \hspace{2pt} \norm{\vec{v}} \norm{\vec{u}}
     \end{align*}
+    Equality holds whenever either $\vec{u}$ or $\vec{v}$ is a scalar multiple of the other.
 \end{theorem}
+\end{tcolorbox}
 
 The Cauchy-Schwarz Inequality will be used to show the following inequality:
 \begin{align*}
@@ -373,4 +384,408 @@ The Cauchy-Schwarz Inequality will be used to show the following inequality:
         \norm{A\vec{v}} \hspace{2pt} \leq \hspace{2pt} \norm{A}_{F} \norm{\vec{v}}
     \end{align*}
 \end{proof}
+
+\begin{example}
+    Take matrix $A$ from Example \ref{frobenius_example_1}.
+    \begin{align*}
+        A \hspace{2pt} = \hspace{2pt}
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+    \end{align*}
+    Take the following vector
+    \begin{align*}
+        \vec{v} \hspace{2pt} = \hspace{2pt}
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+    \end{align*}
+    and observe the Frobenius inequality holds.
+    \begin{align*}
+        \norm{A\vec{v}} \hspace{2pt} &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        } \hspace{2pt} = \hspace{2pt} \norm{
+        \begin{bmatrix}
+            19\\
+            43
+        \end{bmatrix}
+        } \hspace{2pt} = \hspace{2pt}
+        \norm{
+        \begin{bmatrix}
+            1 \cdot 5 + 2 \cdot 7\\
+            3 \cdot 5 + 4 \cdot 7
+        \end{bmatrix}
+        } \hspace{2pt} = \hspace{2pt}
+        \sqrt{
+        \begin{bmatrix}
+            1 \cdot 5 + 2 \cdot 7\\
+            3 \cdot 5 + 4 \cdot 7
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            1 \cdot 5 + 2 \cdot 7\\
+            3 \cdot 5 + 4 \cdot 7
+        \end{bmatrix}
+        }\\[2ex]
+        &= \hspace{2pt} \sqrt{(1 \cdot 5 + 2 \cdot 7)^{2} + (3 \cdot 5 + 4 \cdot 7)^{2}}
+    \end{align*}
+    So, following the proof of the Frobenius inequality,
+    \begin{align*}
+        \norm{A\vec{v}}^{2} \hspace{2pt} &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \\[2ex] 
+        &= \hspace{2pt} (1 \cdot 5 + 2 \cdot 7)^{2} + (3 \cdot 5 + 4 \cdot 7)^{2} \hspace{2pt} = \hspace{2pt} \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        \cdot
+        \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        +
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        \cdot
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)\\[2ex]
+        &= \hspace{2pt} \left(
+        \sqrt{
+        \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        \cdot
+        \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2}
+        +
+        \left(
+        \sqrt{
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        \cdot
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2}\\[2ex]
+        &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} 
+        +
+        \norm{
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \\[2ex]
+        &\leq \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        }^{2} \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2}
+        +
+        \norm{
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        }^{2} \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \\[2ex]
+        &= \hspace{2pt} \left( \hspace{10pt}
+        \left(
+        \sqrt{
+        \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2}
+        + 
+        \left(
+        \sqrt{
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \right)
+        }
+        \right)^{2}
+        \hspace{10pt} \right) \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \\[2ex]
+        &= \hspace{2pt} \left( \hspace{10pt}
+        \left(
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            1\\
+            2
+        \end{bmatrix}
+        \right)
+        + 
+        \left(
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+            3\\
+            4
+        \end{bmatrix}
+        \right) 
+        \hspace{10pt} \right) \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \\[2ex]
+        &= \hspace{2pt} (\hspace{10pt} (1)^{2} + (2)^{2} + (3)^{2} + (4)^{2} \hspace{10pt}) \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \hspace{2pt} = \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+        }_{F}^{2} \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        }^{2} \hspace{2pt} = \hspace{2pt} \norm{A}_{F}^{2} \norm{\vec{v}}^{2}
+    \end{align*}
+    So, we have
+    \begin{align*}
+        \norm{A\vec{v}} \hspace{2pt} &= \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        } \hspace{2pt} \leq \hspace{2pt} \norm{
+        \begin{bmatrix}
+            1 & 2\\
+            3 & 4
+        \end{bmatrix}
+        }_{F} \norm{
+        \begin{bmatrix}
+            5\\
+            7
+        \end{bmatrix}
+        } \hspace{2pt} = \hspace{2pt} \norm{A}_{F} \norm{\vec{v}}
+    \end{align*}
+
+    \begin{tcolorbox}[sharp corners, colback=black!5!white, colframe=black!75!black, fontupper=\color{black}]
+        \begin{lstlisting}[language=python, gobble = 12]
+            import numpy as np
+
+            A = np.array([[1,2],[3,4]])
+            v = np.array([5,7])
+            A_row1 = np.array([1,2])
+            A_row1_v = np.dot(A_row1,v)
+            A_row1_v_norm = np.linalg.norm(A_row1_v)
+            A_row1_norm = np.linalg.norm(A_row1)
+            A_row2 = np.array([3,4])
+            A_row2_v = np.dot(A_row2,v)
+            A_row2_v_norm = np.linalg.norm(A_row2_v)
+            A_row2_norm = np.linalg.norm(A_row2)
+            v_norm = np.linalg.norm(v)
+            Av = A@v
+            Av_norm = np.linalg.norm(Av)
+            A_frob_norm = np.linalg.norm(A,'fro')
+
+            print("")
+            print("A:")
+            print(A)
+            print("")
+            print("v:")
+            print(v)
+            print("")
+            print("A_row1_v_norm:")
+            print(A_row1_v_norm)
+            print("")
+            print("A_row2_v_norm:")
+            print(A_row2_v_norm) 
+            print("")
+            print("A_row1_norm * v_norm:")
+            print(A_row1_norm * v_norm)
+            print("")
+            print("A_row2_norm * v_norm:")
+            print(A_row2_norm * v_norm)
+            print("")
+            print("Av:")
+            print(Av)
+            print("")
+            print("Av_norm:")
+            print(Av_norm)
+            print("")
+            print("A_frob_norm * v_norm:")
+            print(A_frob_norm * v_norm)
+        \end{lstlisting}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[sharp corners, colback=green!10!white, colframe=black!75!black, fontupper=\color{black}]
+        \begin{lstlisting}[language=python, gobble = 12]
+            A:
+            [[1 2]
+             [3 4]]
+
+            v:
+            [5 7]
+
+            A_row1_v_norm:
+            19.0
+
+            A_row2_v_norm:
+            43.0
+
+            A_row1_norm * v_norm:
+            19.235384061671347
+
+            A_row2_norm * v_norm:
+            43.01162633521314
+
+            Av:
+            [19 43]
+
+            Av_norm:
+            47.01063709417264
+
+            A_frob_norm * v_norm:
+            47.11687595755899
+        \end{lstlisting}
+    \end{tcolorbox}
+\end{example}
 
