@@ -726,65 +726,54 @@ The Cauchy-Schwarz Inequality will be used to show the following inequality:
             Av_norm = np.linalg.norm(Av)
             A_frob_norm = np.linalg.norm(A,'fro')
 
-            print("")
-            print("A:")
-            print(A)
-            print("")
-            print("v:")
-            print(v)
-            print("")
-            print("A_row1_v_norm:")
-            print(A_row1_v_norm)
-            print("")
-            print("A_row2_v_norm:")
-            print(A_row2_v_norm) 
-            print("")
-            print("A_row1_norm * v_norm:")
-            print(A_row1_norm * v_norm)
-            print("")
-            print("A_row2_norm * v_norm:")
-            print(A_row2_norm * v_norm)
-            print("")
-            print("Av:")
-            print(Av)
-            print("")
-            print("Av_norm:")
-            print(Av_norm)
-            print("")
-            print("A_frob_norm * v_norm:")
-            print(A_frob_norm * v_norm)
+            print("\nA:\n", A, "\n\nv:\n", v)
+            print("\n\nA_row1_v_norm:\n", A_row1_v_norm)
+            print("\n\nA_row2_v_norm:\n", A_row2_v_norm)
+            print("\n\nA_row1_norm * v_norm:\n", A_row1_norm * v_norm)
+            print("\n\nA_row2_norm * v_norm:\n", A_row2_norm * v_norm)
+            print("\n\nAv:\n", Av)
+            print("\n\nAv_norm:\n", Av_norm)
+            print("\n\nA_frob_norm * v_norm:\n", A_frob_norm * v_norm)
         \end{lstlisting}
     \end{tcolorbox}
 
     \begin{tcolorbox}[sharp corners, colback=green!10!white, colframe=black!75!black, fontupper=\color{black}]
         \begin{lstlisting}[language=python, gobble = 12]
+
             A:
-            [[1 2]
-             [3 4]]
+             [[1 2]
+             [3 4]] 
 
             v:
-            [5 7]
+             [5 7]
+
 
             A_row1_v_norm:
-            19.0
+             19.0
+
 
             A_row2_v_norm:
-            43.0
+             43.0
+
 
             A_row1_norm * v_norm:
-            19.235384061671347
+             19.235384061671347
+
 
             A_row2_norm * v_norm:
-            43.01162633521314
+             43.01162633521314
+
 
             Av:
-            [19 43]
+             [19 43]
+
 
             Av_norm:
-            47.01063709417264
+             47.01063709417264
+
 
             A_frob_norm * v_norm:
-            47.11687595755899
+             47.11687595755899
         \end{lstlisting}
     \end{tcolorbox}
 \end{example}
