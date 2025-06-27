@@ -486,7 +486,7 @@ and is divergent, otherwise.
 \begin{proof}
     If $\lvert r \rvert \hspace{2pt} = \hspace{2pt} 1$, is the result obvious? If $\lvert r \rvert \hspace{2pt} < \hspace{2pt} 1$, then $\lvert r \rvert \in \Big[\dfrac{k-1}{m}, \dfrac{k}{m}\Big)$, where $k \hspace{2pt} < \hspace{2pt} m$ and $k, m \in \mathbb{N}$. Choose $\epsilon \hspace{2pt} = \hspace{2pt} \dfrac{1}{k}$. Then when $N \hspace{2pt} = \hspace{2pt} k^{2} + 1$ and $n \hspace{2pt} \geq \hspace{2pt} N$, we have
     \begin{align*}
-        \Big|\hspace{4pt} \Big(\dfrac{k}{m}\Big)^{n} - 0 \hspace{4pt} \Big| \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{(k+1)^{n}} \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{k^{n} + n \cdot k^{n-1}} \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{n \cdot k^{n-1}} \hspace{2pt} = \hspace{2pt} \dfrac{k}{n} \hspace{2pt} < \hspace{2pt} \dfrac{1}{k} \hspace{2pt} = \hspace{2pt} \epsilon
+        \Big|\Big(\dfrac{k}{m}\Big)^{n} - 0 \Big| \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{(k+1)^{n}} \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{k^{n} + n \cdot k^{n-1}} \hspace{2pt} \leq \hspace{2pt} \dfrac{k^{n}}{n \cdot k^{n-1}} \hspace{2pt} = \hspace{2pt} \dfrac{k}{n} \hspace{2pt} < \hspace{2pt} \dfrac{1}{k} \hspace{2pt} = \hspace{2pt} \epsilon
     \end{align*}
 \end{proof}
 \end{theorem}
@@ -792,6 +792,24 @@ Prove that if $\lim_{n \longrightarrow \infty} f(n) = 0$ and if $\{g(n)\}_{n=1}^
 \begin{align*}
     \lim_{n \longrightarrow \infty} f(n)g(n) = 0
 \end{align*}
+\begin{proof}
+    Suppose $\lvert g(n) \rvert \hspace{2pt} \leq \hspace{2pt} M$. Suppose $\{f(n)\}_{n=1}^{\infty}$ converges to $0$. Then for $\epsilon \hspace{2pt} > \hspace{2pt} 0$, we have some $K \in \mathbb{N}$ such that
+    \begin{align*}
+        \lvert f(n) - 0 \rvert \hspace{2pt} = \hspace{2pt} \lvert f(n) \rvert \hspace{2pt} < \hspace{2pt} \epsilon \hspace{2pt} , \hspace{10pt} \forall n \hspace{2pt} \geq \hspace{2pt} K
+    \end{align*}
+    Note that for all such $n \hspace{2pt} \geq \hspace{2pt} K$, we have
+    \begin{align*}
+        \lvert g(n) \rvert \hspace{2pt} \leq \hspace{2pt} M
+    \end{align*}
+    Choose $\varphi \hspace{2pt} = \hspace{2pt} \epsilon \cdot M$. Then for all $n \hspace{2pt} \geq \hspace{2pt} K$
+    \begin{align*}
+        \lvert f(n)g(n) - 0 \rvert \hspace{2pt} = \hspace{2pt} \lvert f(n)g(n) \rvert \hspace{2pt} = \hspace{2pt} \lvert f(n) \rvert \hspace{2pt} \lvert g(n) \rvert \hspace{2pt} < \hspace{2pt} \epsilon \cdot M \hspace{2pt} = \hspace{2pt} \varphi 
+    \end{align*}
+    Since $\epsilon$ is chosen to be arbitrarily small, we have
+    \begin{align*}
+        \lim_{n \longrightarrow \infty} f(n)g(n) = 0
+\end{align*}
+\end{proof}
 \end{exercise}
 
 \newpage
