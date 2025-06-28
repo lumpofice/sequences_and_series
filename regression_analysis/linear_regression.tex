@@ -1,0 +1,75 @@
+\section{Linear Regression}
+
+p.401 Walpole\\[2ex]
+\begin{center}
+    $\sigma_{b_{0}}^{2} = \dfrac{\sum(x_{i}^{2})}{n\sum(x_{i} - \bar{x})^{2}}\sigma^{2}$
+\end{center}
+\begin{align*}
+    \sigma_{\bar{y} - b_{1}\bar{x}}^{2} &= \sigma_{\Big(\dfrac{\sum(y_{i})}{n} - \dfrac{\sum(x_{i} - \bar{x})(y_{i} - \bar{y})}{\sum(x_{i} - \bar{x})^{2}}\dfrac{\sum(x_{i})}{n}\Big)}^{2}\\[1ex]
+    &= \dfrac{n}{n^{2}}\sigma^{2} + \Big(\dfrac{\sum(x_{i})}{n}\Big)^{2}\dfrac{\sum(x_{i} - \bar{x})^{2}}{(\sum(x_{i} - \bar{x})^{2})^{2}}\sigma^{2}\\[1ex]
+    &= \dfrac{1}{n}\sigma^{2} + \Big(\dfrac{\sum(x_{i})}{n}\Big)^{2}\dfrac{1}{\sum(x_{i} - \bar{x})^{2}}\sigma^{2}\\[1ex]
+    &= \dfrac{n\sum(x_{i} - \bar{x})^{2}\sigma^{2} + (\sum(x_{i}))^{2}\sigma^{2}}{n^{2}\sum(x_{i} - \bar{x})^{2}}
+\end{align*}
+Using the fact that
+\begin{align*}
+    E[(X - \mu_{X})^{2}] = E(X^{2}) - (E(X))^{2} \hspace{20pt} &\Longleftrightarrow \hspace{20pt} \dfrac{\sum(x_{i} - \bar{x})^{2}}{n} = \dfrac{\sum(x_{i}^{2})}{n} - \Big(\dfrac{\sum(x_{i})}{n}\Big)^{2}\\[1ex]
+    &\Longleftrightarrow \hspace{20pt} n\sum(x_{i} - \bar{x})^{2} = n\sum(x_{i}^{2}) - (\sum(x_{i}))^{2}
+\end{align*}
+we have
+\begin{align*}
+    \dfrac{n\sum(x_{i} - \bar{x})^{2}\sigma^{2} + (\sum(x_{i}))^{2}\sigma^{2}}{n^{2}\sum(x_{i} - \bar{x})^{2}} &= \dfrac{n\sum(x_{i}^{2})\sigma^{2} - (\sum(x_{i}))^{2}\sigma^{2} + (\sum(x_{i}))^{2}\sigma^{2}}{n^{2}\sum(x_{i} - \bar{x})^{2}}\\[1ex]
+    &= \dfrac{\sum(x_{i}^{2})}{n\sum(x_{i} - \bar{x})^{2}}\sigma^{2}
+\end{align*}
+
+
+
+\newpage
+p.414 Walpole\\[2ex]
+\begin{center}
+    $SST = SSR + SSE$
+\end{center}
+We know $SSE = S_{yy} - (b1 \cdot S_{xy})$\\[1ex]
+We have 
+\begin{align*}
+    SSR &= \sum(\hat{y}_{i} - \bar{y})^{2} = \sum(b_{0} + b_{1}x_{i} - b_{0} - b_{1}\bar{x})^{2}\\
+    &= \sum(b_{1}(x_{i} - \bar{x}))^{2} = b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\[2ex]
+    SST &= \sum(y_{i} - \bar{y})^{2} = \sum(y_{i} - \bar{y})(y_{i} - \bar{y})\\
+    &= \sum(y_{i} - \bar{y})y_{i} = \sum(y_{i}^{2} - (b_{0} + b_{1}\bar{x})y_{i})\\
+    &= \sum(y_{i}^{2}) - (b_{0} + b_{1}\bar{x})\sum(y_{i})\\[2ex]
+    &\Longrightarrow \\[2ex]
+    SST - SSR &= \sum(y_{i}^{2}) - (b_{0} + b_{1}\bar{x})\sum(y_{i}) - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= \sum(y_{i}^{2}) - b_{0}\sum(y_{i}) - b_{1}\bar{x}\sum(y_{i}) - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= \sum(y_{i}^{2}) - (\bar{y} - b_{1}\bar{x})\sum(y_{i}) - b_{1}\bar{x}\sum(y_{i}) - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= \sum(y_{i}^{2}) - \bar{y}\sum(y_{i}) + b_{1}\bar{x}\sum(y_{i}) - b_{1}\bar{x}\sum(y_{i}) - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= \sum(y_{i}^{2}) - \bar{y}\sum(y_{i}) - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= \sum(y_{i}^{2} - \bar{y})^{2} - b_{1}^{2}\sum(x_{i} - \bar{x})^{2}\\
+    &= S_{yy} - \dfrac{S_{xy}^{2}S_{xx}}{S_{xx}^{2}} = S_{yy} - \dfrac{S_{xy}^{2}}{S_{xx}} \\
+    &= S_{yy} - b_{1}S_{xy} = SSE
+\end{align*}
+
+\newpage
+p.438 Walpole
+\begin{center}
+    $E\Big((\bar{y} - \mu_{\bar{y}})(b_{1} - \mu_{b_{1}})\Big) = 0$
+\end{center}
+
+\begin{align*}
+    \dfrac{\sum \bar{y}}{n} = \dfrac{\sum \mu_{y_{i}}}{n} = \mu_{\Big(\sum y_{i}\Big)/n}
+\end{align*}
+
+\begin{align*}
+    \sum (x_{i} - \bar{x})(y_{i} - \mu_{y_{i}}) = (x_{1} - \bar{x})(y_{1} - \mu_{y_{1}}) + \cdots + (x_{n} - \bar{x})(y_{n} - \mu_{y_{n}})
+\end{align*}
+
+\begin{align*}
+    &E\Big((\bar{y} - \mu_{\bar{y}})(b_{1} - \mu_{b_{1}})\Big)\\[2ex]
+    = \hspace{4pt} &E\Big(\Big(\dfrac{\sum y_{i}}{n} - \dfrac{\sum \bar{y}_{i}}{n}\Big)\Big(\dfrac{\sum (x_{i} - \bar{x})y_{i}}{\sum (x_{i} - \bar{x})^{2}} - \dfrac{\sum (x_{i} - \bar{x})\mu_{y_{i}}}{\sum (x_{i} - \bar{x})^{2}}\Big)\Big)\\[2ex]
+    = \hspace{4pt} &E\Big(\dfrac{1}{n}(y_{1} + \cdots + y_{n} - \mu_{y_{1}} - \cdots - \mu_{y_{n}})\dfrac{1}{\sum (x_{i} - \bar{x})^{2}}\Big((x_{1} - \bar{x})(y_{1} - \mu_{y_{1}}) + \cdots + (x_{n} - \bar{x})(y_{n} - \mu_{y_{n}})\Big)\Big)\\[2ex]
+    = \hspace{4pt} &E\Big(\dfrac{1}{n}\dfrac{1}{\sum (x_{i} - \bar{x})^{2}}\Big((x_{1} - \bar{x})(y_{1} - \mu_{y_{1}})^{2} + \cdots + \\[2ex] 
+    &(x_{1} - \bar{x})(y_{2} - \mu_{y_{2}})(y_{1} - \mu_{y_{1}}) + \cdots + (y_{n} - \mu_{y_{n}})(x_{n-1} - \bar{x})(y_{n-1} - \mu_{y_{n-1}})\Big)\Big)\\[2ex]
+    = \hspace{4pt} &\dfrac{1}{n}\dfrac{1}{\sum (x_{i} - \bar{x})^{2}}\Big((x_{1} - \bar{x})E\Big[(y_{1} - \mu_{y_1})^{2}\Big] + \cdots + (x_{n} - \bar{x})E\Big[(y_{n} - \mu_{y_{n}})^{2}\Big] + \\[2ex]
+    &\sum_{i \neq j, i = 1}^{n} (x_{i} - \bar{x})E\Big[(y_{i} - \mu_{y_{i}})(y_{j} - \mu_{y_{j}})\Big]\Big)\\[2ex]
+    = \hspace{4pt} &\dfrac{1}{n}\dfrac{\sigma^{2}}{\sum (x_{i} - \bar{x})^{2}}\sum (x_{i} - \bar{x})\\[2ex]
+    = \hspace{4pt} &\dfrac{1}{n}\dfrac{\sigma^{2}}{\sum (x_{i} - \bar{x})^{2}}(x_{1} + \cdots + x_{n} - n\bar{x})\\[2ex]
+    = \hspace{4pt} &0
+\end{align*}
