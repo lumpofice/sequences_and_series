@@ -1,5 +1,25 @@
 \section{Linear Regression}
 
+p.396 Walpole \\[2ex]
+\begin{align*}
+    SSE \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} e_{i}^{2} \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} (y_{i} - \hat{y}_{i})^{2} \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i})^{2}
+\end{align*}
+
+\begin{align*}
+    \dfrac{\partial (SSE)}{\partial b_{0}} \hspace{2pt} = \hspace{2pt} -2 \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i})
+\end{align*}
+
+\begin{align*}
+    \dfrac{\partial (SSE)}{\partial b_{1}} \hspace{2pt} = \hspace{2pt} -2 \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i})x_{i}
+\end{align*}
+
+\begin{align*}
+    0 \hspace{2pt} = \hspace{2pt} -2 \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i}) \hspace{20pt} &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i}) \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i} - \sum_{i = 1}^{n} b_{0} - \sum_{i = 1}^{n} b_{1}x_{i} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i} - nb_{0} - \sum_{i = 1}^{n} b_{1}x_{i} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} b_{0} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} y_{i} - \sum_{i = 1}^{n} b_{1}x_{i}}{n}
+\end{align*}
+
 p.401 Walpole\\[2ex]
 \begin{center}
     $\sigma_{b_{0}}^{2} = \dfrac{\sum(x_{i}^{2})}{n\sum(x_{i} - \bar{x})^{2}}\sigma^{2}$
