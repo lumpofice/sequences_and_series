@@ -20,6 +20,30 @@ p.396 Walpole \\[2ex]
     &\Longleftrightarrow \hspace{20pt} b_{0} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} y_{i} - \sum_{i = 1}^{n} b_{1}x_{i}}{n}
 \end{align*}
 
+We use the following to derive the second of the normal equations:
+
+\begin{align*}
+    &E[(X - \mu_{X})(Y - \mu_{Y})] \hspace{2pt} = \hspace{2pt} E(XY) - \mu_{X}\mu_{Y} \hspace{20pt} \Longleftrightarrow \\[1ex] 
+    &\dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{n} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} x_{i}y_{i}}{n} - \dfrac{\sum_{i = 1}^{n} x_{i}}{n} \dfrac{\sum_{i = 1}^{n} y_{i}}{n}
+\end{align*}
+
+\begin{align*}
+    &E[(X - \mu_{X})^{2}] \hspace{2pt} = \hspace{2pt} E(X^{2}) - (\mu_{X})^{2} \hspace{20pt} \Longleftrightarrow \\[1ex] 
+    &\dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}}{n} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i})^{2}}{n} - \Big(\dfrac{\sum_{i = 1}^{n} x_{i}}{n}\Big)^{2}
+\end{align*}
+
+\begin{align*}
+    0 \hspace{2pt} = \hspace{2pt} -2 \sum_{i = 1}^{n} (y_{i} - b_{0} - b_{1}x_{i})x_{i} \hspace{20pt} &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i}x_{i} - b_{0}\sum_{i = 1}^{n} x_{i} - \sum_{i = 1}^{n} b_{1}x_{i}^{2} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i}x_{i} - \Big( \dfrac{\sum_{i = 1}^{n} y_{i} - b_{1}\sum_{i = 1}^{n} x_{i}}{n} \Big) \sum_{i = 1}^{n} x_{i} - b_{1}\sum_{i = 1}^{n} x_{i}^{2} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i}x_{i} - \dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n} + \dfrac{b_{1}(\sum_{i = 1}^{n} x_{i})^{2}}{n} - b_{1}\sum_{i = 1}^{n} x_{i}^{2} \\[1ex] 
+    &\Longleftrightarrow \hspace{20pt} 0 \hspace{2pt} = \hspace{2pt} \sum_{i = 1}^{n} y_{i}x_{i} - \dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n} + \dfrac{b_{1}(\sum_{i = 1}^{n} x_{i})^{2} - b_{1}n\sum_{i = 1}^{n} x_{i}^{2}}{n} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \Big(\dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n} - \sum_{i = 1}^{n} y_{i}x_{i} \Big) \Big(\dfrac{n}{(\sum_{i = 1}^{n} x_{i})^{2} - n\sum_{i = 1}^{n} x_{i}^{2}} \Big) \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \Big(\dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i} - n\sum_{i = 1}^{n} y_{i}x_{i}}{n} \Big) \Big(\dfrac{n}{(\sum_{i = 1}^{n} x_{i})^{2} - n\sum_{i = 1}^{n} x_{i}^{2}} \Big) \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{n\sum_{i = 1}^{n} y_{i}x_{i} - \sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n\sum_{i = 1}^{n} x_{i}^{2} - (\sum_{i = 1}^{n} x_{i})^{2}} \\[1ex]
+    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{(x_{i} - \bar{x})^{2}}
+\end{align*}
+
+\newpage
 p.401 Walpole\\[2ex]
 \begin{center}
     $\sigma_{b_{0}}^{2} = \dfrac{\sum(x_{i}^{2})}{n\sum(x_{i} - \bar{x})^{2}}\sigma^{2}$
