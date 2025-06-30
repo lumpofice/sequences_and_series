@@ -40,7 +40,17 @@ We use the following to derive the second of the normal equations:
     &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \Big(\dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n} - \sum_{i = 1}^{n} y_{i}x_{i} \Big) \Big(\dfrac{n}{(\sum_{i = 1}^{n} x_{i})^{2} - n\sum_{i = 1}^{n} x_{i}^{2}} \Big) \\[1ex]
     &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \Big(\dfrac{\sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i} - n\sum_{i = 1}^{n} y_{i}x_{i}}{n} \Big) \Big(\dfrac{n}{(\sum_{i = 1}^{n} x_{i})^{2} - n\sum_{i = 1}^{n} x_{i}^{2}} \Big) \\[1ex]
     &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{n\sum_{i = 1}^{n} y_{i}x_{i} - \sum_{i = 1}^{n} y_{i} \sum_{i = 1}^{n} x_{i}}{n\sum_{i = 1}^{n} x_{i}^{2} - (\sum_{i = 1}^{n} x_{i})^{2}} \\[1ex]
-    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{(x_{i} - \bar{x})^{2}}
+    &\Longleftrightarrow \hspace{20pt} b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}}
+\end{align*}
+
+Taking this final equality further:
+
+\begin{align*}
+    b_{1} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(y_{i} - \bar{y})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \hspace{2pt} &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i} - \sum_{i = 1}^{n} (x_{i} - \bar{x})\bar{y}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i} - \bar{y}\sum_{i = 1}^{n} (x_{i} - \bar{x})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i} - \bar{y}(x_{1} + \cdots + x_{n} - n\bar{x})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i} - \bar{y}\Big(x_{1} + \cdots + x_{n} - n\dfrac{x_{1} + \cdots x_{n}}{n}\Big)}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}}
 \end{align*}
 
 \newpage
