@@ -54,6 +54,31 @@ Taking this final equality further:
 \end{align*}
 
 \newpage
+p.401 Walpole \\[2ex]
+\begin{align*}
+    \mu_{b_{1}} \hspace{2pt} &= \hspace{2pt} E\Big(\dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})y_{i}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \Big) \\[1ex]
+    &= \hspace{2pt} E\Big(\dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(\beta_{0} + \beta_{1}x_{i} + \epsilon_{i})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \Big) \\[1ex]
+    &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})(E(\beta_{0}) + x_{i}E(\beta_{1}) + E(\epsilon_{i}))}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{0})\sum_{i = 1}^{n} (x_{i} - \bar{x}) + E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i} + \sum_{i = 1}^{n} (x_{i} - \bar{x})E(\epsilon_{i})}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{0})(0) + E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i} + \sum_{i = 1}^{n} (x_{i} - \bar{x})(0)}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} x_{i}^{2} - \sum_{i = 1}^{n} 2x_{i}\bar{x} + n(\bar{x})^{2}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} x_{i}^{2} - 2\bar{x}\sum_{i = 1}^{n} x_{i} + n\bar{x}\bar{x}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} x_{i}^{2} - 2\bar{x}(n\bar{x}) + n\bar{x}\bar{x}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} x_{i}^{2} - n\bar{x}\bar{x}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} x_{i}^{2} - \sum_{i = 1}^{n} x_{i}\bar{x}} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} (x_{i}^{2} - x_{i}\bar{x})} \\[1ex]
+    &= \hspace{2pt} \dfrac{E(\beta_{1})\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})x_{i}} \\[1ex]
+    &= \hspace{2pt} E(\beta_{1}) \hspace{2pt} = \hspace{2pt} \beta_{1}E(1) \hspace{2pt} = \hspace{2pt} \beta_{1}
+\end{align*}
+
+For the following result, note that each $y_{i}$ follows a normal distribution.
+
+\begin{align*}
+    \sigma_{b_{1}}^{2} \hspace{2pt} &= \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2} \sigma_{y_{i}}^{2}}{\Big(\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2} \Big)^{2}} \hspace{2pt} = \hspace{2pt} \dfrac{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2} \sigma^{2}}{\Big(\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2} \Big)^{2}} \hspace{2pt} = \hspace{2pt} \dfrac{\sigma^{2}}{\sum_{i = 1}^{n} (x_{i} - \bar{x})^{2}}
+\end{align*}
+
+\newpage
 p.401 Walpole\\[2ex]
 \begin{center}
     $\sigma_{b_{0}}^{2} = \dfrac{\sum(x_{i}^{2})}{n\sum(x_{i} - \bar{x})^{2}}\sigma^{2}$
