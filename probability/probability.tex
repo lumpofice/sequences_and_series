@@ -1,0 +1,83 @@
+\section{Probability}
+
+\begin{definition}
+Let $X$ be a function from space $S$ to the real numbers that follows the mapping
+\begin{align*}
+    X(s) \hspace{2pt} = \hspace{2pt} x \hspace{20pt} \text{where} \hspace{10pt} s \in S \hspace{10pt} \text{and} \hspace{10pt} x \in \mathbb{R}
+\end{align*}
+\label{random_variable}
+\end{definition}
+
+\begin{definition}
+The cumulative distribution function of a function $X$, as described in Definition \ref{random_variable}, denoted by $F_{X}(x)$ is defined as
+\begin{align*}
+    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{20pt} \text{for all} \hspace{10pt} x \in \text{Rng}(X)
+\end{align*}
+\label{cumulative_distribution_function}
+\end{definition}
+
+\begin{theorem}
+The function $F_{X}$ is a cumulative distribution function if and only if it meets the following three conditions:
+\begin{align*}
+    &\text{i)} \hspace{10pt} \lim_{x \longrightarrow -\infty} F_{X}(x) \hspace{2pt} = \hspace{2pt} 0 \hspace{10pt} \text{and} \hspace{10pt} \lim_{x \longrightarrow \infty} F_{X}(x) \hspace{2pt} = \hspace{2pt} 1\\[2ex]
+    &\text{ii)} \hspace{10pt} F_{X} \hspace{4pt} \text{is a nondecreasing function of} \hspace{4pt} x\\[2ex]
+    &\text{iii)} \hspace{10pt} F_{X} \hspace{4pt} \text{is right-continuous. Meaning, for each} \hspace{4pt} x_{0} \in \text{Rng}(X) \hspace{4pt} \text{we have} \hspace{10pt} \lim_{x \longrightarrow x_{0}^{+}} F_{X}(x) = F_{X}(x_{0})
+\end{align*}
+\end{theorem}
+
+\begin{definition}
+A function $X$, as described in Definition \ref{random_variable}, is continuous if $F_{X}$ is a continuous function of $x$.
+\end{definition}
+
+\begin{definition}
+A function $X$, as described in Definition \ref{random_variable}, is discrete if $F_{X}$ is a step function of $x$.
+\end{definition}
+
+\begin{definition}
+The probability mass function of a discrete function $X$, as described in Definition \ref{random_variable}, is given by 
+\begin{align*}
+    f_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(x) \hspace{20pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)
+\end{align*}
+\label{probability_mass_function}
+\end{definition}
+
+\begin{note}
+Connecting Definition \ref{cumulative_distribution_function} with Definition \ref{probability_mass_function}, we have
+\begin{align*}
+    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} P(X \hspace{2pt} = \hspace{2pt} i) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} f_{X}(i)
+\end{align*}
+\end{note}
+
+\begin{definition}
+The probability density function, $f_{X}$, of a continuous function $X$, as described in Definition \ref{random_variable}, is the function that satisfies 
+\begin{align*}
+    F_{X}(x) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{x} f_{X}(t) dt \hspace{10pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)
+\end{align*}
+\end{definition}
+
+\begin{theorem}
+A function $f_{X}$ is a probability mass function (or a probability density function) of a random variable $X$, as describe in Definition \ref{random_variable}, if and only if
+\begin{align*}
+    &i) \hspace{10pt} f_{X}(x) \hspace{2pt} \geq \hspace{2pt} 0 \hspace{10pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)\\[2ex]
+    &ii)_\text{(discrete)} \hspace{10pt} \sum_{x \in Rng(X)} f_{X}(x) \hspace{2pt} = \hspace{2pt} 1\\[2ex]
+    &ii)_\text{(continuous)} \hspace{10pt} \int_{-\infty}^{\infty} f_{X}(x) dx \hspace{2pt} = \hspace{2pt} 1
+\end{align*}
+\end{theorem}
+
+\begin{definition}
+    The expected value of a random variable $g(X)$ follows the form
+    \begin{align*}
+        &i)_\text{($X$ is discrete)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \sum_{x \in Rng(X)} g(x)f(x) \\[2ex]
+        &ii)_\text{($X$ is continuous)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} g(x)f(x)dx
+    \end{align*}
+    assuming $E(g(X)) \hspace{2pt} < \hspace{2pt} \infty$
+\end{definition}
+
+\begin{theorem}
+    Let $g_{1}(X)$ and $g_{2}(X)$ be random variables with finite expectations, and let $a$, $b$, and $c$ be members of $\mathbb{R}$. Then we have
+    \begin{align*}
+        E(ag_{1}(X) + bg_{2}(X) + c) \hspace{2pt} = \hspace{2pt} aE(g_{1}(X)) + bE(g_{2}(X)) + c
+    \end{align*}
+\end{theorem}
+
+    

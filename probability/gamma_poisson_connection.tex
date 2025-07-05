@@ -1,0 +1,44 @@
+\section{Gamma-Poisson Connection}
+
+\begin{definition}
+The probability mass function of the Poisson distribution, followed by a function $X$, as described in Definition \ref{random_variable}, where $X$ has a range of nonnegative integers, has a parameter $\lambda$ and is defined as
+\begin{align*}
+    \text{Poisson}(x | \lambda) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} = \hspace{2pt} x) \hspace{2pt} = \hspace{2pt} f(x | \lambda) \hspace{2pt} = \hspace{2pt}  \dfrac{e^{-\lambda} \lambda^{x}}{x!} \hspace{10pt} \text{where} \hspace{4pt} x \in \text{Rng}(X) \hspace{2pt} = \hspace{2pt} \{0, 1, 2, 3, 4, \cdots\}, \hspace{10pt} \lambda \hspace{2pt} > \hspace{2pt} 0
+\end{align*}
+\end{definition}
+
+\begin{definition}
+The gamma function is defined as follows
+\begin{align*}
+    \Gamma(\alpha) \hspace{2pt} = \hspace{2pt} \int_{0}^{\infty} t^{\alpha - 1} e^{-t} dt \hspace{20pt} \alpha \hspace{2pt} > \hspace{2pt} 0 
+\end{align*}
+\end{definition}
+
+\begin{definition}
+The probability density function for the gamma distribution, followed by a function $X$, as described in Definition \ref{random_variable}, has parameters $\alpha$ and $\beta$ and is defined as 
+\begin{align*}
+    gamma(\alpha, \beta) \hspace{2pt} = \hspace{2pt} f(x | \alpha, \beta) \hspace{2pt} = \hspace{2pt} \dfrac{x^{\alpha - 1} e^{-x/\beta}}{\Gamma(\alpha)\beta^{\alpha}} \hspace{10pt} \text{where} \hspace{4pt} x \in (0, \infty), \hspace{10pt} \alpha \hspace{2pt} > \hspace{2pt} 0, \hspace{10pt} \beta \hspace{2pt} > \hspace{2pt} 0
+\end{align*}
+\end{definition}
+
+\begin{exercise}
+For function $X$ following the gamma distribution 
+\begin{align*}
+    gamma(\alpha, \beta) \hspace{20pt} \text{where} \hspace{4pt} \alpha \in \mathbb{Z}
+\end{align*}
+and for function $Y$ following a Poisson distribution
+\begin{align*}
+    Poisson(y | x/\beta)
+\end{align*}
+show that
+\begin{align*}
+    P(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{2pt} = \hspace{2pt} P(Y \hspace{2pt} \geq \hspace{2pt} \alpha)
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Show
+\begin{align*}
+    \int_{x}^{\infty} \dfrac{1}{\Gamma(\alpha)} z^{\alpha - 1} e^{-z} dz \hspace{2pt} = \hspace{2pt} \sum_{y \hspace{2pt} = \hspace{2pt} 0}^{\alpha - 1} \dfrac{x^{y} e^{-x}}{y!} \hspace{20pt} \alpha \hspace{2pt} = \hspace{2pt} 1, 2, 3, \cdots
+\end{align*}
+\end{exercise}
