@@ -44,7 +44,7 @@ The probability mass function of a discrete function $X$, as described in Defini
 \begin{note}
 Connecting Definition \ref{cumulative_distribution_function} with Definition \ref{probability_mass_function}, we have
 \begin{align*}
-    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} P(X \hspace{2pt} = \hspace{2pt} i) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} f_{X}(i)
+    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} P_{X}(X \hspace{2pt} = \hspace{2pt} i) \hspace{2pt} = \hspace{2pt} \sum_{i \hspace{2pt} \leq \hspace{2pt} x} f_{X}(i)
 \end{align*}
 \end{note}
 
@@ -67,17 +67,76 @@ A function $f_{X}$ is a probability mass function (or a probability density func
 \begin{definition}
     The expected value of a random variable $g(X)$ follows the form
     \begin{align*}
-        &i)_\text{($X$ is discrete)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \sum_{x \in Rng(X)} g(x)f(x) \\[2ex]
-        &ii)_\text{($X$ is continuous)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} g(x)f(x)dx
+        &i)_\text{($X$ is discrete)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \sum_{x \in Rng(X)} g(x)f_{X}(x) \\[2ex]
+        &ii)_\text{($X$ is continuous)} \hspace{10pt} E(g(X)) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} g(x)f_{X}(x)dx
     \end{align*}
     assuming $E(g(X)) \hspace{2pt} < \hspace{2pt} \infty$
 \end{definition}
 
+The expected value of a random variable, $X$, is also known as the expectation of random variable, $X$.
+
 \begin{theorem}
+    \label{expectation_linear_combination}
     Let $g_{1}(X)$ and $g_{2}(X)$ be random variables with finite expectations, and let $a$, $b$, and $c$ be members of $\mathbb{R}$. Then we have
     \begin{align*}
         E(ag_{1}(X) + bg_{2}(X) + c) \hspace{2pt} = \hspace{2pt} aE(g_{1}(X)) + bE(g_{2}(X)) + c
     \end{align*}
 \end{theorem}
 
-    
+\begin{definition}
+    \label{nth_moment}
+    The $n^{\text{th}}$ moment of a random variable, $X$, is defined as
+    \begin{align*}
+        E(X^{n})
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    The $n^{\text{th}}$ central moment of a random variable, $X$, is defined as
+    \begin{align*}
+        E((X - E(X))^{n})
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    The variance of a random variable, $X$, is the second central moment of $X$
+    \begin{align*}
+        Var(X) \hspace{2pt} = \hspace{2pt} E((X - E(X))^{2}) 
+    \end{align*}
+\end{definition}
+
+We can expand this definition of variance, and in using Theorem \ref{expectation_linear_combination}, recalling that the expected value of random variable, $X$, is a member of $\mathbb{R}$, we have
+\begin{align*}
+    Var(X) \hspace{2pt} &= \hspace{2pt} E((X - E(X))^{2}) \\[1ex]
+    &= \hspace{2pt} E(X^{2} - 2XE(X) + (E(X))^{2}) \\[1ex]
+    &= \hspace{2pt} E(X^{2}) - E(2XE(X)) + E((E(X))^{2}) \\[1ex]
+    &= \hspace{2pt} E(X^{2}) - 2(E(X))^{2} + (E(X))^{2} \\[1ex]
+    &= \hspace{2pt} E(X^{2}) - (E(X))^{2}
+\end{align*}
+arriving at an alternative way of writing the variance of random variable, $X$.
+
+\begin{theorem}
+    If random variable, $X$, has a finite variance, then for any $a$ and $b$ in $\mathbb{R}$, we have
+    \begin{align*}
+        Var(aX + b) \hspace{2pt} = \hspace{2pt} a^{2}Var(X)
+    \end{align*}
+\end{theorem}
+
+\begin{definition}
+    The moment generating function of random variable, $X$, follows the form
+    \begin{align*}
+        &i)_\text{($X$ is discrete)} \hspace{10pt} M_{X}(t) \hspace{2pt} = \hspace{2pt} E(e^{tX}) \hspace{2pt} = \hspace{2pt} \sum_{x \in Rng(X)} e^{tX}f_{X}(x) \\[2ex]
+        &ii)_\text{($X$ is continuous)} \hspace{10pt} M_{X}(t) \hspace{2pt} = \hspace{2pt} E(e^{tX}) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} e^{tX}f_{X}(x)dx
+    \end{align*}
+assuming that $M_{X}(t)$ exists for any $t$ belonging to some neighborhood of $0$.
+\end{definition}
+
+\begin{theorem}
+    \label{nth_moment_by_derivative_of_mgf}
+    If the moment generating function for random variable, $X$, exists, then
+    \begin{align*}
+        E(X^{n}) \hspace{2pt} = \hspace{2pt} M_{X}^{(n)}(0) \hspace{2pt} = \hspace{2pt} \dfrac{d^{n}}{dt^{n}}M_{X}(t)\Big|_{t = 0}  
+    \end{align*}
+\end{theorem}
+
+So, we see by Definition \ref{nth_moment} and Theorem \ref{nth_moment_by_derivative_of_mgf} that the $n^{\text{th}}$ moment of random variable, $X$, is the $n^{\text{th}}$ derivative of the moment generating function of random variable, $X$, evaluated at $t \hspace{2pt} = \hspace{2pt} 0$.
