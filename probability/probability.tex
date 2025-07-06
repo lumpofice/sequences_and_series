@@ -3,15 +3,16 @@
 \begin{definition}
 Let $X$ be a function from space $S$ to the real numbers that follows the mapping
 \begin{align*}
-    X(s) \hspace{2pt} = \hspace{2pt} x \hspace{20pt} \text{where} \hspace{10pt} s \in S \hspace{10pt} \text{and} \hspace{10pt} x \in \mathbb{R}
+    X(s) \hspace{2pt} = \hspace{2pt} x \hspace{20pt} \text{where} \hspace{20pt} s \in S \hspace{10pt} \text{and} \hspace{10pt} x \in \mathbb{R}
 \end{align*}
+$X$ is referred to as a random variable.
 \label{random_variable}
 \end{definition}
 
 \begin{definition}
 The cumulative distribution function of a function $X$, as described in Definition \ref{random_variable}, denoted by $F_{X}(x)$ is defined as
 \begin{align*}
-    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{20pt} \text{for all} \hspace{10pt} x \in \text{Rng}(X)
+    F_{X}(x) \hspace{2pt} = \hspace{2pt} P_{X}(X \hspace{2pt} \leq \hspace{2pt} x) \hspace{20pt} \text{for all} \hspace{4pt} x \in \text{Rng}(X)
 \end{align*}
 \label{cumulative_distribution_function}
 \end{definition}
@@ -140,3 +141,41 @@ assuming that $M_{X}(t)$ exists for any $t$ belonging to some neighborhood of $0
 \end{theorem}
 
 So, we see by Definition \ref{nth_moment} and Theorem \ref{nth_moment_by_derivative_of_mgf} that the $n^{\text{th}}$ moment of random variable, $X$, is the $n^{\text{th}}$ derivative of the moment generating function of random variable, $X$, evaluated at $t \hspace{2pt} = \hspace{2pt} 0$.
+
+\begin{definition}
+    A random vector is an $n$-dimensional function from space $S$ to space $\mathbb{R}^{n}$ following the mapping
+    \begin{align*}
+        s \hspace{2pt} \mapsto \hspace{2pt} (X_{1}(s), X_{2}(s), \dots , X_{n}(s)) \hspace{20pt} \text{where} \hspace{10pt} s \in S
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    Let $(X_{1}, X_{2})$ be a discrete bivariate random vector. Then the joint probability mass function, from $\mathbb{R}^{2}$ to $\mathbb{R}$, of random vector $(X_{1}, X_{2})$ is 
+    \begin{align*}
+        f_{X_{1}, X_{2}}(x_{1}, x_{2}) \hspace{2pt} = \hspace{2pt} P_{X_{1}, X_{2}}(X_{1} = x_{1}, X_{2} = x_{2})
+    \end{align*}
+\end{definition}
+
+\begin{definition}
+    Let $(X_{1}, X_{2})$ be a continuous random vector. Then the joint probability density function, $f_{X_{1}, X_{2}}(x_{1}, x_{2})$, is the function satisfying the following
+    \begin{align*}
+        P_{X_{1}, X_{2}}(X_{1} \hspace{2pt} \leq \hspace{2pt} x_{1}, X_{2} \hspace{2pt} \leq \hspace{2pt} x_{2}) \hspace{2pt} &= \hspace{2pt} F_{X_{1}, X_{2}}(x_{1}, x_{2}) \\[1ex]
+        &= \hspace{2pt} \int_{-\infty}^{x}\int_{-\infty}^{y} f_{X_{1}, X_{2}}(s,t) dt ds \hspace{10pt} \forall (x_{1}, x_{2}) \in A \hspace{10pt} \forall A \subset \mathbb{R}^{2}
+    \end{align*}
+\end{definition}
+
+\begin{theorem}
+    Let $(X_{1}, X_{2})$ be a bivariate random vector with joint probability mass function $f_{X_{1}, X_{2}}$. Then the marginal probability mass functions of $X_{1}$ and $X_{2}$ are given by
+    \begin{align*}
+        &P_{X_{1}}(X_{1} \hspace{2pt} = \hspace{2pt} x_{1}) \hspace{2pt} = \hspace{2pt} f_{X_{1}}(x_{1}) \hspace{2pt} = \hspace{2pt} \sum_{x_{2} \in \mathbb{R}} f_{X_{1}, X_{2}}(x_{1}, x_{2}) \\[1ex]
+        &P_{X_{2}}(X_{2} \hspace{2pt} = \hspace{2pt} x_{2}) \hspace{2pt} = \hspace{2pt} f_{X_{2}}(x_{2}) \hspace{2pt} = \hspace{2pt} \sum_{x_{1} \in \mathbb{R}} f_{X_{1}, X_{2}}(x_{1}, x_{2})
+    \end{align*}
+\end{theorem}
+
+\begin{theorem}
+    Let $(X_{1}, X_{2})$ be a bivariate random vector with joint probability density function $f_{X_{1}, X_{2}}$. Then the marginal probability density functions of $X_{1}$ and $X_{2}$ are given by
+    \begin{align*}
+        &P_{X_{1}}(X_{1} \hspace{2pt} = \hspace{2pt} x_{1}) \hspace{2pt} = \hspace{2pt} f_{X_{1}}(x_{1}) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} f_{X_{1}, X_{2}}(x_{1}, x_{2}) dx_{2} \\[1ex]
+        &P_{X_{2}}(X_{2} \hspace{2pt} = \hspace{2pt} x_{2}) \hspace{2pt} = \hspace{2pt} f_{X_{2}}(x_{2}) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} f_{X_{1}, X_{2}}(x_{1}, x_{2}) dx_{1}
+    \end{align*}
+\end{theorem}
