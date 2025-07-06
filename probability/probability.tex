@@ -145,7 +145,7 @@ So, we see by Definition \ref{nth_moment} and Theorem \ref{nth_moment_by_derivat
 \begin{definition}
     A random vector is an $n$-dimensional function from space $S$ to space $\mathbb{R}^{n}$ following the mapping
     \begin{align*}
-        s \hspace{2pt} \mapsto \hspace{2pt} (X_{1}(s), X_{2}(s), \dots , X_{n}(s)) \hspace{20pt} \text{where} \hspace{10pt} s \in S
+        s \hspace{2pt} \mapsto \hspace{2pt} (X_{1}(s), X_{2}(s), \dots , X_{n}(s)) \hspace{20pt} \text{where} \hspace{20pt} s \in S \hspace{20pt} \text{and} \hspace{20pt} n \in \mathbb{N}
     \end{align*}
 \end{definition}
 
@@ -177,5 +177,55 @@ So, we see by Definition \ref{nth_moment} and Theorem \ref{nth_moment_by_derivat
     \begin{align*}
         &P_{X_{1}}(X_{1} \hspace{2pt} = \hspace{2pt} x_{1}) \hspace{2pt} = \hspace{2pt} f_{X_{1}}(x_{1}) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} f_{X_{1}, X_{2}}(x_{1}, x_{2}) dx_{2} \\[1ex]
         &P_{X_{2}}(X_{2} \hspace{2pt} = \hspace{2pt} x_{2}) \hspace{2pt} = \hspace{2pt} f_{X_{2}}(x_{2}) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{\infty} f_{X_{1}, X_{2}}(x_{1}, x_{2}) dx_{1}
+    \end{align*}
+\end{theorem}
+
+\begin{definition}
+    Let $(X_{1}, X_{2})$ be a random vector. Then the random variables, $X_{1}$, $X_{2}$, for their respective marginal probability density functions or probability mass functions, $f_{X_{1}}$, $f_{X_{2}}$, are independent, if for every $x \in \mathbb{R}$ and for every $y \in \mathbb{R}$
+    \begin{align*}
+        f_{X{1}, X{2}}(x_{1}, x_{2}) \hspace{2pt} = \hspace{2pt} f_{X_{1}}(x_{1}) f_{X_{2}}(x_{2})
+    \end{align*}
+\end{definition}
+
+\begin{theorem}
+    Let $(X_{1}, X_{2})$ be a random vector. Then the random variables, ${X_{1}}$, ${X_{2}}$, are independent if and only if there exist functions, $g(X_{1})$, $h(X_{2})$, such that, for the probability density function or probability mass function, $f_{X_{1}, X_{2}}$, we have for any $x_{1} \in \mathbb{R}$ and for any $x_{2} \in \mathbb{R}$
+    \begin{align*}
+        f_{X_{1}, X_{2}}(x_{1}, x_{2}) \hspace{2pt} = \hspace{2pt} g(x_{1}) h(x_{2})
+    \end{align*}
+\end{theorem}
+
+\begin{theorem}
+    Let $X_{1}$ and $X_{2}$ be independent random variables. Let $g$ be a function only of $X_{1}$. Let $h$ be a function only $X_{2}$. Then
+    \begin{align*}
+        E(g(X_{1}) h(X_{2})) \hspace{2pt} = \hspace{2pt} E(g(X_{1})) E(h(X_{2}))
+    \end{align*}
+\end{theorem}
+
+\begin{theorem}
+    Let $X_{1}$ and $X_{2}$ be independent random variables, and let $M_{X_{1}}(t)$ and $M_{X_{2}}(t)$ be their respective, existing moment generating functions. Let there be a random variable, $Z$, such that
+    \begin{align*}
+        Z \hspace{2pt} = \hspace{2pt} X_{1} + X_{2}
+    \end{align*}
+    Then we have
+    \begin{align*}
+        M_{Z}(t) \hspace{2pt} = \hspace{2pt} M_{X_{1}}(t) M_{X_{2}}(t)
+    \end{align*}
+\end{theorem}
+
+\begin{definition}
+    Let $\vec{X}_{1}$, $\dots$, $\vec{X}_{n}$ be random vectors, and let $f_{\vec{X}_{1}, \dots , \vec{X}_{n}}$ be their joint probability density function or the joint probability mass function. Let $f_{\vec{X}_{i}}(\vec{x}_{i})$ be the marginal probability density function or the marginal probability mass function for random vector, $\vec{X}_{i}$. Then random vectors, $\vec{X}_{1}$, $\dots$, $\vec{X}_{n}$, are mutually independent if, for all $(\vec{x}_{1}, \dots , \vec{x}_{n}) \in Dom(f_{\vec{X}_{1}, \dots , \vec{X}_{n}})$ , we have
+    \begin{align*}
+        f_{\vec{X}_{1}, \dots , \vec{X}_{n}}(\vec{x}_{1}, \dots , \vec{x}_{n}) \hspace{2pt} = \hspace{2pt} \prod_{i = 1}^{n} f_{\vec{X}_{i}}(\vec{x}_{i})
+    \end{align*}
+\end{definition}
+
+\begin{theorem}
+    Let $X_{1}$, $\dots$, $X_{n}$ be mutually independent random variables, and let $M_{X_{1}}(t)$, $\dots$, $M_{X_{n}}(t)$ be their respective, existing moment generating functions. Let there be a random variable, $Z$, such that
+    \begin{align*}
+        Z \hspace{2pt} = \hspace{2pt} X_{1} + \dots + X_{n}
+    \end{align*}
+    Then we have
+    \begin{align*}
+        M_{Z}(t) \hspace{2pt} = \hspace{2pt} M_{X_{1}}(t) \cdots M_{X_{n}}(t)
     \end{align*}
 \end{theorem}
