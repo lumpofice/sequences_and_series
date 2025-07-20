@@ -146,6 +146,21 @@ From the definition of a power series to the Taylor polynomial, we see
 \end{align*}
 \end{note}
 
+\begin{theorem}
+    Let $f$ be a function such that 
+    \begin{align*}
+        f(a) \hspace{2pt} , \hspace{4pt} f^{(1)}(a) \hspace{2pt} , \hspace{4pt} \dots \hspace{2pt} , \hspace{4pt} f^{(n)}(a)
+    \end{align*}
+    all exist. Let the following polynomial be the Taylor approximation, $T_{n}(x)$, of $f$ at $a$
+    \begin{align*}
+        T_{n}(x) \hspace{2pt} = \hspace{2pt} f(a) + f^{(1)}(a)(x - a) + \dfrac{f^{(2)}(a)}{2!}(x - a)^{2} + \cdots + \dfrac{f^{(n)}(a)}{n!}(x - a)^{n}
+    \end{align*}
+    Then we have
+    \begin{align*}
+        \lim_{x \longrightarrow a} \dfrac{f(x) - T_{n}(x)}{(x - a)^{n}} \hspace{2pt} = \hspace{2pt} 0
+    \end{align*}
+\end{theorem}
+
 \begin{example}
 The Taylor series for $f(x) = e^{x}$ centered at $0$ can be found as follows. We have the general setup
 \begin{align*}
