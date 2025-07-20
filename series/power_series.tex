@@ -159,6 +159,43 @@ From the definition of a power series to the Taylor polynomial, we see
     \begin{align*}
         \lim_{x \longrightarrow a} \dfrac{f(x) - T_{n}(x)}{(x - a)^{n}} \hspace{2pt} = \hspace{2pt} 0
     \end{align*}
+    \begin{proof}
+        Take
+        \begin{align*}
+            \dfrac{f(x) - T_{n}(x)}{(x - a)^{n}} \hspace{2pt} &= \hspace{2pt} \dfrac{f(x) - \Big(f(a) + \cdots + \dfrac{f^{(n-1)}(a) (x - a)^{n-1}}{(n - 1)!} \Big)}{(x - a)^{n}} - \dfrac{f^{(n)}(a)}{n!} \\[2ex]
+            &= \hspace{2pt} \dfrac{f(x) - Q(x)}{g(x)} - \dfrac{f^{(n)}(a)}{n!} 
+        \end{align*}
+        We can take derivatives of $Q$ and evaluate those derivative at $a$, as follows
+        \begin{align*}
+            Q^{(k)}(a) \hspace{2pt} = \hspace{2pt} f^{(k)}(a) \hspace{10pt} k \in \{1, 2, \dots , n-1\}
+        \end{align*}
+        and we know that
+        \begin{align*}
+            g^{(k)}(x) \hspace{2pt} = \hspace{2pt} \dfrac{n! \hspace{2pt} (x - a)^{n - k}}{(n - k)!}
+        \end{align*}
+        Additionally, we have that
+        \begin{align*}
+            \lim_{x \longrightarrow a} Q^{(k)}(x) \hspace{2pt} = \hspace{2pt} 0 \hspace{10pt} k \in \{1, 2, \dots , n-2\}
+        \end{align*}
+        and
+        \begin{align*}
+            \lim_{x \longrightarrow a} g^{(k)}(x) \hspace{2pt} = \hspace{2pt} 0 \hspace{10pt} k \in \{1, 2, \dots , n-2\}
+        \end{align*}
+        Finally, we know that 
+        \begin{align*}
+            Q^{(n-1)}(x) \hspace{2pt} = \hspace{2pt} f^{(n-1)}(a)
+        \end{align*}
+        So, using L'Hospital's Rule, we have
+        \begin{align*}
+            \lim_{x \longrightarrow a} \dfrac{f(x) - Q(x)}{g(x)} \hspace{2pt} &= \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(1)}(x) - Q^{(1)}(x)}{g^{(1)}(x)} \hspace{2pt} = \hspace{2pt} \cdots \hspace{2pt} = \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - Q^{(n-1)}(x)}{g^{(n-1)}(x)} \\[2ex]
+            &= \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - f^{(n-1)(a)}}{\dfrac{n! \hspace{2pt} (x - a)}{1!}} \hspace{2pt} = \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - f^{(n-1)}(a)}{n! (x - a)} \hspace{2pt} = \hspace{2pt} \dfrac{f^{(n)}(a)}{n!}
+        \end{align*}
+        So, we have our result
+        \begin{align*}
+            \lim_{x \longrightarrow a} \dfrac{f(x) - T_{n}(x)}{(x-a)^{n}} \hspace{2pt} &= \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f(x) - Q(x)}{g(x)} - \dfrac{f^{(n)}(a)}{n!} \hspace{2pt} = \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - f^{(n-1)}(a)}{n!(x - a)} - \dfrac{f^{(n)}(a)}{n!} \\[2ex]
+            &= \dfrac{f^{(n)}(a)}{n!} - \dfrac{f^{(n)}(a)}{n!} \hspace{2pt} = \hspace{2pt} 0
+        \end{align*}
+    \end{proof}
 \end{theorem}
 
 \begin{example}
