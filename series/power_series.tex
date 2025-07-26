@@ -147,6 +147,7 @@ From the definition of a power series to the Taylor polynomial, we see
 \end{note}
 
 \begin{theorem}
+    \label{taylor_consequence_0}
     Let $f$ be a function such that 
     \begin{align*}
         f(a) \hspace{2pt} , \hspace{4pt} f^{(1)}(a) \hspace{2pt} , \hspace{4pt} \dots \hspace{2pt} , \hspace{4pt} f^{(n)}(a)
@@ -185,7 +186,7 @@ From the definition of a power series to the Taylor polynomial, we see
         \begin{align*}
             Q^{(n-1)}(x) \hspace{2pt} = \hspace{2pt} f^{(n-1)}(a)
         \end{align*}
-        So, using L'Hospital's Rule, we have
+        So, using L'Hospital's Rule, iteratively, with the $\dfrac{0}{0}$ indeterminate form, we have
         \begin{align*}
             \lim_{x \longrightarrow a} \dfrac{f(x) - Q(x)}{g(x)} \hspace{2pt} &= \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(1)}(x) - Q^{(1)}(x)}{g^{(1)}(x)} \hspace{2pt} = \hspace{2pt} \cdots \hspace{2pt} = \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - Q^{(n-1)}(x)}{g^{(n-1)}(x)} \\[2ex]
             &= \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - f^{(n-1)(a)}}{\dfrac{n! \hspace{2pt} (x - a)}{1!}} \hspace{2pt} = \hspace{2pt} \lim_{x \longrightarrow a} \dfrac{f^{(n-1)}(x) - f^{(n-1)}(a)}{n! (x - a)} \hspace{2pt} = \hspace{2pt} \dfrac{f^{(n)}(a)}{n!}

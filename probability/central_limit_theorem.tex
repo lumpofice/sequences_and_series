@@ -11,3 +11,17 @@
     \end{align*}
 \end{theorem}
 
+\begin{theorem}
+    Let $\{X_{i}\}_{i \in \mathbb{N}}$ be a sequence of independent and identically distributed random variables, all with moment generating functions. Let
+    \begin{align*}
+        E(X_{i}) \hspace{2pt} = \hspace{2pt} \mu \hspace{20pt} \text{and} \hspace{20pt} Var(X_{i}) \hspace{2pt} = \hspace{2pt} \sigma^{2}
+    \end{align*}
+    Define 
+    \begin{align*}
+        \overline{X}_{n} \hspace{2pt} = \hspace{2pt} \dfrac{1}{n} \sum_{i = 1}^{n} X_{i} \hspace{20pt} \text{and} \hspace{20pt} G_{n}(x) \hspace{2pt} = \hspace{2pt} \sqrt{n}\dfrac{(\overline{X}_{n} - \mu)}{\sigma}
+    \end{align*}
+    Then for any $x \in \mathbb{R}$, we have
+    \begin{align*}
+        \lim_{n \longrightarrow \infty} G_{n}(x) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{x} \dfrac{1}{\sqrt{2 \pi}} e^{-y^{2}/2} dy
+    \end{align*}
+\end{theorem}

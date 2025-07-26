@@ -213,11 +213,14 @@ So, we see by Definition \ref{nth_moment} and Theorem \ref{nth_moment_by_derivat
 \end{theorem}
 
 \begin{definition}
+    \label{iid}
     Let $\vec{X}_{1}$, $\dots$, $\vec{X}_{n}$ be random vectors, and let $f_{\vec{X}_{1}, \dots , \vec{X}_{n}}$ be their joint probability density function or the joint probability mass function. Let $f_{\vec{X}_{i}}(\vec{x}_{i})$ be the marginal probability density function or the marginal probability mass function for random vector, $\vec{X}_{i}$. Then random vectors, $\vec{X}_{1}$, $\dots$, $\vec{X}_{n}$, are mutually independent if, for all $(\vec{x}_{1}, \dots , \vec{x}_{n}) \in Dom(f_{\vec{X}_{1}, \dots , \vec{X}_{n}})$ , we have
     \begin{align*}
         f_{\vec{X}_{1}, \dots , \vec{X}_{n}}(\vec{x}_{1}, \dots , \vec{x}_{n}) \hspace{2pt} = \hspace{2pt} \prod_{i = 1}^{n} f_{\vec{X}_{i}}(\vec{x}_{i})
     \end{align*}
 \end{definition}
+
+The random variables in Definition \ref{iid} are known as independent and identically distributed random variables.
 
 \begin{theorem}
     Let $X_{1}$, $\dots$, $X_{n}$ be mutually independent random variables, and let $M_{X_{1}}(t)$, $\dots$, $M_{X_{n}}(t)$ be their respective, existing moment generating functions. Let there be a random variable, $Z$, such that
