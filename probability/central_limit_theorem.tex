@@ -24,4 +24,16 @@
     \begin{align*}
         \lim_{n \longrightarrow \infty} G_{n}(x) \hspace{2pt} = \hspace{2pt} \int_{-\infty}^{x} \dfrac{1}{\sqrt{2 \pi}} e^{-y^{2}/2} dy
     \end{align*}
+    \begin{proof}
+        We have that
+        \begin{align*}
+            \sum_{i \in \mathbb{N}_{n}} Y_{i} \hspace{2pt} &= \hspace{2pt} \dfrac{X_{1} - \mu}{\sigma} + \cdots + \dfrac{X_{n} - \mu}{\sigma} \\[1ex]
+            &= \hspace{2pt} \dfrac{1}{\sigma} (X_{1} + \cdots + X_{n} - n\mu) \\[1ex]
+            &= \hspace{2pt} \dfrac{n(\overline{X}_{n} - \mu)}{\sigma}
+        \end{align*}
+        which gives us
+        \begin{align*}
+            \dfrac{1}{\sqrt{n}} \sum_{i \in \mathbb{N}_{n}} Y_{i} \hspace{2pt} = \hspace{2pt} \dfrac{\sqrt{n}(\overline{X}_{n} - \mu)}{\sigma}
+        \end{align*}
+    \end{proof}
 \end{theorem}

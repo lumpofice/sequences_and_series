@@ -232,3 +232,23 @@ The random variables in Definition \ref{iid} are known as independent and identi
         M_{Z}(t) \hspace{2pt} = \hspace{2pt} M_{X_{1}}(t) \cdots M_{X_{n}}(t)
     \end{align*}
 \end{theorem}
+
+\begin{theorem}
+    For any constants $a$ and $b$, the moment generating function of a random variable following the form
+    \begin{align*}
+        aX + b
+    \end{align*}
+    is given by
+    \begin{align*}
+        M_{aX + b}(t) \hspace{2pt} = \hspace{2pt} e^{bt} M_{X}(at)
+    \end{align*}
+    \begin{proof}
+        We have
+        \begin{align*}
+            M_{aX + b} \hspace{2pt} &= \hspace{2pt} E(e^{(aX + b)t}) \\[1ex]
+            &= \hspace{2pt} E(e^{(aX)t} e^{bt}) \\[1ex]
+            &= \hspace{2pt} e^{bt} E(e^{(aX)t}) \\[1ex]
+            &= \hspace{2pt} e^{bt} M_{X}(at)
+        \end{align*}
+    \end{proof}
+\end{theorem}
