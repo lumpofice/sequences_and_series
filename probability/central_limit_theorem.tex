@@ -1,7 +1,7 @@
 \section{Central Limit Theorem}
 
 \begin{theorem}
-    Let $\{X_{n}\}_{n \in \mathbb{N}}$ be a sequence of random variables, all with moment generating functions, such that
+    Let $\{X_{n}\}_{n \in \mathbb{N}}$ be a sequence of independent and identically distributed random variables, all with moment generating functions, such that
     \begin{align*}
         \lim_{n \longrightarrow \infty} M_{X_{n}}(t) \hspace{2pt} = \hspace{2pt} M_{X}(t) \hspace{20pt} \text{for all} \hspace{10pt} t \hspace{10pt} \text{such that} \hspace{4pt} -\delta \hspace{2pt} < \hspace{2pt} t \hspace{2pt} < \hspace{2pt} \delta \hspace{2pt} , \hspace{20pt} \delta \hspace{2pt} > \hspace{2pt} 0
     \end{align*}
@@ -34,6 +34,20 @@
         which gives us
         \begin{align*}
             \dfrac{1}{\sqrt{n}} \sum_{i \in \mathbb{N}_{n}} Y_{i} \hspace{2pt} = \hspace{2pt} \dfrac{\sqrt{n}(\overline{X}_{n} - \mu)}{\sigma}
+        \end{align*}
+        By Theorem \ref{mgf_sum_multiple_random_variables}, first, then by Theorem \ref{mgf_single_random_variable_in_linear_form}, we have the following
+        \begin{align*}
+            M_{\frac{1}{\sqrt{n}}\sum_{i \in \mathbb{N}_{n}}Y_{i}} (t) \hspace{2pt} &= \hspace{2pt} M_{\frac{1}{\sqrt{n}}Y_{1} + \cdots + \frac{1}{\sqrt{n}}Y_{n}} (t) \\[1ex]
+            &= \hspace{2pt} M_{\frac{1}{\sqrt{n}}Y_{1}} (t) \cdots M_{\frac{1}{\sqrt{n}}Y_{n}} (t) \\[1ex]
+            &= \hspace{2pt} M_{Y_{1}} \Big(\dfrac{t}{\sqrt{n}}\Big) \cdots M_{Y_{n}} \Big(\dfrac{t}{\sqrt{n}}\Big)
+        \end{align*}
+        Since $\{Y_{i}\}_{i \in \mathbb{N}_{n}}$ is a set of independent and identically distributed random variables, we may write the following
+        \begin{align*}
+            Y \sim Y_{i} \hspace{10pt} \forall i \in \mathbb{N}_{n} 
+        \end{align*}
+        giving us
+        \begin{align*}
+            M_{\frac{1}{\sqrt{n}}\sum_{i \in \mathbb{N}_{n}}Y_{i}} (t) \hspace{2pt} = \hspace{2pt} M_{Y_{1}} \Big(\dfrac{t}{\sqrt{n}}\Big) \cdots M_{Y_{n}} \Big(\dfrac{t}{\sqrt{n}}\Big) \hspace{2pt} = \hspace{2pt} \Big(M_{Y} \Big(\dfrac{t}{\sqrt{n}}\Big) \Big)^{n}
         \end{align*}
     \end{proof}
 \end{theorem}
