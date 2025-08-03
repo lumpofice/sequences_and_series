@@ -49,5 +49,33 @@
         \begin{align*}
             M_{\frac{1}{\sqrt{n}}\sum_{i \in \mathbb{N}_{n}}Y_{i}} (t) \hspace{2pt} = \hspace{2pt} M_{Y_{1}} \Big(\dfrac{t}{\sqrt{n}}\Big) \cdots M_{Y_{n}} \Big(\dfrac{t}{\sqrt{n}}\Big) \hspace{2pt} = \hspace{2pt} \Big(M_{Y} \Big(\dfrac{t}{\sqrt{n}}\Big) \Big)^{n}
         \end{align*}
+        We can expand $M_{Y} \Big(\dfrac{t}{\sqrt{n}}\Big)$ to a Taylor Series, as follows
+        \begin{align*}
+            M_{Y} \Big(\dfrac{t}{\sqrt{n}}\Big) \hspace{2pt} = \hspace{2pt} \sum_{k \in \mathbb{N}} M_{Y}^{(k)} (0) \Big(\dfrac{t}{\sqrt{n}} - 0\Big)^{k}
+        \end{align*}
+        We have that 
+        \begin{align*}
+            M_{Y}^{(0)} (0) \hspace{2pt} = \hspace{2pt} 1
+        \end{align*}
+        since $M_{Y}^{(0)} (0) \hspace{2pt} = \hspace{2pt} F_{Y} (\infty) \hspace{2pt} = \hspace{2pt} P_{Y} (Y \hspace{2pt} < \hspace{2pt} \infty)$. \\[1ex]
+        The mean of random variable $Y \hspace{2pt} = \hspace{2pt} \Big(\dfrac{X - \mu}{\sigma}\Big)$ is $0$, which we can also observe via the following
+        \begin{align*}
+            M_{Y}^{(1)} (0) \hspace{2pt} = \hspace{2pt} 0
+        \end{align*}
+        This is true, since for any random variable, $V$, with mean $\mu$ and variance $\sigma^{2}$, we have
+        \begin{align*}
+            E\Big(\dfrac{V - \mu}{\sigma}\Big) \hspace{2pt} = \hspace{2pt} \dfrac{1}{\sigma} (E(V) - \mu) \hspace{2pt} = \hspace{2pt} 0 
+        \end{align*}
+        Finally, the variance of random variable $Y \hspace{2pt} = \hspace{2pt} \Big(\dfrac{X - \mu}{\sigma}\Big)$ is $1$, which we can also observe via the following
+        \begin{align*}
+            M_{Y}^{(2)} (0) \hspace{2pt} = \hspace{2pt} 1
+        \end{align*}
+        This is true, since for any random variable, $V$, with mean $\mu$ and variance $\sigma^{2}$, we have
+        \begin{align*}
+            E\Big(\Big(\dfrac{V - \mu}{\sigma}\Big)^{2}\Big) \hspace{2pt} &= \hspace{2pt} E\Big(\dfrac{1}{\sigma^{2}}(V^{2} - 2\mu V + \mu^{2})\Big) \\[1ex]
+            &= \hspace{2pt} \dfrac{1}{\sigma^{2}} (E(V^{2}) - 2\mu^{2} + \mu^{2}) \\[1ex]
+            &= \hspace{2pt} \dfrac{1}{\sigma^{2}} (E(V^{2}) - \mu^{2}) \\[1ex]
+            &= \hspace{2pt} \dfrac{1}{\sigma^{2}} (\sigma^{2}) \hspace{2pt} = \hspace{2pt} 1
+        \end{align*}
     \end{proof}
 \end{theorem}
